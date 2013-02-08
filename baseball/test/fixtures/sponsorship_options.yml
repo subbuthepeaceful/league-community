@@ -1,0 +1,55 @@
+lamvpb_cat_1:
+    hub_id: 4
+    group: "Category 1"
+    name: "Full Page Four Color Ad"
+    description: "inside front, back or outside back cover"
+    amount: "$1000"
+    primary: 1
+    
+lamvpb_cat_2:
+    hub_id: 4
+    group: "Category 2"
+    name: "Full Page Four Color Ad"
+    description: "center of Yearbook"
+    amount: "$800"
+    primary: 1
+    
+lamvpb_cat_3:
+    hub_id: 4
+    group: "Category 3"
+    name: "Half Page Four Color Ad"
+    description: "center of Yearbook"
+    amount: "$600"
+    primary: 1
+    
+lamvpb_cat_4:
+    hub_id: 4
+    group: "Category 4"
+    name: "Business Card Size Black & White Ad"
+    description: "within Yearbook"
+    amount: "$400"
+    primary: 1
+    
+lamvpb_cat_5:
+    hub_id: 4
+    group: "Category 5"
+    name: "Your Company Name"
+    description: "on back of team jersey (Shetland & Pinto divisions only)"
+    amount: "$300"
+    primary: 1
+    
+lamvpb_opt_1:
+    hub_id: 4
+    group: "Option 1"
+    name: "Full Page Insert Pull Out Ad"
+    description: "included in the Yearbook"
+    amount: "$900"
+    primary: 0
+    
+lamvpb_opt_2:
+    hub_id: 4
+    group: "Option 2"
+    name: "Corporate/Family Friend"
+    description: "of LA-MV PONY Baseball"
+    amount: ""
+    primary: 0

@@ -1,0 +1,3 @@
+<div class="topmainbox">
+	<%= render :partial => "shared/team_header_non_participant" %>
+</div>

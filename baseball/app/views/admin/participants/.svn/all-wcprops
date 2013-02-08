@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/strongcirclescore/!svn/ver/538/branches/circlesbase/app/views/admin/participants
+END
+_add_participant.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/strongcirclescore/!svn/ver/194/branches/circlesbase/app/views/admin/participants/_add_participant.html.erb
+END
+confirm_import.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/strongcirclescore/!svn/ver/169/branches/circlesbase/app/views/admin/participants/confirm_import.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/strongcirclescore/!svn/ver/538/branches/circlesbase/app/views/admin/participants/index.html.erb
+END
+_import_participants.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/strongcirclescore/!svn/ver/431/branches/circlesbase/app/views/admin/participants/_import_participants.html.erb
+END
+import.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/strongcirclescore/!svn/ver/169/branches/circlesbase/app/views/admin/participants/import.html.erb
+END
+_confirm_participants.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/strongcirclescore/!svn/ver/169/branches/circlesbase/app/views/admin/participants/_confirm_participants.html.erb
+END

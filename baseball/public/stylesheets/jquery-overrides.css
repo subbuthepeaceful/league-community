@@ -1,0 +1,65 @@
+.ui-state-default {
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.ui-widget-content {
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.user-form-submit {
+	color: #153d85;
+}
+
+.user-form-submit-hover {
+	background: #EE3A43;
+	color: #FFF;
+	cursor: pointer;
+}
+
+#ui-datepicker-div {
+	z-index: 999999;
+}
+
+/* CALENDAR CUSTOMIZED STYLES */
+.fc-event a {
+	font-size: 12px;
+}
+
+.fc-event-time {
+	color: #F6AD28;
+}
+
+.assigned a {
+	background-color: #007F00;
+	color: #FFF;
+}
+
+.unassigned a {
+	background-color: #F00;
+	color: #FFF;
+}
+
+.program a {
+	background-color: #88B8EF;
+	color: #000000;
+}
+
+.session a {
+	background-color: #55AA55;
+	color: #000000;
+}
+
+/* TABLESORTER OVERRIDES */
+.concise-table th {
+	font-size: 12px;
+}
+
+.concise-table td {
+	font-size: 12px;
+}
+
+#import_status td {
+	color: #007F00;
+}

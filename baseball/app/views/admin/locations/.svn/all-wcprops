@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/strongcirclescore/!svn/ver/194/branches/circlesbase/app/views/admin/locations
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/strongcirclescore/!svn/ver/166/branches/circlesbase/app/views/admin/locations/index.html.erb
+END
+_add_location.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/strongcirclescore/!svn/ver/194/branches/circlesbase/app/views/admin/locations/_add_location.html.erb
+END

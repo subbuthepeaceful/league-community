@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/strongcirclescore/!svn/ver/551/branches/circlesbase/lib/tasks
+END
+game_loader.rake
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/strongcirclescore/!svn/ver/542/branches/circlesbase/lib/tasks/game_loader.rake
+END
+activation.rake
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/strongcirclescore/!svn/ver/565/branches/circlesbase/lib/tasks/activation.rake
+END
+circles.rake
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/strongcirclescore/!svn/ver/430/branches/circlesbase/lib/tasks/circles.rake
+END
+cucumber.rake
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/lib/tasks/cucumber.rake
+END
+admin_setup.rake
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/strongcirclescore/!svn/ver/509/branches/circlesbase/lib/tasks/admin_setup.rake
+END
+standings.rake
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/strongcirclescore/!svn/ver/565/branches/circlesbase/lib/tasks/standings.rake
+END
+external_teams.rake
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/strongcirclescore/!svn/ver/565/branches/circlesbase/lib/tasks/external_teams.rake
+END
+team_loader.rake
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/strongcirclescore/!svn/ver/530/branches/circlesbase/lib/tasks/team_loader.rake
+END

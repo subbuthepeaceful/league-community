@@ -1,0 +1,34 @@
+<div id="new_message" class="circles-dialog">
+	<div class="form-box">
+		<div class="form-box-top">
+			<div class="title">
+				<h2>Send a Team Message</h2>
+			</div>
+		</div>
+		<div class="form-box-bod">
+			<% form_for :circles_message, :url => participant_messages_path(@participant), :html => { :name => "new_message_form"} do |f| %>
+			<p>Type your subject and message below. When you click Send, your message will be sent to the whole team.</p>
+				<div class="form-line">
+					<%= label_tag 'subject' %>
+					<%= f.text_field :subject, :size => 32, :class => "txt" %>
+				</div>
+				<div class="clear-both">
+				</div>
+				<div class="form-line">
+					<%= label_tag 'message' %>
+					<%= f.text_area :body, :cols => "30", :rows => "10", :class => "txt-area" %>
+				</div>
+				<div class="clear-both">
+				</div>
+				<div class="form-line">
+					<%= label_tag 'high_priority' %>
+					<%= f.check_box :important, :class => "check-box" %>
+				</div>
+				<div class="clear-both">
+				</div>				
+			<% end -%>
+		</div>
+		<div class="form-box-bot">
+		</div>
+	</div>
+</div>

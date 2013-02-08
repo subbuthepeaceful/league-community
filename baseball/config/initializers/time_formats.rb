@@ -1,0 +1,7 @@
+Time::DATE_FORMATS[:circles_short_date] = "%b-%d, %Y"
+Time::DATE_FORMATS[:message_sent] = "%b-%d %l:%M%p"
+Time::DATE_FORMATS[:circles_scheduled_event] = "%A, %B-%d %l:%M%p"
+Time::DATE_FORMATS[:circles_time_only] = "%l:%M %p"
+Time::DATE_FORMATS[:year_only] = "%Y"
+Time::DATE_FORMATS[:month_only] = "%B"
+Time::DATE_FORMATS[:date_only] = "%m/%d/%Y"

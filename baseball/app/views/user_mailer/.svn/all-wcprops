@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/strongcirclescore/!svn/ver/565/branches/circlesbase/app/views/user_mailer
+END
+activate_notification.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/strongcirclescore/!svn/ver/565/branches/circlesbase/app/views/user_mailer/activate_notification.html.erb
+END
+new_sponsorship_notification.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/strongcirclescore/!svn/ver/458/branches/circlesbase/app/views/user_mailer/new_sponsorship_notification.html.erb
+END
+circles_message.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/strongcirclescore/!svn/ver/403/branches/circlesbase/app/views/user_mailer/circles_message.html.erb
+END
+reset_password_notification.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/strongcirclescore/!svn/ver/492/branches/circlesbase/app/views/user_mailer/reset_password_notification.html.erb
+END
+game_reminder.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/strongcirclescore/!svn/ver/433/branches/circlesbase/app/views/user_mailer/game_reminder.html.erb
+END
+sponsorship_thank_you_notification.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/strongcirclescore/!svn/ver/458/branches/circlesbase/app/views/user_mailer/sponsorship_thank_you_notification.html.erb
+END
+game_report.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/strongcirclescore/!svn/ver/506/branches/circlesbase/app/views/user_mailer/game_report.html.erb
+END

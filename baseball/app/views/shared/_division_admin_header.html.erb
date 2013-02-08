@@ -1,0 +1,14 @@
+<div class="profile teamhead">
+	<div class="text">
+		<ul class="info">
+			<li>Division: <span class="team-name">&nbsp;<%= @division.name%>&nbsp;</span></li>
+		</ul><!-- /Info -->
+		<ul class="buttons team-actions fright">
+			<li><a class="calendar" href="<%=schedule_division_path(@division)%>">Calendar</a></li>
+			<% if @nav.eql? "admin" -%>
+				<li><a class="signup" href="<%=gamelist_division_path(@division)%>">Game Reports</a></li>
+				<li><a class="star" href="<%= votes_division_path(@division)%>">Player Votes</a></li>
+			<% end -%>
+		</ul><!-- /Buttons -->
+	</div>
+</div>

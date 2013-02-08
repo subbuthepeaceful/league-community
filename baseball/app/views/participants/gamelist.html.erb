@@ -1,0 +1,75 @@
+<script type="text/javascript">
+	var $participantId = <%= @participant.id %>;
+	function snackSignup(gameId) {
+	
+	  var url = '<%=snack_signup_participant_path(@participant)%>?game_id=' + gameId  ;
+	  $.get(url, null, function(data){
+		if(data!="") {
+			html = data;
+			html += "(<a href=\"#\" onclick='clearSnackSignup(\"" + gameId + "\")'>clear</a>)";
+	    	$("#snack_"+gameId).html(html);
+		} 
+	  });
+	}
+	
+	function clearSnackSignup(gameId) {
+	  var url = '<%=clear_snack_signup_participant_path(@participant)%>?game_id=' + gameId  ;
+	  $.get(url, null, function(data){
+	    	$("#snack_"+gameId).html("<a href='#' onclick='snackSignup(\"" + gameId + "\")'>Unassigned - Sign Up</a>");
+	  });
+	}
+</script>
+
+<div class="topmainbox">
+	
+	<%= render :partial => "shared/team_header" %>
+
+
+	<div id="columns">
+		<div class="center">
+	
+			<table class="gamelist">
+				<tr class="head">
+					<td></td>
+					<td>Date</td>
+					<td>Time</td>
+					<td>Day</td>
+					<td>Location</td>
+					<td>Home Team</td>
+					<td>Away Team</td>
+					<td>Snack Duty</td>
+				</tr>
+				<%@calendar.each_index {|i|%>
+					<% entry =@calendar[i] %>
+					<% if i % 2 == 0 %>
+						<tr class="even">
+					<% else %>
+						<tr class="odd">
+					<% end -%>
+					<% if entry && entry.class.name=="Game"%>
+						<td><%= "Game ##{i+1}" %></td>
+						<td><%=entry.scheduled_at.strftime("%B %e")%></td>
+						<td><%=entry.scheduled_at.strftime("%l:%M %p") %></td>
+						<td><%=entry.scheduled_at.strftime("%A") %></td>
+						<td><%=entry.location.to_s %></td>
+						<td><%= entry.home_team.name %></td>
+						<td><%= entry.away_team.name %></td>
+						
+						<td>
+							<div id="snack_<%=entry.id%>">
+							<% if entry.snack_volunteer(@participant.team)%>
+								<%= entry.snack_volunteer(@participant.team).primary_contact.name%>(<a href="#" onclick='clearSnackSignup("<%=entry.id%>")'>clear</a>)
+							<% else %>
+								<a href="#" onclick='snackSignup("<%=entry.id%>")'>Unassigned - Sign Up</a>
+							<% end %>
+							</div>
+						</td>
+					<% end -%>	
+					</tr>
+				<%} if @calendar%>
+			</table>
+		</div>
+	</div>
+</div>
+
+<%= render :partial => "shared/new_message"%>

@@ -1,0 +1,25 @@
+<div id="assign_coaches" class="circles-dialog">
+	<div class="circles-form">
+		<h3></h3>
+		<% form_tag '/assign_coaches', :name => "assign_coaches_form" do -%>
+			<div class="form-line">
+				<%= label_tag 'head coach' %>
+				<%= select_tag :head_coach, options_from_collection_for_select(@registrants, 'id', 'name')%>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'assistant coach' %>
+				<%= select_tag :assistant_coach_1, options_from_collection_for_select(@registrants, 'id', 'name')%>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'assistant coach' %>
+				<%= select_tag :assistant_coach_2, options_from_collection_for_select(@registrants, 'id', 'name')%>
+			</div>
+			<div class="clear-both">
+			</div>
+		<% end -%>
+	</div>
+</div>

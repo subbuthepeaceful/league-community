@@ -1,0 +1,48 @@
+<%= javascript_tag "window._token = '#{form_authenticity_token}';" %>
+<div id="processing_window">
+	<div class="processing-status">
+		<%= image_tag "/images/ajax-loader.gif" %>
+	</div>
+</div>
+<div id="confirm_participant_import" class="circles-dialog">
+	<div class="dialog-table">
+		<% form_tag '/confirm_import_participants', :name => "confirm_import_participants_form" do -%>
+		<table id="importable_participants_table" class="tablesorter concise-table" width="100%">
+			<thead>
+				<tr>
+					<th>Program</th>
+					<th>Session</th>
+					<th>Division</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email</th>
+					<th>Address</th>
+					<th>Home Phone</th>
+					<th>Requests</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @importable_participants.each do |p| -%>
+					<tr>
+						<td id="program"><%= p[:program] %></td>
+						<td id="session"><%= p[:session] %></td>
+						<td id="division"><%= p[:division] %></td>
+						<td id="firstname"><%= p[:firstname] %></td>
+						<td id="lastname"><%= p[:lastname] %></td>
+						<td id="email"><%= p[:email] %></td>
+						<td id="address"><%= p[:street_address] + ","  %>
+							<br />
+							<%= p[:city] + "," + p[:state] + "," + p[:zip_code]  %>
+						</td>
+						<td id="home_phone"><%= p[:home_phone] %></td>
+						<td id="special_requests"><%= p[:special_requests] %></td>
+						<td id="import_status"></td>
+					</tr>
+				<% end -%>
+			</tbody>
+		</table>
+		<% end %>
+		</div>
+</div>
+

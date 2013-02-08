@@ -1,0 +1,24 @@
+<div id="edit_names_jerseys" class="circles-dialog">
+	<div class="circles-form">
+		<% form_tag update_player_names_and_jerseys_team_path(@team), :name => "edit_names_jerseys_form" do %>
+			<h3>Manage Roster: Names and Jersey Numbers for <%= @team.selected_name %></h3>
+			<div id="participant_jersey_table">
+				<table class="tablesorter participant-table">
+					<thead>
+						<th>Player First/Last Name</th>
+						<th>Jersey Number</th>
+					</thead>
+					<% @team.players.each_with_index do |p,i|%>
+						<tr>
+							<td><%= text_field_tag "first_name_#{i}".to_sym, p.first_name %>&nbsp;
+								<%= text_field_tag "last_name_#{i}".to_sym, p.last_name %>
+							</td>
+							<td><%= text_field_tag "jersey_#{i}".to_sym, p.jersey_number(@team), :size => 3 %></td>
+						</tr>
+					<% end -%>
+				</table>
+				<%= hidden_field_tag :current_participant, @participant.id -%>
+			</div>
+		<% end -%>
+	</div>
+</div>

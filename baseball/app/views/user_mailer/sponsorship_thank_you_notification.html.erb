@@ -1,0 +1,67 @@
+<style type="text/css">
+#email_body {
+	width: 700px;
+	border: solid 2px #55A859;
+	font-family: "Arial", "Helvetica", serif;
+	font-size: 14px;
+	padding: 10px;
+}
+
+#email_body h1 {
+	font-size: 20px;
+}
+
+#email_body h2 {
+	font-size: 16px;
+}
+
+#email_body .tag-line {
+	font-style: italic;
+	margin-left: 200px;
+	color: #1771A6;
+}
+
+#email_body .header-logo {
+	margin-left: 250px;
+	margin-right: auto;
+}
+
+#email_body h3 {
+	font-style: italic;;
+}
+
+#email_body p.major {
+	color: #008F00;
+	font-size: 16px;
+}
+
+</style>
+<div id="email_body">
+	<h1><%= @hub.name %></h1>
+	<h2><%= @hub.description %></h2>
+	<h1>Thank you for your sponsorship! Please retain this email for your records</h1>
+	<br />
+	<div id="sponsor_details">
+		<p><%= @hub.name %> is very grateful for your sponsorship. Our tax ID is <%= @hub.tax_id %>. Please print this page for your records.</p> 
+		<br />
+		<p>Please consider sending your logo to our sponsorship team <a href="mailto:<%= @hub.sponsor_email %>">(<%= @hub.sponsor_email%>)</a> so that we can include it in our web site.</p>
+		<h3>Sponsor Details</h3>
+		<%= @sponsor.company_name %>&nbsp;<%= @sponsor.company_website %>
+		<br />
+		<%= @sponsor.street_address %>
+		<br />
+		<%= @sponsor.city %>,&nbsp;<%= @sponsor.state %>&nbsp;<%= @sponsor.zip_code %>
+		<br />
+		<br />
+		<h3>Contact Details</h3>
+		<%= @sponsor.contact_name %>&nbsp;<%= @sponsor.contact_email %>&nbsp;<%= @sponsor.contact_phone %>
+		<hr />
+		<h3>Sponsorship Details</h3>
+			Option Selected: <%= @sponsorship_option.group %>&nbsp;<%= @sponsorship_option.name %>&nbsp;<%= @sponsorship_option.description %>
+			<br />
+			Total Amount: $<%= @sponsored_option.amount %>
+			<br />
+			Additional information: <%= @sponsored_option.additional_info %>
+		<hr />
+	</div>
+</div>

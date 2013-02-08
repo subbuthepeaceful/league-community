@@ -1,0 +1,80 @@
+<div id="sport">
+	<div class="maincol">
+		<div id="topwidebox" class="box">
+			<div class="box-top">
+				<%= image_tag "/images/circles/ico_program_#{@program.id}.png" %>
+				<h2><%= @program.name %></h2>
+				<h3>Why login to the circles community?</h3>
+			</div>
+			<div class="box-body ui-corner-all">
+				<div class="list">
+					<ul>
+						<li><img src="/images/ico-checkgreen.png" alt="check" /> Easily sign up for snacks</li>
+						<li><img src="/images/ico-checkpurple.png" alt="check" /> Get team-specific alerts</li>
+						<li><img src="/images/ico-checkblue.png" alt="check" /> Notifications of schedule changes</li>
+					</ul>
+					<ul class="last">
+						<li><img src="/images/ico-checkorange.png" alt="check" /> Calendar of games &amp; practices</li>
+						<li><img src="/images/ico-checkpurple.png" alt="check" /> Notes from the coach</li>
+						<li><img src="/images/ico-checkgreen.png" alt="check" /> View/Share photos from games</li>
+					</ul>
+				</div><!-- /List -->
+			</div>
+			<div class="box-bot"></div>
+		</div>
+		<div id="botwidebox">
+			<div id="photos" class="box">
+				<div class="box-top">
+					<h3>Photos of the Week</h3>
+				</div><!-- /Box-top -->
+				<div class="box-body">
+					<div class="inner">
+						<ul>
+							<li>
+								<a class="thumb" href="#"><img src="/images/hubs/programs/<%= @program.id%>/weekly/pic-photo1.jpg" alt="image" /></a>
+								<p>Photo of the week 1</p>
+							</li>
+							<li>
+								<a class="thumb" href="#"><img src="/images/hubs/programs/<%= @program.id%>/weekly/pic-photo2.jpg" alt="image" /></a>
+								<p>Photo of the week 2</p>
+							</li>
+							<li>
+								<a class="thumb" href="#"><img src="/images/hubs/programs/<%= @program.id%>/weekly/pic-photo3.jpg" alt="image" /></a>
+								<p>Photo of the week 3</p>
+							</li>
+							<li>
+								<a class="thumb" href="#"><img src="/images/hubs/programs/<%= @program.id%>/weekly/pic-photo4.jpg" alt="image" /></a>
+								<p>Photo of the week 4</p>
+							</li>
+						</ul>
+					</div>
+				</div><!-- /Box-body -->
+				<div class="box-bot"></div>
+			</div><!-- /Box -->
+		</div><!-- /Bot Wide Box -->
+	</div>
+	<div class="sidecol">
+
+		<div id="loginbox">
+			<div class="inner">
+				<h3>Login to Your Circle</h3>
+				<p>OR if you haven’t registered for a YMCA program, <a href="http://www.mdrymca.org/branches/5-SRV" target="_blank">register now</a></p>
+				<a class="btn" href="/logins/new">Login Now</a>
+			</div>
+		</div><!-- /Loginbox -->
+		<div class="sidebox">
+			<div id="becomesponsor" class="box">
+				<div class="box-top">
+					<h3>Program Sponsors</h3>
+				</div>
+			</div><!-- /Becomesponsor -->
+			<div class="box-body">
+				<% @sponsors.each do |sponsor| -%>
+					<a class="ad" href="#"><%= image_tag sponsor.banner1.url(:list) %></a>
+					<br />
+				<% end -%>	
+			</div>
+			<div class="box-bot"></div>
+		</div><!-- /Sidebox -->
+	</div><!-- /Sidecol -->
+</div>

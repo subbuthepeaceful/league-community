@@ -1,0 +1,30 @@
+<div id="add_program" class="circles-dialog">
+	<div class="circles-form">
+		<% form_for :program, :url => admin_programs_path, :html => { :name => "add_program_form"} do |f| %>
+			<div class="form-line">
+				<%= label_tag 'name' %>
+				<%= f.text_field :name, :size => 20, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'description' %>
+				<%= f.text_area :description, :cols => "20", :rows => "5", :class => "txt-area" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'status' %>
+				<%= f.select :status, ["Active", "Inactive"] %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'Program Group' %>
+				<%= f.select :parent, @program_groups %>
+			</div>
+			<div class="clear-both">
+			</div>
+		<% end -%>
+	</div>
+</div>

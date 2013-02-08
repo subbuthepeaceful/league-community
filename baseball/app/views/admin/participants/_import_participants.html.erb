@@ -1,0 +1,64 @@
+<div id="import_participants" class="circles-dialog">
+	<div class="circles-form">
+		<% form_for :import, :url => '/import_participants', :html => { :multipart => true, :name => "import_participants_form" } do |f| -%>
+		<p>Select an active Program, Session and Division for the Import</p>
+			<div class="form-line">
+				<%= label_tag 'program' %>
+				<%= f.select :program, @programs.collect { |p| [ p.name, p.id]} %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'session' %>
+				<%= f.select :session, [] %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'division' %>
+				<%= f.select :division, [] %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<hr />
+			<p>Click the Browse button to select a CSV (Comma Separated Value) file for importing participants</p>
+			<div>
+				<p>Values for the following column names will be imported:</p>
+					<ul id="import_column_list">
+						<li>First Name</li>
+						<li>Last Name</li>
+						<li>Date of Birth</li>
+						<li>Gender</li>
+						<li>Primary Contact First Name</li>
+						<li>Primary Contact Last Name</li>
+						<li>Primary Contact Email</li>
+						<li>Primary Contact Street Address</li>
+						<li>Primary Contact City</li>
+						<li>Primary Contact State</li>
+						<li>Primary Contact Zip Code</li>
+						<li>Primary Contact Phone</li>
+						<li>Secondary Contact First Name</li>
+						<li>Secondary Contact Last Name</li>
+						<li>Secondary Contact Email</li>
+						<li>Secondary Contact Street Address</li>
+						<li>Secondary Contact City</li>
+						<li>Secondary Contact State</li>
+						<li>Secondary Contact Zip Code</li>
+						<li>Secondary Contact Phone</li>
+						<li>School</li>
+						<li>T-Shirt Size</li>
+						<li>Registration Requests</li>
+					</ul>
+				<div id="upload_file_form_field" class="ui-corner-all">
+					<label for="file" class="file-upload">Import File</label>&nbsp;<%= f.file_field :import_file, :accept => "text/csv", :class => "file-upload"%>
+					<br />
+					<%= submit_tag "Upload", :class => "ui-state-default ui-corner-all", :id => "file_upload_submit" %>
+				</div>
+			</div>
+			<div id="loading_image">
+				<%= image_tag "/images/ajax-loader.gif" %>
+			</div>
+			
+		<% end %>
+	</div>
+</div>

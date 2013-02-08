@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/strongcirclescore/!svn/ver/405/branches/circlesbase/app/views/pictures
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/strongcirclescore/!svn/ver/405/branches/circlesbase/app/views/pictures/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/strongcirclescore/!svn/ver/377/branches/circlesbase/app/views/pictures/new.html.erb
+END
+preview.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/strongcirclescore/!svn/ver/350/branches/circlesbase/app/views/pictures/preview.html.erb
+END

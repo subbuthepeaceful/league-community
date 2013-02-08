@@ -1,0 +1,4 @@
+	<ul id="nav">
+		<li <%= "class='current'" if controller.class.eql? HomeController%>><a href="/"><span>Home</span></a></li>
+		<li <%= "class='current'" if @program && @program.id == 1%>><a href="/programs/1"><span>Program 1</span></a></li>
+	</ul><!-- /Nav -->

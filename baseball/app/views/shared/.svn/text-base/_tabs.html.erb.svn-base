@@ -1,0 +1,48 @@
+<ul id="nav">
+	<% if @participant -%>
+		<li <%= "class='current'" if controller.action_name=="dashboard"%>>
+			<a href="<%=dashboard_participant_path(@participant)%>"><span>Home</span></a>
+		</li>
+		<li <%= "class='current'" if @nav=="schedule" %>>
+			<a href="<%=schedule_participant_path(@participant)%>"><span>Schedule</span></a>
+		</li>
+		<li <%= "class='current'" if @nav=="roster"%>>
+			<a href="<%=roster_participant_path(@participant)%>"><span>Roster</span></a>
+		</li>
+	<% end -%>
+	<% if @messages_enabled -%>
+		<li <%= "class='current'" if controller.class.eql? MessagesController %>>
+			<a href="<%= participant_messages_path(@participant) %>"><span>Messages</span></a>
+		</li>
+	<% end -%>
+	<% if @resources_enabled -%>
+		<li <%= "class='current'" if @nav=="resources"%>>
+	      <a href="<%=resources_participant_path(@participant)%>"><span>Resources</span></a>
+	  	</li>
+	<% end -%>
+	<% if @pictures_enabled -%>
+		<li <%= "class='current'" if controller.class.eql? PicturesController %>>
+	      <a href="<%=participant_pictures_path(@participant)%>"><span>Team Pictures</span></a>
+	  	</li>
+	<% end -%>
+	<% if @sponsors_enabled -%>
+	<li <%= "class='current'" if @nav=="sponsors"%>>
+      <a href="<%=sponsors_participant_path(@participant)%>"><span>Local Sponsors</span></a>
+  	</li>
+	<% end -%>
+	<% if @is_head_coach || @is_assistant_coach -%>	
+	<li <%= "class='current'" if @nav == "coaching"%>>
+		<a href="<%= team_path(@participant.team) %>"><span>Coaches Diary</span></a>
+	</li>
+	<li <%= "class='current'" if @nav == "division" %>>
+		<a href="<%= view_division_path(@participant.team.division) %>"><span>Division Reports</span></a>
+	</li>
+	<% end -%>
+	<% if @enable_tabs -%>
+		<% @enable_tabs.each do |enable_tab| -%>
+			<li <%= "class='current'" if @nav == "admin" %>>
+				<a href="<%= enable_tab[:url]%>"><span><%= enable_tab[:title] %></span></a>
+			</li>
+		<% end -%>
+	<% end -%>
+</ul><!-- /Nav -->

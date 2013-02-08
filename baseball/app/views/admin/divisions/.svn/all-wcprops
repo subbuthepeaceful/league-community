@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/strongcirclescore/!svn/ver/528/branches/circlesbase/app/views/admin/divisions
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/strongcirclescore/!svn/ver/528/branches/circlesbase/app/views/admin/divisions/index.html.erb
+END
+define_dates.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/strongcirclescore/!svn/ver/463/branches/circlesbase/app/views/admin/divisions/define_dates.html.erb
+END
+_add_division.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/strongcirclescore/!svn/ver/169/branches/circlesbase/app/views/admin/divisions/_add_division.html.erb
+END
+_division_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/strongcirclescore/!svn/ver/161/branches/circlesbase/app/views/admin/divisions/_division_header.html.erb
+END
+_add_division_event.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/strongcirclescore/!svn/ver/418/branches/circlesbase/app/views/admin/divisions/_add_division_event.html.erb
+END
+_game_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/strongcirclescore/!svn/ver/507/branches/circlesbase/app/views/admin/divisions/_game_details.html.erb
+END
+_create_division_schedule.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/strongcirclescore/!svn/ver/463/branches/circlesbase/app/views/admin/divisions/_create_division_schedule.html.erb
+END

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/vendor/plugins/subdomain-fu
+END
+install.sh
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/vendor/plugins/subdomain-fu/install.sh
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/vendor/plugins/subdomain-fu/Rakefile
+END
+README.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/vendor/plugins/subdomain-fu/README.rdoc
+END
+VERSION.yml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/vendor/plugins/subdomain-fu/VERSION.yml
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/vendor/plugins/subdomain-fu/init.rb
+END
+CHANGELOG
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/vendor/plugins/subdomain-fu/CHANGELOG
+END
+MIT-LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/vendor/plugins/subdomain-fu/MIT-LICENSE
+END
+subdomain-fu.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/vendor/plugins/subdomain-fu/subdomain-fu.gemspec
+END

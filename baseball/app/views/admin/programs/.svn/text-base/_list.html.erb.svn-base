@@ -1,0 +1,29 @@
+<div class="section-table">
+	<table id="programs_table" class="tablesorter" width="100%">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Status</th>
+				<th>Created On</th>
+				<th>Created By</th>
+				<th class="action-header">Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @programs.each_with_index do |program, i| -%>
+			
+			<% if i % 2 == 0 -%>
+				<tr class="even">
+			<% else -%>
+				<tr class="odd">
+			<% end -%>
+					<td><%= link_to program.name, admin_program_sessions_path(program) %></td>
+					<td><%= program.status %></td>
+					<td><%= program.created_on.to_s(:circles_short_date) %></td>
+					<td><%= program.created_by %></td>
+					<td><a href="#">Preview</a> | <a href="#">Delete</a></td>
+				</tr>
+			<% end -%>
+		</tbody>
+	</table>
+</div>

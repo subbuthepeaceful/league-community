@@ -1,0 +1,66 @@
+<%form_tag update_availability_participant_path(@participant),  :method => :post do%>
+
+<div class="topmainbox">
+	
+	<%= render :partial => "shared/team_header" %>
+
+
+	<div id="columns">   
+		<div class="center">
+
+			<table class="availability-table">
+					<tr>
+						<td></td>
+						<td class="name"</td>
+						<% @team.games.each {|game|%>
+						<td class="availability">
+						<%=game.scheduled_at.strftime("%b %e")%>
+						<br />
+						<%=game.scheduled_at.strftime("%l:%M%p")%>
+						</td>
+						<% }%>
+					</tr>
+					<tr>
+						<td colspan="<%=@team.games.size+1%>"></td>
+					</tr>
+				<%@team.players.each_with_index{|player, i|  %>
+					<% if i % 2 == 0 -%>
+						<tr class="even">
+					<% else -%>
+						<tr class="odd">
+					<% end -%>
+						<td class="name" colspan="2"><%=player.name%></td>
+			
+						<% @team.games.each {|game|%>
+							<td class="availability">
+								<% if @participant==player%>
+									<input name="games[<%=game.id%>]"type="checkbox" <%= "checked" if game.get_availability(player)%>>
+								<% else %>
+									<% if game.get_availability(player)%>
+										<%=image_tag "/images/user/green_tick.gif",:class=>"icon"%>
+									<% else %> 
+										<%=image_tag "/images/user/red_cross.gif",:class=>"icon"%>
+									<% end %>
+								<% end %>
+							</td>
+						<% } %>
+					</tr>	
+	
+				<% } %>
+				<tr>
+					<td colspan="<%=@team.games.size+2%>"><hr /></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+					</td>
+					<td colspan="3">
+						<%= submit_tag "Update Availability", :class => "ui-state-default ui-corner-all user-form-submit", :id => "form-submit-availability" %>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+		<% end %>
+	</div>
+</div>
+<%= render :partial => "shared/new_message"%>

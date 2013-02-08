@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/script
+END
+console
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/strongcirclescore/!svn/ver/106/branches/circlesbase/script/console
+END
+cucumber
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/script/cucumber
+END
+server
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/strongcirclescore/!svn/ver/106/branches/circlesbase/script/server
+END
+dbconsole
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/strongcirclescore/!svn/ver/106/branches/circlesbase/script/dbconsole
+END
+destroy
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/strongcirclescore/!svn/ver/106/branches/circlesbase/script/destroy
+END
+runner
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/strongcirclescore/!svn/ver/106/branches/circlesbase/script/runner
+END
+about
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/strongcirclescore/!svn/ver/106/branches/circlesbase/script/about
+END
+generate
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/strongcirclescore/!svn/ver/106/branches/circlesbase/script/generate
+END
+plugin
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/strongcirclescore/!svn/ver/106/branches/circlesbase/script/plugin
+END

@@ -1,0 +1,227 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/strongcirclescore/!svn/ver/567/branches/circlesbase/app/models
+END
+hub_asset.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/strongcirclescore/!svn/ver/448/branches/circlesbase/app/models/hub_asset.rb
+END
+participant.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/strongcirclescore/!svn/ver/565/branches/circlesbase/app/models/participant.rb
+END
+hub.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/strongcirclescore/!svn/ver/460/branches/circlesbase/app/models/hub.rb
+END
+state.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/strongcirclescore/!svn/ver/448/branches/circlesbase/app/models/state.rb
+END
+division.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/strongcirclescore/!svn/ver/567/branches/circlesbase/app/models/division.rb
+END
+team_record.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/strongcirclescore/!svn/ver/551/branches/circlesbase/app/models/team_record.rb
+END
+address.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/strongcirclescore/!svn/ver/146/branches/circlesbase/app/models/address.rb
+END
+circle_option.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/strongcirclescore/!svn/ver/460/branches/circlesbase/app/models/circle_option.rb
+END
+game_statistic.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/strongcirclescore/!svn/ver/469/branches/circlesbase/app/models/game_statistic.rb
+END
+team_membership.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/strongcirclescore/!svn/ver/148/branches/circlesbase/app/models/team_membership.rb
+END
+matchup.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/strongcirclescore/!svn/ver/165/branches/circlesbase/app/models/matchup.rb
+END
+photo_provider.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/strongcirclescore/!svn/ver/279/branches/circlesbase/app/models/photo_provider.rb
+END
+sponsored_option.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/strongcirclescore/!svn/ver/456/branches/circlesbase/app/models/sponsored_option.rb
+END
+user_mailer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/strongcirclescore/!svn/ver/555/branches/circlesbase/app/models/user_mailer.rb
+END
+phone.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/strongcirclescore/!svn/ver/146/branches/circlesbase/app/models/phone.rb
+END
+admin_role.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/strongcirclescore/!svn/ver/509/branches/circlesbase/app/models/admin_role.rb
+END
+game.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/strongcirclescore/!svn/ver/565/branches/circlesbase/app/models/game.rb
+END
+availability.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/strongcirclescore/!svn/ver/286/branches/circlesbase/app/models/availability.rb
+END
+registration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/strongcirclescore/!svn/ver/194/branches/circlesbase/app/models/registration.rb
+END
+photo_feed.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/strongcirclescore/!svn/ver/279/branches/circlesbase/app/models/photo_feed.rb
+END
+user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/strongcirclescore/!svn/ver/373/branches/circlesbase/app/models/user.rb
+END
+sponsorship_option.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/strongcirclescore/!svn/ver/448/branches/circlesbase/app/models/sponsorship_option.rb
+END
+event.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/strongcirclescore/!svn/ver/418/branches/circlesbase/app/models/event.rb
+END
+star_player_vote.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/strongcirclescore/!svn/ver/517/branches/circlesbase/app/models/star_player_vote.rb
+END
+session.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/strongcirclescore/!svn/ver/257/branches/circlesbase/app/models/session.rb
+END
+team.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/strongcirclescore/!svn/ver/565/branches/circlesbase/app/models/team.rb
+END
+sponsorship.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/strongcirclescore/!svn/ver/260/branches/circlesbase/app/models/sponsorship.rb
+END
+circles_message.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/strongcirclescore/!svn/ver/273/branches/circlesbase/app/models/circles_message.rb
+END
+photo.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/strongcirclescore/!svn/ver/396/branches/circlesbase/app/models/photo.rb
+END
+mailbox.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/strongcirclescore/!svn/ver/439/branches/circlesbase/app/models/mailbox.rb
+END
+contact.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/strongcirclescore/!svn/ver/538/branches/circlesbase/app/models/contact.rb
+END
+mailbox_message.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/strongcirclescore/!svn/ver/264/branches/circlesbase/app/models/mailbox_message.rb
+END
+sponsor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/strongcirclescore/!svn/ver/459/branches/circlesbase/app/models/sponsor.rb
+END
+game_report.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/strongcirclescore/!svn/ver/551/branches/circlesbase/app/models/game_report.rb
+END
+program.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/strongcirclescore/!svn/ver/169/branches/circlesbase/app/models/program.rb
+END
+location.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/strongcirclescore/!svn/ver/257/branches/circlesbase/app/models/location.rb
+END
+volunteer_signup.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/strongcirclescore/!svn/ver/148/branches/circlesbase/app/models/volunteer_signup.rb
+END

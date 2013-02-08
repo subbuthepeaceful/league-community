@@ -1,0 +1,50 @@
+<div id="columns">
+
+	<div class="leftcolumn">
+		<div class="mypictures ltcolbox">
+			<div class="ltcolbox-top">
+				<div class="title">
+					<h2>My Pictures </h2>
+          <%= link_to '(share)', new_participant_picture_path(@participant)%>
+          <a class="openclose" href="#">Open/Close</a>
+				</div><!-- /Title -->
+			</div>
+			<div class="ltcolbox-bod">
+				<div class="user-photos">
+          <% @my_photos.each do |photo| -%>
+          <div class="user-photo">
+            <div class="thumbnail"><%= picture_tag(photo) %></div>
+						<div class="caption">(<%= link_to 'X', participant_picture_path(@participant, photo), :method=>:delete, :confirm=>'Are you sure you want to remove this picture?' %>) <%= photo.title %></div>
+          </div>
+          <% end -%>
+        </div><!-- /Photos -->
+			</div><!-- /My Pictures -->
+			<div class="ltcolbox-bot"></div><!-- /Bottom -->
+		</div><!-- /Body -->
+
+    <div class="mypictures ltcolbox">
+      <div class="ltcolbox-top">
+        <div class="title">
+          <h2>Team Pictures </h2>
+          <a class="openclose" href="#">Open/Close</a>
+        </div><!-- /Title -->
+      </div>
+      <div class="ltcolbox-bod">
+        <div class="user-photos">
+          <% @team_photos.each do |photo| -%>
+          <div class="user-photo">
+            <div class="thumbnail"><%= picture_tag(photo) %></div>
+            <div class="caption"><%= photo.title %></div>
+          </div>
+          <% end -%>
+        </div><!-- /Photos -->
+      </div><!-- /Team Pictures -->
+      <div class="ltcolbox-bot"></div><!-- /Bottom -->
+    </div><!-- /Body -->
+  </div>
+  <div class="rightcolumn">
+    	<%= render :partial => "shared/circles_promo"%>
+  </div><!-- /Right Column -->
+</div><!-- /Columns -->
+
+<%=  render :partial => 'shared/picture_popup' %>

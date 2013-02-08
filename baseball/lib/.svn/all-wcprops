@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/strongcirclescore/!svn/ver/551/branches/circlesbase/lib
+END
+authenticated_test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/lib/authenticated_test_helper.rb
+END
+circles_scheduler.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/strongcirclescore/!svn/ver/536/branches/circlesbase/lib/circles_scheduler.rb
+END
+flickr_fu_extensions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/strongcirclescore/!svn/ver/310/branches/circlesbase/lib/flickr_fu_extensions.rb
+END
+circles_importer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/strongcirclescore/!svn/ver/469/branches/circlesbase/lib/circles_importer.rb
+END
+authenticated_system.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/lib/authenticated_system.rb
+END

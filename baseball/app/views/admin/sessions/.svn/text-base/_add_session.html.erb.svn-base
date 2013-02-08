@@ -1,0 +1,36 @@
+<div id="add_session" class="circles-dialog">
+	<div class="circles-form">
+		<% form_for :session, :url => admin_program_sessions_path(@program), :html => { :name => "add_session_form"} do |f| %>
+			<div class="form-line">
+				<%= label_tag 'name' %>
+				<%= f.text_field :name, :size => 20, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'description' %>
+				<%= f.text_area :description, :cols => "20", :rows => "5", :class => "txt-area" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'status' %>
+				<%= f.select :status, ["Active", "Inactive"] %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'start date' %>
+				<%= f.text_field :start_date, :size => 20, :class => "txt", :id => "session_start_date" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'end date' %>
+				<%= f.text_field :end_date, :size => 20, :class => "txt", :id => "session_end_date" %>
+			</div>
+			<div class="clear-both">
+			</div>
+		<% end -%>
+	</div>
+</div>

@@ -1,0 +1,59 @@
+<script type="text/javascript">
+	$participantId = <%= @default_participant.id %>;
+</script>
+<div id="columns">
+
+	<div class="leftcolumn">
+		<div class="mymessages ltcolbox">
+			<div class="ltcolbox-top">
+				<div class="title">
+					<h2>My Messages</h2>
+					<a class="sendmsg" href="#">(Write a New Team Message)</a>
+					<img src="/images/user/ico-send.png" id="sendmsg-box-header"/>
+					<a class="openclose" href="#">Open/Close</a>
+				</div><!-- /Title -->
+			</div>
+			<div class="ltcolbox-bod">
+					<ul class="messages">
+						<% @messages.each_with_index do |message, i| -%>
+							<% if message.important -%>
+								<li class="highlight">
+							<% else -%>
+								<li>
+							<% end -%>
+									<span class="date"><%= message.sent.to_s(:message_sent) %></span>
+									<span class="sender"><%= message.contact.name %> : </span>
+									<% if message.important -%>
+										<img src="/images/user/ico-notice.png" alt="notice" /> <a href="#" class="msgsubject important" id="subject_<%=message.id%>"><%= message.subject %></a>
+									<% else -%>
+										<a href="#" class="msgsubject" id="subject_<%=message.id%>"><%= message.subject %></a>
+									<% end -%>
+									<% if message.unread(@default_participant.primary_contact) -%>
+										<script type="text/javascript">
+											var $msgId = <%= message.id %>;
+											var $msgItem = "#subject_" + $msgId;
+											$($msgItem).addClass("unread");
+										</script>
+									<% end -%>
+									<a class="readmsg" href="#">read</a>
+									<div class="message-body" id="body_<%=message.id%>">
+										<p><%= message.body %></p>
+										<br />
+										<a class="replymsg" href="#" id="reply_<%= message.id%>">Reply</a>
+									</div>
+							</li>
+						<% end -%>
+					</ul>
+				</div><!-- /My Messages -->
+			<div class="ltcolbox-bot"></div>
+		</div>
+	</div>
+	<div class="rightcolumn">
+		<%= render :partial => "shared/circles_promo"%>
+	</div><!-- /Right Column -->
+</div><!-- /Columns -->
+
+<%= render :partial => "shared/new_message"%>
+
+<%= render :partial => "shared/reply_message"%>
+

@@ -1,0 +1,30 @@
+#wrapper {
+	background: url('/images/hubs/green-circles-gradient.png') repeat-x top left;
+}
+
+#midboxes ul.sports a.thumb{ display:block; width:110px; height:75px; padding:5px 0 0 5px; margin-bottom:5px; background:url(/images/circles/bgr-midthumb-small.png) no-repeat; }
+
+.user-form-submit {
+	background: #046A02;
+	color: #FFF;
+}
+
+.user-form-submit-hover {
+	background: #3EA41F;
+	color: #000;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.user-cancel {
+	background: #EE0000;
+}
+
+#game_report_form input.select {
+	font-size: 12px;
+}
+
+#game_report_form .fieldWithErrors input {
+	border: solid 1px red;
+}
+

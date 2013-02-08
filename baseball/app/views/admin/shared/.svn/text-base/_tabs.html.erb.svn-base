@@ -1,0 +1,45 @@
+<div id="admin_tabs" class="circles-tabs">
+	<ul>
+		<li <%= @section == "Home" ? "class=\"selected\"" : "" %>>
+			<%= link_to 'Home', admin_root_path %>
+		</li>
+		<li>
+			|
+		</li>
+		<li>
+			<a href="#">Messages</a>
+		</li>
+		<li>
+			|
+		</li>
+		<li <%= @section == "Programs" ? "class=\"selected\"" : "" %>>
+			<%= link_to 'Programs', admin_programs_path %>
+		</li>
+		<li>
+			|
+		</li>
+		<li <%= @section == "Users" ? "class=\"selected\"" : "" %>>
+			<%= link_to 'Participants', admin_participants_path %>
+		</li>
+		<li>
+			|
+		</li>
+		<li <%= @section == "Locations" ? "class=\"selected\"" : "" %>>
+			<%= link_to 'Locations', admin_locations_path %>
+		</li>
+		<li>
+			|
+		</li>
+		<li>
+			<a href="#">Resources</a>
+		</li>
+		<li>
+			|
+		</li>
+		<li>
+			<%= link_to 'Advertising', admin_sponsors_path %>
+		</li>
+	</ul>
+	<div class="clear-both">
+	</div>
+</div>

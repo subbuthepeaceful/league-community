@@ -1,0 +1,42 @@
+<div id="add_location" class="circles-dialog">
+	<div class="circles-form">
+		<% form_for :location, :url => admin_locations_path, :html => { :name => "add_location_form", :id => "add_location_form"} do |f| %>
+			<div class="form-line">
+				<%= label_tag 'name' %>
+				<%= f.text_field :name, :size => 25, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'street address' %>
+				<%= f.text_field :street_address, :size => 20, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'city' %>
+				<%= f.text_field :city, :size => 20, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'state' %>
+				<%= f.text_field :state, :size => 10, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'zip code' %>
+				<%= f.text_field :zip_code, :size => 10, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'comments' %>
+				<%= f.text_area :comments, :cols => "20", :rows => "5", :class => "txt-area" %>
+			</div>
+			<div class="clear-both">
+			</div>
+		<% end -%>
+	</div>
+</div>

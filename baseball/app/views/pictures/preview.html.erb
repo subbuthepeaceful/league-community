@@ -1,0 +1,30 @@
+<div class="topmainbox">
+
+     <% if @feeds && !@feeds.empty? %>
+		<div id="share-picture-form" class="circles-form">
+          <h2><a href="<%= new_participant_picture_path(@participant)%>">Back to Picture Sources</a>&nbsp;&gt;&nbsp;Share Pictures</h2>
+		  
+          <% form_for :provider, :url => share_participant_pictures_path, :html => { :name => "pictures_share_form"} do |f| -%>
+			<div class="preview-photos">
+				<% if @feeds.size >1 -%>
+				  <div class="select_all"><input type="checkbox" name="select_all_pictures"/> Select All Pictures </div>
+				<% end -%>
+				<% @feeds.each do |feed| -%>
+			   		<div class="preview-photo">
+			      		<div class="thumbnail"><%= picture_tag(feed) %></div>
+			      		<div class="preview-check"><%=  check_box_tag 'pictures[]', feed.photo_id, @shared_photos.include?(feed.photo_id) %></div>
+			  		</div>
+				<% end -%>
+				<div class="clear-both">
+				</div>
+				<%= f.hidden_field :name  %>
+				<%= f.hidden_field :user_id  %>
+				<%= f.hidden_field :album_id  %>
+
+				<%= submit_tag "Share Selected Pictures", :class => "ui-state-default ui-corner-all form-submit user-form-submit" %>
+			</div>
+		  <% end -%>
+	<% end -%>
+</div>
+
+<%=  render :partial => 'shared/picture_popup' %>

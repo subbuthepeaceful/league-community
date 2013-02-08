@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/strongcirclescore/!svn/ver/479/branches/circlesbase/config/initializers
+END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/strongcirclescore/!svn/ver/106/branches/circlesbase/config/initializers/inflections.rb
+END
+mime_fix.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/strongcirclescore/!svn/ver/180/branches/circlesbase/config/initializers/mime_fix.rb
+END
+session_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/strongcirclescore/!svn/ver/106/branches/circlesbase/config/initializers/session_store.rb
+END
+site_keys.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/config/initializers/site_keys.rb
+END
+flickr_fu_extension.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/strongcirclescore/!svn/ver/310/branches/circlesbase/config/initializers/flickr_fu_extension.rb
+END
+mail.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/strongcirclescore/!svn/ver/409/branches/circlesbase/config/initializers/mail.rb
+END
+backtrace_silencers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/strongcirclescore/!svn/ver/106/branches/circlesbase/config/initializers/backtrace_silencers.rb
+END
+hub_specifics.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/strongcirclescore/!svn/ver/469/branches/circlesbase/config/initializers/hub_specifics.rb
+END
+time_formats.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/strongcirclescore/!svn/ver/479/branches/circlesbase/config/initializers/time_formats.rb
+END
+new_rails_defaults.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/strongcirclescore/!svn/ver/164/branches/circlesbase/config/initializers/new_rails_defaults.rb
+END
+mime_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/strongcirclescore/!svn/ver/106/branches/circlesbase/config/initializers/mime_types.rb
+END
+constants.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/strongcirclescore/!svn/ver/279/branches/circlesbase/config/initializers/constants.rb
+END

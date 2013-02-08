@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/strongcirclescore/!svn/ver/561/branches/circlesbase/db
+END
+test.sqlite3
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/db/test.sqlite3
+END
+create_databases.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/db/create_databases.sql
+END

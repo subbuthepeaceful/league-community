@@ -1,0 +1,559 @@
+/* Css Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{ margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; }
+ol,ul{ list-style:none; }
+blockquote,q{ quotes:none; }
+blockquote:before,blockquote:after,q:before,q:after{ content:''; content:none; }
+:focus{ outline:0; }
+ins{ text-decoration:none; }
+del{ text-decoration:line-through; }
+table{ border-collapse:collapse; border-spacing:0; }
+
+/* General Styles */
+.skiplink{ display:none; }
+label{ cursor:pointer; }
+a,a:visited{ color:#0068b3; text-decoration:none; }
+a:focus,a:hover{ text-decoration:underline; cursor: pointer; }
+body{ background:url(/images/circles/bgr-body.png); color:#333; font:10px/1 "Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, sans-serif; }
+
+/* Wrapper */
+#wrapper{ margin:0 auto; background:url(/images/circles/bgr-body-top.png) repeat-x top left; }
+
+/* Header */
+#header{ width:980px; height:106px; color:#fff; margin:0 auto; overflow:hidden; }
+	#header h1{ font:42px Arial Black, Helvetica, sans-serif; padding-top:10px; text-transform:uppercase; letter-spacing:-2px; }
+	#header h2{ font:bold 12px Arial, Helvetica, sans-serif; text-transform:uppercase; }
+	
+/* Logo */
+#logo{ float:left; display:block; margin-top: 20px; margin-right: 40px; }
+
+/* Title Top */
+#titletop{ clear:both; width:980px; margin:0 auto 20px; overflow:hidden; }
+	#titletop .welcome{ float:left; width:580px; padding-bottom:1px; overflow:hidden; }
+	#titletop .welcome img.logo{ padding-top:25px; }
+	#titletop h2{ float:left; font-size:30px; margin:0 5px 12px 0; padding-top:15px; }
+	#titletop h3{ clear:both; font:bold 14px Arial, Helvetica, sans-serif; }
+	#titletop h3 a{ font-size:14px; }
+	#titletop ul{ float:right; font-size:11px; overflow:hidden; font-weight:bold; }
+	#titletop li{ float:left; margin-left:5px; padding-top: 15px; padding-bottom:1px; }
+	#titletop li.select { font-size: 11px; padding-top: 12px;}
+
+/* Container */
+#container{ width:999px; margin:0 auto; }
+	#container-top{ width:999px; height:39px; margin:0 auto; background:url(/images/circles/bgr-container-top.png) no-repeat bottom left; }
+	#container-bot{ width:999px; height:10px; margin:0 auto; background:url(/images/circles/bgr-container-bot.png) no-repeat; }
+	#container-bod{ width:994px; margin:0 auto; padding:0 9px; background:url(/images/circles/bgr-container.png) repeat-y 1px 0; }
+
+/* Nav */
+#nav{ width:980px; font-size:14px; padding-left:5px; }
+	#nav li{ float:left; }
+	#nav a{ float:left; margin:0; padding:0 0 0 10px; text-decoration:none; background:url(/images/circles/bgr-tab-left.png) no-repeat left top; }
+	#nav a span{ display:block; padding:15px 20px 10px 10px; color:#fff; background:url(/images/circles/bgr-tab-right.png) no-repeat right top; font-weight:bold; float:left; cursor:pointer; }
+	#nav .current a,
+	#nav a:hover{ background-position:left bottom; }
+	#nav .current a span,
+	#nav a:hover span{ color:#333; background-position:right bottom; }
+	
+/* Content */
+#content{ width:940px; margin:0 auto; padding:20px 0; }
+
+/* Mast */
+#main #mast{ clear:both; width:940px; height:184px; font-size:12px; color:#fff; margin-bottom:30px; line-height:18px; background:url(/images/circles/bgr-mast.jpg) no-repeat; overflow:hidden; }
+	#main #mast .sshot{ float:left; width:112px; padding:15px 25px 0; }
+	#main #mast .text{ float:left; width:460px; padding:25px 20px 0; }
+	#main #mast .text h2{ font-size:30px; margin-bottom:20px; }
+	#main #mast .login{ float:right; width:195px; padding:30px 30px 0; }
+	#main #mast .login h3{ font-size:18px; margin-bottom:5px; }
+	#main #mast .login p{ margin-bottom:10px; }
+	#main #mast .login a, #main #mast .login a:visited{ color:#fff; text-decoration:underline; }
+	#main #mast .login a:hover{ text-decoration:none; }
+	#main #mast .login a.btn{ display:block; width:184px; height:48px; text-indent:-9999px; background:url(/images/circles/button-login.png) no-repeat; }
+
+/* Middle Boxes */
+#midboxes{ clear:both; width:940px; margin-bottom:20px; }
+#midboxes-top{ width:940px; height:43px; background:url(/images/circles/bgr-midboxes-top.png) no-repeat; }
+#midboxes-bot{ width:940px; height:5px; background:url(/images/circles/bgr-midboxes-bot.png) no-repeat; }
+#midboxes-bod{ width:938px; padding-bottom:10px; border-left:1px solid #dfdfcd; border-right:1px solid #dfdfcd; background:#f7f7ed; }
+	#midboxes ul.sports{ clear:both; width:938px; padding:20px 0; text-transform:uppercase; overflow:hidden; }
+	#midboxes ul.sports li{ float:left; margin-left:20px; margin-bottom: 20px;}
+	#midboxes ul.sports a.thumb{ display:block; width:152px; height:152px; padding:12px 0 0 12px; margin-bottom:5px; background:url(/images/circles/bgr-midthumb.png) no-repeat; }
+	#midboxes ul.tabs{ width:980px; font-size:18px; font-weight:bold; padding-left:13px; }
+	#midboxes ul.tabs li{ float:left; background:url(/images/circles/bgr-midtab-sep.png) no-repeat right center; }
+	#midboxes ul.tabs a,
+	#midboxes ul.tabs a:visited{ float:left; margin:0; padding:0 0 0 5px; text-decoration:none; }
+	#midboxes ul.tabs a span{ display:block; padding:13px 27px 12px 14px; }
+	#midboxes ul.tabs .current a{ background:url(/images/circles/bgr-midtab-left.png) no-repeat left top; }
+	#midboxes ul.tabs .current a span{ color:#333; background:url(/images/circles/bgr-midtab-right.png) no-repeat right top; }
+	#midboxes ul.tabs a:hover{ background:url(/images/circles/bgr-midtab-left.png) no-repeat left top; }
+	#midboxes ul.tabs a:hover span{ color:#333; background:url(/images/circles/bgr-midtab-right.png) no-repeat right top; }
+
+/* Sport */
+#sport{ clear:both; width:940px; overflow:hidden; }
+	#sport .maincol{ float:left; width:670px; }
+	#sport .sidecol{ float:right; width:250px; }
+	#sport .sidecol .ad{ display:block; margin-bottom:20px; }
+
+/* Sidebox */
+.sidebox{ clear:both; width:250px; }
+	.sidebox .box{ width:250px; }
+	.sidebox .box-top{ width:250px; height:41px; background:url(/images/circles/bgr-sidebox-top.png) no-repeat; }
+	.sidebox .box-bot{ clear:both; width:250px; height:5px; background:url(/images/circles/bgr-sidebox-bot.png) no-repeat; }
+	.sidebox .box-body{ width:248px; border-left:1px solid #dfdfcd; border-right:1px solid #dfdfcd; background:#f7f7ed; }
+
+/* Become Sponsor */
+#becomesponsor h3{ font-size:18px; padding:12px 0 12px 55px; margin-left:1px; background:url(/images/circles/ico-featsponsors.png) no-repeat left center; }
+	#becomesponsor .inner{ padding:19px; }
+	#becomesponsor p{ font-size:12px; margin-bottom:20px; line-height:15px; }
+	#becomesponsor a.learnmore{ display:block; width:123px; height:37px; margin:0 auto; text-indent:-9999px; background:url(/images/circles/button-learnmore.png) no-repeat; }
+
+#announcements h3{ font-size:18px; padding:12px 0px 12px 55px; margin-left:5px; background:url(/images/user/ico-mymsgs.png) no-repeat left center; }
+	#announcements .inner{ padding:19px; }
+	#announcements p{ font-size:12px; margin-bottom:20px; line-height:15px; }
+
+	
+/* Login Box */
+#loginbox{ width:250px; height:173px; color:#fff; margin-bottom:20px; background:url(/images/circles/bgr-sidelogin.png) no-repeat; }
+	#loginbox .inner{ width:192px; padding:20px 28px; }
+	#loginbox h3{ font-size:18px; margin-bottom:5px; }
+	#loginbox p{ font-size:12px; margin-bottom:15px; line-height:18px; }
+	#loginbox a,
+	#loginbox a:visited{ color:#fff; text-decoration:underline; }
+	#loginbox a:hover{ text-decoration:none; }
+	#loginbox a.btn{ display:block; width:184px; height:48px; text-indent:-9999px; background:url(/images/circles/button-login.png) no-repeat; }
+	
+/* Mast Basketball */
+#mastbasketball{ width:630px; height:153px; margin-bottom:20px; padding:20px 20px 0; background:url(/images/circles/bgr-mastbasketball.png) no-repeat; overflow:hidden; }
+	#mastbasketball h2{ float:left; font-size:28px; padding-left:50px; margin-right:25px;  }
+	#mastbasketball img { margin-right: 10px;}
+	#mastbasketball h3{ float:right; font-size:14px; color:#333; margin:15px 0 0; }
+	#mastbasketball .list{ clear:both; width:100%; font-size:14px; padding:25px 0 0; overflow:hidden; }
+	#mastbasketball .list ul{ float:left; margin-left:50px; }
+	#mastbasketball .list .last{ margin-left:14px; }
+	#mastbasketball .list li{ margin-bottom:5px; font-weight:bold; }
+	#mastbasketball .list li img{ margin-right:4px; vertical-align:middle; }
+
+/* Top Wide Box */
+#topwidebox{ clear:both; width:670px; overflow:hidden; margin-bottom: 20px;}
+	#topwidebox .box{ width:670px; }
+	#topwidebox .box-top{ width:670px; height:42px; color: #FFF; background: #224e7f; }
+	#topwidebox .box-bot{ clear:both; width:670px; height:5px; background:url(/images/circles/bgr-widebox-bot.png) no-repeat; }
+	#topwidebox .box-body{ width:668px; border-left:1px solid #dfdfcd; border-right:1px solid #dfdfcd; background:#f7f7ed; padding-bottom: 20px;}
+
+	#topwidebox .box-top img { float: left;}
+	#topwidebox .box-top h2 { font-size:18px; padding:12px 0 12px 55px; margin-left:1px; }
+	#topwidebox h3 { font-family: serif; color: #111; font-style: italic; font-size: 16px; margin-left: 45px; margin-top: 10px;}
+	#topwidebox .list{ clear:both; width:100%; font-size:14px; padding:25px 0 0; overflow:hidden; }
+	#topwidebox .list ul{ float:left; margin-left:50px; }
+	#topwidebox .list .last{ margin-left:14px; }
+	#topwidebox .list li{ margin-bottom:5px; font-weight:bold; }
+	#topwidebox .list li img{ margin-right:4px; vertical-align:middle; }
+
+/* Bottom Wide Box */
+#botwidebox{ clear:both; width:670px; overflow:hidden; }
+	#botwidebox .box{ width:670px; }
+	#botwidebox .box-top{ width:670px; height:42px; background:url(/images/circles/bgr-widebox-top.png) no-repeat; }
+	#botwidebox .box-bot{ clear:both; width:670px; height:5px; background:url(/images/circles/bgr-widebox-bot.png) no-repeat; }
+	#botwidebox .box-body{ width:668px; border-left:1px solid #dfdfcd; border-right:1px solid #dfdfcd; background:#f7f7ed; }
+
+/* Photos */
+#photos h3{ font-size:18px; padding:12px 0 12px 55px; margin-left:1px; background:url(/images/circles/ico-photos.png) no-repeat left center; }
+	#photos ul{ width:651px; padding:25px 0; margin:0 auto; overflow:hidden; }
+	#photos li{ float:left; width:144px; padding-bottom:1px; margin-left:9px; color:#848484; }
+	#photos li span{ color:#f08800; }
+	#photos li p { margin-left: 10px;}
+	#photos li.first{ margin-left:0; }
+	#photos li.scroll{ width:15px; }
+	#photos li a.thumb{ display:block; width:132px; margin-bottom:5px; padding:12px 0 0 12px; background:url(/images/circles/bgr-photos.png) no-repeat; }
+	#photos li a.prev{ display:block; width:15px;  margin-top:40px; text-indent:-9999px; background:url(/images/circles/button-prev.png) no-repeat; }
+	#photos li a.next{ display:block; width:15px;  margin-top:40px; text-indent:-9999px; background:url(/images/circles/button-next.png) no-repeat; }
+
+
+/* Top Mainbox */
+.topmainbox{ width:900px; padding:20px 20px 15px; background:url(/images/user/bgr-topmainbox-top.png) repeat-y; overflow:hidden; }
+.topmainbox-bot{ clear:both; width:940px; height:5px; margin-bottom:20px; background:url(/images/user/bgr-topmainbox-bot.png) no-repeat; }
+	.topmainbox .profile{ float:left; width:565px; }
+	.topmainbox .profile h2{ font-size:30px; }
+	.topmainbox .profile .image{ float:left; width:109px; height:123px; margin-right:24px; padding:12px 0 0 12px; background:url(/images/user/bgr-profilepic.png) no-repeat; }
+	.topmainbox .profile a.set-profile-photo { text-align: center; margin-left: 5px; margin-top: 2px;}
+	.topmainbox .profile .info{ font-size:14px; margin-bottom:20px; }
+	.topmainbox .profile .info li{ margin-bottom:8px; }
+	.topmainbox .profile .buttons{ font-size:12px; font-weight:bold; }
+	.topmainbox .profile .buttons li{ float:left; width:176px; height:17px; padding:5px; margin:0 10px 4px 0; background:url(/images/user/bgr-buttons.png) no-repeat; }
+	.topmainbox .profile .buttons li a{ display:block; padding:2px 0 2px 20px; }
+	.topmainbox .profile .buttons li a.signup{ background:url(/images/user/ico-signup.png) no-repeat left; }
+	.topmainbox .profile .buttons li a.edit{ background:url(/images/user/ico-editprofile.png) no-repeat left; }
+	.topmainbox .profile .buttons li a.upload{ background:url(/images/user/ico-uploadphotos.png) no-repeat left; }
+	.topmainbox .profile .buttons li a.preferences{ background:url(/images/user/ico-msgpref.png) no-repeat left; }
+	.topmainbox .profile .buttons li a.sendmsg{ background:url(/images/user/ico-send.png) no-repeat left; }
+	.topmainbox .profile .buttons li a.calendar{ background:url(/images/user/ico-mycalendar-small.png) no-repeat left; }
+	.topmainbox .profile .buttons li a.jersey-number{ background:url(/images/user/ico-editprofile.png) no-repeat left; }
+	.topmainbox .profile .buttons li a.star{ background:url(/images/user/ico-star.gif) no-repeat left; }
+	.topmainbox .sponsor{ float:right; width:299px; height:105px; padding:15px 17px; background:url(/images/user/bgr-sponsor.png) no-repeat; }
+	.topmainbox .sponsor a.allsponsors{ display:block; font-size:12px; text-align:right; margin:4px 0 0; }
+	/* .topmainbox .sponsor img { margin-left: 20px; margin-top: 20px; } */
+	.topmainbox .teamhead { width: 900px; border-bottom: solid 1px #777; margin-bottom: 2px; padding-bottom: 2px;}
+	.topmainbox .teamhead .text { margin-top: 4px;}
+	.topmainbox .teamhead .info { margin-bottom: 2px;}
+	.topmainbox .teamhead h3 { font-size: 16px;}
+
+/* Columns */
+#columns{ clear:both; width:940px; overflow:hidden; }
+
+/* Footer */
+#footer{ clear:both; position:relative; width:980px; font-size:12px; color:#fff; margin:10px auto; padding:0 0 10px; }
+	#footer a{ color:#fff; }
+	#footer a.logo{ position:absolute; top:0; right:0; display:block; width:112px; height:19px; text-indent:-9999px; background:url(/images/circles/logo-footstrongcircles.png) no-repeat; }
+
+/* Left Column */
+.leftcolumn{ float:left; width:670px; }
+.ltcolbox{ width:670px; margin-bottom:20px; }
+.ltcolbox-top{ width:670px; height:42px; background:url(/images/user/bgr-ltcolbox-top.png) no-repeat; overflow:hidden; }
+.ltcolbox-bot{ width:670px; height:6px; background:url(/images/user/bgr-ltcolbox-bot.png) no-repeat; }
+.ltcolbox-bod{ width:670px; padding-bottom:10px; background:url(/images/user/bgr-ltcolbox-bod.png) repeat-y; overflow:hidden; }
+.ltcolbox .title{ width:650px; height:32px; padding:10px 10px 0; overflow:hidden; }
+	.ltcolbox .title h2{ float:left; padding:2px 0 2px 50px; font-size:18px; }
+	.ltcolbox .title a.openclose{ float:right; display:block; width:21px; height:21px; text-indent:-5000px; background:url(/images/user/button-closebox.png) no-repeat; }
+
+.center{ float:left; width:900px; }	
+/* Right Column */
+.rightcolumn{ float:right; width:250px; }
+	.rightcolumn .sponsor{ margin-bottom:20px; }
+	.rightcolumn .rtcolbox-bod{ width:250px; background:url(/images/user/bgr-rtcolbox-bod.png) repeat-y; overflow:hidden; }
+	.rightcolumn .rtcolbox-bot{ clear:both; width:250px; height:6px; background:url(/images/user/bgr-rtcolbox-bot.png) no-repeat; }
+
+/* My Team */
+.myteam .title h2{ background:url(/images/user/ico-myteam.png) no-repeat left; }
+	.myteam .photos{ float:left; width:235px; padding:20px 0 0 20px; }
+	.myteam .photos li{ float:left; font-size:9px; margin-right:16px; text-transform:uppercase; }
+	.myteam .photos li .team{ width:98px; height:88px; padding:12px 0 0 12px; margin-bottom:2px; background:url(/images/user/bgr-teamlogo.png) no-repeat; }
+	.myteam .photos li .coach{ width:78px; height:88px; padding:12px 0 0 12px; margin-bottom:2px; background:url(/images/user/bgr-teamcoach.png) no-repeat; }
+	.myteam .text{ float:left; width:375px; font-size:12px; padding:35px 10px 0; }
+	.myteam .text ul{ width:375px; margin-bottom:15px; overflow:hidden; }
+	.myteam .text li{ float:left; margin-right:5px; padding-bottom:1px; }
+	.myteam .text li a.sendmsg{ display:block; padding-left:18px; background:url(/images/user/ico-send.png) no-repeat left; }
+	.myteam .text p{ margin-bottom:2px; }
+	.myteam .text br{ margin-bottom:2px; }
+
+/* My Messages */
+.mymessages .title h2{ margin-right:8px; background:url(/images/user/ico-mymsgs.png) no-repeat left; }
+	.mymessages .title a{ float:left; font-size:12px; font-weight:bold; vertical-align:middle; line-height:25px; }
+	.mymessages ul{ font-size:12px; padding:12px 10px; }
+	.mymessages li{ padding:6px; border-top:1px solid #dfdfcd; }
+	.mymessages li.first{ border-top:0; }
+	.mymessages li.highlight{ background:#f4ecd7; }
+	.mymessages li span.date{ padding-right:10px; }
+	.mymessages li span.notice{ font-weight:bold; font-style:italic; color:#900; }
+	.mymessages li a { color: #000;}
+	.mymessages li a.important { color:#900; }
+	.mymessages a.readmsg{ margin-left: 10px; padding-right:10px; background:url(/images/user/ico-dwnarrow.png) no-repeat right; color:#3269aa; }
+	.mymessages li a.replymsg{ padding-left:18px; background:url(/images/user/ico-send.png) no-repeat left; color:#3269aa;}
+	.mymessages .message-body { border: 1px solid #dfdfcd; margin: 5px; padding: 2px; background: #FFF; display: none;}
+	.mymessages .message-body p {padding: 5px;}
+	.mymessages li a.unread { font-weight: bold; text-decoration: underline;}
+
+/* My Calendar */
+.mycalendar .title h2{ margin-right:8px; background:url(/images/user/ico-mycalendar.png) no-repeat left; }
+	.mycalendar .title a{ float:left; font-size:12px; font-weight:bold; vertical-align:middle; line-height:25px; }
+	.mycalendar .monthday{ width:650px; font-size:14px; font-weight:bold; padding:0 15px; margin:5px 0; overflow:hidden; }
+	.mycalendar .monthday li{ float:left; line-height:20px; }
+	.mycalendar .monthday li.center{ width:605px; text-align:center; color:#333; }
+	.mycalendar .monthday li a{ font-size:30px; font-weight:normal; }
+	.mycalendar .days{ clear:both; color:#666; padding:0 5px; }
+	.mycalendar .days li{ float:left; width:90px; height:112px; margin-left:2px; padding-left:2px; border-left:1px solid #e8e9dc; }
+	.mycalendar .days li.first{ margin-left:0; padding-left:0; border-left:0; }
+	.mycalendar .days li .day{ padding:2px; margin-bottom:2px; text-align:center; text-transform:uppercase; background:#e8e9dc; }
+	.mycalendar .days li .event{ height:88px; padding:3px 5px; }
+	.mycalendar .days li .highlight{ background:#e0ebf0; }
+	.mycalendar .days li em{ font-weight:bold; color:#900; }
+	.mycalendar .days li p{ margin-bottom:10px; line-height:12px; color:#848484; }
+
+/* My Team */
+.mypictures .title h2{ margin-right:8px; background:url(/images/user/ico-uploadphotos.png) no-repeat left; }
+  .mypictures .title a{ float:left; font-size:12px; font-weight:bold; vertical-align:middle; line-height:25px; }
+ 	.mypictures .user-photos{ padding:20px 0 0 10px;}
+  .mypictures .user-photos .user-photo{ float:left; margin:12px 10px 10px 10px; font-size:9px; }
+	.mypictures .user-photos .user-photo .thumbnail{ width:100px; text-align:center; padding-left:4px; padding-right:4px;}
+  .mypictures .user-photos .user-photo .caption{text-align:center;  margin-top: 4px;}
+
+.myresources .title h2{ margin-right:8px; background:url(/images/user/ico-mymsgs.png) no-repeat left; }
+	.myresources .title a{ float:left; font-size:12px; font-weight:bold; vertical-align:middle; line-height:25px; }
+	.myresources ul{ font-size:12px; padding:12px 10px; }
+	.myresources li{ padding:6px; border-bottom:1px solid #dfdfcd; }
+	.myresources li.last{ border-bottom:0; }
+  .myresources p{ font-size:12px; padding:12px 10px 5px 20px;}
+
+.localsponsors .title h2{ margin-right:8px; background:url(/images/user/ico-myteam.png) no-repeat left; }
+	.localsponsors .title a{ float:left; font-size:12px; font-weight:bold; vertical-align:middle; line-height:25px; }
+	.localsponsors .sponsor{ font-size:12px; padding:12px 10px; }
+	.localsponsors .sponsor .sponsor-logo{ width: 220px; padding:6px; float: left; }
+  .localsponsors .sponsor .sponsor-title{ font-size:16px; margin-left: 20px; padding-top: 20px; float: left;  }
+  .localsponsors p{ font-size:12px; padding:12px 10px 5px 20px;}
+
+/* Generic Form Styles */
+/* Dialog Styles */
+.circles-dialog {
+	display: none;
+}
+
+.circles-dialog label {
+	font-size: 16px;
+}
+
+.circles-dialog .dialog-submit-buttons {
+	margin-top: 20px;
+}
+
+.circles-dialog .dialog-submit-buttons ul {
+	list-style: none;
+}
+
+.circles-dialog .dialog-submit-buttons li {
+	float: left;
+	margin-right: 20px;
+}
+
+.form-box {
+	width:670px; margin-bottom:20px;
+}
+
+.form-box-top {
+	width:670px; height:42px; background:url(/images/user/bgr-ltcolbox-top.png) no-repeat; overflow:hidden;
+}
+
+.form-box-bot {
+	width:670px; height:6px; background:url(/images/user/bgr-ltcolbox-bot.png) no-repeat;
+}
+
+.form-box-bod {
+	width:670px; padding-bottom:10px; background:url(/images/user/bgr-ltcolbox-bod.png) repeat-y; overflow:hidden;
+}
+
+.form-box .title {width:650px; height:32px; padding:10px 10px 0; overflow:hidden;}
+
+.form-box .title h2 {float:left; padding:2px 0 2px 50px; font-size:18px;}
+
+.form-box-pictures .title h2{ margin-right:8px; background:url(/images/user/ico-uploadphotos.png) no-repeat left; }
+
+.form-box p { margin: 20px;}
+
+.clear-both {
+	clear: both;
+}
+
+.form-line {
+	margin-top: 20px;
+	margin-bottom: 5px;
+	padding: 2px 2px 2px 2px;
+	display: block;
+}
+
+.form-line label {
+	float: left;
+	text-align: right;
+	padding-top: 5px;
+	font-size: 20px;
+	margin-right: 40px;
+	width: 150px;
+}
+
+.form-line .inline-label {
+	float: none;
+}
+
+.form-line .txt {
+	font-size: 20px;
+}
+
+.form-line .txt-area {
+	font-size: 20px;
+}
+
+.form-line select {
+	font-size: 20px;
+}
+
+.form-line .file-upload {
+	float: right;
+}
+
+.form-line .check-box {
+	margin-top: 5px;
+}
+
+.form-line .radio-button {
+	margin-top: 5px;
+}
+
+.form-line .disabled {
+	background: none;
+	border: 0.5px dotted #000;
+}
+
+.form-submit {
+	padding-bottom: 5px;
+	float: left;
+	margin-top: 5px;
+	margin-left: 190px;
+}
+
+#change_password_form label {
+	width: 200px;
+}
+
+#change_password_form .form-submit {
+	margin-left: 240px;
+}
+
+#weekly_calendar {
+	padding-top: 2px;
+}
+
+#reply_message_form label {
+	width: 250px;
+}
+
+#content .gamelist {font-size:13px;margin:10px 0 15px 15px;text-align:left;width:100%;}	
+#content .gamelist tr { height: 30px;}
+#content .gamelist tr.even { background: #D4D4D0;}
+#content .gamelist tr.odd { background: #F1F1F1;}
+#content .gamelist tr.head{font-weight:bold; height:34px; }
+#content .gamelist tr td{padding:3px 7px 3px 7px;}
+#content .gamelist tr.head td{padding-top: 7px; }
+#content .gamelist tr.last td{padding-bottom: 15px; }
+
+#content .rosterlist {font-size:13px;margin:10px 0 15px 15px;text-align:left;width:100%;}	
+/* #content .rosterlist tr { height: 20px;} */
+#content .rosterlist tr.even { background: #D4D4D0;}
+#content .rosterlist tr.odd { background: #F1F1F1;}
+#content .rosterlist tr.head{font-weight:bold; height:34px; }
+#content .rosterlist tr td{padding:3px 7px 3px 7px;}
+#content .rosterlist tr {padding-bottom: 20px;}
+#content .rosterlist tr.head td{padding-top: 7px; }
+#content .rosterlist tr.last td{padding-bottom: 15px; }
+#content .rosterlist span { margin-bottom: 20px;}
+#content .rosterlist .jersey-number {font-size: 24px;}
+
+#content .availability-table {font-size:12px;margin:10px 0 15px 15px;text-align:left;width:100%;}	
+#content .availability-table tr { height: 20px;}
+#content .availability-table tr.even { background: #D4D4D0;}
+#content .availability-table tr.odd { background: #F1F1F1;}
+#content .availability-table tr.head{font-weight:bold; height:34px; }
+#content .availability-table tr td{padding:3px 7px 3px 7px;}
+#content .availability-table tr.head td{padding-top: 7px; }
+#content .availability-table tr.last td{padding-bottom: 15px; }
+
+.team-name { color: #EE3A43; }
+a.teamname { font-size: 10px;}
+
+.event_details_table { margin-left: 100px; font-size: 13px;}
+.event_details_table tr td { padding: 3px;}
+
+.addr, .addr:visited { text-decoration: underline; color: #00A;}
+
+#sendmsg-box-header { margin-left: 10px; padding-top: 7px; float: left;}
+
+/* Pictures */
+
+.circles-form h2 { font-size: 16px;}
+
+#picture-provider-form{ float: left; width: 420px;}
+#picture-provider-form .form-line label{margin-right:10px; width:80px;}
+#picture-provider-form .form-submit{margin-left: 150px;}
+
+#picture-upload-form{ float: left; width: 420px;  margin-left: 20px; padding-left:20px;}
+#picture-upload-form .form-line label{margin-right:10px; width:80px;}
+#picture-upload-form .form-submit{margin-left: 150px;}
+
+#album-select-form { border-top: 2px  solid #969590; margin-top: 20px; padding-top: 20px; font-size: 12px;}
+.picture-grid {margin-top: 20px}
+.picture-grid tr { margin-top: 10px;}
+.picture-grid td { padding: 3px;}
+.picture-grid .album-caption { margin: 10px; padding-left: 10px; text-align: center;}
+
+.preview-photos{ padding:10px 0 0 10px; width: 670px}
+.preview-photos .select_all{font-size:12px;  margin-left:10px }
+.preview-photos .preview-photo{ float:left; margin:12px 10px 10px 10px; font-size:9px; }
+.preview-photos .preview-photo .thumbnail{ width:100px; text-align:center; padding-left:4px; padding-right:4px;}
+.preview-photos .preview-photo .preview-check{text-align:center;  margin-top: 4px;}
+.preview-photos .preview-photos-submit{ margin:10px 50px 10px 20px; text-align:center;}
+
+#photo_dialog #photo_dialog_photo{ text-align:center;}
+#photo_dialog #photo_dialog_caption{ text-align:center; margin-top: 5px} 
+
+/* Adjusted messaging styles */
+p.info-message { font-size: 12px;}
+
+div.error-message { background: transparent; border: 1px solid #F00; color: #F00; font-size: 12px; padding: 10px; margin-top: 3px;}
+.error-message ul { list-style: circle; margin-left: 20px;}
+
+div.errorExplanation { background: transparent; border: 1px solid #F00; color: #F00; font-size: 12px; padding: 10px; margin-top: 3px;}
+.errorExplanation ul { list-style: circle; margin-left: 20px;}
+
+
+/* Adjusting Sponsorship Form Widths */
+#sponsor_form { width: 800px;}
+#sponsor_form label { width: 250px;}
+#sponsor_form .form-line { margin-top: 10px;}
+#sponsor_form .form-line label { font-size: 14px;}
+#sponsor_form .form-line .txt { font-size: 14px;}
+#sponsor_form .form-line select { font-size: 14px;}
+#sponsor_form h3 { font-size: 16px;}
+
+#sponsor_form .sponsorship-options { font-size: 14px; margin-left: 30px; margin-top: 10px; width: 750px;}
+#sponsor_form .sponsorship-options td { padding-bottom: 5px; }
+#sponsor_form .sponsorship-options td.sponsorship-amount { text-align: right;}
+
+#sponsor_form #payment_buttons { float: right; }
+#sponsor_form #payment_buttons td { padding: 40px; }
+#sponsor_form #payment_buttons td.proceed-button { margin-bottom: 10px;}
+
+#sponsor_review { font-size: 16px;}
+
+#sponsor_details { margin-left: 200px; padding: 10px; line-height: 1.5em;}
+
+/* Baseball Game Report Table */
+.game-report-table { font-size: 14px;}
+.game-report-table input { font-size: 14px;}
+.game-report-table select { font-size: 18px;}
+.game-report-table tr.divider { border: solid 2px #272;}
+
+.game-report-table td { padding: 10px; border: solid 1px #DDD;}
+.game-report-table td.score { background-color: #4B4;}
+.game-report-table td.report-section { color: blue;}
+
+.game-report-roster-stats { font-size: 12px; margin-top: 10px;}
+.game-report-roster-stats td { padding: 5px;}
+
+span.score-num {
+	font-size: 24px;
+	color: #00E;
+}
+
+span.red {
+	color: #FF0000;
+}
+
+span.player-name {
+	font-size: 14px;
+	font-style: bold;
+}
+
+/* Extra actions for User Schedule */
+#schedule_user_actions {
+	float: right;
+	font-size: 14px;
+	font-style: bold;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	background-color: #EE3A43;
+	padding: 5px;
+}
+
+#schedule_user_actions a {
+	color: #FFF;
+}
+
+.division-select label { font-size: 16px;}
+.division-select select { font-size: 16px;}
+.division-select { margin-bottom: 10px;}
+
+table.medium td { font-size: 14px;}

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/strongcirclescore/!svn/ver/509/branches/circlesbase/config/environments
+END
+test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/strongcirclescore/!svn/ver/509/branches/circlesbase/config/environments/test.rb
+END
+development.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/strongcirclescore/!svn/ver/504/branches/circlesbase/config/environments/development.rb
+END
+production.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/strongcirclescore/!svn/ver/504/branches/circlesbase/config/environments/production.rb
+END

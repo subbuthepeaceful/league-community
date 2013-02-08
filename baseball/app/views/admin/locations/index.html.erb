@@ -1,0 +1,46 @@
+<div id="location_header" class="section-header">
+	<div class="section-header-title">
+		<h1>Locations</h1>
+	</div>
+	<div class="section-header-actions" id="location_header_actions">
+		<ul class="section-header-buttons">
+			<li>
+				<a id="add_location_link" href="#">+ Add Location</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="clear-both">
+</div>
+<div id="location_list" class="section-list">
+	<div class="section-table">
+		<table id="locations_table" class="tablesorter" width="100%">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Address</th>
+					<th>Comments</th>
+					<th class="action-header">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @locations.each_with_index do |location, i| -%>
+					
+				<% if i % 2 == 0 -%>
+					<tr class="even">
+				<% else -%>
+					<tr class="odd">
+				<% end -%>
+				
+						<td><%= location.name %></td>
+						<td><%= location.address %></td>
+						<td><%= location.comments %></td>
+						<td>LOCATION ACTIONS</td>
+					</tr>
+				<% end -%>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<%= render :partial => "add_location" %>

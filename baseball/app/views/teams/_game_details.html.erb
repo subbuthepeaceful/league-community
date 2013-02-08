@@ -1,0 +1,43 @@
+<div id="game_details" class="circles-dialog">
+	<div class="circles-form" id="game_details_form">
+		<h3></h3>
+		<% form_tag new_team_game_path(@team), :name => "new_game_details_form" do -%>
+			<div class="form-line">
+				<%= label_tag 'Game Date' %>
+				<%= text_field_tag :game_date, '', :class => "game-date-text" %> 
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'Game Time' %>
+				<%= text_field_tag :game_time, '', :class => "game-time-text" %> 
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'Us' %>
+				<%= text_field_tag :us, @team.display_name, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'Them' %>
+				<%= text_field_tag :them, '', :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'Home/Away' %>
+				<%= radio_button_tag :home_or_away, 'home' %>Home&nbsp;<%= radio_button_tag :home_or_away, 'away' %>Away&nbsp;
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'Location' %>
+				<%= text_field_tag :location, '', :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+		<% end -%>
+	</div>
+</div>

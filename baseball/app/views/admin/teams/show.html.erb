@@ -1,0 +1,14 @@
+<div id="program_header" class="section-header">
+	<div class="section-header-title">
+		<h1><%= @team.name %></h1>
+		<span class="section-breadcrumb"><%= team_breadcrumb(@program, @session, @division) %></span>
+	</div>
+	<div class="section-header-actions" id="program_header_actions">
+		<% form_tag '/' do %>
+			<%= text_field :query, '' , :class => "small-form-txt" %>
+			<%= submit_tag 'search' , :class => "ui-state-default ui-corner-all" %>
+		<% end -%>
+	</div>
+</div>
+<div class="clear-both">
+</div>

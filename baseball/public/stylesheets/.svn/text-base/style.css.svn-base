@@ -1,0 +1,499 @@
+/* Css Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{ margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; }
+ol,ul{ list-style:none; }
+blockquote,q{ quotes:none; }
+blockquote:before,blockquote:after,q:before,q:after{ content:''; content:none; }
+:focus{ outline:0; }
+ins{ text-decoration:none; }
+del{ text-decoration:line-through; }
+table{ border-collapse:collapse; border-spacing:0; }
+
+/* General Styles */
+.skiplink{ display:none; }
+label{ cursor:pointer; }
+a,
+a:visited{ color:#0027BB; text-decoration:none; }
+a:focus,
+a:hover{ text-decoration:underline; }
+body{ background:#717174; color:#666; font:10px Arial,Helvetica,sans-serif; }
+.wrapper{ margin:0 auto; width:1200px; }
+
+/* Header */
+#header{ padding:25px 0 0; }
+.header_top{ height:61px; background:#5a5a5d; }
+.header_top_subpage{ margin:0 0 25px; }
+	#logo,
+	#logo:visited{ float:left; display:block; width:252px; height:38px; cursor:pointer; background:url(../images/logo.png) no-repeat; margin:13px 0 0; text-indent:-9999em; }
+	#header ul{ margin:0 0 0 412px; height:61px; }
+	#header li{ float:left; display:block; }
+	#header li a,
+	#header li a:visited{ float:left; display:block; border-top:1px solid #5a5a5d; color:#fff; font-size:20px; line-height:60px; vertical-align:middle; text-transform:uppercase; padding:0 4px; margin:0 0 0 12px; font-weight:bold; }
+	#header .current a,
+	#header .current a:visited,
+	#header li a:hover{ color:#a8a8a8; border-top-color:#faa635; text-decoration:none; }
+	#banner{ display:block; }
+	#banner img{ display:block; }
+	
+	#header a,
+	#header a:visited { color: #e68400;}
+	
+	#header .hub-logo { position:absolute; top: 10px; right: 10px;}
+	
+/* Container */
+.container{ background:#fff; padding:22px 0 46px; }
+/* .container .wrapper{ padding:0 0 0 0; width:960px; } */
+.home_container{ padding:40px 0 46px; }
+.home_container .wrapper{ overflow:hidden; background:url(../images/bgr_container.gif) repeat-y; padding:0; width:980px; }
+
+/* Content */
+#content{ width:100%; }
+	#inner_content h2{ font:30px Verdana,Arial,Helvetica,sans-serif; color:#717174; margin:0 0 2px; }
+	#bcrumbs{ font-size:11px; margin:0 0 15px; }
+	#bcrumbs li{ display:inline; }
+	#content p{ font-size:14px; line-height:22px; padding:0 57px 19px 0; }
+
+/* Admin Content */
+#admin_content{ width:100%; padding-left: 5px; margin-top: 5px; border-top-color: #717174; border-top-width: 1px; border-top-style: solid;}
+#admin_content p{ font-size:14px; line-height:22px; padding:0 57px 19px 0; }
+
+/* Footer */
+#footer{ border-top:7px solid #646468; padding:9px 0; }
+	#footer p{ font-size:12px; color:#fff; line-height:24px; text-align:right; }
+	#footer a,
+	#footer a:visited{ color:#e68400; }
+
+/* Admin Container */
+#admin_container {
+	padding-top: 0;
+}
+
+/* Generic Form Styles */
+	
+	.circles-form {
+		width: 500px;
+		font-family: Verdana,Arial,Helvetica,sans-serif;
+	}
+
+ .circles-form h1 {
+		font:30px Verdana,Arial,Helvetica,sans-serif; color:#717174; margin:0 0 14px;
+	}
+	
+  .circles-wide-form {
+    width: 680px;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+  }
+
+  .circles-wide-form h1 {
+    font:30px Verdana,Arial,Helvetica,sans-serif; color:#717174; margin:0 0 14px;
+  }
+
+  .clear-both {
+		clear: both;
+	}
+	.form-line {
+		margin-top: 20px;
+		margin-bottom: 5px;
+		padding: 2px 2px 2px 2px;
+		display: block;
+	}
+
+	.form-line label {
+		float: left;
+		text-align: right;
+		padding-top: 5px;
+		font-family: Verdana,Arial,Helvetica,sans-serif; 
+		font-size: 20px;
+		margin-right: 40px;
+		width: 150px;
+	}
+	
+	.form-line .inline-label {
+		float: none;
+	}
+
+	.form-line .txt {
+		font-family: Verdana,Arial,Helvetica,sans-serif; 
+		font-size: 20px;
+	}
+
+	.form-line .txt-area {
+		font-family: Verdana,Arial,Helvetica,sans-serif; 
+		font-size: 20px;
+	}
+
+	.form-line select {
+		font-family: Verdana,Arial,Helvetica,sans-serif; 
+		font-size: 20px;
+	}
+	
+	.form-line .file-upload {
+		float: right;
+	}
+	
+	.form-submit {
+		color:#333;
+		background: url('/images/new-button-small.png');
+		font-family: Verdana,Arial,Helvetica,sans-serif;
+		font-size: 16px;
+		width: 100px;
+		height: 40px;
+		border: none;
+		float: left;
+		padding-bottom: 5px;
+	}
+	
+	.form-submit:hover {
+		color: #FFF;
+		cursor: pointer;
+	}
+	
+	
+	.fieldWithErrors input {
+		border: solid 2px red;
+	}
+		
+	#errorExplanation {
+		margin-left: 200px;
+		color: red;
+		font-family: Verdana,Arial,Helvetica,sans-serif;
+		font-size: 14px;
+	}
+	
+	#errorExplanation h2 {
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+	
+	#errorExplanation ul {
+		margin-left: 10px;
+		list-style: circle;
+	}
+	
+/* Login Form */
+#login_form {
+	width: 600px;
+	margin-left: 100px;
+}
+
+#login_form #login_submit {
+	margin-top: 20px;
+	margin-left: 200px;
+}
+
+/* User Header Bar */
+#user_bar {
+	float: right;
+	font-size:14px; color:#fff; line-height:24px; text-align:right;
+}
+
+/* Tabs */
+.circles-tabs ul {
+	list-style: none;
+	margin-top: 0;
+	padding: 0;
+}
+
+.circles-tabs li {
+	float: left;
+	margin-right: 10px;
+	padding-top: 5px;
+	padding-left: 10px;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 18px;
+}
+
+.circles-tabs .selected {
+	text-decoration: underline;
+}
+
+.section-header {
+	width: 100%;
+}
+
+.section-header-title {
+	float: left;
+}
+
+.section-header-title h1 {
+	font:30px Verdana,Arial,Helvetica,sans-serif; color:#717174; 
+}
+
+.section-header-title a {
+	color: #228ef1;
+}
+
+.section-breadcrumb {
+	font-size: 12px;
+}
+
+.section-header-actions {
+	margin-top: 5px;
+	width: 400px;
+	float: right;
+}
+.section-header-actions ul {
+	list-style: none;
+	margin-top: 5px;
+	padding: 0;
+	float: right;
+}
+
+.section-header-actions li {
+	float: left;
+	margin-right: 5px;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 16px;
+}
+
+.section-list {
+	margin-top: 5px;
+}
+
+.section-list-options {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 16px;
+	margin-bottom: 5px;
+	padding-bottom: 3px;
+	border-bottom: solid 1px #EEE;
+}
+
+.section-list-options a {
+	text-decoration: underline;
+}
+
+.section-list-options a:hover {
+	color: #e68400;
+}
+
+.section-list-options a:visited {
+	text-decoration: underline;
+}
+
+.small-form-txt {
+	font-family: Verdana,Arial,Helvetica,sans-serif; 
+	font-size: 14px;
+}
+
+.schedule-view {
+	margin-top: 5px;
+}
+
+/* Dialog Styles */
+.circles-dialog {
+	display: none;
+}
+
+.circles-dialog label {
+	font-size: 16px;
+}
+
+.circles-dialog .dialog-submit-buttons {
+	margin-top: 20px;
+}
+
+.circles-dialog .dialog-submit-buttons ul {
+	list-style: none;
+}
+
+.circles-dialog .dialog-submit-buttons li {
+	float: left;
+	margin-right: 20px;
+}
+
+
+
+#add_program .dialog-submit-buttons {
+	margin-left: 225px;
+}
+
+#session_event_form {
+	width: 600px;
+}
+
+#session_event_form label {
+	width: 200px;
+}
+
+/* Team and Team Roster */
+.team-roster {
+	display: none;
+}
+
+.expand-team {
+	float: left;
+	margin-right: 5px;
+}
+
+#primary_contact_details {
+	width: 750px;
+}
+
+#primary_contact_details label {
+	font-size: 14px;
+}
+
+#primary_contact_details .txt {
+	font-size: 14px;
+}
+
+#primary_contact_details select {
+	font-size: 14px;
+}
+
+#secondary_contact_details {
+	width: 750px;
+}
+
+#secondary_contact_details label {
+	font-size: 14px;
+}
+
+#secondary_contact_details .txt {
+	font-size: 14px;
+}
+
+#secondary_contact_details select {
+	font-size: 14px;
+}
+
+/* TEAM MANAGEMENT VIEWS */
+
+#team_management_panel {
+	font-size: 14px;
+}
+#registrant_list {
+	float: left;
+	padding: 5px;
+}
+
+#registrant_list h3 {
+	width: 400px;
+	color: #000;
+}
+
+#registrants_table {
+	float: left;
+	margin: auto;
+	width: 900px;
+	font-size: 12px;
+}
+
+#team_roster {
+	/* background: url("/images/blank-clipboard.jpg"); */
+	/* background-position: -35px -10px; */
+	border: solid 1px #e68400;
+	min-height: 70px;
+	width: 240px;
+	float: right;
+}
+
+#team_roster h3 {
+	color: #000;
+}
+
+#team_member_list {
+	margin-left: 12px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+
+.roster-save {
+	margin-right: 20px;
+	margin-bottom: 2px;
+	float: right;
+}
+
+.modified-table-cell {
+	color: #e68400;
+	font-weight: bold;
+}
+
+
+/* DIVISION SCHEDULE CREATION FORM */
+#create_division_schedule_form {
+	width: 750px;
+}
+
+.game-slot {
+	margin-top: 5px;
+	display: block;
+}
+
+.game-slot label {
+	float: left;
+	text-align: right;
+	padding-top: 5px;
+	font-family: Verdana,Arial,Helvetica,sans-serif; 
+	margin-right: 10px;
+}
+
+/* LOCATION ADDITION FORM */
+#add_location_form {
+	width: 700px;
+}
+
+/* PARTICIPANT IMPORT FORM */
+
+#import_participants form {
+	width: 700px;
+}
+
+#import_column_list {
+	float:left;
+	list-style: circle;
+	font-size: 12px;
+	width: 200px;
+}
+
+#upload_file_form_field {
+	width: 450px;
+	float: right;
+	padding: 10px;
+	border: solid 1px #000;
+}
+
+#file_upload_submit {
+	margin-left: 90px;
+	margin-top: 20px;
+}
+
+#loading_image {
+	width: 100px;
+}
+
+/* PROCESSING WINDOW */
+.processing-status {
+	margin:0 auto;
+}
+
+a.in-dialog-hyperlink {
+	text-decoration: underline;
+}
+
+/* ONLINE ACTIVATION */
+#activate_division_form {
+	width: 700px;
+}
+
+#activate_division_form .txt-area {
+	font-size: 12px;
+}
+
+/* FRONT END - PARTICIPANT STYLES */
+#user_activate {
+	margin-top: 40px;
+	margin-left: 190px;
+}
+
+#change_password_form {
+	width: 100%;
+}
+
+#change_password_form label {
+	width: 300px;
+}
+
+#user_update_password {
+	margin-top: 40px;
+	margin-left: 340px;
+}

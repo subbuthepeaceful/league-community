@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/strongcirclescore/!svn/ver/558/branches/circlesbase/app/views/participants
+END
+gamelist.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/strongcirclescore/!svn/ver/431/branches/circlesbase/app/views/participants/gamelist.html.erb
+END
+sponsors.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/strongcirclescore/!svn/ver/405/branches/circlesbase/app/views/participants/sponsors.html.erb
+END
+dashboard.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/strongcirclescore/!svn/ver/558/branches/circlesbase/app/views/participants/dashboard.html.erb
+END
+availability.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/strongcirclescore/!svn/ver/348/branches/circlesbase/app/views/participants/availability.html.erb
+END
+resources.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/strongcirclescore/!svn/ver/446/branches/circlesbase/app/views/participants/resources.html.erb
+END
+_edit_names_jerseys.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/strongcirclescore/!svn/ver/528/branches/circlesbase/app/views/participants/_edit_names_jerseys.html.erb
+END
+schedule.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/strongcirclescore/!svn/ver/415/branches/circlesbase/app/views/participants/schedule.html.erb
+END
+roster.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/strongcirclescore/!svn/ver/528/branches/circlesbase/app/views/participants/roster.html.erb
+END
+_set_team_name.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/strongcirclescore/!svn/ver/346/branches/circlesbase/app/views/participants/_set_team_name.html.erb
+END
+_set_jersey_number.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/strongcirclescore/!svn/ver/506/branches/circlesbase/app/views/participants/_set_jersey_number.html.erb
+END

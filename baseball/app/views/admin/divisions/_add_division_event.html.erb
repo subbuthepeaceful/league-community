@@ -1,0 +1,37 @@
+<div id="add_division_event" class="circles-dialog">
+	<div class="circles-form" id="division_event_form">
+		<h3></h3>
+		<% form_for :event, :url => add_event_admin_program_session_division_path(@program, @session, @division), :html => {:name => "add_division_event_form"} do |f|-%>
+			<div class="form-line">
+				<%= label_tag 'Event Name' %>
+				<%= f.text_field :name, :size => 30 %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'Start Date/Time' %>
+				<%= f.text_field :start_date, :size => 10, :id => "event_start_date" %>
+				<%= f.text_field :start_time, :size => 10, :id => "event_start_time" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'End Date/Time' %>
+				<%= f.text_field :end_date, :size => 10, :id => "event_end_date" %>
+				<%= f.text_field :end_time, :size => 10, :id => "event_end_time" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'Location' %>
+				<%= f.select :location, @hub.locations %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'Notes/Description' %>
+				<%= f.text_area :description, :rows => 7, :cols => 30 %>
+			</div>
+		<% end -%>
+	</div>
+</div>

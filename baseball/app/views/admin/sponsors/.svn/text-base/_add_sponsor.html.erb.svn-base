@@ -1,0 +1,48 @@
+<div id="add_sponsor" class="circles-dialog">
+	<div class="circles-wide-form">
+		<% form_for :sponsor, :url => admin_sponsors_path, :html => { :name => "add_sponsor_form", :multipart => true} do |f| %>
+			<div class="form-line">
+				<%= label_tag 'Company name' %>
+				<%= f.text_field :company_name, :size => 30, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+      <div class="form-line">
+        <%= label_tag 'Company website' %>
+        <%= f.text_field :company_website, :size => 30, :class => "txt" %>
+      </div>
+      <div class="clear-both">
+      </div>
+      <div class="form-line">
+        <%= label_tag 'Contact name' %>
+        <%= f.text_field :contact_name, :size => 30, :class => "txt" %>
+      </div>
+      <div class="clear-both">
+      </div>
+      <div class="form-line">
+        <%= label_tag 'Contact email' %>
+        <%= f.text_field :contact_email, :size => 30, :class => "txt" %>
+      </div>
+      <div class="clear-both">
+      </div>
+      <div class="form-line">
+        <%= label_tag 'Contact phone' %>
+        <%= f.text_field :contact_phone, :size => 30, :class => "txt" %>
+      </div>
+      <div class="clear-both">
+      </div>
+      <div class="form-line">
+        <%= label_tag 'Banner (300x100)' %>
+        <%= f.file_field :banner1, :size => 30, :class => "txt" %>
+      </div>
+      <div class="clear-both">
+      </div>
+      <div class="form-line">
+        <%= label_tag 'Banner (250x250)' %>
+        <%= f.file_field :banner2, :size => 30, :class => "txt" %>
+      </div>
+      <div class="clear-both">
+      </div>
+		<% end -%>
+	</div>
+</div>

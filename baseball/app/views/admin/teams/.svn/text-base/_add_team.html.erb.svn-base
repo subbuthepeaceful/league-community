@@ -1,0 +1,12 @@
+<div id="add_team" class="circles-dialog">
+	<div class="circles-form">
+		<% form_for :team, :url => admin_program_session_division_teams_path(@program, @session, @division), :html => { :name => "add_team_form"} do |f| %>
+			<div class="form-line">
+				<%= label_tag 'name' %>
+				<%= f.text_field :name, :size => 12, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+		<% end -%>
+	</div>
+</div>

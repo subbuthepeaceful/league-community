@@ -1,0 +1,30 @@
+<div class="section-table">
+	<table id="sessions_table" class="tablesorter" width="100%">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Status</th>
+				<th>Start Date</th>
+				<th>End Date</th>
+				<th># of Teams</th>
+				<th class="action-header">Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @sessions.each_with_index do |session, i| -%>
+			<% if i % 2 == 0 -%>
+				<tr class="even">
+			<% else -%>
+				<tr class="odd">
+			<% end -%>
+					<td><%= link_to session.name, "#{admin_program_session_divisions_path(@program, session)}" %></td>
+					<td><%= session.status %></td>
+					<td><%= session.start_date.to_s(:circles_short_date) %></td>
+					<td><%= session.end_date.to_s(:circles_short_date) %></td>
+					<td><%= "0" %></td>
+					<td><a href="#">Preview</a> | <a href="#">Delete</a></td>
+				</tr>
+			<% end -%>
+		</tbody>
+	</table>
+</div>

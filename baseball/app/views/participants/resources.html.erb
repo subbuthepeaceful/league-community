@@ -1,0 +1,44 @@
+<div id="columns">
+
+	<div class="leftcolumn">
+		<div class="myresources ltcolbox">
+			<div class="ltcolbox-top">
+				<div class="title">
+					<h2>YMCA Resources </h2>
+          <a class="openclose" href="#">Open/Close</a>
+				</div><!-- /Title -->
+			</div>
+			<div class="ltcolbox-bod">
+          <ul>
+              <li><%= link_to 'Welcome Letter from Eric Leffler', '/resources/Eric_Welcome_Letter.pdf' %></li>
+ 			  <li><%= link_to "YMCA Sports Philosophy", '/resources/YMCA_Sports_Philosophy.pdf' %></li>
+              <li><%= link_to 'Sponsorship Opportunities', 'http://www.mdrymca.org/sponsor_youth_sports', { :target => "_blank"} %></li>
+              <li><%= link_to 'Sponsorship Form', '/resources/YMCA_Sponsorship_Form.pdf', { :target => "_blank"} %></li>
+              <li><%= link_to 'YMCA Sports Registration Form', '/resources/YMCA_Sports_Registration_Form.pdf', { :target => "_blank"} %></li>
+          </ul>
+      </div><!-- /YMCA Resources-->
+			<div class="ltcolbox-bot"></div><!-- /Bottom -->
+		</div><!-- /Body -->
+
+    <div class="myresources ltcolbox">
+      <div class="ltcolbox-top">
+        <div class="title">
+          <h2>Team Resources </h2>
+          <a class="openclose" href="#">Open/Close</a>
+        </div><!-- /Title -->
+      </div>
+      <div class="ltcolbox-bod">
+		<ul>
+              <li><%= link_to "San Ramon Valley YMCA Basketball League Coaches' Guide", '/resources/bball_tips_techniques.pdf' %></li>
+ 			  <li><%= link_to "YMCA Basketball Rules and Guidelines", '/resources/YMCA_Basketball_Rules_and_Guidelines.pdf' %></li>
+		</ul>
+      </div><!-- /Team Resources -->
+      <div class="ltcolbox-bot"></div><!-- /Bottom -->
+    </div><!-- /Body -->
+  </div>
+  <div class="rightcolumn">
+    	<%= render :partial => "shared/circles_promo"%>
+  </div><!-- /Right Column -->
+</div><!-- /Columns -->
+
+<%=  render :partial => 'shared/picture_popup' %>

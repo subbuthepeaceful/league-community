@@ -1,0 +1,31 @@
+require 'config/environment'
+
+namespace :lamvpb do
+  task :calculate_team_records do 
+    hub = Hub.find_by_url_prefix('lamvpb')
+    session = hub.default_program.currently_active_session
+    division = Division.find_by_name(ENV['DIVISION'])
+
+    #preseason_cutoff = DateTime.parse('2011-04-05 00:00:00')
+    
+    division.scheduled_games.each do |g|
+      # For M-1, ignore games prior to 4/5
+      #unless (division.id == 4 && g.scheduled_at < preseason_cutoff)
+      unless g.is_preseason?
+
+       puts "Finding Game Report(s) for #{g.home_team} v #{g.away_team} at #{g.scheduled_at.to_s}"
+
+        hr = g.home_team.game_report(g)
+        gr = hr ? hr : g.away_team.game_report(g)
+        if gr
+          puts "Found confirmed game report for #{g.scheduled_at.to_s}"
+          ht = g.home_team
+          at = g.away_team
+        
+          ht.update_team_record(gr, :home)
+          at.update_team_record(gr, :away)
+        end
+      end
+    end
+  end
+end

@@ -1,0 +1,64 @@
+<div id="main">
+
+	<div id="mast">
+		<div class="sshot">
+			<img src="/images/pic-screenshot.png" alt="image" />
+		</div><!-- /Shot -->
+		<div class="text">
+			<h2>What is <%= @hub.circle_name %></h2>
+			<p>Presenting an evolution of our member communities into an online experience that connects our members, engages our participants with useful tools and benefits both you and our sponsors! It is our mission to build stronger communities and we hope your experience with <%= @hub.name %> is enriched even more by <%= @hub.circle_name %>!</p>
+		</div><!-- /Text -->
+		<div class="login">
+			<h3>Login to Your <%= singular_circle(@hub.circle_name)%></h3>
+			<p>If you haven’t registered for a <%= @hub.name %> program, <a href="<%= @hub.home_url %>" target="_blank">register now</a></p>
+			<a class="btn" href="/logins/new">Login Now</a>
+		</div><!-- /Login -->
+	</div><!-- /Mast -->
+	
+	<div id="midboxes">
+
+		<div id="midboxes-top">
+			<% if @hub.has_multiple_programs? %>
+				<ul class="tabs">
+					<li class="current"><a href="#"><span>Youth Sports</span></a></li>
+					<li><a href="#"><span>Youth Programs</span></a></li>
+					<li><a href="#"><span>Camps</span></a></li>
+				</ul>
+			<% elsif @hub.has_multiple_seasons? -%>
+				<ul class="tabs">
+					<li class="current"><a href="#"><span>Regular Season</span></a></li>
+					<li><a href="#"><span>Club Program</span></a></li>
+					<li><a href="#"><span>Postseason</span></a></li>
+				</ul>
+			<% end -%>
+		</div><!-- /Midboxes-top -->
+
+		<div id="midboxes-bod">
+			<ul class="sports">
+				<% if @hub.has_multiple_programs? -%>
+					<% @hub.programs.each_with_index do |p,i| -%>
+						<li>
+							<a class="thumb" href="/programs/<%=i+1%>"><img src="/images/pic-sports<%=i+1%>.jpg" alt="<%= p.description  %>" /></a>
+							<a href="/programs/<%=i+1%>"><%= p.name %></a>
+						</li>
+					<% end -%>
+				<% elsif @hub.has_multiple_divisions? -%>
+					<% @hub.default_program.divisions.each_with_index do |d,i| -%>
+						<li><a class="thumb" href="#"><img src="/images/pic-divisions<%=i+1%>.jpg" alt="<%= d.description  %>" /></a>
+							<a href="#"><%= d.name %></a>
+						</li>
+					<% end -%>
+				<% else -%>
+					<% @hub.programs.each_with_index do |p,i| -%>
+						<li>
+							<a class="thumb" href="/logins/new"><img src="/images/pic-programs<%=i+1%>.jpg" alt="<%= p.description %>" /></a>
+							<a href="/logins/new"><%= p.name %></a>
+						</li>
+					<% end -%>
+				<% end -%>
+			</ul>
+		</div><!-- /Midboxes-bod -->
+		<div id="midboxes-bot"></div>
+	</div><!-- /Middle Boxes -->
+</div><!-- /Main -->
+

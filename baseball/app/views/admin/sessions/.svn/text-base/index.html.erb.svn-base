@@ -1,0 +1,38 @@
+<script type="text/javascript">
+	var $programId = <%= @program.id %>;
+	var $sessionId;
+</script>
+<%= javascript_include_tag "session" %>
+<div id="program_header" class="section-header">
+	<div class="section-header-title">
+		<h1><%= @program.name %></h1>
+		<span class="section-breadcrumb"><%= program_breadcrumb(@program) %></span>
+	</div>
+	<div class="section-header-actions" id="program_header_actions">
+		<ul class="section-header-buttons">
+			<li>
+				<a id="add_session_link" href="#">+ Add Session</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="clear-both">
+</div>
+<div id="session_list" class="section-list">
+	<div class="section-list-options">
+		<% if @view == "list" -%>
+			List
+		<% else -%>
+			<a href="/admin/programs/<%= @program.id %>/sessions?view=list">List</a>
+		<% end -%>
+		&nbsp;|&nbsp;
+		<% if @view == "schedule" -%>
+			Schedule
+		<% else -%>
+			<a href="/admin/programs/<%= @program.id %>/sessions?view=schedule">Schedule</a>
+		<% end -%>
+	</div>
+	<%= render :partial => @view %>
+</div>
+
+<%= render :partial => "add_session" %>

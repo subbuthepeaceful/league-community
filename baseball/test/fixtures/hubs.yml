@@ -1,0 +1,68 @@
+mdrymca_h:
+    id: 1
+    name: "Mt. Diablo Region YMCA"
+    url_prefix: "mdrymca"
+    description: "The Mt. Diablo Region YMCA with 4 locations in the East Bay - Northern California"
+    parent_id: nil
+    time_zone: 'Pacific Time (US & Canada)'
+    circle_name: "YMCA Circles"
+    home_url: "http://www.mdrymca.org"
+    program_variant: "Multi-branch|Multi-program"
+
+srvymca_h:
+    id: 2
+    name: "San Ramon Valley YMCA"
+    url_prefix: "srvymca"
+    description: "Serving the communities of Alamo, Danville, San Ramon and Walnut Creek"
+    parent_id: 1
+    time_zone: 'Pacific Time (US & Canada)'
+    circle_name: "YMCA Circles"
+    home_url: "http://www.mdrymca.org/branches/5-SRV"
+    program_variant: "Single-branch|Multi-program"
+
+mvlags_h:
+    id: 3
+    name: "MVLA Girls Softball"
+    url_prefix: "mvlags"
+    description: "The MVLA Girls Softball League"
+    parent_id: nil
+    time_zone: 'Pacific Time (US & Canada)'
+    circle_name: ""
+    home_url: ""
+    program_variant: ""
+    
+lamvpb_h:
+    id: 4
+    name: "LAMV Pony Baseball"
+    url_prefix: "lamvpb"
+    description: "Serving Los Altos and Mountain View Youth since 1986 where Everyone Plays Real Baseball"
+    parent_id: nil
+    time_zone: 'Pacific Time (US & Canada)'
+    circle_name: "Strike Zone"
+    home_url: "http://www.lamvpb.org"
+    program_variant: "Single-branch|Single-program|Multi-season"
+    full_circles_domain: "strikezone.lamvpb.org"
+    tax_id: "77–0238764"
+    from_email: "webmaster@lamvpb.org"
+
+aro_rugby_h:
+    id: 5
+    name: "Aro Rugby"
+    url_prefix: "aro-rugby"
+    description: "Building mind, spirit and body through the great sport of rugby, for boys and girls, ages 5 - 12"    
+    parent_id: nil
+    time_zone: 'Pacific Time (US & Canada)'
+    circle_name: "In Formation"
+    home_url: ""
+    program_variant: "Multi-branch|Single-program"
+    
+four_h_h:
+    id: 6
+    name: "4-H"
+    url_prefix: "four-h"
+    description: "A world in which youth and adults learn, grow and work together as catalysts for positive change."    
+    parent_id: nil
+    time_zone: 'Eastern Time (US & Canada)'
+    circle_name: "Clovers"
+    home_url: ""
+    program_variant: "Multi-branch|Multi-program"

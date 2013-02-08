@@ -1,0 +1,33 @@
+<%= javascript_include_tag "program" %>
+<div id="program_header" class="section-header">
+	<div class="section-header-title">
+		<h1>Programs</h1>
+	</div>
+	<div class="section-header-actions" id="program_header_actions">
+		<ul class="section-header-buttons">
+			<li>
+				<a id="add_program_link" href="#">+ Add Program</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="clear-both">
+</div>
+<div id="program_list" class="section-list">
+	<div class="section-list-options">
+		<% if @view == "list" -%>
+			List
+		<% else -%>
+			<a href="/admin/programs?view=list">List</a>
+		<% end -%>
+		&nbsp;|&nbsp;
+		<% if @view == "schedule" -%>
+			Schedule
+		<% else -%>
+			<a href="/admin/programs?view=schedule">Schedule</a>
+		<% end -%>
+	</div>
+	<%= render :partial => @view %>
+</div>
+
+<%= render :partial => "add_program" %>

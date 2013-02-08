@@ -1,0 +1,37 @@
+<div id="game_details" class="circles-dialog">
+	<div class="circles-form" id="game_details_form">
+		<h3></h3>
+		<% form_tag '/admin', :name => "update_game_details_form" do -%>
+			<div class="form-line">
+				<%= label_tag 'Game Date' %>
+				<%= text_field_tag :game_date, '', :class => "game-date-text" %> 
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'Game Time' %>
+				<%= text_field_tag :game_time, '', :class => "game-time-text" %> 
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'Home Team' %>
+				<%= select_tag :home_team, options_from_collection_for_select(@teams, 'id', 'display_name') %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'Away Team' %>
+				<%= select_tag :away_team, options_from_collection_for_select(@teams, 'id', 'display_name') %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'Location' %>
+				<%= select_tag :location, options_from_collection_for_select(@locations, 'id', 'name') %>
+			</div>
+			<div class="clear-both">
+			</div>
+		<% end -%>
+	</div>
+</div>

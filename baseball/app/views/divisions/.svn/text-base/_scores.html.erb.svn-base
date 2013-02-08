@@ -1,0 +1,46 @@
+<div class="topmainbox">
+	
+	<div id="columns">
+		<div class="center">
+	
+			<table class="gamelist">
+				<tr class="head">
+					<td>Date</td>
+					<td>Time</td>
+					<td>Day</td>
+					<td>Location</td>
+					<td>Home Team</td>
+					<td>Away Team</td>
+					<td>Final Score</td>
+				</tr>
+				<%@games.each_index {|i|%>
+					<% entry =@games[i] %>
+					<% if i % 2 == 0 %>
+						<tr class="even">
+					<% else %>
+						<tr class="odd">
+					<% end -%>
+						<td><%=entry.scheduled_at.strftime("%B %e")%></td>
+						<td><%=entry.scheduled_at.strftime("%l:%M %p") %></td>
+						<td><%=entry.scheduled_at.strftime("%A") %></td>
+						<td><%=entry.location.to_s %></td>
+						<td><%= entry.home_team.selected_name ? entry.home_team.selected_name : entry.home_team.name %></td>
+						<td><%= entry.away_team.selected_name ? entry.away_team.selected_name : entry.away_team.name %></td>
+						<td>
+							<% if entry.home_team.has_saved_game_report(entry) %>
+                <span class="score"><%= entry.final_score %></span>&nbsp;|&nbsp;
+								<%#= link_to "#{entry.home_team.selected_name} Report", view_team_game_game_report_path(entry.home_team, entry, entry.home_team.game_report(entry)) %>
+								<span class="score"><%= link_to "(Home)", public_team_game_game_report_path(entry.home_team, entry, entry.home_team.game_report(entry)), :target => "_blank" %></span>
+                <% if entry.away_team.has_saved_game_report(entry) %>
+								    <span class="score"><%= link_to " | (Away)", public_team_game_game_report_path(entry.away_team, entry, entry.away_team.game_report(entry)), :target => "_blank" %></span>
+                <% end -%> 
+							<% else -%>
+								<span class="red">No Score Reported Yet</span>
+							<% end -%>
+						</td>
+					</tr>
+				<%} if @games%>
+			</table>
+		</div>
+	</div>
+</div>

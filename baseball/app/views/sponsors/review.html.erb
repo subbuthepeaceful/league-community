@@ -1,0 +1,49 @@
+<div id="sponsor_review">
+	<h2>Sponsorship Review</h2>
+		<div id="sponsor_details">
+			<h3>Sponsor Details</h3>
+			<%= @sponsor.company_name %>&nbsp;<%= @sponsor.company_website %>
+			<br />
+			<%= @sponsor.street_address %>
+			<br />
+			<%= @sponsor.city %>,&nbsp;<%= @sponsor.state %>&nbsp;<%= @sponsor.zip_code %>
+			<br />
+			<br />
+			<h3>Contact Details</h3>
+			<%= @sponsor.contact_name %>&nbsp;<%= @sponsor.contact_email %>&nbsp;<%= @sponsor.contact_phone %>
+			<hr />
+			<h3>Sponsorship Details</h3>
+				Option Selected: <%= @sponsorship_option.group %>&nbsp;<%= @sponsorship_option.name %>&nbsp;<%= @sponsorship_option.description %>
+				<br />
+				Total Amount: $<%= @sponsored_option.amount %>
+				<br />
+				Additional information: <%= @sponsored_option.additional_info %>
+			<hr />
+		</div>
+</div>	
+
+<div class="clear-both">
+</div>
+
+<form action="https://www.usaepay.com/interface/epayform/" style="float:left;margin-left: 250px;">
+	<input type="hidden" name="UMkey" value="57fL7kerWt69P0Qp8jcJ4fYbwTmx8g0z">
+	<input type="hidden" name="UMcommand" value="sale">
+	<input type="hidden" name="UMamount" value="<%= @sponsored_option.amount%>">
+	<input type="hidden" name="UMinvoice" value="<%= @generated_invoice_num %>">
+	<input type="hidden" name="UMdescription" value="<%= @sponsorship_option.group + ' ' + @sponsorship_option.name + ' ' + @sponsorship_option.description %>">
+	<input type="hidden" name="UMbillcompany" value="<%= @sponsor.company_name %>">
+	<input type="hidden" name="UMbillstreet" value="<%= @sponsor.street_address %>">
+	<input type="hidden" name="UMbillcity" value="<%= @sponsor.city %>">
+	<input type="hidden" name="UMbillstate" value="<%= @sponsor.state %>">
+	<input type="hidden" name="UMbillzip" value="<%= @sponsor.zip_code %>">
+	<input type="hidden" name="UMbillcountry" value="U.S.A.">
+	<input type="hidden" name="UMemail" value="<%= @sponsor.contact_email %>">
+	<input type="hidden" name="UMbillphone" value="<%= @sponsor.contact_phone %>">
+	<input type="hidden" name="UMbillfname" value="<%= @sponsor.contact_name.split(" ").size > 1 ? @sponsor.contact_name.split(" ")[0] : '' %>">
+	<input type="hidden" name="UMbilllname" value="<%= @sponsor.contact_name.split(" ").size > 1 ? @sponsor.contact_name.split(" ")[1] : '' %>">
+	
+	<input type="image" src="/images/hubs/usaepaysecurebuttongray.gif" value="Continue to Payment Form">
+</form>
+
+<div class="clear-both">
+</div>

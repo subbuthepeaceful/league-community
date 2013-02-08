@@ -1,0 +1,37 @@
+<%= javascript_include_tag "division" %>
+<script type="text/javascript">
+	$divisionId = <%= @division.id %>;
+	$divisionStartYear = <%= @division.start_date_year %>;
+	$divisionStartMonth = <%= @division.start_date_month_as_offset %>;
+</script>
+<div id="program_header" class="section-header">
+	<div class="section-header-title">
+		<h1><%= @division.name %></h1>
+		<span class="section-breadcrumb"><%= team_breadcrumb(@program, @session, @division) %></span>
+	</div>
+	<div class="section-header-actions" id="program_header_actions">
+		<ul class="section-header-buttons">
+			<li>
+				<a id="add_division_event_link" href="#">+ Add Event</a>
+			</li>
+			<li>
+				|
+			</li>
+			<li>
+				<a id="create_division_schedule_link" href="#">Add Game Schedule</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="clear-both">
+</div>
+<div id="division_detail" class="section-list">
+		<div id="division_calendar">
+		</div>
+</div>
+
+<%= render :partial => "game_details" %>
+
+<%= render :partial => "create_division_schedule" %>
+
+<%= render :partial => "add_division_event"%>

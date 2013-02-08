@@ -1,0 +1,100 @@
+<%= javascript_include_tag "game-report" %>
+<div class="topmainbox">
+	<div class="profile teamhead">
+		<h3><u><%= link_to "Game Reports", gamelist_team_path(@team) %></u>&nbsp;&gt;&nbsp;New Game Report</h3>
+	</div>
+	<div class="clear-both">
+	</div>
+	<%= error_messages_for :game_report %>		
+	<div class="clear-both">
+	</div>
+	<div id="game_report_form">
+		<% form_for :game_report, :url => team_game_game_reports_path(@team, @game) do |f| -%>
+			<table class="game-report-table">
+				<tr>
+					<td class="report-section">Game Details</td>
+					<td>Division : <b><%= @team.division %></b></td>
+					<td>Home Team : <b><%= @game.home_team.selected_name ? @game.home_team.selected_name : @game.home_team.name %></b></td>
+					<td>Visiting Team : <b><%= @game.away_team.selected_name ? @game.away_team.selected_name : @game.away_team.name %></b></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Scheduled Date : <%= @game.scheduled_at.to_s(:circles_short_date) %></td>
+					<script type="text/javascript">
+						var $game_scheduled_at_date = "<%=  @game.scheduled_at.to_s(:date_only) %>";
+					</script>
+					<td>Scheduled Time : <%= @game.scheduled_at.to_s(:circles_time_only) %></td>
+					<script type="text/javascript">
+						var $game_scheduled_at_time = "<%= @game.scheduled_at.to_s(:circles_time_only) %>";
+					</script>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Actual Date : <%= f.text_field :actual_start_date, :size => 12, :value => @game.scheduled_at.to_s(:circles_short_date)  %></td>
+					<td>Actual Start  : <%= f.text_field :actual_start_time, :size => 10, :value => @game.scheduled_at.to_s(:circles_time_only)%>
+					<td>Actual End : <%= f.text_field :actual_end_time, :size => 10, :value => (@game.scheduled_at + 7200).to_s(:circles_time_only) %></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="score">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Final Score HOME <%= f.text_field :home_team_score, :size => 2 %>&nbsp;AWAY <%= f.text_field :away_team_score, :size => 2 %></td>
+					<td># of Innings Played : <%= f.text_field :num_innings_played, :size => 3 %></td>
+					<td>End Reason : <%= f.select :end_reason, ["Regulation", "Time", "Weather", "Darkness", "Other"]%>
+					</td>
+				</tr>
+				<tr class="divider"></tr>
+				<% unless @game.is_interlock? -%>
+					<tr>
+						<td class="report-section">All Star Vote</td>
+						<% @other_team = @game.other_team(@team) -%>
+						<td><%= select "game_report", "first_vote", @other_team.players.collect{ |p| [p.team_display(@other_team),p.id] }, :prompt => "Select Player" %></td>
+						<td><%= select "game_report", "second_vote", @other_team.players.collect{ |p| [p.team_display(@other_team), p.id] }, :prompt => "Select Player" %></td>
+						<td><%= select "game_report", "third_vote", @other_team.players.collect{ |p| [p.team_display(@other_team),p.id] }, :prompt => "Select Player" %></td>
+					</tr>
+					<tr class="divider"></tr>
+				<% end -%>
+				<tr>
+					<td class="report-section">Umpires</td>
+					<td>Plate Ump: <%= f.text_field :plate_umpire, :size => 10 %></td>
+					<td>Field Ump: <%= f.text_field :field_umpire, :size => 10 %></td>
+					<td>Game Played at : <%= @game.location %></td>
+				</tr>
+				<tr class="divider"></tr>
+				<tr>
+					<td colspan="4">
+						<table class="game-report-roster-stats">
+							<tr>
+								<th>Player</th>
+								<th colspan="3">Pitching</th>
+								<th></th>
+								<th>Catching</th>
+							</tr>
+							<% @team.players.each_with_index do |p,i| -%>
+								<tr>
+									<td><span class="player-name"><%=p.team_display(@team) %></span></td>
+									<td>Pitcher # <%= text_field_tag "pitcher_#{i}".to_sym, "", :size => 1 %></td>
+									<td>Innings Pitched <%= text_field_tag "innings_#{i}".to_sym, "", :size => 2%></td>
+									<td>Pitches Thrown <%= text_field_tag "pitches_#{i}".to_sym, "", :size => 3%></td>
+									<td>&nbsp; | &nbsp;</td>
+									<td>Innings Caught <%= text_field_tag "catches_#{i}".to_sym, "", :size => 2%></td>
+								</tr>
+							<% end -%>		
+						</table>
+					</td>
+				</tr>
+				<tr class="divider"></tr>
+				<tr>
+					<td class="report-section">Comments</td>
+					<td colspan="4"><%= f.text_area :comments, :cols => "80", :rows => "5" %></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td colspan="2"><%= submit_tag "Create and Preview Game Report", :class => "ui-state-default ui-corner-all form-submit user-form-submit"%></td>
+					<td></td>
+				</tr>
+			</table>
+			
+		<% end -%>
+	</div>
+	<div class="clear-both">
+	</div>
+</div>

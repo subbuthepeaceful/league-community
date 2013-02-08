@@ -1,0 +1,93 @@
+<div id="program_header" class="section-header">
+	<div class="section-header-title">
+		<h1><%= @division.name %></h1>
+		<span class="section-breadcrumb"><%= team_breadcrumb(@program, @session, @division) %></span>
+	</div>
+	<div class="section-header-actions" id="program_header_actions">
+		<ul class="section-header-buttons">
+			<li>
+				<a id="add_team_link" href="#">+ Add Team</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="clear-both">
+</div>
+<div id="division_list" class="section-list">
+	<div class="section-list-options">
+		<a href="#">List</a>
+		&nbsp;|&nbsp;
+		<%= link_to "Schedule", define_dates_admin_program_session_division_path(@program, @session, @division) %>
+		&nbsp;|&nbsp;
+		<a href="#" id="activate_division_online">Activate Online Access</a>
+	</div>
+	<div class="section-table">
+		<table id="teams_table" class="tablesorter" width="100%">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Size</th>
+					<th>Coach</th>
+					<th>Email Address</th>
+					<th>Phone #</th>
+					<th class="action-header">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @teams.each_with_index do |team, i| -%>
+				<tr>
+					<td><a href="#" id="team_<%=i%>_link" class="team-link"><%= team.name %></a></td>
+					<td><a href="#" id="team_<%=i%>_icon" class="ui-state-highlight ui-icon ui-icon-triangle-1-e expand-team">Down</a><%= team.size %></td>
+					<% if team.head_coach -%>
+						<td><%= team.head_coach.name %></td>
+						<td><%= team.head_coach.email_address %></td>
+						<td><%#= team.head_coach.phone %></td>
+					<% else -%>
+						<td>N/A</td>
+						<td>N/A</td>
+						<td>N/A</td>
+					<% end -%>
+					<td><a href="#" id="assign_coaches_<%=team.id%>" class="assign-coach-link">Assign Coaches</a>
+						&nbsp;|&nbsp;
+						<%= link_to "Manage Roster", edit_admin_team_path(team) %></td>
+				</tr>
+				<tr>
+					<td colspan="6">
+						<div id="team_table_<%=i%>" class="team-roster">
+							<table class="tablesorter" width="100%">
+								<thead>
+									<tr>
+										<th>Player</th>
+										<th>Contact(s)</th>
+										<th>Email Address</th>
+										<th>Phone #</th>
+										<th class="action-header">Actions</th>
+									</tr>
+									<tbody>
+										<% team.participants.each do |participant| -%>
+										<tr>
+											<td><%= participant.name %></td>
+											<td><%= participant.primary_contact.name%></td>
+											<td><%= participant.primary_contact.email_address%></td>
+											<td><%#= participant.primary_contact.phone %></td>
+											<td>N/A</td>
+										</tr>
+										<% end -%>
+									</tbody>
+								</thead>
+							</table>
+						</div>
+					</td>
+				</tr>
+				<% end -%>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<%= render :partial => "add_team"%>
+
+<%= render :partial => "assign_coaches" %>
+
+<%= render :partial => "activate_online" %>
+

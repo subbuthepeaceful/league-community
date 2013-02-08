@@ -1,0 +1,15 @@
+#wrapper {
+	background: url('/images/hubs/yellow-black-circles-gradient.png') repeat-x top left;
+}
+
+.user-form-submit {
+	background: #302609;
+	color: #FFF;
+}
+
+.user-form-submit-hover {
+	background: #F1B82B;
+	color: #000;
+	text-decoration: underline;
+	cursor: pointer;
+}

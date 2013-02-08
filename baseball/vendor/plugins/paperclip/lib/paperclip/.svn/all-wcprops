@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/strongcirclescore/!svn/ver/260/branches/circlesbase/vendor/plugins/paperclip/lib/paperclip
+END
+callback_compatability.rb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/strongcirclescore/!svn/ver/260/branches/circlesbase/vendor/plugins/paperclip/lib/paperclip/callback_compatability.rb
+END
+processor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/strongcirclescore/!svn/ver/260/branches/circlesbase/vendor/plugins/paperclip/lib/paperclip/processor.rb
+END
+iostream.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/strongcirclescore/!svn/ver/260/branches/circlesbase/vendor/plugins/paperclip/lib/paperclip/iostream.rb
+END
+thumbnail.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/strongcirclescore/!svn/ver/260/branches/circlesbase/vendor/plugins/paperclip/lib/paperclip/thumbnail.rb
+END
+storage.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/strongcirclescore/!svn/ver/260/branches/circlesbase/vendor/plugins/paperclip/lib/paperclip/storage.rb
+END
+upfile.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/strongcirclescore/!svn/ver/260/branches/circlesbase/vendor/plugins/paperclip/lib/paperclip/upfile.rb
+END
+matchers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/strongcirclescore/!svn/ver/260/branches/circlesbase/vendor/plugins/paperclip/lib/paperclip/matchers.rb
+END
+attachment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/strongcirclescore/!svn/ver/260/branches/circlesbase/vendor/plugins/paperclip/lib/paperclip/attachment.rb
+END
+interpolations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/strongcirclescore/!svn/ver/260/branches/circlesbase/vendor/plugins/paperclip/lib/paperclip/interpolations.rb
+END
+geometry.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/strongcirclescore/!svn/ver/260/branches/circlesbase/vendor/plugins/paperclip/lib/paperclip/geometry.rb
+END

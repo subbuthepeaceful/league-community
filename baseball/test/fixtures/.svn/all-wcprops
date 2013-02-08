@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/strongcirclescore/!svn/ver/518/branches/circlesbase/test/fixtures
+END
+hub_assets.yml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/strongcirclescore/!svn/ver/448/branches/circlesbase/test/fixtures/hub_assets.yml
+END
+hubs.yml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/strongcirclescore/!svn/ver/518/branches/circlesbase/test/fixtures/hubs.yml
+END
+sponsorship_options.yml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/strongcirclescore/!svn/ver/448/branches/circlesbase/test/fixtures/sponsorship_options.yml
+END
+sessions.yml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/strongcirclescore/!svn/ver/260/branches/circlesbase/test/fixtures/sessions.yml
+END
+programs.yml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/test/fixtures/programs.yml
+END
+circle_options.yml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/strongcirclescore/!svn/ver/460/branches/circlesbase/test/fixtures/circle_options.yml
+END

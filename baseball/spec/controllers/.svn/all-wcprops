@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/spec/controllers
+END
+users_controller_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/spec/controllers/users_controller_spec.rb
+END
+authenticated_system_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/spec/controllers/authenticated_system_spec.rb
+END
+logins_controller_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/spec/controllers/logins_controller_spec.rb
+END
+access_control_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/spec/controllers/access_control_spec.rb
+END

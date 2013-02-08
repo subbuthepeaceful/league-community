@@ -1,0 +1,4 @@
+lamvpb_header_banner:
+    hub_id: 4
+    name: "Header Banner"
+    uri: "/images/hubs/lamvpb-header.png"

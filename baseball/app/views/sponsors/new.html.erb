@@ -1,0 +1,138 @@
+<div id="sponsor_form" class="circles-form">
+	<h2>2012 Sponsorship Registration Form</h2>
+	<%= error_messages_for 'sponsor', :header_message => nil, :class => "error-message" %>
+	<% if flash[:error] %>
+		<div class="error-message">
+			<%= flash[:error]%>
+			<% flash[:error] = nil%>
+		</div>
+	<% end -%>
+	<% form_for :sponsor, :url => '/sponsors/create' do |f| -%>
+		<div class="form-line">
+			<%= label_tag 'sponsor/company name'%>
+			<%= f.text_field :company_name, :class => "txt" %>
+		</div>
+		<div class="clear-both">
+		</div>
+		<div class="form-line">
+			<%= label_tag 'street address'%>
+			<%= f.text_field :street_address, :class => "txt"%>
+		</div>
+		<div class="clear-both">
+		</div>
+		<div class="form-line">
+			<%= label_tag 'city'%>
+			<%= f.text_field :city, :class => "txt" %>
+		</div>
+		<div class="clear-both">
+		</div>
+		<div class="form-line">
+			<%= label_tag 'state / zip code' %>
+			<%= f.select :state, State::NAMES, :selected => "CA" %>
+			&nbsp;
+			<%= f.text_field :zip_code, :size => 12, :class => "txt" %>
+		</div>
+		<div class="clear-both">
+		</div>
+		<div class="form-line">
+			<%= label_tag 'contact name' %>
+			<%= f.text_field :contact_name, :class => "txt" %>
+		</div>
+		<div class="clear-both">
+		</div>
+		<div class="form-line">
+			<%= label_tag 'contact email' %>
+			<%= f.text_field :contact_email, :class => "txt" %>
+		</div>
+		<div class="clear-both">
+		</div>
+		<div class="form-line">
+			<%= label_tag 'contact phone' %>
+			<%= f.text_field :contact_phone, :class => "txt" %>
+		</div>
+		<div class="clear-both">
+		</div>
+		<hr />
+		<h3>Team/Player Information (if known)</h3>
+		<div class="form-line">
+			<%= label_tag 'player/team name and division'%>
+			<%= f.text_field :sponsorable_name_1, :class => "txt" %>
+			&nbsp;
+			<%= select :sponsor, :sponsorable_division_1, @hub.default_program.divisions %>
+		</div>
+		<div class="clear-both">
+		</div>
+		<div class="form-line">
+			<%= label_tag 'requests/comments'%>
+			<%= f.text_area :sponsorable_addtl_info_1, :rows => "3", :cols => "35" %>
+		</div>
+		<div class="clear-both">
+		</div>
+		<div class="form-line">
+			<%= label_tag 'player/team name and division'%>
+			<%= f.text_field :sponsorable_name_2, :class => "txt" %>
+			&nbsp;
+			<%= select :sponsor, :sponsorable_division_2, @hub.default_program.divisions %>
+		</div>
+		<div class="clear-both">
+		</div>
+		<div class="form-line">
+			<%= label_tag 'requests/comments'%>
+			<%= f.text_area :sponsorable_addtl_info_2, :rows => "3", :cols => "35" %>
+		</div>
+		<div class="clear-both">
+		</div>
+		<div class="form-line">
+			<%= label_tag 'player/team name and division'%>
+			<%= f.text_field :sponsorable_name_3, :class => "txt" %>
+			&nbsp;
+			<%= select :sponsor, :sponsorable_division_3, @hub.default_program.divisions %>
+		</div>
+		<div class="clear-both">
+		</div>
+		<div class="form-line">
+			<%= label_tag 'requests/comments'%>
+			<%= f.text_area :sponsorable_addtl_info_3, :rows => "3", :cols => "35" %>
+		</div>
+		<div class="clear-both">
+		</div>
+		<hr />
+		<h3>Primary Sponsorship Options</h3>
+		<table class="sponsorship-options">
+		<% @primary_options.each do |po| -%>
+			<tr>
+				<td><%= radio_button_tag "sponsorship_option", po.id%>&nbsp;<%= po.group %>&nbsp;<%= po.name %>&nbsp;<%= po.description %></td>
+				<td>............</td>
+				<td class="sponsorship-amount"><%= po.amount %></td>
+			</tr>
+		<% end -%>
+		</table>
+		<hr />
+		<h3>Alternative Sponsorship Options</h3>
+		<table class="sponsorship-options">
+		<% @other_options.each do |so| -%>
+			<tr>
+				<td><%= radio_button_tag "sponsorship_option", so.id%> <%= so.group %>&nbsp;<%= so.name %>&nbsp;<%= so.description %></td>
+				<td>.............</td>
+				<td class="sponsorship-amount">
+					<% if so.is_variable_amount? -%>
+						<%= text_field_tag :sponsor_variable_amount, "", :size => 5, :class => "txt" -%>
+					<% else -%>
+						<%= so.amount %>
+					<% end -%>
+				</td>
+			</tr>		
+		<% end -%>
+		</table>
+		<hr />
+		<div class="clear-both">
+		</div>
+		<table id="payment_buttons">
+			<tr>
+				<td class="proceed-button"><%= submit_tag 'Confirm and Payment Options >', :class => "ui-state-default ui-corner-all form-submit user-form-submit"%></td>
+			</tr>
+		</table>
+		<div class="clear-both">
+		</div>
+	<% end -%>
+</div>

@@ -1,0 +1,84 @@
+<div id="participants_header" class="section-header">
+	<div class="section-header-title">
+		<h1>Participants</h1>
+	</div>
+	<div class="section-header-actions" id="program_header_actions">
+		<ul class="section-header-buttons">
+			<li>
+				<a id="add_participant_link" href="#">+ Add Participant</a>
+			</li>
+			<li>
+				|
+			</li>
+			<li>
+				<a id="import_participants_link" href="#">Import Participants</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="clear-both">
+</div>
+<div id="participant_list" class="section-list">
+	<div class="section-table concise-table">
+		<table id="participants_table" class="tablesorter" width="100%">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Program</th>
+					<th>Phone</th>
+					<th>Email</th>
+					<th>Online Status</th>
+					<th class="action-header">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @participants.each_with_index do |participant, i| -%>
+					
+				<% if i % 2 == 0 -%>
+					<tr class="even">
+				<% else -%>
+					<tr class="odd">
+				<% end -%>
+				
+						<td><%= participant.name %></td>
+						<td><% participant.programs.each do |program| %>
+								<%= program["program"] %>
+								<br />
+								<%= program["session"]%>
+								<br />
+								<%= program["division"]%>
+								<br />
+							<% end -%>
+						</td>
+						<td><%= participant.phones.join("/") %></td>
+						<td><%= participant.email_addresses.join(",") %></td>
+						<td><% if participant.activated? -%>
+							Activated
+							<% end -%>
+						</td>
+						<td><% if participant.activated? -%>
+							<%= link_to "Preview", dashboard_participant_path(participant), :target => "blank" %>
+							&nbsp;
+							|
+							&nbsp;
+							<%= link_to "Resend Activation", resend_activation_admin_participant_path(participant), :class => "process-link" %>
+							<% else -%>
+							<%= link_to "Activate", activate_admin_participant_path(participant), :class => "process-link" %>
+							<% end -%>
+						</td>
+					</tr>
+				<% end -%>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div id="processing_window">
+	<div class="processing-status">
+		<%= image_tag "/images/ajax-loader.gif" %>
+	</div>
+</div>
+
+
+<%= render :partial => "add_participant" %>
+<%= render :partial => "import_participants" %>

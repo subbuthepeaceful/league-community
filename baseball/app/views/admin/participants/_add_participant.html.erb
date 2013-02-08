@@ -1,0 +1,223 @@
+<div id="add_participant" class="circles-dialog">
+	<% form_for :participant, :url => admin_participants_path, :html => { :name => "add_participant_form"} do |f| %>
+	<div id="participant_tabs">
+		<ul>
+			<li><a href="#participant_details">Participant</a></li>
+			<li><a href="#registration_details">Registration</a></li>
+			<li><a href="#primary_contact_details">Primary Contact</a></li>
+			<li><a href="#secondary_contact_details">Secondary Contact</a></li>
+			<li><a href="#additional_info">Coaching & Requests</a></li>
+		</ul>
+		<div class="circles-form" id="participant_details">
+				<div class="form-line">
+					<%= label_tag 'title' %>
+					<%= f.select :title, [ "Mr.", "Mrs.", "Mstr.", "Miss", "Dr." ], :id => "select_title" %>
+				</div>
+				<div class="clear-both">
+				</div>
+				<div class="form-line">
+					<%= label_tag 'first name' %>
+					<%= f.text_field :first_name, :size => 20, :class => "txt" %>
+				</div>
+				<div class="clear-both">
+				</div>
+				<div class="form-line">
+					<%= label_tag 'last name' %>
+					<%= f.text_field :last_name, :size => 20, :class => "txt" %>
+				</div>
+				<div class="clear-both">
+				</div>
+				<div class="form-line">
+					<%= label_tag 'date of birth' %>
+					<%= f.text_field :date_of_birth, :size => 10, :class => "txt", :id => "participant_birth_date" %>
+				</div>
+				<div class="clear-both">
+				</div>
+		</div>
+		<div class="circles-form" id="registration_details">
+			<div class="form-line">
+				<%= label_tag 'program' %>
+				<%= f.select :program, @programs.collect { |p| [ p.name, p.id]} %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'session' %>
+				<%= f.select :session, [] %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'division' %>
+				<%= f.select :division, [] %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'date of registration' %>
+				<%= f.text_field :registered_date, :size => 10, :class => "txt", :id => "participant_registered_date" %>
+			</div>
+			<div class="clear-both">
+			</div>
+		</div>
+		<div class="circles-form" id="primary_contact_details">
+			<h3>Primary Contact</h3>
+			<div class="form-line">
+				<%= label_tag 'first name' %>
+				<%= f.text_field :primary_contact_first_name, :size => 20, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'last name' %>
+				<%= f.text_field :primary_contact_last_name, :size => 20, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'email address' %>
+				<%= f.text_field :primary_contact_email_address, :size => 30, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<hr />
+			<div class="form-line">
+				<%= label_tag 'street address' %>
+				<%= f.text_field :primary_contact_street_address, :size => 20, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'city' %>
+				<%= f.text_field :primary_contact_city, :size => 10, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'state' %>
+				<%= f.text_field :primary_contact_state, :size => 10, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'zip code' %>
+				<%= f.text_field :primary_contact_zip, :size => 10, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<hr />
+			<div class="form-line">
+				<%= label_tag 'primary phone' %>
+				<%= f.text_field :primary_contact_primary_phone, :size => 10, :class => "txt" %>
+				&nbsp;Phone Type&nbsp;
+				<%= f.select :primary_contact_primary_phone_type, ["Work", "Home", "Cell", "Other"] %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'alternate phone' %>
+				<%= f.text_field :primary_contact_alternate_phone, :size => 10, :class => "txt" %>
+				&nbsp;Phone Type&nbsp;
+				<%= f.select :primary_contact_alternate_phone_type, ["Work", "Home", "Cell", "Other"] %>
+			</div>
+			<div class="clear-both">
+			</div>
+		</div>
+		<div class="circles-form" id="secondary_contact_details">
+			<h3>Secondary Contact</h3>
+			<div class="form-line">
+				<%= label_tag 'first name' %>
+				<%= f.text_field :secondary_contact_first_name, :size => 20, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'last name' %>
+				<%= f.text_field :secondary_contact_last_name, :size => 20, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'email address' %>
+				<%= f.text_field :secondary_contact_email_address, :size => 30, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<hr />
+			<div class="form-line">
+				<%= label_tag '' %>
+				<%= f.check_box :same_address_across_contacts %>
+				&nbsp;Use same address as primary contact&nbsp;
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'street address' %>
+				<%= f.text_field :secondary_contact_street_address, :size => 20, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'city' %>
+				<%= f.text_field :secondary_contact_city, :size => 10, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'state' %>
+				<%= f.text_field :secondary_contact_state, :size => 10, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'zip code' %>
+				<%= f.text_field :secondary_contact_zip, :size => 10, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<hr />
+			<div class="form-line">
+				<%= label_tag 'primary phone' %>
+				<%= f.text_field :secondary_contact_primary_phone, :size => 10, :class => "txt" %>
+				&nbsp;Phone Type&nbsp;
+				<%= f.select :secondary_contact_primary_phone_type, ["Work", "Home", "Cell", "Other"] %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'alternate phone' %>
+				<%= f.text_field :secondary_contact_alternate_phone, :size => 10, :class => "txt" %>
+				&nbsp;Phone Type&nbsp;
+				<%= f.select :secondary_contact_alternate_phone_type, ["Work", "Home", "Cell", "Other"] %>
+			</div>
+			<div class="clear-both">
+			</div>
+		</div>
+		<div class="circles-form" id="additional_info">
+			<h3>Buddy/Coaching Requests</h3>
+			<div class="form-line">
+				<%= label_tag 'buddy and coaching requests' %>
+				<%= f.text_area :registration_requests, :cols => "20", :rows => "5", :class => "txt-area" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<hr />
+			<h3>Primary Contact Volunteer Signup</h3>
+			<div class="form-line">
+				<%= label_tag 'Volunteer Signup' %>
+				<%= f.select :primary_contact_volunteer, [ "Select Role", "Head Coach", "Assistant Coach", "None"] %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<hr />
+			<h3>Secondary Contact Volunteer Signup</h3>
+			<div class="form-line">
+				<%= label_tag 'Volunteer Signup' %>
+				<%= f.select :secondary_contact_volunteer, [ "Select Role", "Head Coach", "Assistant Coach", "None"] %>
+			</div>
+			<div class="clear-both">
+			</div>
+		</div>	
+	<% end -%>	
+	</div>
+</div>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/strongcirclescore/!svn/ver/258/branches/circlesbase/app/views/admin/sessions
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/strongcirclescore/!svn/ver/258/branches/circlesbase/app/views/admin/sessions/index.html.erb
+END
+_add_session.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/strongcirclescore/!svn/ver/123/branches/circlesbase/app/views/admin/sessions/_add_session.html.erb
+END
+_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/strongcirclescore/!svn/ver/256/branches/circlesbase/app/views/admin/sessions/_list.html.erb
+END
+_add_session_event.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/strongcirclescore/!svn/ver/257/branches/circlesbase/app/views/admin/sessions/_add_session_event.html.erb
+END
+_schedule.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/strongcirclescore/!svn/ver/256/branches/circlesbase/app/views/admin/sessions/_schedule.html.erb
+END
+schedule.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/strongcirclescore/!svn/ver/257/branches/circlesbase/app/views/admin/sessions/schedule.html.erb
+END

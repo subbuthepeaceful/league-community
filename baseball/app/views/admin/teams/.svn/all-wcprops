@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/strongcirclescore/!svn/ver/537/branches/circlesbase/app/views/admin/teams
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/strongcirclescore/!svn/ver/256/branches/circlesbase/app/views/admin/teams/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/strongcirclescore/!svn/ver/537/branches/circlesbase/app/views/admin/teams/index.html.erb
+END
+_assign_coaches.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/strongcirclescore/!svn/ver/153/branches/circlesbase/app/views/admin/teams/_assign_coaches.html.erb
+END
+_add_team.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/strongcirclescore/!svn/ver/150/branches/circlesbase/app/views/admin/teams/_add_team.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/strongcirclescore/!svn/ver/256/branches/circlesbase/app/views/admin/teams/show.html.erb
+END
+_activate_online.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/strongcirclescore/!svn/ver/195/branches/circlesbase/app/views/admin/teams/_activate_online.html.erb
+END

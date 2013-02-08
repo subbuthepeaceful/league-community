@@ -1,0 +1,80 @@
+<div class="topmainbox">
+	<div class="profile teamhead">
+		<h3><%= link_to "Game Reports", gamelist_division_path(@team.division) %>&nbsp;&gt;&nbsp;Game Report <span style="font-size: 0.75em;">(Filed by <%= @game_report.contact.name %> on <%= @game_report.updated_at.to_s(:message_sent)%>)<span>
+		 </h3>
+	</div>
+	<div class="clear-both">
+	</div>
+	<div id="game_report_view" class="view-mode">
+			<table class="game-report-table">
+				<tr>
+					<td class="report-section">Game Details</td>
+					<td>Division : <b><%= @team.division %></b></td>
+					<td>Home Team : <b><%= @game.home_team.selected_name ? @game.home_team.selected_name : @game.home_team.name %></b></td>
+					<td>Visiting Team : <b><%= @game.away_team.selected_name ? @game.away_team.selected_name : @game.away_team.name %></b></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Scheduled Date : <%= @game.scheduled_at.to_s(:circles_short_date) %></td>
+					<td>Scheduled Time : <%= @game.scheduled_at.to_s(:circles_time_only) %></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Actual Date : <%= @game_report.actual_start_date.to_s(:circles_short_date)  %></td>
+					<td>Actual Start  : <%= @game_report.actual_start_time.to_s(:circles_time_only) %>
+					<td>Actual End : <%= @game_report.actual_end_time.to_s(:circles_time_only) %></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="score">Final Score: HOME <span class="score-num"><%= @game_report.home_team_score %></span>&nbsp;AWAY <span class="score-num"><%= @game_report.away_team_score %></span></td>
+					<td># of Innings Played : <%= @game_report.num_innings_played %></td>
+					<td>End Reason : <%= @game_report.end_reason %>
+					</td>
+				</tr>
+				<tr class="divider"></tr>
+				<tr>
+					<td class="report-section">Umpires</td>
+					<td>Plate Ump: <%= @game_report.plate_umpire %></td>
+					<td>Field Ump: <%= @game_report.field_umpire %></td>
+					<td>Game played at : <%= @game.location %></td>
+				</tr>
+				<tr class="divider"></tr>
+				<tr>
+					<td colspan="4">
+						<table class="game-report-roster-stats">
+							<tr>
+								<th>Player</th>
+								<th colspan="3">Pitching</th>
+								<th></th>
+								<th>Catching</th>
+							</tr>
+							<% @game_statistics.each do |gs| -%>
+								<tr>
+									<td><span class="player-name"><%= gs[:player].team_display(@team) %></span></td>
+									<% if gs[:pitcher_number] -%>
+										<td>Pitcher # <span class="score-num"><%= gs[:pitcher_number] %></span></td>
+										<td>Innings Pitched <span class="score-num"><%= gs[:innings_pitched] %></span></td>
+										<td>Pitch Count <span class="score-num"><%= gs[:pitch_count] %></span></td>
+									<% else -%>
+										<td colspan="3"></td>
+									<% end -%>
+									<td>&nbsp; | &nbsp;</td>
+									<% if gs[:innings_caught]%>
+										<td>Innings Caught <span class="score-num"><%= gs[:innings_caught] %></span></td>
+									<% else -%>
+										<td></td>
+									<% end -%>
+								</tr>
+							<% end -%>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+	</div>
+	<div class="clear-both">
+	</div>
+</div>

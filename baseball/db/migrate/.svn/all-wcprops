@@ -1,0 +1,383 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/strongcirclescore/!svn/ver/551/branches/circlesbase/db/migrate
+END
+20100119205143_add_division_to_events.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/strongcirclescore/!svn/ver/418/branches/circlesbase/db/migrate/20100119205143_add_division_to_events.rb
+END
+20100202175313_create_sponsorship_options.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/strongcirclescore/!svn/ver/448/branches/circlesbase/db/migrate/20100202175313_create_sponsorship_options.rb
+END
+20100113195127_add_logo_to_team.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/strongcirclescore/!svn/ver/360/branches/circlesbase/db/migrate/20100113195127_add_logo_to_team.rb
+END
+20091104142506_create_volunteer_signups.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/strongcirclescore/!svn/ver/148/branches/circlesbase/db/migrate/20091104142506_create_volunteer_signups.rb
+END
+20100113060130_add_photo_to_participant.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/strongcirclescore/!svn/ver/354/branches/circlesbase/db/migrate/20100113060130_add_photo_to_participant.rb
+END
+20091215191628_create_mailbox_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/strongcirclescore/!svn/ver/264/branches/circlesbase/db/migrate/20091215191628_create_mailbox_messages.rb
+END
+20091102162535_create_registrations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/strongcirclescore/!svn/ver/148/branches/circlesbase/db/migrate/20091102162535_create_registrations.rb
+END
+20110326132415_create_team_records.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/strongcirclescore/!svn/ver/551/branches/circlesbase/db/migrate/20110326132415_create_team_records.rb
+END
+20091102174756_create_contacts_participants.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/strongcirclescore/!svn/ver/144/branches/circlesbase/db/migrate/20091102174756_create_contacts_participants.rb
+END
+20091015163919_create_hubs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/db/migrate/20091015163919_create_hubs.rb
+END
+20091201194645_create_events.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/strongcirclescore/!svn/ver/257/branches/circlesbase/db/migrate/20091201194645_create_events.rb
+END
+20100122052046_add_snack_to_matchups.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/strongcirclescore/!svn/ver/432/branches/circlesbase/db/migrate/20100122052046_add_snack_to_matchups.rb
+END
+20100415140135_add_external_flag_to_divisions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/strongcirclescore/!svn/ver/509/branches/circlesbase/db/migrate/20100415140135_add_external_flag_to_divisions.rb
+END
+20091111210613_create_locations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/strongcirclescore/!svn/ver/166/branches/circlesbase/db/migrate/20091111210613_create_locations.rb
+END
+20091217151555_add_reply_to_circles_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/strongcirclescore/!svn/ver/272/branches/circlesbase/db/migrate/20091217151555_add_reply_to_circles_messages.rb
+END
+20100318121931_create_admin_roles.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/strongcirclescore/!svn/ver/479/branches/circlesbase/db/migrate/20100318121931_create_admin_roles.rb
+END
+20091110035347_create_games.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/strongcirclescore/!svn/ver/335/branches/circlesbase/db/migrate/20091110035347_create_games.rb
+END
+20100104160000_create_availabilities.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/strongcirclescore/!svn/ver/285/branches/circlesbase/db/migrate/20100104160000_create_availabilities.rb
+END
+20091016001323_create_sessions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/strongcirclescore/!svn/ver/123/branches/circlesbase/db/migrate/20091016001323_create_sessions.rb
+END
+20100131161929_create_hub_assets.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/strongcirclescore/!svn/ver/448/branches/circlesbase/db/migrate/20100131161929_create_hub_assets.rb
+END
+20100316182037_create_star_player_votes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/strongcirclescore/!svn/ver/469/branches/circlesbase/db/migrate/20100316182037_create_star_player_votes.rb
+END
+20100201193830_add_circle_name_to_hubs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/strongcirclescore/!svn/ver/448/branches/circlesbase/db/migrate/20100201193830_add_circle_name_to_hubs.rb
+END
+20091029221435_create_participants.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/strongcirclescore/!svn/ver/144/branches/circlesbase/db/migrate/20091029221435_create_participants.rb
+END
+20091027231242_create_teams.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/strongcirclescore/!svn/ver/129/branches/circlesbase/db/migrate/20091027231242_create_teams.rb
+END
+20100112214056_create_delayed_jobs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/strongcirclescore/!svn/ver/448/branches/circlesbase/db/migrate/20100112214056_create_delayed_jobs.rb
+END
+20091106214102_add_has_schedule_to_division.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/strongcirclescore/!svn/ver/161/branches/circlesbase/db/migrate/20091106214102_add_has_schedule_to_division.rb
+END
+20100213161338_add_from_email_to_hubs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/strongcirclescore/!svn/ver/456/branches/circlesbase/db/migrate/20100213161338_add_from_email_to_hubs.rb
+END
+20100204004922_create_sponsored_options.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/strongcirclescore/!svn/ver/448/branches/circlesbase/db/migrate/20100204004922_create_sponsored_options.rb
+END
+20100111224735_add_selected_name_to_team.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/strongcirclescore/!svn/ver/347/branches/circlesbase/db/migrate/20100111224735_add_selected_name_to_team.rb
+END
+20100315181514_create_game_statistics.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/strongcirclescore/!svn/ver/469/branches/circlesbase/db/migrate/20100315181514_create_game_statistics.rb
+END
+20091110221436_create_matchups.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/strongcirclescore/!svn/ver/164/branches/circlesbase/db/migrate/20091110221436_create_matchups.rb
+END
+20091215190902_create_circles_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/strongcirclescore/!svn/ver/264/branches/circlesbase/db/migrate/20091215190902_create_circles_messages.rb
+END
+20100201201307_add_program_variant_to_hubs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/strongcirclescore/!svn/ver/448/branches/circlesbase/db/migrate/20100201201307_add_program_variant_to_hubs.rb
+END
+20100204171007_add_full_circle_domain_to_hub.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/strongcirclescore/!svn/ver/449/branches/circlesbase/db/migrate/20100204171007_add_full_circle_domain_to_hub.rb
+END
+20100114225258_add_admin_contact.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/strongcirclescore/!svn/ver/391/branches/circlesbase/db/migrate/20100114225258_add_admin_contact.rb
+END
+20100113192626_add_photo_to_contact.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/strongcirclescore/!svn/ver/359/branches/circlesbase/db/migrate/20100113192626_add_photo_to_contact.rb
+END
+20100213154329_add_tax_id_to_hub.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/strongcirclescore/!svn/ver/456/branches/circlesbase/db/migrate/20100213154329_add_tax_id_to_hub.rb
+END
+20091102174205_create_phones.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/strongcirclescore/!svn/ver/144/branches/circlesbase/db/migrate/20091102174205_create_phones.rb
+END
+20091214232629_create_mailboxes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/strongcirclescore/!svn/ver/264/branches/circlesbase/db/migrate/20091214232629_create_mailboxes.rb
+END
+20110308074617_add_external_flag_to_teams.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/strongcirclescore/!svn/ver/528/branches/circlesbase/db/migrate/20110308074617_add_external_flag_to_teams.rb
+END
+20100114231312_add_home_url_to_hubs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/strongcirclescore/!svn/ver/393/branches/circlesbase/db/migrate/20100114231312_add_home_url_to_hubs.rb
+END
+20100213221636_create_circle_options.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/strongcirclescore/!svn/ver/460/branches/circlesbase/db/migrate/20100213221636_create_circle_options.rb
+END
+20091111211508_add_location_to_games.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/strongcirclescore/!svn/ver/166/branches/circlesbase/db/migrate/20091111211508_add_location_to_games.rb
+END
+20091102174003_create_addresses.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/strongcirclescore/!svn/ver/144/branches/circlesbase/db/migrate/20091102174003_create_addresses.rb
+END
+20100202042759_add_hub_to_sponsors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/strongcirclescore/!svn/ver/448/branches/circlesbase/db/migrate/20100202042759_add_hub_to_sponsors.rb
+END
+20091102161303_create_hubs_participants.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/strongcirclescore/!svn/ver/144/branches/circlesbase/db/migrate/20091102161303_create_hubs_participants.rb
+END
+20091027181218_create_divisions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/strongcirclescore/!svn/ver/169/branches/circlesbase/db/migrate/20091027181218_create_divisions.rb
+END
+20091208212002_create_sponsors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/strongcirclescore/!svn/ver/268/branches/circlesbase/db/migrate/20091208212002_create_sponsors.rb
+END
+20091102175614_create_team_memberships.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/strongcirclescore/!svn/ver/144/branches/circlesbase/db/migrate/20091102175614_create_team_memberships.rb
+END
+20091016002704_create_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/db/migrate/20091016002704_create_users.rb
+END
+20091015235647_create_programs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/db/migrate/20091015235647_create_programs.rb
+END
+20091220210900_create_photos.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/strongcirclescore/!svn/ver/284/branches/circlesbase/db/migrate/20091220210900_create_photos.rb
+END
+20100415132143_add_external_flag_to_games.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/strongcirclescore/!svn/ver/509/branches/circlesbase/db/migrate/20100415132143_add_external_flag_to_games.rb
+END
+20100319014304_add_state_to_game_reports.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/strongcirclescore/!svn/ver/479/branches/circlesbase/db/migrate/20100319014304_add_state_to_game_reports.rb
+END
+20100403130946_add_jersey_number_to_player.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/strongcirclescore/!svn/ver/506/branches/circlesbase/db/migrate/20100403130946_add_jersey_number_to_player.rb
+END
+20100213154703_add_status_to_sponsored_options.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/strongcirclescore/!svn/ver/456/branches/circlesbase/db/migrate/20100213154703_add_status_to_sponsored_options.rb
+END
+20100302045722_create_game_reports.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/strongcirclescore/!svn/ver/469/branches/circlesbase/db/migrate/20100302045722_create_game_reports.rb
+END
+20100114231657_add_sponsor_email_to_hubs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/strongcirclescore/!svn/ver/393/branches/circlesbase/db/migrate/20100114231657_add_sponsor_email_to_hubs.rb
+END
+20100113221500_add_image_to_photos.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/strongcirclescore/!svn/ver/370/branches/circlesbase/db/migrate/20100113221500_add_image_to_photos.rb
+END
+20100508145719_add_preseason_to_divisions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/strongcirclescore/!svn/ver/517/branches/circlesbase/db/migrate/20100508145719_add_preseason_to_divisions.rb
+END
+20091102170658_add_contact_to_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/strongcirclescore/!svn/ver/144/branches/circlesbase/db/migrate/20091102170658_add_contact_to_user.rb
+END
+20091102164558_create_contacts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/strongcirclescore/!svn/ver/194/branches/circlesbase/db/migrate/20091102164558_create_contacts.rb
+END
+20091016172004_add_super_admin_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/db/migrate/20091016172004_add_super_admin_user.rb
+END

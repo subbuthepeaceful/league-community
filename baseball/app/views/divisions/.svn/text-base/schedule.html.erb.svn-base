@@ -1,0 +1,20 @@
+<script type="text/javascript">
+	var $teamId;
+	var $divisionId = <%= @division.id %>;
+</script>
+<%= javascript_include_tag "user-schedule" %>
+
+<div class="topmainbox">
+	
+	<%= render :partial => "shared/division_admin_header" %>
+	
+	<div id="columns">
+		<div class="center">
+			<div class="schedule_view">
+				<div id="division_schedule">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="topmainbox-bot"></div>	

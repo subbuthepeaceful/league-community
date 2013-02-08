@@ -1,0 +1,38 @@
+<div class="form-box">
+	<div class="form-box-top">
+		<div class="title">
+			<h2>Activate your account</h2>
+		</div>
+	</div>
+	<% if flash[:error] %>
+		<div class="error-message">
+			<%= flash[:error] %>
+			<% flash[:error] = nil %>
+		</div>
+	<% end -%>
+	<div class="form-box-bod">
+		<div id="activate_form" class="circles-form">
+			<% form_tag "/users/#{@user.id}/perform_activation" do -%>
+			<div class="form-line">
+				<%= label_tag 'login' %>
+				<%= text_field_tag 'login', @user.login, :class => "txt", :size => 30 %>
+			</div>
+			<div class="clear-both">
+			</div>
+
+			<div class="form-line">
+				<%= label_tag 'password' %>
+				<%= password_field_tag 'password', nil, :class => "txt", :size => 30 %>
+			</div>
+			<div class="clear-both">
+			</div>
+	
+			<%= submit_tag 'Activate', :class => "ui-state-default ui-corner-all form-submit user-form-submit", :id => "user_activate" %>
+			<div class="clear-both">
+			</div>
+			<% end -%>
+		</div>
+	</div>
+	<div class="form-box-bot">
+	</div>
+</div>

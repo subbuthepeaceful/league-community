@@ -1,0 +1,5 @@
+lamv_messages_enabled_co:
+    hub_id: 4
+    option_name: "MESSAGES"
+    option_value: true
+    

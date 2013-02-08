@@ -1,0 +1,3 @@
+#wrapper {
+	background: url('/images/hubs/green-circles-gradient.png') repeat-x top left;
+}

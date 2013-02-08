@@ -1,0 +1,11 @@
+<div class="profile teamhead">
+	<div class="text">
+		<ul class="info">
+			<li>Team: <span class="team-name">&nbsp;<%= @team.display_name%>&nbsp;</span></li>
+		</ul><!-- /Info -->
+		<ul class="buttons team-actions fright">
+			<li><a class="calendar" href="<%=schedule_team_path(@team)%>">Calendar</a></li>
+			<li><a class="signup" href="<%=gamelist_team_path(@team)%>">Game Reports</a></li>
+		</ul><!-- /Buttons -->
+	</div>
+</div>

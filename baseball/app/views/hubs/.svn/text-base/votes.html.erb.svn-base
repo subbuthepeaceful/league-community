@@ -1,0 +1,34 @@
+<div class="topmainbox">
+	
+	<%= render :partial => "shared/hub_admin_header" %>
+	<div id="columns">
+		<div class="center">
+	
+			<table class="tablesorter medium" id="star_player_votes">
+				<thead>
+					<tr>
+						<th>Player</th>
+						<th>Team</th>
+						<th>Total Votes</th>
+						<% if @division.preseason_games > 0 -%>
+							<th>Reg. Season Votes</th>
+						<% end -%>
+						<th>Games Voted In</th>
+					</tr>
+				</thead>
+				<% @top_voted_players.each do |voted_player| -%>
+					<tr>
+						<td><%= voted_player[:player].name %></td>
+						<td><%= voted_player[:team].display_name %></td>
+						<td><%= voted_player[:num_votes] %></td>
+						<% if @division.preseason_games > 0 -%>
+							<td><%= voted_player[:regular_season_votes] %></td>
+						<% end -%>
+						<td><%= voted_player[:voted_games].collect { |gr| gr.game.scheduled_at.strftime("%e-%b") + "," }%></td>
+					</tr>
+				<% end -%>
+			</table>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/strongcirclescore/!svn/ver/568/branches/circlesbase/app/controllers
+END
+circles_utilities.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/strongcirclescore/!svn/ver/469/branches/circlesbase/app/controllers/circles_utilities.rb
+END
+picasa_service.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/strongcirclescore/!svn/ver/284/branches/circlesbase/app/controllers/picasa_service.rb
+END
+contacts_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/strongcirclescore/!svn/ver/515/branches/circlesbase/app/controllers/contacts_controller.rb
+END
+sponsors_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/strongcirclescore/!svn/ver/465/branches/circlesbase/app/controllers/sponsors_controller.rb
+END
+flickr_service.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/strongcirclescore/!svn/ver/310/branches/circlesbase/app/controllers/flickr_service.rb
+END
+dashboard_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/strongcirclescore/!svn/ver/264/branches/circlesbase/app/controllers/dashboard_controller.rb
+END
+game_reports_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/strongcirclescore/!svn/ver/553/branches/circlesbase/app/controllers/game_reports_controller.rb
+END
+home_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/strongcirclescore/!svn/ver/523/branches/circlesbase/app/controllers/home_controller.rb
+END
+programs_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/strongcirclescore/!svn/ver/332/branches/circlesbase/app/controllers/programs_controller.rb
+END
+logins_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/strongcirclescore/!svn/ver/515/branches/circlesbase/app/controllers/logins_controller.rb
+END
+admin_roles_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/strongcirclescore/!svn/ver/509/branches/circlesbase/app/controllers/admin_roles_controller.rb
+END
+games_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/strongcirclescore/!svn/ver/469/branches/circlesbase/app/controllers/games_controller.rb
+END
+pictures_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/strongcirclescore/!svn/ver/371/branches/circlesbase/app/controllers/pictures_controller.rb
+END
+users_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/strongcirclescore/!svn/ver/515/branches/circlesbase/app/controllers/users_controller.rb
+END
+participants_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/strongcirclescore/!svn/ver/514/branches/circlesbase/app/controllers/participants_controller.rb
+END
+hubs_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/strongcirclescore/!svn/ver/568/branches/circlesbase/app/controllers/hubs_controller.rb
+END
+application_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/strongcirclescore/!svn/ver/515/branches/circlesbase/app/controllers/application_controller.rb
+END
+events_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/strongcirclescore/!svn/ver/431/branches/circlesbase/app/controllers/events_controller.rb
+END
+messages_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/strongcirclescore/!svn/ver/439/branches/circlesbase/app/controllers/messages_controller.rb
+END
+divisions_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/strongcirclescore/!svn/ver/560/branches/circlesbase/app/controllers/divisions_controller.rb
+END
+teams_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/strongcirclescore/!svn/ver/528/branches/circlesbase/app/controllers/teams_controller.rb
+END

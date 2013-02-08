@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/strongcirclescore/!svn/ver/565/branches/circlesbase/app/views/divisions
+END
+gamelist.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/strongcirclescore/!svn/ver/479/branches/circlesbase/app/views/divisions/gamelist.html.erb
+END
+view.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/strongcirclescore/!svn/ver/501/branches/circlesbase/app/views/divisions/view.html.erb
+END
+standings.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/strongcirclescore/!svn/ver/551/branches/circlesbase/app/views/divisions/standings.html.erb
+END
+schedule.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/strongcirclescore/!svn/ver/479/branches/circlesbase/app/views/divisions/schedule.html.erb
+END
+_scores.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/strongcirclescore/!svn/ver/565/branches/circlesbase/app/views/divisions/_scores.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/strongcirclescore/!svn/ver/448/branches/circlesbase/app/views/divisions/show.html.erb
+END
+votes.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/strongcirclescore/!svn/ver/517/branches/circlesbase/app/views/divisions/votes.html.erb
+END

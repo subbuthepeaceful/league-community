@@ -1,0 +1,77 @@
+10
+
+dir
+561
+http://dev.coredotcontinuum.com/svn/strongcirclescore/branches/circlesbase/test
+http://dev.coredotcontinuum.com/svn/strongcirclescore
+
+
+
+2010-05-27T05:24:52.313263Z
+518
+subbu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+66a3a3f8-0c13-41bd-d746-bde5736855b6
+
+unit
+dir
+
+test_helper.rb
+file
+
+
+
+
+2010-02-04T17:07:08.000000Z
+e297614c72684d065aef001f86188732
+2009-10-07T16:07:45.916091Z
+106
+subbu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1800
+
+performance
+dir
+
+functional
+dir
+
+integration
+dir
+
+fixtures
+dir
+

@@ -1,0 +1,67 @@
+<div class="topmainbox">
+	
+	<%= render :partial => "shared/roster_header" %>
+
+	<div id="columns">
+		<div class="center">
+	
+		<table class="rosterlist">
+					<tr>
+						<% if @team.head_coach -%>
+						<td><% if @team.head_coach.profile_photo_file_name %>
+							<%= image_tag @team.head_coach.profile_photo.url(:thumb) %>
+						<% end -%>
+						</td>
+						<td></td>
+						<td>Head Coach: <%="#{@team.head_coach.name}"%></td>
+						<td><%=@team.head_coach.email_address%></td>
+						<td>
+						<%=print_phones(@team.head_coach)%>
+						</td>
+						<% end -%>
+					</tr>
+			
+					<% @team.assistant_coaches.each { |coach|%>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>Assistant Coach: <%=coach.name%></td>
+						<td><%=coach.email_address%></td>
+						<td><%=print_phones(coach)%></td>
+					</tr>
+					<% } if @team.assistant_coaches  -%>
+			
+				<tr>
+					<td colspan="4"><hr/></td>
+				</tr>
+				<%@team.players.each_with_index{|player, i|  %>
+					<tr>
+						<td>
+							<% if player.profile_photo_file_name -%>
+								<%= image_tag player.profile_photo.url(:thumb)%>
+							<% else -%>
+								<%= image_tag default_roster_photo(player.team.division.program) %>
+							<% end -%>
+						</td>
+						<td>
+							<span class="jersey-number"><%= "##{player.jersey_number(@team)}" %>
+						</td>
+							
+						<td><%=player.name%></td>
+						<% if player.primary_contact -%>
+							<td><%=player.primary_contact.email_address%></td>
+							<td><%=print_phones(player.primary_contact)%></td>
+						<% end -%>
+					</tr>	
+				<% } %>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="topmainbox-bot"></div>
+
+<%= render :partial => "shared/new_message"%>
+
+<%= render :partial => "set_jersey_number" %>
+
+<%= render :partial => "edit_names_jerseys" %>

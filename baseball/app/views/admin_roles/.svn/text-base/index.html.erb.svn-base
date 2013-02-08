@@ -1,0 +1,3 @@
+<div class="topmainbox">
+	<%= render :partial => "shared/division_admin_header" %>
+</div>

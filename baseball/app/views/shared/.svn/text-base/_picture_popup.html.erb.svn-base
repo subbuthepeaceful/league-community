@@ -1,0 +1,4 @@
+<div id="photo_dialog" class="circles-dialog">
+    <div id="photo_dialog_photo"></div>
+    <div id="photo_dialog_caption"></div>
+</div>

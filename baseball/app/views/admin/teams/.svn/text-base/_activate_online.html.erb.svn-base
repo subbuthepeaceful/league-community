@@ -1,0 +1,25 @@
+<script type="text/javascript">
+	var $divisionName = "<%= @division.name %>";
+	var $sessionName = "<%= @division.program.currently_active_session.name %>";
+	var $programName = "<%= @division.program.name %>";
+	var $hubName = "<%= @hub.name %>";
+</script>
+<div id="activate_division" class="circles-dialog">
+	<div class="circles-form">
+		<h3>Online Activation and Welcome Email</h3>
+		<% form_tag activate_admin_division_path(@division), :name => "activate_division_form", :id => "activate_division_form" do -%>
+			<div class="form-line">
+				<%= label_tag 'Email Subject' %>
+				<%= text_area_tag :welcome_email_subject, '', :cols => 50, :rows => 4, :class => "txt-area" %> 
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag 'Email Message' %>
+				<%= text_area_tag :welcome_email_message, '', :cols => 50, :rows => 20, :class => "txt-area" %>
+			</div>
+			<div class="clear-both">
+			</div>
+		<% end -%>
+	</div>
+</div>

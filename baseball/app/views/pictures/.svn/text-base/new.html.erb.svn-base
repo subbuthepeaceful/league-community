@@ -1,0 +1,75 @@
+<div class="topmainbox picture-source-panel">
+        <div id="picture-provider-form" class="circles-form">
+			<h2>Select a Picture Source</h2>
+	        <% form_for :provider, :url => preview_participant_pictures_path, :html => { :name => "picture_provider_form"} do |f| -%>
+				<div class="form-line">
+			        <label>Provider:</label> <%=  f.select :name, [PHOTO_PROVIDER_PICASA, PHOTO_PROVIDER_FLICKR] %> 
+				</div>
+				<div class="clear-both">
+				</div>
+				<div class="form-line">
+					<label>User ID:</label> <%=  f.text_field :user_id, :class => "txt", :size => 20 %> 
+				</div>
+				<div class="clear-both">
+				</div>
+	        	<%= submit_tag "Preview Albums", :class => "ui-state-default ui-corner-all form-submit user-form-submit", :id => "preview_albums_submit" %>
+	        <% end -%>
+            <div class="clear-both"></div>
+	    </div>
+
+        <div id="picture-upload-form" class="circles-form">
+        <h2>Upload a Single Picture</h2>
+          <% form_for :photo, :url => participant_pictures_path, :html => { :name => "upload_picture_form", :multipart => true} do |f| -%>
+        <div class="form-line">
+              <label>Picture:</label> <%=  f.file_field :image, :size=> 20, :class => "txt" %>
+        </div>
+        <div class="clear-both"></div>
+        <div class="form-line">
+          <label>Caption:</label> <%=  f.text_field :title, :class => "txt", :size => 20 %> <br /><br/>
+        </div>
+        <div class="clear-both"></div>
+            <%= submit_tag "Upload Picture", :class => "ui-state-default ui-corner-all form-submit user-form-submit", :id => "upload_picture_submit" %>
+          <% end -%>
+      </div>
+
+    <div class="clear-both"></div>
+
+	        <% if @album_feeds && !@album_feeds.empty? %>
+
+			<div id="album-select-form" class="circles-form">
+	
+	          <h2>Select Album (You can preview and share photos with the team in the next step)</h2>
+	          	<% form_for :provider, :url => preview_participant_pictures_path, :html => { :name => "select_album_form"} do |f| -%>
+					<table class="picture-grid">
+	            		<% @album_feeds.each_with_index do |feed, i| -%>
+							<% if i % 3 == 0 -%>
+								<tr>
+							<% end -%>
+								<td>
+									<%=  f.radio_button :album_id, feed.album_id %>&nbsp;&nbsp;<%=  image_tag(feed.thumbnail_url, :width=>100) %>
+									<br />
+									<div class="album-caption"><%= feed.title %></div>
+								</td>
+							<% if i % 3 == 2 || i == @album_feeds.size - 1 %>
+								</tr>
+							<% end -%>
+	            		<% end -%>
+					</table>
+					
+	            	<%= f.hidden_field :name  %>
+	            	<%= f.hidden_field :user_id  %>
+
+					<div class="clear-both">
+					</div>
+
+	            	<%= submit_tag "Preview Album Photos", :class => "ui-state-default ui-corner-all form-submit user-form-submit", :id => "preview_album_photos_submit" %>
+	          <% end -%>
+		</div>
+        <% end -%>
+</div>
+
+<div id="processing_window">
+	<div class="processing-status">
+		<%= image_tag "/images/ajax-loader.gif" %>
+	</div>
+</div>

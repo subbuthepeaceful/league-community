@@ -1,0 +1,954 @@
+-- MySQL dump 10.11
+--
+-- Host: localhost    Database: circlesbase_production
+-- ------------------------------------------------------
+-- Server version	5.0.45
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `addresses`
+--
+
+DROP TABLE IF EXISTS `addresses`;
+CREATE TABLE `addresses` (
+  `id` int(11) NOT NULL auto_increment,
+  `street_address` varchar(255) default NULL,
+  `city` varchar(255) default NULL,
+  `state` varchar(8) default NULL,
+  `zip_code` varchar(12) default NULL,
+  `contact_id` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=256 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `addresses`
+--
+
+LOCK TABLES `addresses` WRITE;
+/*!40000 ALTER TABLE `addresses` DISABLE KEYS */;
+INSERT INTO `addresses` (`id`, `street_address`, `city`, `state`, `zip_code`, `contact_id`) VALUES (1,NULL,NULL,NULL,NULL,2),(2,NULL,NULL,NULL,NULL,3),(3,NULL,NULL,NULL,NULL,4),(4,NULL,NULL,NULL,NULL,5),(5,NULL,NULL,NULL,NULL,6),(6,NULL,NULL,NULL,NULL,7),(7,NULL,NULL,NULL,NULL,8),(8,NULL,NULL,NULL,NULL,9),(9,NULL,NULL,NULL,NULL,10),(10,NULL,NULL,NULL,NULL,11),(11,NULL,NULL,NULL,NULL,12),(12,NULL,NULL,NULL,NULL,13),(13,NULL,NULL,NULL,NULL,14),(14,NULL,NULL,NULL,NULL,15),(15,NULL,NULL,NULL,NULL,16),(16,NULL,NULL,NULL,NULL,17),(17,NULL,NULL,NULL,NULL,18),(18,NULL,NULL,NULL,NULL,19),(19,NULL,NULL,NULL,NULL,20),(20,NULL,NULL,NULL,NULL,21),(21,NULL,NULL,NULL,NULL,22),(22,NULL,NULL,NULL,NULL,23),(23,NULL,NULL,NULL,NULL,24),(24,NULL,NULL,NULL,NULL,25),(25,NULL,NULL,NULL,NULL,26),(26,NULL,NULL,NULL,NULL,27),(27,NULL,NULL,NULL,NULL,28),(28,NULL,NULL,NULL,NULL,29),(29,NULL,NULL,NULL,NULL,30),(30,NULL,NULL,NULL,NULL,31),(31,NULL,NULL,NULL,NULL,32),(32,NULL,NULL,NULL,NULL,33),(33,NULL,NULL,NULL,NULL,34),(34,NULL,NULL,NULL,NULL,35),(35,NULL,NULL,NULL,NULL,36),(36,NULL,NULL,NULL,NULL,37),(37,NULL,NULL,NULL,NULL,38),(38,NULL,NULL,NULL,NULL,39),(39,NULL,NULL,NULL,NULL,40),(40,NULL,NULL,NULL,NULL,41),(41,NULL,NULL,NULL,NULL,42),(42,NULL,NULL,NULL,NULL,43),(43,NULL,NULL,NULL,NULL,44),(44,NULL,NULL,NULL,NULL,45),(45,NULL,NULL,NULL,NULL,46),(46,NULL,NULL,NULL,NULL,47),(47,NULL,NULL,NULL,NULL,48),(48,NULL,NULL,NULL,NULL,49),(49,NULL,NULL,NULL,NULL,50),(50,NULL,NULL,NULL,NULL,51),(51,NULL,NULL,NULL,NULL,52),(52,NULL,NULL,NULL,NULL,53),(53,NULL,NULL,NULL,NULL,54),(54,NULL,NULL,NULL,NULL,55),(55,NULL,NULL,NULL,NULL,56),(56,NULL,NULL,NULL,NULL,57),(57,NULL,NULL,NULL,NULL,58),(58,NULL,NULL,NULL,NULL,59),(59,NULL,NULL,NULL,NULL,60),(60,NULL,NULL,NULL,NULL,61),(61,NULL,NULL,NULL,NULL,62),(62,NULL,NULL,NULL,NULL,63),(63,NULL,NULL,NULL,NULL,64),(64,NULL,NULL,NULL,NULL,65),(65,NULL,NULL,NULL,NULL,66),(66,NULL,NULL,NULL,NULL,67),(67,NULL,NULL,NULL,NULL,68),(68,NULL,NULL,NULL,NULL,69),(69,NULL,NULL,NULL,NULL,70),(70,NULL,NULL,NULL,NULL,71),(71,NULL,NULL,NULL,NULL,72),(72,NULL,NULL,NULL,NULL,73),(73,NULL,NULL,NULL,NULL,74),(74,NULL,NULL,NULL,NULL,75),(75,NULL,NULL,NULL,NULL,76),(76,NULL,NULL,NULL,NULL,77),(77,NULL,NULL,NULL,NULL,78),(78,NULL,NULL,NULL,NULL,79),(79,NULL,NULL,NULL,NULL,80),(80,NULL,NULL,NULL,NULL,81),(81,NULL,NULL,NULL,NULL,82),(82,NULL,NULL,NULL,NULL,83),(83,NULL,NULL,NULL,NULL,84),(84,NULL,NULL,NULL,NULL,85),(85,NULL,NULL,NULL,NULL,86),(86,NULL,NULL,NULL,NULL,87),(87,NULL,NULL,NULL,NULL,88),(88,NULL,NULL,NULL,NULL,89),(89,NULL,NULL,NULL,NULL,90),(90,NULL,NULL,NULL,NULL,91),(91,NULL,NULL,NULL,NULL,92),(92,NULL,NULL,NULL,NULL,93),(93,NULL,NULL,NULL,NULL,94),(94,NULL,NULL,NULL,NULL,95),(95,NULL,NULL,NULL,NULL,96),(96,NULL,NULL,NULL,NULL,97),(97,NULL,NULL,NULL,NULL,98),(98,NULL,NULL,NULL,NULL,99),(99,NULL,NULL,NULL,NULL,100),(100,NULL,NULL,NULL,NULL,101),(101,NULL,NULL,NULL,NULL,102),(102,NULL,NULL,NULL,NULL,103),(103,NULL,NULL,NULL,NULL,104),(104,NULL,NULL,NULL,NULL,105),(105,NULL,NULL,NULL,NULL,106),(106,NULL,NULL,NULL,NULL,107),(107,NULL,NULL,NULL,NULL,108),(108,NULL,NULL,NULL,NULL,109),(109,NULL,NULL,NULL,NULL,110),(110,NULL,NULL,NULL,NULL,111),(111,NULL,NULL,NULL,NULL,112),(112,NULL,NULL,NULL,NULL,113),(113,NULL,NULL,NULL,NULL,114),(114,NULL,NULL,NULL,NULL,115),(115,NULL,NULL,NULL,NULL,116),(116,NULL,NULL,NULL,NULL,117),(117,NULL,NULL,NULL,NULL,118),(118,NULL,NULL,NULL,NULL,119),(119,NULL,NULL,NULL,NULL,120),(120,NULL,NULL,NULL,NULL,121),(121,NULL,NULL,NULL,NULL,122),(122,NULL,NULL,NULL,NULL,123),(123,NULL,NULL,NULL,NULL,124),(124,NULL,NULL,NULL,NULL,125),(125,NULL,NULL,NULL,NULL,126),(126,NULL,NULL,NULL,NULL,127),(127,NULL,NULL,NULL,NULL,128),(128,NULL,NULL,NULL,NULL,129),(129,NULL,NULL,NULL,NULL,130),(130,NULL,NULL,NULL,NULL,131),(131,NULL,NULL,NULL,NULL,132),(132,NULL,NULL,NULL,NULL,133),(133,NULL,NULL,NULL,NULL,134),(134,NULL,NULL,NULL,NULL,135),(135,NULL,NULL,NULL,NULL,136),(136,NULL,NULL,NULL,NULL,137),(137,NULL,NULL,NULL,NULL,138),(138,NULL,NULL,NULL,NULL,139),(139,NULL,NULL,NULL,NULL,140),(140,NULL,NULL,NULL,NULL,141),(141,NULL,NULL,NULL,NULL,142),(142,NULL,NULL,NULL,NULL,143),(143,NULL,NULL,NULL,NULL,144),(144,NULL,NULL,NULL,NULL,145),(145,NULL,NULL,NULL,NULL,146),(146,NULL,NULL,NULL,NULL,147),(147,NULL,NULL,NULL,NULL,148),(148,NULL,NULL,NULL,NULL,149),(149,NULL,NULL,NULL,NULL,150),(150,NULL,NULL,NULL,NULL,151),(151,NULL,NULL,NULL,NULL,152),(152,NULL,NULL,NULL,NULL,153),(153,NULL,NULL,NULL,NULL,154),(154,NULL,NULL,NULL,NULL,155),(155,NULL,NULL,NULL,NULL,156),(156,NULL,NULL,NULL,NULL,157),(157,NULL,NULL,NULL,NULL,158),(158,NULL,NULL,NULL,NULL,159),(159,NULL,NULL,NULL,NULL,160),(160,NULL,NULL,NULL,NULL,161),(161,NULL,NULL,NULL,NULL,162),(162,NULL,NULL,NULL,NULL,163),(163,NULL,NULL,NULL,NULL,164),(164,NULL,NULL,NULL,NULL,165),(165,NULL,NULL,NULL,NULL,166),(166,NULL,NULL,NULL,NULL,167),(167,NULL,NULL,NULL,NULL,168),(168,NULL,NULL,NULL,NULL,169),(169,NULL,NULL,NULL,NULL,170),(170,NULL,NULL,NULL,NULL,171),(171,NULL,NULL,NULL,NULL,172),(172,NULL,NULL,NULL,NULL,173),(173,NULL,NULL,NULL,NULL,174),(174,NULL,NULL,NULL,NULL,175),(175,NULL,NULL,NULL,NULL,176),(176,NULL,NULL,NULL,NULL,177),(177,NULL,NULL,NULL,NULL,178),(178,NULL,NULL,NULL,NULL,179),(179,NULL,NULL,NULL,NULL,180),(180,NULL,NULL,NULL,NULL,181),(181,NULL,NULL,NULL,NULL,182),(182,NULL,NULL,NULL,NULL,183),(183,NULL,NULL,NULL,NULL,184),(184,NULL,NULL,NULL,NULL,185),(185,NULL,NULL,NULL,NULL,186),(186,NULL,NULL,NULL,NULL,187),(187,NULL,NULL,NULL,NULL,188),(188,NULL,NULL,NULL,NULL,189),(189,NULL,NULL,NULL,NULL,190),(190,NULL,NULL,NULL,NULL,191),(191,NULL,NULL,NULL,NULL,192),(192,NULL,NULL,NULL,NULL,193),(193,NULL,NULL,NULL,NULL,194),(194,NULL,NULL,NULL,NULL,195),(195,NULL,NULL,NULL,NULL,196),(196,NULL,NULL,NULL,NULL,197),(197,NULL,NULL,NULL,NULL,198),(198,NULL,NULL,NULL,NULL,199),(199,NULL,NULL,NULL,NULL,200),(200,NULL,NULL,NULL,NULL,201),(201,NULL,NULL,NULL,NULL,202),(202,NULL,NULL,NULL,NULL,203),(203,NULL,NULL,NULL,NULL,204),(204,NULL,NULL,NULL,NULL,205),(205,NULL,NULL,NULL,NULL,206),(206,NULL,NULL,NULL,NULL,207),(207,NULL,NULL,NULL,NULL,208),(208,NULL,NULL,NULL,NULL,209),(209,NULL,NULL,NULL,NULL,210),(210,NULL,NULL,NULL,NULL,211),(211,NULL,NULL,NULL,NULL,212),(212,NULL,NULL,NULL,NULL,213),(213,NULL,NULL,NULL,NULL,214),(214,NULL,NULL,NULL,NULL,215),(215,NULL,NULL,NULL,NULL,216),(216,NULL,NULL,NULL,NULL,217),(217,NULL,NULL,NULL,NULL,218),(218,NULL,NULL,NULL,NULL,219),(219,NULL,NULL,NULL,NULL,220),(220,NULL,NULL,NULL,NULL,221),(221,NULL,NULL,NULL,NULL,222),(222,NULL,NULL,NULL,NULL,223),(223,NULL,NULL,NULL,NULL,224),(224,NULL,NULL,NULL,NULL,225),(225,NULL,NULL,NULL,NULL,226),(226,NULL,NULL,NULL,NULL,227),(227,NULL,NULL,NULL,NULL,228),(228,NULL,NULL,NULL,NULL,229),(229,NULL,NULL,NULL,NULL,230),(230,NULL,NULL,NULL,NULL,231),(231,NULL,NULL,NULL,NULL,232),(232,NULL,NULL,NULL,NULL,233),(233,NULL,NULL,NULL,NULL,234),(234,NULL,NULL,NULL,NULL,235),(235,NULL,NULL,NULL,NULL,236),(236,NULL,NULL,NULL,NULL,237),(237,NULL,NULL,NULL,NULL,238),(238,NULL,NULL,NULL,NULL,239),(239,NULL,NULL,NULL,NULL,240),(240,NULL,NULL,NULL,NULL,241),(241,NULL,NULL,NULL,NULL,242),(242,NULL,NULL,NULL,NULL,243),(243,NULL,NULL,NULL,NULL,244),(244,NULL,NULL,NULL,NULL,245),(245,NULL,NULL,NULL,NULL,246),(246,NULL,NULL,NULL,NULL,247),(247,NULL,NULL,NULL,NULL,248),(248,NULL,NULL,NULL,NULL,249),(249,NULL,NULL,NULL,NULL,250),(250,NULL,NULL,NULL,NULL,251),(251,NULL,NULL,NULL,NULL,252),(252,NULL,NULL,NULL,NULL,253),(253,NULL,NULL,NULL,NULL,254),(254,NULL,NULL,NULL,NULL,255),(255,NULL,NULL,NULL,NULL,256);
+/*!40000 ALTER TABLE `addresses` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `availabilities`
+--
+
+DROP TABLE IF EXISTS `availabilities`;
+CREATE TABLE `availabilities` (
+  `id` int(11) NOT NULL auto_increment,
+  `game_id` int(11) NOT NULL,
+  `participant_id` int(11) NOT NULL,
+  `available` tinyint(1) default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `availabilities`
+--
+
+LOCK TABLES `availabilities` WRITE;
+/*!40000 ALTER TABLE `availabilities` DISABLE KEYS */;
+/*!40000 ALTER TABLE `availabilities` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `circle_options`
+--
+
+DROP TABLE IF EXISTS `circle_options`;
+CREATE TABLE `circle_options` (
+  `id` int(11) NOT NULL auto_increment,
+  `hub_id` int(11) NOT NULL,
+  `option_name` varchar(255) default NULL,
+  `option_value` varchar(255) default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `circle_options`
+--
+
+LOCK TABLES `circle_options` WRITE;
+/*!40000 ALTER TABLE `circle_options` DISABLE KEYS */;
+/*!40000 ALTER TABLE `circle_options` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `circles_messages`
+--
+
+DROP TABLE IF EXISTS `circles_messages`;
+CREATE TABLE `circles_messages` (
+  `id` int(11) NOT NULL auto_increment,
+  `contact_id` int(11) NOT NULL,
+  `subject` varchar(255) default NULL,
+  `body` text,
+  `sent` datetime default NULL,
+  `important` tinyint(1) default NULL,
+  `in_reply_to` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `circles_messages`
+--
+
+LOCK TABLES `circles_messages` WRITE;
+/*!40000 ALTER TABLE `circles_messages` DISABLE KEYS */;
+/*!40000 ALTER TABLE `circles_messages` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `contacts`
+--
+
+DROP TABLE IF EXISTS `contacts`;
+CREATE TABLE `contacts` (
+  `id` int(11) NOT NULL auto_increment,
+  `title` varchar(8) default NULL,
+  `first_name` varchar(24) default NULL,
+  `last_name` varchar(24) default NULL,
+  `email_address` varchar(64) default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  `profile_photo_file_name` varchar(255) default NULL,
+  `profile_photo_content_tye` varchar(255) default NULL,
+  `profile_photo_file_size` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=257 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `contacts`
+--
+
+LOCK TABLES `contacts` WRITE;
+/*!40000 ALTER TABLE `contacts` DISABLE KEYS */;
+INSERT INTO `contacts` (`id`, `title`, `first_name`, `last_name`, `email_address`, `created_at`, `updated_at`, `profile_photo_file_name`, `profile_photo_content_tye`, `profile_photo_file_size`) VALUES (1,NULL,'System','Administrator','admin@strongcircles.com','2010-02-04 17:28:17','2010-02-04 17:28:17',NULL,NULL,NULL),(2,NULL,'<Parent>','Ahrens','jbahrens2002@yahoo.com','2010-03-16 20:10:28','2010-03-16 20:10:28',NULL,NULL,NULL),(3,NULL,'<Parent>','Ahrens',NULL,'2010-03-16 20:10:28','2010-03-16 20:10:28',NULL,NULL,NULL),(4,NULL,'<Parent>','Altinger','jaltinger@yahoo.com','2010-03-16 20:10:28','2010-03-16 20:10:28',NULL,NULL,NULL),(5,NULL,'<Parent>','Atler','dmatler@yahoo.com','2010-03-16 20:10:28','2010-03-16 20:10:28',NULL,NULL,NULL),(6,NULL,'<Parent>','Baker','gbaker@scu.edu','2010-03-16 20:10:28','2010-03-16 20:10:28',NULL,NULL,NULL),(7,NULL,'<Parent>','Boennighausen','mboennig@yahoo.com','2010-03-16 20:10:29','2010-03-16 20:10:29',NULL,NULL,NULL),(8,NULL,'<Parent>','Bowers','brucerbowers@gmail.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(9,NULL,'<Parent>','Carey','mvcareys@pacbell.net','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(10,NULL,'<Parent>','Chao','shari_chao@yahoo.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(11,NULL,'<Parent>','Chen','bchen@synopsys.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(12,NULL,'<Parent>','Cho','c_cho@pacbell.net','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(13,NULL,'<Parent>','Clark','lincolnclark@kpmg.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(14,NULL,'<Parent>','Clevenger','danaclev2@aol.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(15,NULL,'<Parent>','Cochran','scochran74@yahoo.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(16,NULL,'<Parent>','Colodny','dcolodny@yahoo.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(17,NULL,'<Parent>','Conroy','tanya36@gmail.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(18,NULL,'<Parent>','Dea-Mattson','wendy@dea-mattson.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(19,NULL,'<Parent>','Dickerson','dickerson_cj@hotmail.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(20,NULL,'<Parent>','Dinneen','rob.dinneen@gmail.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(21,NULL,'<Parent>','Doyle','kerwin75@yahoo.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(22,NULL,'<Parent>','Eckstein','beeckstein@sbcglobal.net','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(23,NULL,'<Parent>','Eggleton','keggleton@wsgr.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(24,NULL,'<Parent>','Erf','franke@yahoo.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(25,NULL,'<Parent>','Espiritu','tonyespiritu@yahoo.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(26,NULL,'<Parent>','Faigon','anat@yendor.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(27,NULL,'<Parent>','Foody','moc@sterlingpr.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(28,NULL,'<Parent>','Fox','audrey_fox@comcast.net','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(29,NULL,'<Parent>','Fravala','nickfravala@comcast.net','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(30,NULL,'<Parent>','Gambetta','doug.gambetta@comcast.net','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(31,NULL,'<Parent>','Gitin','ecc123@comcast.net','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(32,NULL,'<Parent>','Gonzalez-Lizardi','james_gonzalezjr@yahoo.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(33,NULL,'<Parent>','Gumm','robert.l.gumm@us.pwc.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(34,NULL,'<Parent>','Horowitz','warren616@earthlink.net','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(35,NULL,'<Parent>','Hou','ffzhao2002@yahoo.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(36,NULL,'<Parent>','hughes','scottahughes@comcast.net','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(37,NULL,'<Parent>','Jog','vikramjog@sbcglobal.net','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(38,NULL,'<Parent>','Johnson','anne.eric.johnson@sbcglobal.net','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(39,NULL,'<Parent>','Kane','dankane@pacbell.net','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(40,NULL,'<Parent>','Kapur','geetuverma@yahoo.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(41,NULL,'<Parent>','Kasser','bkasser@russellreynolds.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(42,NULL,'<Parent>','Katwan','akatwan@yahoo.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(43,NULL,'<Parent>','Kulandaivelu','kalai-karthi@yahoogroups.com','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(44,NULL,'<Parent>','Larson','d19591@earthlink.net','2010-03-16 20:10:31','2010-03-16 20:10:31',NULL,NULL,NULL),(45,NULL,'<Parent>','LeBlanc','luckylaurac@hotmail.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(46,NULL,'<Parent>','Lee','jinah23@hotmail.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(47,NULL,'<Parent>','Lillie','coachlillie@gmail.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(48,NULL,'<Parent>','Malley','melissamalley@yahoo.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(49,NULL,'<Parent>','Martin','martinville@pacbell.net','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(50,NULL,'<Parent>','McDermott','ecmcdermott@comcast.net','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(51,NULL,'<Parent>','McGall','kathleen.mcgall@lifetech.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(52,NULL,'<Parent>','McGrath','peggy.wellness@gmail.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(53,NULL,'<Parent>','Mitchel','rkmitchel@aol.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(54,NULL,'<Parent>','Moore','angmoore@earthlink.net','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(55,NULL,'<Parent>','Motogawa','kmotogawa@yahoo.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(56,NULL,'<Parent>','Mujica','pam.mujica@hp.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(57,NULL,'<Parent>','Nam','dereknam@yahoo.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(58,NULL,'<Parent>','Nunley','annnunley@gmail.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(59,NULL,'<Parent>','Pelayo','rjrpelayo@aol.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(60,NULL,'<Parent>','Perrino','d_perrino@msn.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(61,NULL,'<Parent>','Phelps','danandeileen@ameritech.net','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(62,NULL,'<Parent>','phillips','mphillips@ccarey.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(63,NULL,'<Parent>','Pribe','cap.mph@comcast.net','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(64,NULL,'<Parent>','Quigley','gquigley@smuhsd.org','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(65,NULL,'<Parent>','Ragen','kent@ecounit.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(66,NULL,'<Parent>','Refaee','kansarinia@yahoo.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(67,NULL,'<Parent>','Ross','clayandrachel@hotmail.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(68,NULL,'<Parent>','Ruben','laralruben@gmail.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(69,NULL,'<Parent>','Sarathy','wsarathy@yahoo.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(70,NULL,'<Parent>','Schiller','Bschiller@schillerconstruction.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(71,NULL,'<Parent>','Schmidt','res49@cornell.edu','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(72,NULL,'<Parent>','Scott','andreascott89@yahoo.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(73,NULL,'<Parent>','Seither','joeseither@yahoo.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(74,NULL,'<Parent>','Siu','jenny_rex@yahoo.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(75,NULL,'Kevin','Smith','kssmith@lamvpb.org','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(76,NULL,'<Parent>','smith','msmith8513@msn.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(77,NULL,'<Parent>','Spry','steve@lthfp.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(78,NULL,'<Parent>','Stein','daphnebstein@gmail.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(79,NULL,'<Parent>','Subramanyan','bsubbu@sbcglobal.net','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(80,NULL,'<Parent>','Suresh','roh12@pacbell.net','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(81,NULL,'<Parent>','Tandy','tandy.kathleen@gmail.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(82,NULL,'<Parent>','Taraporevala','ftaraporevala@yahoo.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(83,NULL,'<Parent>','Tey','ronnytey@yahoo.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(84,NULL,'<Parent>','Valentino','lorivalentino@yahoo.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(85,NULL,'<Parent>','Vidovich','mikevidovich@aol.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(86,NULL,'<Parent>','Ware','jaware1@gmail.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(87,NULL,'<Parent>','Welch','badgerwelch@gmail.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(88,NULL,'Byron','Young','byroncyoung@sbcglobal.net','2010-03-16 20:10:32','2010-03-17 04:51:25','phil.jpg',NULL,5225),(89,NULL,'<Parent>','Young','markyoung58@yahoo.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(90,NULL,'<Parent>','Yu','william.j.yu@gmail.com','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(91,NULL,'<Parent>','Zubrick','mccrowder@sbcglobal.net','2010-03-16 20:10:32','2010-03-16 20:10:32',NULL,NULL,NULL),(92,NULL,'<Parent>','McTighe','kmctighe@cisco.com','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(93,NULL,'<Parent>','Chen','tcchen@yahoo.com','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(94,NULL,'<Parent>','Schill','904family@comcast.net','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(95,NULL,'<Parent>','Miller','gmiller@cisco.com','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(96,NULL,'<Parent>','Orlov','briano@brianorlovphoto.com','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(97,NULL,'<Parent>','domier','domier@pacbell.net','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(98,NULL,'<Parent>','Lund','garde_lund@sbcglobal.net','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(99,NULL,'<Parent>','Higley','dana.higley@us.ibm.com','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(100,NULL,'<Parent>','Wagenbrenner','swagenbr@cisco.com','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(101,NULL,'<Parent>','Torreano','ltorrreano@ocmcdonald.com','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(102,NULL,'<Parent>','Siegel','rbsiegel@earthlink.net','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(103,NULL,'<Parent>','Kapp','patriciakap@comcast.net','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(104,NULL,'<Parent>','Salkoski','mama-of-2@hotmail.com','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(105,NULL,'<Parent>','Yu','lihhuah@yahoo.com','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(106,NULL,'<Parent>','Simons','simons_r@sbcglobal.net','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(107,NULL,'<Parent>','Morales','james.morales@hp.com','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(108,NULL,'<Parent>','Luskin','luskin@pacbell.net','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(109,NULL,'<Parent>','Lucas','alucas@yahoo.com','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(110,NULL,'<Parent>','Kemp','mikekemp@sfhs.com','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(111,NULL,'<Parent>','Kirshenbaum','kirshenbaum@hpl.hp.com','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(112,NULL,'<Parent>','Taylor','ktaylor@stanford.edu','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(113,NULL,'<Parent>','Salvucci','dsalvucci@yahoo.com','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(114,NULL,'<Parent>','germain','jane.germain@yahoo.com','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(115,NULL,'<Parent>','Doyle','onpurple1@yahoo.com','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(116,NULL,'<Parent>','Buchner','terri@buchner.us','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(117,NULL,'<Parent>','Groseclose','geoff.g@earthlink.net','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(118,NULL,'<Parent>','Arnold','rick.arnold@hp.com','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(119,NULL,'<Parent>','Wood','gwood1501@sbcglobal.net','2010-03-16 22:04:11','2010-03-16 22:04:11',NULL,NULL,NULL),(120,NULL,'<Parent>','Marshall','bigwords@comcast.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(121,NULL,'<Parent>','Silveira','gsilveira@technofyn.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(122,NULL,'<Parent>','Heck','larry_heck@yahoo.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(123,NULL,'<Parent>','Banks','cjjjbanks@comcast.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(124,NULL,'<Parent>','Allen','agilmoreallen@yahoo.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(125,NULL,'<Parent>','Remahl','thomas@remahl.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(126,NULL,'<Parent>','montalban','runnercm@yahoo.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(127,NULL,'<Parent>','Dawson','dawsonwu@rahul.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(128,NULL,'<Parent>','Gounod','lisa.gounod@sbcglobal.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(129,NULL,'<Parent>','Binesh','bizhanb@gmail.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(130,NULL,'<Parent>','Rudolph','gdrudolph@comcast.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(131,NULL,'<Parent>','Sans','SandySans@aol.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(132,NULL,'<Parent>','Porter','leslie@porterconsulting.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(133,NULL,'<Parent>','Zepeda','mayzepeda@yahoo.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(134,NULL,'<Parent>','young','drmly@aol.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(135,NULL,'<Parent>','Moran','ed_m_95110@yahoo.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(136,NULL,'<Parent>','Resnick','mark.resnick@yahoo.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(137,NULL,'<Parent>','Tomac','pstomac@sbcglobal.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(138,NULL,'<Parent>','Lessing','sharonlessing@mac.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(139,NULL,'<Parent>','Mountford','jamesdesrosier@yahoo.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(140,NULL,'<Parent>','Olsen','carterolsen@yahoo.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(141,NULL,'<Parent>','Godfrey','godfreys@comcast.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(142,NULL,'<Parent>','Auerbach','daa717@comcast.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(143,NULL,'<Parent>','Van Syoc','rod1285@sbcglobal.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(144,NULL,'<Parent>','Hoke','lindakob@comcast.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(145,NULL,'<Parent>','Rau','krau4mail@pacbell.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(146,NULL,'<Parent>','Costello','jlin_costello@yahoo.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(147,NULL,'<Parent>','Coffman','glenncof@sbcglobal.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(148,NULL,'<Parent>','Dong','jdong@sbcglobal.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(149,NULL,'<Parent>','Deppmeier','lindadeppmeier@yahoo.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(150,NULL,'<Parent>','Wipfler','wipfler1@apple.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(151,NULL,'<Parent>','Starr','barry_94040@yahoo.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(152,NULL,'<Parent>','grillo','grilloh@comcast.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(153,NULL,'<Parent>','Gounod','lgounod@aol.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(154,NULL,'<Parent>','Carrie','carrielast@yahoo.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(155,NULL,'<Parent>','Yap','akisan@gmail.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(156,NULL,'<Parent>','Gardner-Gill','gardnergill@yahoo.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(157,NULL,'<Parent>','Hollenbaugh','hankhollenbaugh@comcast.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(158,NULL,'<Parent>','Attard','dave@attard.org','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(159,NULL,'<Parent>','Chaffee','chaffee2004@comcast.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(160,NULL,'<Parent>','Pann','dpann@pacbell.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(161,NULL,'<Parent>','Field','bfield@wwdb.org','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(162,NULL,'<Parent>','DelFierro','ed.delfierro@sbcglobal.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(163,NULL,'<Parent>','Dyer','mike_dyer@sbcglobal.net','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(164,NULL,'<Parent>','Chestnut','regnv@yahoo.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(165,NULL,'<Parent>','Saadi','ed@pencom.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(166,NULL,'<Parent>','Nag','sudip.nag@netapp.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(167,NULL,'<Parent>','Kenyon','rkenyon@lasdschools.org','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(168,NULL,'<Parent>','Eum','jayeum@yahoo.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(169,NULL,'<Parent>','Elder','gordonmaxelder@yahoo.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(170,NULL,'<Parent>','Vallner','dvallner@msn.com','2010-03-16 22:04:12','2010-03-16 22:04:12',NULL,NULL,NULL),(171,NULL,'<Parent>','Namyst','david.d.namyst@intel.com','2010-03-16 22:04:13','2010-03-16 22:04:13',NULL,NULL,NULL),(172,NULL,'<Parent>','Gonzalez','gonzorello@msn.com','2010-03-16 22:04:13','2010-03-16 22:04:13',NULL,NULL,NULL),(173,NULL,'<Parent>','Kjos','todd.kjos@gmail.com','2010-03-16 22:04:13','2010-03-16 22:04:13',NULL,NULL,NULL),(174,NULL,'<Parent>','Edgecumbe','eedgecum@specialized.com','2010-03-16 22:04:13','2010-03-16 22:04:13',NULL,NULL,NULL),(175,NULL,'<Parent>','Holton','holtons4@sbcglobal.net','2010-03-16 22:04:13','2010-03-16 22:04:13',NULL,NULL,NULL),(176,NULL,'<Parent>','Geiger','dangeiger1@yahoo.com','2010-03-16 22:06:32','2010-03-16 22:06:32',NULL,NULL,NULL),(177,NULL,'<Parent>','Pakravan','farhadp@cisco.com','2010-03-16 22:06:32','2010-03-16 22:06:32',NULL,NULL,NULL),(178,NULL,'<Parent>','Marchok','tom.marchok@alumni.cmu.edu','2010-03-16 22:06:32','2010-03-16 22:06:32',NULL,NULL,NULL),(179,NULL,'<Parent>','Walker','luciane@aol.com','2010-03-16 22:06:32','2010-03-16 22:06:32',NULL,NULL,NULL),(180,NULL,'<Parent>','Lee','rleetime@yahoo.com','2010-03-16 22:06:32','2010-03-16 22:06:32',NULL,NULL,NULL),(181,NULL,'<Parent>','Siu','simonsiu@gmail.com','2010-03-16 22:06:32','2010-03-16 22:06:32',NULL,NULL,NULL),(182,NULL,'<Parent>','Swearingen','cathy@dxm.com','2010-03-16 22:06:32','2010-03-16 22:06:32',NULL,NULL,NULL),(183,NULL,'<Parent>','Johnson','betsyajohnson@gmail.com','2010-03-16 22:06:32','2010-03-16 22:06:32',NULL,NULL,NULL),(184,NULL,'<Parent>','Bosset','sbosset@yahoo.com','2010-03-16 22:06:32','2010-03-16 22:06:32',NULL,NULL,NULL),(185,NULL,'<Parent>','matusich','mike@baggengineers.com','2010-03-16 22:06:32','2010-03-16 22:06:32',NULL,NULL,NULL),(186,NULL,'<Parent>','Krause','georgiakrause@yahoo.com','2010-03-16 22:06:32','2010-03-16 22:06:32',NULL,NULL,NULL),(187,NULL,'<Parent>','Noel','leonluap@gmail.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(188,NULL,'<Parent>','Sherrill','dendlich@hotmail.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(189,NULL,'<Parent>','Burgess','cherianddanny@gmail.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(190,NULL,'<Parent>','Owen','debralowen@sbcglobal.net','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(191,NULL,'<Parent>','Geffon','kathywalsh2@mac.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(192,NULL,'<Parent>','Dullaghan','jimdullaghan@gmail.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(193,NULL,'<Parent>','Thurm','scott.thurm@wsj.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(194,NULL,'<Parent>','Koblas','mkoblas@extra.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(195,NULL,'<Parent>','Khuong','ckhuong@cisco.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(196,NULL,'<Parent>','Israni','maryisrani@yahoo.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(197,NULL,'<Parent>','Stukenborg','kathleen@stukenborg.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(198,NULL,'<Parent>','Lee','faxlee@hotmail.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(199,NULL,'<Parent>','Sriram','h09sriram@yahoo.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(200,NULL,'<Parent>','Boennighausen','mboenn@yahoo.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(201,NULL,'<Parent>','Baker','bbaker@valleywater.org','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(202,NULL,'<Parent>','Goodwin','nicole-ponybaseball@goodwinz.net','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(203,NULL,'<Parent>','Shieh','michaelshieh@yahoo.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(204,NULL,'<Parent>','Quinn','cmiq@stanfordalumni.org','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(205,NULL,'<Parent>','Cabot','mark_cabot@hotmail.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(206,NULL,'<Parent>','Wang','jeanchen1968@hotmail.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(207,NULL,'<Parent>','Jones','jkjonesfamily@yahoo.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(208,NULL,'<Parent>','Norris','jnorris@svb.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(209,NULL,'<Parent>','Fitz','cindy@familyfitz.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(210,NULL,'<Parent>','Nikzad','hamid.nikzad@hp.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(211,NULL,'<Parent>','Zdepski','ayso45jane@yahoo.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(212,NULL,'<Parent>','Turner','joseph_r_turner@yahoo.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(213,NULL,'<Parent>','Kita','kita4teeth@aol.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(214,NULL,'<Parent>','Lue','roselue@gmail.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(215,NULL,'<Parent>','Lepesh','lepesh5@comcast.net','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(216,NULL,'<Parent>','Hedgpeth','dhedgpeth@sbcglobal.net','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(217,NULL,'<Parent>','Smith','hilaryhsmith@gmail.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(218,NULL,'<Parent>','Dominguez','alice@smooth-ops.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(219,NULL,'<Parent>','Galles','mgalles@yahoo.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(220,NULL,'<Parent>','Dahm','bonniedahm@yahoo.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(221,NULL,'<Parent>','Hoyt','waynehoyt@sbcglobal.net','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(222,NULL,'<Parent>','Galli','rjgalli@comerica.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(223,NULL,'<Parent>','Laurenzano','frank.laurenzano@sbcglobal.net','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(224,NULL,'<Parent>','Liu','the_lius@sbcglobal.net','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(225,NULL,'<Parent>','Bapat','sbapat@gmail.com','2010-03-16 22:06:33','2010-03-16 22:06:33',NULL,NULL,NULL),(226,NULL,'<Parent>','Martinez','jmarmart@yahoo.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(227,NULL,'<Parent>','Hardy','terrypassarotti@gmail.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(228,NULL,'<Parent>','Nelson','gingern@microsoft.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(229,NULL,'<Parent>','McAfee','ajmcafee@mac.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(230,NULL,'<Parent>','Byun','cinbyun@yahoo.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(231,NULL,'<Parent>','powers','neilpowers58@gmail.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(232,NULL,'<Parent>','Lewis','Karib.lewis@sbcglobal.net','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(233,NULL,'<Parent>','Lai','Benjamin_Lai@affymetrix.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(234,NULL,'<Parent>','Conkin','r.conkin@comcast.net','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(235,NULL,'<Parent>','von Oepen','r.oepen@sbcglobal.net','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(236,NULL,'<Parent>','Denzel','robbynd@comcast.net','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(237,NULL,'<Parent>','Demo','murray.demo@yahoo.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(238,NULL,'<Parent>','Wong','mutsy8@yahoo.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(239,NULL,'<Parent>','Adhvaith','sayeguitta@yahoo.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(240,NULL,'<Parent>','Halden','dhalden1@earthlink.net','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(241,NULL,'<Parent>','Magee','phanmagee@gmail.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(242,NULL,'<Parent>','Kikuta','jkikuta@hotmail.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(243,NULL,'<Parent>','Sinha','sinha.sumi@gmail.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(244,NULL,'<Parent>','Coyne','mb.coyne@comcast.net','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(245,NULL,'<Parent>','Landphere','matooka@earthlink.net','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(246,NULL,'<Parent>','Wong','leksich628@yahoo.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(247,NULL,'<Parent>','Shan','jshan999@yahoo.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(248,NULL,'<Parent>','clark','clarkfamilyCA@comcast.net','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(249,NULL,'<Parent>','Edelson','dredelson@gmail.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(250,NULL,'<Parent>','Fairbanks','mattkfairbanks@gmail.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(251,NULL,'<Parent>','cox','fi-tony@pacbell.net','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(252,NULL,'<Parent>','Vishnubhatt','svishnubhatt@yahoo.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(253,NULL,'<Parent>','Krystynak','krystynak@yahoo.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(254,NULL,'<Parent>','Stockton','spifer@ymail.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(255,NULL,'<Parent>','Fimbres','dreeemboat@aol.com','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL),(256,NULL,'<Parent>','Mark','amywkuan@sbcglobal.net','2010-03-16 22:06:34','2010-03-16 22:06:34',NULL,NULL,NULL);
+/*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `contacts_participants`
+--
+
+DROP TABLE IF EXISTS `contacts_participants`;
+CREATE TABLE `contacts_participants` (
+  `contact_id` int(11) default NULL,
+  `participant_id` int(11) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `contacts_participants`
+--
+
+LOCK TABLES `contacts_participants` WRITE;
+/*!40000 ALTER TABLE `contacts_participants` DISABLE KEYS */;
+INSERT INTO `contacts_participants` (`contact_id`, `participant_id`) VALUES (2,1),(3,1),(4,2),(3,2),(5,3),(3,3),(6,4),(3,4),(7,5),(3,5),(8,6),(3,6),(9,7),(3,7),(10,8),(3,8),(11,9),(3,9),(12,10),(3,10),(12,11),(3,11),(13,12),(3,12),(14,13),(3,13),(15,14),(3,14),(16,15),(3,15),(17,16),(3,16),(18,17),(3,17),(19,18),(3,18),(20,19),(3,19),(21,20),(3,20),(22,21),(3,21),(23,22),(3,22),(24,23),(3,23),(25,24),(3,24),(26,25),(3,25),(27,26),(3,26),(28,27),(3,27),(29,28),(3,28),(30,29),(3,29),(31,30),(3,30),(32,31),(3,31),(33,32),(3,32),(34,33),(3,33),(35,34),(3,34),(36,35),(3,35),(37,36),(3,36),(38,37),(3,37),(39,38),(3,38),(40,39),(3,39),(41,40),(3,40),(42,41),(3,41),(43,42),(3,42),(44,43),(3,43),(45,44),(3,44),(46,45),(3,45),(47,46),(3,46),(48,47),(3,47),(49,48),(3,48),(50,49),(3,49),(51,50),(3,50),(52,51),(3,51),(53,52),(3,52),(54,53),(3,53),(55,54),(3,54),(56,55),(3,55),(57,56),(3,56),(58,57),(3,57),(59,58),(3,58),(60,59),(3,59),(61,60),(3,60),(62,61),(3,61),(63,62),(3,62),(64,63),(3,63),(65,64),(3,64),(66,65),(3,65),(67,66),(3,66),(68,67),(3,67),(69,68),(3,68),(70,69),(3,69),(71,70),(3,70),(72,71),(3,71),(73,72),(3,72),(74,73),(3,73),(75,74),(3,74),(76,75),(3,75),(77,76),(3,76),(78,77),(3,77),(79,78),(3,78),(80,79),(3,79),(81,80),(3,80),(82,81),(3,81),(83,82),(3,82),(84,83),(3,83),(85,84),(3,84),(86,85),(3,85),(87,86),(3,86),(88,87),(3,87),(89,88),(3,88),(90,89),(3,89),(91,90),(3,90),(92,91),(3,91),(93,92),(3,92),(94,93),(3,93),(95,94),(3,94),(96,95),(3,95),(97,96),(3,96),(98,97),(3,97),(99,98),(3,98),(100,99),(3,99),(101,100),(3,100),(102,101),(3,101),(103,102),(3,102),(104,103),(3,103),(105,104),(3,104),(8,105),(3,105),(106,106),(3,106),(107,107),(3,107),(108,108),(3,108),(109,109),(3,109),(110,110),(3,110),(111,111),(3,111),(112,112),(3,112),(113,113),(3,113),(114,114),(3,114),(115,115),(3,115),(116,116),(3,116),(117,117),(3,117),(118,118),(3,118),(119,119),(3,119),(120,120),(3,120),(121,121),(3,121),(85,122),(3,122),(122,123),(3,123),(123,124),(3,124),(124,125),(3,125),(18,126),(3,126),(125,127),(3,127),(126,128),(3,128),(127,129),(3,129),(128,130),(3,130),(129,131),(3,131),(130,132),(3,132),(131,133),(3,133),(132,134),(3,134),(133,135),(3,135),(134,136),(3,136),(135,137),(3,137),(136,138),(3,138),(137,139),(3,139),(138,140),(3,140),(139,141),(3,141),(140,142),(3,142),(141,143),(3,143),(142,144),(3,144),(143,145),(3,145),(144,146),(3,146),(145,147),(3,147),(146,148),(3,148),(147,149),(3,149),(148,150),(3,150),(149,151),(3,151),(150,152),(3,152),(151,153),(3,153),(152,154),(3,154),(153,155),(3,155),(154,156),(3,156),(155,157),(3,157),(13,158),(3,158),(156,159),(3,159),(157,160),(3,160),(158,161),(3,161),(159,162),(3,162),(160,163),(3,163),(161,164),(3,164),(162,165),(3,165),(163,166),(3,166),(164,167),(3,167),(165,168),(3,168),(166,169),(3,169),(167,170),(3,170),(168,171),(3,171),(169,172),(3,172),(170,173),(3,173),(169,174),(3,174),(25,175),(3,175),(171,176),(3,176),(172,177),(3,177),(59,178),(3,178),(173,179),(3,179),(82,180),(3,180),(174,181),(3,181),(175,182),(3,182),(176,183),(3,183),(177,184),(3,184),(178,185),(3,185),(144,186),(3,186),(5,187),(3,187),(179,188),(3,188),(180,189),(3,189),(136,190),(3,190),(181,191),(3,191),(125,192),(3,192),(42,193),(3,193),(182,194),(3,194),(183,195),(3,195),(184,196),(3,196),(185,197),(3,197),(151,198),(3,198),(186,199),(3,199),(187,200),(3,200),(188,201),(3,201),(189,202),(3,202),(190,203),(3,203),(191,204),(3,204),(192,205),(3,205),(193,206),(3,206),(194,207),(3,207),(195,208),(3,208),(50,209),(3,209),(196,210),(3,210),(2,211),(3,211),(197,212),(3,212),(198,213),(3,213),(199,214),(3,214),(200,215),(3,215),(140,216),(3,216),(201,217),(3,217),(202,218),(3,218),(203,219),(3,219),(204,220),(3,220),(205,221),(3,221),(206,222),(3,222),(207,223),(3,223),(208,224),(3,224),(209,225),(3,225),(210,226),(3,226),(211,227),(3,227),(212,228),(3,228),(4,229),(3,229),(213,230),(3,230),(214,231),(3,231),(215,232),(3,232),(216,233),(3,233),(217,234),(3,234),(127,235),(3,235),(218,236),(3,236),(219,237),(3,237),(220,238),(3,238),(221,239),(3,239),(222,240),(3,240),(223,241),(3,241),(224,242),(3,242),(225,243),(3,243),(226,244),(3,244),(227,245),(3,245),(228,246),(3,246),(229,247),(3,247),(167,248),(3,248),(230,249),(3,249),(231,250),(3,250),(232,251),(3,251),(233,252),(3,252),(234,253),(3,253),(235,254),(3,254),(236,255),(3,255),(237,256),(3,256),(238,257),(3,257),(239,258),(3,258),(240,259),(3,259),(241,260),(3,260),(242,261),(3,261),(243,262),(3,262),(98,263),(3,263),(244,264),(3,264),(245,265),(3,265),(246,266),(3,266),(247,267),(3,267),(248,268),(3,268),(249,269),(3,269),(250,270),(3,270),(251,271),(3,271),(56,272),(3,272),(252,273),(3,273),(253,274),(3,274),(254,275),(3,275),(255,276),(3,276),(256,277),(3,277);
+/*!40000 ALTER TABLE `contacts_participants` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `delayed_jobs`
+--
+
+DROP TABLE IF EXISTS `delayed_jobs`;
+CREATE TABLE `delayed_jobs` (
+  `id` int(11) NOT NULL auto_increment,
+  `priority` int(11) default '0',
+  `attempts` int(11) default '0',
+  `handler` text,
+  `last_error` text,
+  `run_at` datetime default NULL,
+  `locked_at` datetime default NULL,
+  `failed_at` datetime default NULL,
+  `locked_by` varchar(255) default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  PRIMARY KEY  (`id`),
+  KEY `delayed_jobs_priority` (`priority`,`run_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `delayed_jobs`
+--
+
+LOCK TABLES `delayed_jobs` WRITE;
+/*!40000 ALTER TABLE `delayed_jobs` DISABLE KEYS */;
+/*!40000 ALTER TABLE `delayed_jobs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `divisions`
+--
+
+DROP TABLE IF EXISTS `divisions`;
+CREATE TABLE `divisions` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(255) default NULL,
+  `age_range` varchar(255) default NULL,
+  `program_id` int(11) NOT NULL,
+  `description` text,
+  `team_prefix` varchar(255) default NULL,
+  `has_schedule` tinyint(1) default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `divisions`
+--
+
+LOCK TABLES `divisions` WRITE;
+/*!40000 ALTER TABLE `divisions` DISABLE KEYS */;
+INSERT INTO `divisions` (`id`, `name`, `age_range`, `program_id`, `description`, `team_prefix`, `has_schedule`) VALUES (1,'Shetland','5-6',2,'Shetland Division','S',0),(2,'Pinto-1','7',2,'','P1',0),(3,'Pinto-2','8',2,'','P2',0),(4,'Mustang-1','9',2,'','M1',0),(5,'Mustang-2','10',2,'','M2',1),(6,'Bronco','11-12',2,'','B',0),(7,'Pony','14U',2,'','P',0),(8,'Colt','16U',2,'','C',0),(9,'Palomino','19U',2,'','PL',0);
+/*!40000 ALTER TABLE `divisions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `events`
+--
+
+DROP TABLE IF EXISTS `events`;
+CREATE TABLE `events` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL,
+  `description` text,
+  `starts` datetime default NULL,
+  `ends` datetime default NULL,
+  `location_id` int(11) default NULL,
+  `session_id` int(11) default NULL,
+  `division_id` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `events`
+--
+
+LOCK TABLES `events` WRITE;
+/*!40000 ALTER TABLE `events` DISABLE KEYS */;
+/*!40000 ALTER TABLE `events` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `game_reports`
+--
+
+DROP TABLE IF EXISTS `game_reports`;
+CREATE TABLE `game_reports` (
+  `id` int(11) NOT NULL auto_increment,
+  `contact_id` int(11) NOT NULL,
+  `team_id` int(11) NOT NULL,
+  `game_id` int(11) NOT NULL,
+  `actual_start_date` datetime default NULL,
+  `actual_start_time` datetime default NULL,
+  `actual_end_time` datetime default NULL,
+  `home_team_score` int(11) default NULL,
+  `away_team_score` int(11) default NULL,
+  `num_innings_played` int(11) default NULL,
+  `end_reason` varchar(255) default NULL,
+  `plate_umpire` varchar(255) default NULL,
+  `field_umpire` varchar(255) default NULL,
+  `comments` text,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `game_reports`
+--
+
+LOCK TABLES `game_reports` WRITE;
+/*!40000 ALTER TABLE `game_reports` DISABLE KEYS */;
+INSERT INTO `game_reports` (`id`, `contact_id`, `team_id`, `game_id`, `actual_start_date`, `actual_start_time`, `actual_end_time`, `home_team_score`, `away_team_score`, `num_innings_played`, `end_reason`, `plate_umpire`, `field_umpire`, `comments`, `created_at`, `updated_at`) VALUES (2,88,48,152,'2010-03-27 07:00:00','2010-03-16 22:00:00',NULL,-1,3,1,'Regulation','','','','2010-03-17 04:23:52','2010-03-17 04:23:52'),(3,88,48,152,'2010-03-27 07:00:00','2010-03-16 22:00:00',NULL,4,3,1,'Regulation','','','','2010-03-17 04:24:08','2010-03-17 04:24:08'),(4,88,48,152,'2010-03-27 07:00:00','2010-03-16 22:00:00',NULL,4,-1,1,'Regulation','','','','2010-03-17 04:24:17','2010-03-17 04:24:17'),(5,88,48,152,'2010-03-27 07:00:00','2010-03-16 22:00:00',NULL,4,1,1,'Regulation','','','','2010-03-17 04:24:23','2010-03-17 04:24:23'),(6,88,48,126,'2010-03-22 07:00:00','2010-03-16 16:00:00','2010-03-16 18:00:00',4,5,7,'Regulation','Tom Jom','FredDead','blah blah blah','2010-03-17 04:40:18','2010-03-17 04:40:18');
+/*!40000 ALTER TABLE `game_reports` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `game_statistics`
+--
+
+DROP TABLE IF EXISTS `game_statistics`;
+CREATE TABLE `game_statistics` (
+  `id` int(11) NOT NULL auto_increment,
+  `game_report_id` int(11) NOT NULL,
+  `participant_id` int(11) NOT NULL,
+  `statistic_name` varchar(255) default NULL,
+  `statistic_value` varchar(255) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `game_statistics`
+--
+
+LOCK TABLES `game_statistics` WRITE;
+/*!40000 ALTER TABLE `game_statistics` DISABLE KEYS */;
+INSERT INTO `game_statistics` (`id`, `game_report_id`, `participant_id`, `statistic_name`, `statistic_value`) VALUES (11,6,9,'Pitching Order|Innings|Count','4|1|35'),(12,6,15,'Catching Innings','1'),(13,6,16,'Pitching Order|Innings|Count','2|2|45'),(14,6,17,'Catching Innings','2'),(15,6,23,'Pitching Order|Innings|Count','1|2|53'),(16,6,71,'Pitching Order|Innings|Count','3|1|15'),(17,6,87,'Catching Innings','2'),(18,6,61,'Catching Innings','1');
+/*!40000 ALTER TABLE `game_statistics` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `games`
+--
+
+DROP TABLE IF EXISTS `games`;
+CREATE TABLE `games` (
+  `id` int(11) NOT NULL auto_increment,
+  `division_id` int(11) NOT NULL,
+  `scheduled_at` datetime default NULL,
+  `notes` text,
+  `snack_volunteer_id` int(11) default NULL,
+  `location_id` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=326 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `games`
+--
+
+LOCK TABLES `games` WRITE;
+/*!40000 ALTER TABLE `games` DISABLE KEYS */;
+INSERT INTO `games` (`id`, `division_id`, `scheduled_at`, `notes`, `snack_volunteer_id`, `location_id`) VALUES (1,5,'2010-03-16 00:00:00',NULL,NULL,1),(2,5,'2010-03-24 00:00:00',NULL,NULL,1),(3,5,'2010-03-30 00:00:00',NULL,NULL,1),(4,5,'2010-04-06 00:00:00',NULL,NULL,1),(5,5,'2010-04-13 00:00:00',NULL,NULL,1),(6,5,'2010-04-20 00:00:00',NULL,NULL,1),(7,5,'2010-04-27 00:00:00',NULL,NULL,1),(8,5,'2010-05-04 00:00:00',NULL,NULL,1),(9,5,'2010-05-11 00:00:00',NULL,NULL,1),(10,5,'2010-05-18 00:00:00',NULL,NULL,1),(11,5,'2010-05-25 00:00:00',NULL,NULL,1),(12,5,'2010-06-01 00:00:00',NULL,NULL,1),(13,5,'2010-06-08 00:00:00',NULL,NULL,1),(14,5,'2010-06-15 00:00:00',NULL,NULL,1),(15,5,'2010-06-22 00:00:00',NULL,NULL,1),(16,5,'2010-06-29 00:00:00',NULL,NULL,1),(17,5,'2010-07-06 00:00:00',NULL,NULL,1),(18,5,'2010-07-13 00:00:00',NULL,NULL,1),(19,5,'2010-07-20 00:00:00',NULL,NULL,1),(20,5,'2010-07-27 00:00:00',NULL,NULL,1),(21,5,'2010-08-03 00:00:00',NULL,NULL,1),(22,5,'2010-08-10 00:00:00',NULL,NULL,1),(23,5,'2010-08-17 00:00:00',NULL,NULL,1),(24,5,'2010-08-24 00:00:00',NULL,NULL,1),(25,5,'2010-08-31 00:00:00',NULL,NULL,1),(26,5,'2010-03-17 00:00:00',NULL,NULL,1),(27,5,'2010-03-24 00:00:00',NULL,NULL,1),(28,5,'2010-03-31 00:00:00',NULL,NULL,1),(29,5,'2010-04-07 00:00:00',NULL,NULL,1),(30,5,'2010-04-14 00:00:00',NULL,NULL,1),(31,5,'2010-04-21 00:00:00',NULL,NULL,1),(32,5,'2010-04-28 00:00:00',NULL,NULL,1),(33,5,'2010-05-05 00:00:00',NULL,NULL,1),(34,5,'2010-05-12 00:00:00',NULL,NULL,1),(35,5,'2010-05-19 00:00:00',NULL,NULL,1),(36,5,'2010-05-26 00:00:00',NULL,NULL,1),(37,5,'2010-06-02 00:00:00',NULL,NULL,1),(38,5,'2010-06-09 00:00:00',NULL,NULL,1),(39,5,'2010-06-16 00:00:00',NULL,NULL,1),(40,5,'2010-06-23 00:00:00',NULL,NULL,1),(41,5,'2010-06-30 00:00:00',NULL,NULL,1),(42,5,'2010-07-07 00:00:00',NULL,NULL,1),(43,5,'2010-07-14 00:00:00',NULL,NULL,1),(44,5,'2010-07-21 00:00:00',NULL,NULL,1),(45,5,'2010-07-28 00:00:00',NULL,NULL,1),(46,5,'2010-08-04 00:00:00',NULL,NULL,1),(47,5,'2010-08-11 00:00:00',NULL,NULL,1),(48,5,'2010-08-18 00:00:00',NULL,NULL,1),(49,5,'2010-08-25 00:00:00',NULL,NULL,1),(50,5,'2010-09-01 00:00:00',NULL,NULL,1),(51,5,'2010-03-18 00:00:00',NULL,NULL,1),(52,5,'2010-03-25 00:00:00',NULL,NULL,1),(53,5,'2010-04-01 00:00:00',NULL,NULL,1),(54,5,'2010-04-08 00:00:00',NULL,NULL,1),(55,5,'2010-04-15 00:00:00',NULL,NULL,1),(56,5,'2010-04-22 00:00:00',NULL,NULL,1),(57,5,'2010-04-29 00:00:00',NULL,NULL,1),(58,5,'2010-05-06 00:00:00',NULL,NULL,1),(59,5,'2010-05-13 00:00:00',NULL,NULL,1),(60,5,'2010-05-20 00:00:00',NULL,NULL,1),(61,5,'2010-05-27 00:00:00',NULL,NULL,1),(62,5,'2010-06-03 00:00:00',NULL,NULL,1),(63,5,'2010-06-10 00:00:00',NULL,NULL,1),(64,5,'2010-06-17 00:00:00',NULL,NULL,1),(65,5,'2010-06-24 00:00:00',NULL,NULL,1),(66,5,'2010-07-01 00:00:00',NULL,NULL,1),(67,5,'2010-07-08 00:00:00',NULL,NULL,1),(68,5,'2010-07-15 00:00:00',NULL,NULL,1),(69,5,'2010-07-22 00:00:00',NULL,NULL,1),(70,5,'2010-07-29 00:00:00',NULL,NULL,1),(71,5,'2010-08-05 00:00:00',NULL,NULL,1),(72,5,'2010-08-12 00:00:00',NULL,NULL,1),(73,5,'2010-08-19 00:00:00',NULL,NULL,1),(74,5,'2010-08-26 00:00:00',NULL,NULL,1),(75,5,'2010-09-02 00:00:00',NULL,NULL,1),(76,5,'2010-03-19 00:00:00',NULL,NULL,1),(77,5,'2010-03-26 00:00:00',NULL,NULL,2),(78,5,'2010-04-02 00:00:00',NULL,NULL,1),(79,5,'2010-04-09 00:00:00',NULL,NULL,1),(80,5,'2010-04-16 00:00:00',NULL,NULL,1),(81,5,'2010-04-23 00:00:00',NULL,NULL,1),(82,5,'2010-04-30 00:00:00',NULL,NULL,1),(83,5,'2010-05-07 00:00:00',NULL,NULL,1),(84,5,'2010-05-14 00:00:00',NULL,NULL,1),(85,5,'2010-05-21 00:00:00',NULL,NULL,1),(86,5,'2010-05-28 00:00:00',NULL,NULL,1),(87,5,'2010-06-04 00:00:00',NULL,NULL,1),(88,5,'2010-06-11 00:00:00',NULL,NULL,1),(89,5,'2010-06-18 00:00:00',NULL,NULL,1),(90,5,'2010-06-25 00:00:00',NULL,NULL,1),(91,5,'2010-07-02 00:00:00',NULL,NULL,1),(92,5,'2010-07-09 00:00:00',NULL,NULL,1),(93,5,'2010-07-16 00:00:00',NULL,NULL,1),(94,5,'2010-07-23 00:00:00',NULL,NULL,1),(95,5,'2010-07-30 00:00:00',NULL,NULL,1),(96,5,'2010-08-06 00:00:00',NULL,NULL,1),(97,5,'2010-08-13 00:00:00',NULL,NULL,1),(98,5,'2010-08-20 00:00:00',NULL,NULL,1),(99,5,'2010-08-27 00:00:00',NULL,NULL,1),(100,5,'2010-09-03 00:00:00',NULL,NULL,1),(101,5,'2010-03-20 16:00:00',NULL,NULL,1),(102,5,'2010-03-27 16:00:00',NULL,NULL,1),(103,5,'2010-04-03 16:00:00',NULL,NULL,1),(104,5,'2010-04-10 16:00:00',NULL,NULL,1),(105,5,'2010-04-17 16:00:00',NULL,NULL,1),(106,5,'2010-04-24 16:00:00',NULL,NULL,1),(107,5,'2010-05-01 16:00:00',NULL,NULL,1),(108,5,'2010-05-08 16:00:00',NULL,NULL,1),(109,5,'2010-05-15 16:00:00',NULL,NULL,1),(110,5,'2010-05-22 16:00:00',NULL,NULL,1),(111,5,'2010-05-29 16:00:00',NULL,NULL,1),(112,5,'2010-06-05 16:00:00',NULL,NULL,1),(113,5,'2010-06-12 16:00:00',NULL,NULL,1),(114,5,'2010-06-19 16:00:00',NULL,NULL,1),(115,5,'2010-06-26 16:00:00',NULL,NULL,1),(116,5,'2010-07-03 16:00:00',NULL,NULL,1),(117,5,'2010-07-10 16:00:00',NULL,NULL,1),(118,5,'2010-07-17 16:00:00',NULL,NULL,1),(119,5,'2010-07-24 16:00:00',NULL,NULL,1),(120,5,'2010-07-31 16:00:00',NULL,NULL,1),(121,5,'2010-08-07 16:00:00',NULL,NULL,1),(122,5,'2010-08-14 16:00:00',NULL,NULL,1),(123,5,'2010-08-21 16:00:00',NULL,NULL,1),(124,5,'2010-08-28 16:00:00',NULL,NULL,1),(125,5,'2010-09-04 16:00:00',NULL,NULL,1),(126,5,'2010-03-20 19:00:00',NULL,NULL,1),(127,5,'2010-03-27 19:00:00',NULL,NULL,1),(128,5,'2010-04-03 19:00:00',NULL,NULL,1),(129,5,'2010-04-10 19:00:00',NULL,NULL,1),(130,5,'2010-04-17 19:00:00',NULL,NULL,1),(131,5,'2010-04-24 19:00:00',NULL,NULL,1),(132,5,'2010-05-01 19:00:00',NULL,NULL,1),(133,5,'2010-05-08 19:00:00',NULL,NULL,1),(134,5,'2010-05-15 19:00:00',NULL,NULL,1),(135,5,'2010-05-22 19:00:00',NULL,NULL,1),(136,5,'2010-05-29 19:00:00',NULL,NULL,1),(137,5,'2010-06-05 19:00:00',NULL,NULL,1),(138,5,'2010-06-12 19:00:00',NULL,NULL,1),(139,5,'2010-06-19 19:00:00',NULL,NULL,1),(140,5,'2010-06-26 19:00:00',NULL,NULL,1),(141,5,'2010-07-03 19:00:00',NULL,NULL,1),(142,5,'2010-07-10 19:00:00',NULL,NULL,1),(143,5,'2010-07-17 19:00:00',NULL,NULL,1),(144,5,'2010-07-24 19:00:00',NULL,NULL,1),(145,5,'2010-07-31 19:00:00',NULL,NULL,1),(146,5,'2010-08-07 19:00:00',NULL,NULL,1),(147,5,'2010-08-14 19:00:00',NULL,NULL,1),(148,5,'2010-08-21 19:00:00',NULL,NULL,1),(149,5,'2010-08-28 19:00:00',NULL,NULL,1),(150,5,'2010-09-04 19:00:00',NULL,NULL,1),(151,5,'2010-03-20 22:00:00',NULL,NULL,1),(152,5,'2010-03-27 22:00:00',NULL,NULL,1),(153,5,'2010-04-03 22:00:00',NULL,NULL,1),(154,5,'2010-04-10 22:00:00',NULL,NULL,1),(155,5,'2010-04-17 22:00:00',NULL,NULL,1),(156,5,'2010-04-24 22:00:00',NULL,NULL,1),(157,5,'2010-05-01 22:00:00',NULL,NULL,1),(158,5,'2010-05-08 22:00:00',NULL,NULL,1),(159,5,'2010-05-15 22:00:00',NULL,NULL,1),(160,5,'2010-05-22 22:00:00',NULL,NULL,1),(161,5,'2010-05-29 22:00:00',NULL,NULL,1),(162,5,'2010-06-05 22:00:00',NULL,NULL,1),(163,5,'2010-06-12 22:00:00',NULL,NULL,1),(164,5,'2010-06-19 22:00:00',NULL,NULL,1),(165,5,'2010-06-26 22:00:00',NULL,NULL,1),(166,5,'2010-07-03 22:00:00',NULL,NULL,1),(167,5,'2010-07-10 22:00:00',NULL,NULL,1),(168,5,'2010-07-17 22:00:00',NULL,NULL,1),(169,5,'2010-07-24 22:00:00',NULL,NULL,1),(170,5,'2010-07-31 22:00:00',NULL,NULL,1),(171,5,'2010-08-07 22:00:00',NULL,NULL,1),(172,5,'2010-08-14 22:00:00',NULL,NULL,1),(173,5,'2010-08-21 22:00:00',NULL,NULL,1),(174,5,'2010-08-28 22:00:00',NULL,NULL,1),(175,5,'2010-09-04 22:00:00',NULL,NULL,1),(176,5,'2010-03-16 00:00:00',NULL,NULL,2),(177,5,'2010-03-23 00:00:00',NULL,NULL,2),(178,5,'2010-03-30 00:00:00',NULL,NULL,2),(179,5,'2010-04-06 00:00:00',NULL,NULL,2),(180,5,'2010-04-13 00:00:00',NULL,NULL,2),(181,5,'2010-04-20 00:00:00',NULL,NULL,2),(182,5,'2010-04-27 00:00:00',NULL,NULL,2),(183,5,'2010-05-04 00:00:00',NULL,NULL,2),(184,5,'2010-05-11 00:00:00',NULL,NULL,2),(185,5,'2010-05-18 00:00:00',NULL,NULL,2),(186,5,'2010-05-25 00:00:00',NULL,NULL,2),(187,5,'2010-06-01 00:00:00',NULL,NULL,2),(188,5,'2010-06-08 00:00:00',NULL,NULL,2),(189,5,'2010-06-15 00:00:00',NULL,NULL,2),(190,5,'2010-06-22 00:00:00',NULL,NULL,2),(191,5,'2010-06-29 00:00:00',NULL,NULL,2),(192,5,'2010-07-06 00:00:00',NULL,NULL,2),(193,5,'2010-07-13 00:00:00',NULL,NULL,2),(194,5,'2010-07-20 00:00:00',NULL,NULL,2),(195,5,'2010-07-27 00:00:00',NULL,NULL,2),(196,5,'2010-08-03 00:00:00',NULL,NULL,2),(197,5,'2010-08-10 00:00:00',NULL,NULL,2),(198,5,'2010-08-17 00:00:00',NULL,NULL,2),(199,5,'2010-08-24 00:00:00',NULL,NULL,2),(200,5,'2010-08-31 00:00:00',NULL,NULL,2),(201,5,'2010-03-17 00:00:00',NULL,NULL,2),(202,5,'2010-03-24 00:00:00',NULL,NULL,2),(203,5,'2010-03-31 00:00:00',NULL,NULL,2),(204,5,'2010-04-07 00:00:00',NULL,NULL,2),(205,5,'2010-04-14 00:00:00',NULL,NULL,2),(206,5,'2010-04-21 00:00:00',NULL,NULL,2),(207,5,'2010-04-28 00:00:00',NULL,NULL,2),(208,5,'2010-05-05 00:00:00',NULL,NULL,2),(209,5,'2010-05-12 00:00:00',NULL,NULL,2),(210,5,'2010-05-19 00:00:00',NULL,NULL,2),(211,5,'2010-05-26 00:00:00',NULL,NULL,2),(212,5,'2010-06-02 00:00:00',NULL,NULL,2),(213,5,'2010-06-09 00:00:00',NULL,NULL,2),(214,5,'2010-06-16 00:00:00',NULL,NULL,2),(215,5,'2010-06-23 00:00:00',NULL,NULL,2),(216,5,'2010-06-30 00:00:00',NULL,NULL,2),(217,5,'2010-07-07 00:00:00',NULL,NULL,2),(218,5,'2010-07-14 00:00:00',NULL,NULL,2),(219,5,'2010-07-21 00:00:00',NULL,NULL,2),(220,5,'2010-07-28 00:00:00',NULL,NULL,2),(221,5,'2010-08-04 00:00:00',NULL,NULL,2),(222,5,'2010-08-11 00:00:00',NULL,NULL,2),(223,5,'2010-08-18 00:00:00',NULL,NULL,2),(224,5,'2010-08-25 00:00:00',NULL,NULL,2),(225,5,'2010-09-01 00:00:00',NULL,NULL,2),(226,5,'2010-03-18 00:00:00',NULL,NULL,2),(227,5,'2010-03-26 00:00:00',NULL,NULL,1),(228,5,'2010-04-01 00:00:00',NULL,NULL,2),(229,5,'2010-04-08 00:00:00',NULL,NULL,2),(230,5,'2010-04-15 00:00:00',NULL,NULL,2),(231,5,'2010-04-22 00:00:00',NULL,NULL,2),(232,5,'2010-04-29 00:00:00',NULL,NULL,2),(233,5,'2010-05-06 00:00:00',NULL,NULL,2),(234,5,'2010-05-13 00:00:00',NULL,NULL,2),(235,5,'2010-05-20 00:00:00',NULL,NULL,2),(236,5,'2010-05-27 00:00:00',NULL,NULL,2),(237,5,'2010-06-03 00:00:00',NULL,NULL,2),(238,5,'2010-06-10 00:00:00',NULL,NULL,2),(239,5,'2010-06-17 00:00:00',NULL,NULL,2),(240,5,'2010-06-24 00:00:00',NULL,NULL,2),(241,5,'2010-07-01 00:00:00',NULL,NULL,2),(242,5,'2010-07-08 00:00:00',NULL,NULL,2),(243,5,'2010-07-15 00:00:00',NULL,NULL,2),(244,5,'2010-07-22 00:00:00',NULL,NULL,2),(245,5,'2010-07-29 00:00:00',NULL,NULL,2),(246,5,'2010-08-05 00:00:00',NULL,NULL,2),(247,5,'2010-08-12 00:00:00',NULL,NULL,2),(248,5,'2010-08-19 00:00:00',NULL,NULL,2),(249,5,'2010-08-26 00:00:00',NULL,NULL,2),(250,5,'2010-09-02 00:00:00',NULL,NULL,2),(251,5,'2010-03-20 16:00:00',NULL,NULL,2),(252,5,'2010-03-27 16:00:00',NULL,NULL,2),(253,5,'2010-04-03 16:00:00',NULL,NULL,2),(254,5,'2010-04-10 16:00:00',NULL,NULL,2),(255,5,'2010-04-17 16:00:00',NULL,NULL,2),(256,5,'2010-04-24 16:00:00',NULL,NULL,2),(257,5,'2010-05-01 16:00:00',NULL,NULL,2),(258,5,'2010-05-08 16:00:00',NULL,NULL,2),(259,5,'2010-05-15 16:00:00',NULL,NULL,2),(260,5,'2010-05-22 16:00:00',NULL,NULL,2),(261,5,'2010-05-29 16:00:00',NULL,NULL,2),(262,5,'2010-06-05 16:00:00',NULL,NULL,2),(263,5,'2010-06-12 16:00:00',NULL,NULL,2),(264,5,'2010-06-19 16:00:00',NULL,NULL,2),(265,5,'2010-06-26 16:00:00',NULL,NULL,2),(266,5,'2010-07-03 16:00:00',NULL,NULL,2),(267,5,'2010-07-10 16:00:00',NULL,NULL,2),(268,5,'2010-07-17 16:00:00',NULL,NULL,2),(269,5,'2010-07-24 16:00:00',NULL,NULL,2),(270,5,'2010-07-31 16:00:00',NULL,NULL,2),(271,5,'2010-08-07 16:00:00',NULL,NULL,2),(272,5,'2010-08-14 16:00:00',NULL,NULL,2),(273,5,'2010-08-21 16:00:00',NULL,NULL,2),(274,5,'2010-08-28 16:00:00',NULL,NULL,2),(275,5,'2010-09-04 16:00:00',NULL,NULL,2),(276,5,'2010-03-20 19:00:00',NULL,NULL,2),(277,5,'2010-03-27 19:00:00',NULL,NULL,2),(278,5,'2010-04-03 19:00:00',NULL,NULL,2),(279,5,'2010-04-10 19:00:00',NULL,NULL,2),(280,5,'2010-04-17 19:00:00',NULL,NULL,2),(281,5,'2010-04-24 19:00:00',NULL,NULL,2),(282,5,'2010-05-01 19:00:00',NULL,NULL,2),(283,5,'2010-05-08 19:00:00',NULL,NULL,2),(284,5,'2010-05-15 19:00:00',NULL,NULL,2),(285,5,'2010-05-22 19:00:00',NULL,NULL,2),(286,5,'2010-05-29 19:00:00',NULL,NULL,2),(287,5,'2010-06-05 19:00:00',NULL,NULL,2),(288,5,'2010-06-12 19:00:00',NULL,NULL,2),(289,5,'2010-06-19 19:00:00',NULL,NULL,2),(290,5,'2010-06-26 19:00:00',NULL,NULL,2),(291,5,'2010-07-03 19:00:00',NULL,NULL,2),(292,5,'2010-07-10 19:00:00',NULL,NULL,2),(293,5,'2010-07-17 19:00:00',NULL,NULL,2),(294,5,'2010-07-24 19:00:00',NULL,NULL,2),(295,5,'2010-07-31 19:00:00',NULL,NULL,2),(296,5,'2010-08-07 19:00:00',NULL,NULL,2),(297,5,'2010-08-14 19:00:00',NULL,NULL,2),(298,5,'2010-08-21 19:00:00',NULL,NULL,2),(299,5,'2010-08-28 19:00:00',NULL,NULL,2),(300,5,'2010-09-04 19:00:00',NULL,NULL,2),(301,5,'2010-03-20 22:00:00',NULL,NULL,2),(302,5,'2010-03-27 22:00:00',NULL,NULL,2),(303,5,'2010-04-03 22:00:00',NULL,NULL,2),(304,5,'2010-04-10 22:00:00',NULL,NULL,2),(305,5,'2010-04-17 22:00:00',NULL,NULL,2),(306,5,'2010-04-24 22:00:00',NULL,NULL,2),(307,5,'2010-05-01 22:00:00',NULL,NULL,2),(308,5,'2010-05-08 22:00:00',NULL,NULL,2),(309,5,'2010-05-15 22:00:00',NULL,NULL,2),(310,5,'2010-05-22 22:00:00',NULL,NULL,2),(311,5,'2010-05-29 22:00:00',NULL,NULL,2),(312,5,'2010-06-05 22:00:00',NULL,NULL,2),(313,5,'2010-06-12 22:00:00',NULL,NULL,2),(314,5,'2010-06-19 22:00:00',NULL,NULL,2),(315,5,'2010-06-26 22:00:00',NULL,NULL,2),(316,5,'2010-07-03 22:00:00',NULL,NULL,2),(317,5,'2010-07-10 22:00:00',NULL,NULL,2),(318,5,'2010-07-17 22:00:00',NULL,NULL,2),(319,5,'2010-07-24 22:00:00',NULL,NULL,2),(320,5,'2010-07-31 22:00:00',NULL,NULL,2),(321,5,'2010-08-07 22:00:00',NULL,NULL,2),(322,5,'2010-08-14 22:00:00',NULL,NULL,2),(323,5,'2010-08-21 22:00:00',NULL,NULL,2),(324,5,'2010-08-28 22:00:00',NULL,NULL,2),(325,5,'2010-09-04 22:00:00',NULL,NULL,2);
+/*!40000 ALTER TABLE `games` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `hub_assets`
+--
+
+DROP TABLE IF EXISTS `hub_assets`;
+CREATE TABLE `hub_assets` (
+  `id` int(11) NOT NULL auto_increment,
+  `hub_id` int(11) NOT NULL,
+  `name` varchar(255) default NULL,
+  `uri` varchar(255) default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=752915611 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `hub_assets`
+--
+
+LOCK TABLES `hub_assets` WRITE;
+/*!40000 ALTER TABLE `hub_assets` DISABLE KEYS */;
+INSERT INTO `hub_assets` (`id`, `hub_id`, `name`, `uri`, `created_at`, `updated_at`) VALUES (752915610,4,'Header Banner','/images/hubs/lamvpb-header.png','2010-02-04 17:28:55','2010-02-04 17:28:55');
+/*!40000 ALTER TABLE `hub_assets` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `hubs`
+--
+
+DROP TABLE IF EXISTS `hubs`;
+CREATE TABLE `hubs` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL,
+  `url_prefix` varchar(255) NOT NULL,
+  `description` text,
+  `parent_id` int(11) default NULL,
+  `time_zone` varchar(255) default 'UTC',
+  `active_since` datetime default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  `home_url` varchar(255) default NULL,
+  `sponsor_email` varchar(255) default NULL,
+  `circle_name` varchar(255) default NULL,
+  `program_variant` varchar(255) default NULL,
+  `full_circles_domain` varchar(255) default NULL,
+  `tax_id` varchar(255) default NULL,
+  `from_email` varchar(255) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `hubs`
+--
+
+LOCK TABLES `hubs` WRITE;
+/*!40000 ALTER TABLE `hubs` DISABLE KEYS */;
+INSERT INTO `hubs` (`id`, `name`, `url_prefix`, `description`, `parent_id`, `time_zone`, `active_since`, `created_at`, `updated_at`, `home_url`, `sponsor_email`, `circle_name`, `program_variant`, `full_circles_domain`, `tax_id`, `from_email`) VALUES (1,'Mt. Diablo Region YMCA','mdrymca','The Mt. Diablo Region YMCA with 4 locations in the East Bay - Northern California',0,'Pacific Time (US & Canada)',NULL,'2010-02-18 22:38:24','2010-02-18 22:38:24','http://www.mdrymca.org',NULL,'YMCA Circles','Multi-branch|Multi-program',NULL,NULL,NULL),(2,'San Ramon Valley YMCA','srvymca','Serving the communities of Alamo, Danville, San Ramon and Walnut Creek',1,'Pacific Time (US & Canada)',NULL,'2010-02-18 22:38:24','2010-02-18 22:38:24','http://www.mdrymca.org/branches/5-SRV',NULL,'YMCA Circles','Single-branch|Multi-program',NULL,NULL,NULL),(3,'MVLA Girls Softball','mvlags','The MVLA Girls Softball League',0,'Pacific Time (US & Canada)',NULL,'2010-02-18 22:38:24','2010-02-18 22:38:24','',NULL,'','',NULL,NULL,NULL),(4,'LAMV Pony Baseball','lamvpb','Serving Los Altos and Mountain View Youth since 1986 where Everyone Plays Real Baseball',0,'Pacific Time (US & Canada)',NULL,'2010-02-18 22:38:24','2010-02-18 22:38:24','http://www.lamvpb.org','sponsors@lamvpb.org','Strike Zone','Single-branch|Single-program|Multi-season','strikezone.lamvpb.org','77â€“0238764','webmaster@lamvpb.org'),(5,'Aro Rugby','aro-rugby','Building mind, spirit and body through the great sport of rugby, for boys and girls, ages 5 - 12',0,'Pacific Time (US & Canada)',NULL,'2010-02-18 22:38:24','2010-02-18 22:38:24','',NULL,'In Formation','Multi-branch|Single-program',NULL,NULL,NULL);
+/*!40000 ALTER TABLE `hubs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `hubs_participants`
+--
+
+DROP TABLE IF EXISTS `hubs_participants`;
+CREATE TABLE `hubs_participants` (
+  `hub_id` int(11) default NULL,
+  `participant_id` int(11) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `hubs_participants`
+--
+
+LOCK TABLES `hubs_participants` WRITE;
+/*!40000 ALTER TABLE `hubs_participants` DISABLE KEYS */;
+INSERT INTO `hubs_participants` (`hub_id`, `participant_id`) VALUES (4,1),(4,2),(4,3),(4,4),(4,5),(4,6),(4,7),(4,8),(4,9),(4,10),(4,11),(4,12),(4,13),(4,14),(4,15),(4,16),(4,17),(4,18),(4,19),(4,20),(4,21),(4,22),(4,23),(4,24),(4,25),(4,26),(4,27),(4,28),(4,29),(4,30),(4,31),(4,32),(4,33),(4,34),(4,35),(4,36),(4,37),(4,38),(4,39),(4,40),(4,41),(4,42),(4,43),(4,44),(4,45),(4,46),(4,47),(4,48),(4,49),(4,50),(4,51),(4,52),(4,53),(4,54),(4,55),(4,56),(4,57),(4,58),(4,59),(4,60),(4,61),(4,62),(4,63),(4,64),(4,65),(4,66),(4,67),(4,68),(4,69),(4,70),(4,71),(4,72),(4,73),(4,74),(4,75),(4,76),(4,77),(4,78),(4,79),(4,80),(4,81),(4,82),(4,83),(4,84),(4,85),(4,86),(4,87),(4,88),(4,89),(4,90),(4,91),(4,92),(4,93),(4,94),(4,95),(4,96),(4,97),(4,98),(4,99),(4,100),(4,101),(4,102),(4,103),(4,104),(4,105),(4,106),(4,107),(4,108),(4,109),(4,110),(4,111),(4,112),(4,113),(4,114),(4,115),(4,116),(4,117),(4,118),(4,119),(4,120),(4,121),(4,122),(4,123),(4,124),(4,125),(4,126),(4,127),(4,128),(4,129),(4,130),(4,131),(4,132),(4,133),(4,134),(4,135),(4,136),(4,137),(4,138),(4,139),(4,140),(4,141),(4,142),(4,143),(4,144),(4,145),(4,146),(4,147),(4,148),(4,149),(4,150),(4,151),(4,152),(4,153),(4,154),(4,155),(4,156),(4,157),(4,158),(4,159),(4,160),(4,161),(4,162),(4,163),(4,164),(4,165),(4,166),(4,167),(4,168),(4,169),(4,170),(4,171),(4,172),(4,173),(4,174),(4,175),(4,176),(4,177),(4,178),(4,179),(4,180),(4,181),(4,182),(4,183),(4,184),(4,185),(4,186),(4,187),(4,188),(4,189),(4,190),(4,191),(4,192),(4,193),(4,194),(4,195),(4,196),(4,197),(4,198),(4,199),(4,200),(4,201),(4,202),(4,203),(4,204),(4,205),(4,206),(4,207),(4,208),(4,209),(4,210),(4,211),(4,212),(4,213),(4,214),(4,215),(4,216),(4,217),(4,218),(4,219),(4,220),(4,221),(4,222),(4,223),(4,224),(4,225),(4,226),(4,227),(4,228),(4,229),(4,230),(4,231),(4,232),(4,233),(4,234),(4,235),(4,236),(4,237),(4,238),(4,239),(4,240),(4,241),(4,242),(4,243),(4,244),(4,245),(4,246),(4,247),(4,248),(4,249),(4,250),(4,251),(4,252),(4,253),(4,254),(4,255),(4,256),(4,257),(4,258),(4,259),(4,260),(4,261),(4,262),(4,263),(4,264),(4,265),(4,266),(4,267),(4,268),(4,269),(4,270),(4,271),(4,272),(4,273),(4,274),(4,275),(4,276),(4,277);
+/*!40000 ALTER TABLE `hubs_participants` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `locations`
+--
+
+DROP TABLE IF EXISTS `locations`;
+CREATE TABLE `locations` (
+  `id` int(11) NOT NULL auto_increment,
+  `hub_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `street_address` varchar(255) default NULL,
+  `city` varchar(255) default NULL,
+  `state` varchar(8) default NULL,
+  `zip_code` varchar(12) default NULL,
+  `comments` text,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `locations`
+--
+
+LOCK TABLES `locations` WRITE;
+/*!40000 ALTER TABLE `locations` DISABLE KEYS */;
+INSERT INTO `locations` (`id`, `hub_id`, `name`, `street_address`, `city`, `state`, `zip_code`, `comments`) VALUES (1,4,'Oak','1501 Oak Avenue','Los Altos','CA','94024','M2 and Bronco'),(2,4,'Loyola','770 Berry Avenue','Los Altos','CA','94024','M1/M2');
+/*!40000 ALTER TABLE `locations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mailbox_messages`
+--
+
+DROP TABLE IF EXISTS `mailbox_messages`;
+CREATE TABLE `mailbox_messages` (
+  `mailbox_id` int(11) NOT NULL,
+  `circles_message_id` int(11) NOT NULL,
+  `unread` tinyint(1) default '1'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mailbox_messages`
+--
+
+LOCK TABLES `mailbox_messages` WRITE;
+/*!40000 ALTER TABLE `mailbox_messages` DISABLE KEYS */;
+/*!40000 ALTER TABLE `mailbox_messages` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mailboxes`
+--
+
+DROP TABLE IF EXISTS `mailboxes`;
+CREATE TABLE `mailboxes` (
+  `id` int(11) NOT NULL auto_increment,
+  `contact_id` int(11) default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mailboxes`
+--
+
+LOCK TABLES `mailboxes` WRITE;
+/*!40000 ALTER TABLE `mailboxes` DISABLE KEYS */;
+INSERT INTO `mailboxes` (`id`, `contact_id`, `created_at`, `updated_at`) VALUES (1,1,'2010-02-04 17:28:17','2010-02-04 17:28:17'),(2,88,'2010-03-16 22:42:24','2010-03-16 22:42:24'),(3,75,'2010-03-16 23:36:53','2010-03-16 23:36:53');
+/*!40000 ALTER TABLE `mailboxes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `matchups`
+--
+
+DROP TABLE IF EXISTS `matchups`;
+CREATE TABLE `matchups` (
+  `id` int(11) NOT NULL auto_increment,
+  `game_id` int(11) NOT NULL,
+  `team_id` int(11) NOT NULL,
+  `home_or_away` varchar(255) default NULL,
+  `snack_volunteer_id` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `matchups`
+--
+
+LOCK TABLES `matchups` WRITE;
+/*!40000 ALTER TABLE `matchups` DISABLE KEYS */;
+INSERT INTO `matchups` (`id`, `game_id`, `team_id`, `home_or_away`, `snack_volunteer_id`) VALUES (13,2,51,'Home',NULL),(14,2,45,'Away',NULL),(15,101,45,'Home',NULL),(16,101,52,'Away',NULL),(17,251,46,'Home',NULL),(18,251,51,'Away',NULL),(19,126,48,'Home',NULL),(20,126,49,'Away',NULL),(21,151,47,'Home',NULL),(22,151,50,'Away',NULL),(23,52,49,'Home',NULL),(24,52,47,'Away',NULL),(25,227,52,'Home',NULL),(26,227,48,'Away',NULL),(27,77,50,'Home',NULL),(28,77,46,'Away',NULL),(29,102,49,'Home',NULL),(30,102,45,'Away',NULL),(31,127,52,'Home',NULL),(32,127,46,'Away',NULL),(33,152,50,'Home',NULL),(34,152,48,'Away',NULL);
+/*!40000 ALTER TABLE `matchups` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `participants`
+--
+
+DROP TABLE IF EXISTS `participants`;
+CREATE TABLE `participants` (
+  `id` int(11) NOT NULL auto_increment,
+  `title` varchar(8) default NULL,
+  `first_name` varchar(24) default NULL,
+  `last_name` varchar(24) default NULL,
+  `date_of_birth` datetime default NULL,
+  `member_since` datetime default NULL,
+  `profile_photo_file_name` varchar(255) default NULL,
+  `profile_photo_content_tye` varchar(255) default NULL,
+  `profile_photo_file_size` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=278 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `participants`
+--
+
+LOCK TABLES `participants` WRITE;
+/*!40000 ALTER TABLE `participants` DISABLE KEYS */;
+INSERT INTO `participants` (`id`, `title`, `first_name`, `last_name`, `date_of_birth`, `member_since`, `profile_photo_file_name`, `profile_photo_content_tye`, `profile_photo_file_size`) VALUES (1,NULL,' Jack','Ahrens',NULL,NULL,NULL,NULL,NULL),(2,NULL,' Will B','Altinger',NULL,NULL,NULL,NULL,NULL),(3,NULL,' Joshua','Atler',NULL,NULL,NULL,NULL,NULL),(4,NULL,' Scott D','Baker',NULL,NULL,NULL,NULL,NULL),(5,NULL,' Peter R','Boennighausen',NULL,NULL,NULL,NULL,NULL),(6,NULL,' Michael','Bowers',NULL,NULL,NULL,NULL,NULL),(7,NULL,' Philip R','Carey',NULL,NULL,NULL,NULL,NULL),(8,NULL,' Brian','Chao',NULL,NULL,NULL,NULL,NULL),(9,NULL,' Joseph','Chen',NULL,NULL,NULL,NULL,NULL),(10,NULL,' Andrew','Cho',NULL,NULL,NULL,NULL,NULL),(11,NULL,' Dylan','Cho',NULL,NULL,NULL,NULL,NULL),(12,NULL,' Thomas','Clark',NULL,NULL,NULL,NULL,NULL),(13,NULL,' Jackson','Clevenger',NULL,NULL,NULL,NULL,NULL),(14,NULL,' Rodrigo','Cochran',NULL,NULL,NULL,NULL,NULL),(15,NULL,' Vincent','Colodny',NULL,NULL,NULL,NULL,NULL),(16,NULL,' Mason','Conroy',NULL,NULL,NULL,NULL,NULL),(17,NULL,' Justin','Dea-Mattson',NULL,NULL,NULL,NULL,NULL),(18,NULL,' Colin','Dickerson',NULL,NULL,NULL,NULL,NULL),(19,NULL,' James M','Dinneen',NULL,NULL,NULL,NULL,NULL),(20,NULL,' Connor','Doyle',NULL,NULL,NULL,NULL,NULL),(21,NULL,' Sean','Eckstein',NULL,NULL,NULL,NULL,NULL),(22,NULL,' Charlie','Eggleton',NULL,NULL,NULL,NULL,NULL),(23,NULL,' Alex','Erf',NULL,NULL,NULL,NULL,NULL),(24,NULL,' Zachary','Espiritu',NULL,NULL,NULL,NULL,NULL),(25,NULL,' Ori','Faigon',NULL,NULL,NULL,NULL,NULL),(26,NULL,' Devon M','Foody',NULL,NULL,NULL,NULL,NULL),(27,NULL,' Carter','Fox',NULL,NULL,NULL,NULL,NULL),(28,NULL,' Nicholas','Fravala',NULL,NULL,NULL,NULL,NULL),(29,NULL,' Grant','Gambetta',NULL,NULL,NULL,NULL,NULL),(30,NULL,' Jacob S','Gitin',NULL,NULL,NULL,NULL,NULL),(31,NULL,' Diego','Gonzalez-Lizardi',NULL,NULL,NULL,NULL,NULL),(32,NULL,' Joshua','Gumm',NULL,NULL,NULL,NULL,NULL),(33,NULL,' Nathan','Horowitz',NULL,NULL,NULL,NULL,NULL),(34,NULL,' David','Hou',NULL,NULL,NULL,NULL,NULL),(35,NULL,' brendan','hughes',NULL,NULL,NULL,NULL,NULL),(36,NULL,' Arun','Jog',NULL,NULL,NULL,NULL,NULL),(37,NULL,' Stephen J','Johnson',NULL,NULL,NULL,NULL,NULL),(38,NULL,' Brendan','Kane',NULL,NULL,NULL,NULL,NULL),(39,NULL,' Rohan','Kapur',NULL,NULL,NULL,NULL,NULL),(40,NULL,' Justin','Kasser',NULL,NULL,NULL,NULL,NULL),(41,NULL,' Sami','Katwan',NULL,NULL,NULL,NULL,NULL),(42,NULL,' Anand K','Kulandaivelu',NULL,NULL,NULL,NULL,NULL),(43,NULL,' Matt T','Larson',NULL,NULL,NULL,NULL,NULL),(44,NULL,' Jake A','LeBlanc',NULL,NULL,NULL,NULL,NULL),(45,NULL,' Simon','Lee',NULL,NULL,NULL,NULL,NULL),(46,NULL,' Jake','Lillie',NULL,NULL,NULL,NULL,NULL),(47,NULL,' Bobby','Malley',NULL,NULL,NULL,NULL,NULL),(48,NULL,' Camorm','Martin',NULL,NULL,NULL,NULL,NULL),(49,NULL,' Matt','McDermott',NULL,NULL,NULL,NULL,NULL),(50,NULL,' Trevor','McGall',NULL,NULL,NULL,NULL,NULL),(51,NULL,' Jack R','McGrath',NULL,NULL,NULL,NULL,NULL),(52,NULL,' Martin','Mitchel',NULL,NULL,NULL,NULL,NULL),(53,NULL,' Zack J','Moore',NULL,NULL,NULL,NULL,NULL),(54,NULL,' Jakob C','Motogawa',NULL,NULL,NULL,NULL,NULL),(55,NULL,' Luke','Mujica',NULL,NULL,NULL,NULL,NULL),(56,NULL,' Justin','Nam',NULL,NULL,NULL,NULL,NULL),(57,NULL,' Max A','Nunley',NULL,NULL,NULL,NULL,NULL),(58,NULL,' Sebastian','Pelayo',NULL,NULL,NULL,NULL,NULL),(59,NULL,' Joe J','Perrino',NULL,NULL,NULL,NULL,NULL),(60,NULL,' Jack','Phelps',NULL,NULL,NULL,NULL,NULL),(61,NULL,' Jake T','phillips',NULL,NULL,NULL,NULL,NULL),(62,NULL,' Benjamin','Pribe',NULL,NULL,NULL,NULL,NULL),(63,NULL,' Robert','Quigley',NULL,NULL,NULL,NULL,NULL),(64,NULL,' Lucas','Ragen',NULL,NULL,NULL,NULL,NULL),(65,NULL,' Cameron R','Refaee',NULL,NULL,NULL,NULL,NULL),(66,NULL,' Braydon','Ross',NULL,NULL,NULL,NULL,NULL),(67,NULL,' Sam','Ruben',NULL,NULL,NULL,NULL,NULL),(68,NULL,' Rohan','Sarathy',NULL,NULL,NULL,NULL,NULL),(69,NULL,' Wilson J','Schiller',NULL,NULL,NULL,NULL,NULL),(70,NULL,' Matthew','Schmidt',NULL,NULL,NULL,NULL,NULL),(71,NULL,' William','Scott',NULL,NULL,NULL,NULL,NULL),(72,NULL,' Cole J','Seither',NULL,NULL,NULL,NULL,NULL),(73,NULL,' Ryan','Siu',NULL,NULL,NULL,NULL,NULL),(74,NULL,' Casey S','Smith',NULL,NULL,NULL,NULL,NULL),(75,NULL,' christopher m','smith',NULL,NULL,NULL,NULL,NULL),(76,NULL,' Ryan P','Spry',NULL,NULL,NULL,NULL,NULL),(77,NULL,' Alec','Stein',NULL,NULL,NULL,NULL,NULL),(78,NULL,' Anand','Subramanyan',NULL,NULL,NULL,NULL,NULL),(79,NULL,' Vignesh','Suresh',NULL,NULL,NULL,NULL,NULL),(80,NULL,' Patrick','Tandy',NULL,NULL,NULL,NULL,NULL),(81,NULL,' Neville','Taraporevala',NULL,NULL,NULL,NULL,NULL),(82,NULL,' Andrew','Tey',NULL,NULL,NULL,NULL,NULL),(83,NULL,' Madison R','Valentino',NULL,NULL,NULL,NULL,NULL),(84,NULL,' Vincent A','Vidovich',NULL,NULL,NULL,NULL,NULL),(85,NULL,' Mark J','Ware',NULL,NULL,NULL,NULL,NULL),(86,NULL,' Michael S','Welch',NULL,NULL,NULL,NULL,NULL),(87,NULL,' Scott D','Young',NULL,NULL,NULL,NULL,NULL),(88,NULL,' Watson A','Young',NULL,NULL,NULL,NULL,NULL),(89,NULL,' Chandler W','Yu',NULL,NULL,NULL,NULL,NULL),(90,NULL,' Brighton','Zubrick',NULL,NULL,NULL,NULL,NULL),(91,NULL,' Matthew','McTighe',NULL,NULL,NULL,NULL,NULL),(92,NULL,' Tyler C','Chen',NULL,NULL,NULL,NULL,NULL),(93,NULL,' Ryan','Schill',NULL,NULL,NULL,NULL,NULL),(94,NULL,' Conor','Miller',NULL,NULL,NULL,NULL,NULL),(95,NULL,' Jacob E','Orlov',NULL,NULL,NULL,NULL,NULL),(96,NULL,' will','domier',NULL,NULL,NULL,NULL,NULL),(97,NULL,' Ryan','Lund',NULL,NULL,NULL,NULL,NULL),(98,NULL,' Jackson','Higley',NULL,NULL,NULL,NULL,NULL),(99,NULL,' Alex','Wagenbrenner',NULL,NULL,NULL,NULL,NULL),(100,NULL,' Michael D','Torreano',NULL,NULL,NULL,NULL,NULL),(101,NULL,' Darius','Siegel',NULL,NULL,NULL,NULL,NULL),(102,NULL,' Frank S','Kapp',NULL,NULL,NULL,NULL,NULL),(103,NULL,' Ty C','Salkoski',NULL,NULL,NULL,NULL,NULL),(104,NULL,' Victor','Yu',NULL,NULL,NULL,NULL,NULL),(105,NULL,' Daniel','Bowers',NULL,NULL,NULL,NULL,NULL),(106,NULL,' Elliot A','Simons',NULL,NULL,NULL,NULL,NULL),(107,NULL,' Andres','Morales',NULL,NULL,NULL,NULL,NULL),(108,NULL,' Tyler','Luskin',NULL,NULL,NULL,NULL,NULL),(109,NULL,' Grant','Lucas',NULL,NULL,NULL,NULL,NULL),(110,NULL,' Owen M','Kemp',NULL,NULL,NULL,NULL,NULL),(111,NULL,' Josh','Kirshenbaum',NULL,NULL,NULL,NULL,NULL),(112,NULL,' Kiyoshi C','Taylor',NULL,NULL,NULL,NULL,NULL),(113,NULL,' Kannon','Salvucci',NULL,NULL,NULL,NULL,NULL),(114,NULL,' jack','germain',NULL,NULL,NULL,NULL,NULL),(115,NULL,' Ryan','Doyle',NULL,NULL,NULL,NULL,NULL),(116,NULL,' Ryan','Buchner',NULL,NULL,NULL,NULL,NULL),(117,NULL,' Austin','Groseclose',NULL,NULL,NULL,NULL,NULL),(118,NULL,' Jack','Arnold',NULL,NULL,NULL,NULL,NULL),(119,NULL,' Matthew','Wood',NULL,NULL,NULL,NULL,NULL),(120,NULL,' Evan E','Marshall',NULL,NULL,NULL,NULL,NULL),(121,NULL,' Felipe','Silveira',NULL,NULL,NULL,NULL,NULL),(122,NULL,' Nicholas A','Vidovich',NULL,NULL,NULL,NULL,NULL),(123,NULL,' Simon P','Heck',NULL,NULL,NULL,NULL,NULL),(124,NULL,' Jack H','Banks',NULL,NULL,NULL,NULL,NULL),(125,NULL,' Gregory','Allen',NULL,NULL,NULL,NULL,NULL),(126,NULL,' Daniel','Dea-Mattson',NULL,NULL,NULL,NULL,NULL),(127,NULL,' Dylan','Remahl',NULL,NULL,NULL,NULL,NULL),(128,NULL,' connor p','montalban',NULL,NULL,NULL,NULL,NULL),(129,NULL,' Darren W','Dawson',NULL,NULL,NULL,NULL,NULL),(130,NULL,' Kyle A','Gounod',NULL,NULL,NULL,NULL,NULL),(131,NULL,' Sam K','Binesh',NULL,NULL,NULL,NULL,NULL),(132,NULL,' Nolan G','Rudolph',NULL,NULL,NULL,NULL,NULL),(133,NULL,' Ian R','Sans',NULL,NULL,NULL,NULL,NULL),(134,NULL,' Jacob','Porter',NULL,NULL,NULL,NULL,NULL),(135,NULL,' Matthew','Zepeda',NULL,NULL,NULL,NULL,NULL),(136,NULL,' justin','young',NULL,NULL,NULL,NULL,NULL),(137,NULL,' Blake A','Moran',NULL,NULL,NULL,NULL,NULL),(138,NULL,' Thomas \"Tommy\" A','Resnick',NULL,NULL,NULL,NULL,NULL),(139,NULL,' Shane','Tomac',NULL,NULL,NULL,NULL,NULL),(140,NULL,' Kyler B','Lessing',NULL,NULL,NULL,NULL,NULL),(141,NULL,' Owen','Mountford',NULL,NULL,NULL,NULL,NULL),(142,NULL,' Jamie','Olsen',NULL,NULL,NULL,NULL,NULL),(143,NULL,' Kyle N','Godfrey',NULL,NULL,NULL,NULL,NULL),(144,NULL,' Jordan','Auerbach',NULL,NULL,NULL,NULL,NULL),(145,NULL,' William J','Van Syoc',NULL,NULL,NULL,NULL,NULL),(146,NULL,' Thomas K','Hoke',NULL,NULL,NULL,NULL,NULL),(147,NULL,' Bryan H','Rau',NULL,NULL,NULL,NULL,NULL),(148,NULL,' Sean','Costello',NULL,NULL,NULL,NULL,NULL),(149,NULL,' Hunter J','Coffman',NULL,NULL,NULL,NULL,NULL),(150,NULL,' Jason N','Dong',NULL,NULL,NULL,NULL,NULL),(151,NULL,' Jacob','Deppmeier',NULL,NULL,NULL,NULL,NULL),(152,NULL,' Nathaniel','Wipfler',NULL,NULL,NULL,NULL,NULL),(153,NULL,' Alex','Starr',NULL,NULL,NULL,NULL,NULL),(154,NULL,' samuel','grillo',NULL,NULL,NULL,NULL,NULL),(155,NULL,' Brian','Gounod',NULL,NULL,NULL,NULL,NULL),(156,NULL,' Ryan','Carrie',NULL,NULL,NULL,NULL,NULL),(157,NULL,' Colin S','Yap',NULL,NULL,NULL,NULL,NULL),(158,NULL,' Noah','Clark',NULL,NULL,NULL,NULL,NULL),(159,NULL,' Benjamin','Gardner-Gill',NULL,NULL,NULL,NULL,NULL),(160,NULL,' Daniel','Hollenbaugh',NULL,NULL,NULL,NULL,NULL),(161,NULL,' Nicholas','Attard',NULL,NULL,NULL,NULL,NULL),(162,NULL,' Tyler J','Chaffee',NULL,NULL,NULL,NULL,NULL),(163,NULL,' Adam','Pann',NULL,NULL,NULL,NULL,NULL),(164,NULL,' Brian R','Field',NULL,NULL,NULL,NULL,NULL),(165,NULL,' Dominic','DelFierro',NULL,NULL,NULL,NULL,NULL),(166,NULL,' Eric M','Dyer',NULL,NULL,NULL,NULL,NULL),(167,NULL,' Joshua','Chestnut',NULL,NULL,NULL,NULL,NULL),(168,NULL,' Edgar W','Saadi',NULL,NULL,NULL,NULL,NULL),(169,NULL,' Aditya','Nag',NULL,NULL,NULL,NULL,NULL),(170,NULL,' Jack','Kenyon',NULL,NULL,NULL,NULL,NULL),(171,NULL,' Gregory','Eum',NULL,NULL,NULL,NULL,NULL),(172,NULL,' Richard Z','Elder',NULL,NULL,NULL,NULL,NULL),(173,NULL,' Nicholas S','Vallner',NULL,NULL,NULL,NULL,NULL),(174,NULL,' jai t','austin',NULL,NULL,NULL,NULL,NULL),(175,NULL,' Ryan','Espiritu',NULL,NULL,NULL,NULL,NULL),(176,NULL,' Grant','Namyst',NULL,NULL,NULL,NULL,NULL),(177,NULL,' Tyler','Gonzalez',NULL,NULL,NULL,NULL,NULL),(178,NULL,' Cristian','Pelayo',NULL,NULL,NULL,NULL,NULL),(179,NULL,' Noah','Kjos',NULL,NULL,NULL,NULL,NULL),(180,NULL,' Kaizad','Taraporevala',NULL,NULL,NULL,NULL,NULL),(181,NULL,' Will D','Edgecumbe',NULL,NULL,NULL,NULL,NULL),(182,NULL,' Danny','Holton',NULL,NULL,NULL,NULL,NULL),(183,NULL,' Nathaniel D','Geiger',NULL,NULL,NULL,NULL,NULL),(184,NULL,' Kamran','Pakravan',NULL,NULL,NULL,NULL,NULL),(185,NULL,' Tyler E','Marchok',NULL,NULL,NULL,NULL,NULL),(186,NULL,' Jackson M','Hoke',NULL,NULL,NULL,NULL,NULL),(187,NULL,' Alex','Atler',NULL,NULL,NULL,NULL,NULL),(188,NULL,' Lucas A','Walker',NULL,NULL,NULL,NULL,NULL),(189,NULL,' Preston','Lee',NULL,NULL,NULL,NULL,NULL),(190,NULL,' Jack W','Resnick',NULL,NULL,NULL,NULL,NULL),(191,NULL,' Ryan','Siu',NULL,NULL,NULL,NULL,NULL),(192,NULL,' Kyle','Remahl',NULL,NULL,NULL,NULL,NULL),(193,NULL,' Anthony','Katwan',NULL,NULL,NULL,NULL,NULL),(194,NULL,' Ryan D','Swearingen',NULL,NULL,NULL,NULL,NULL),(195,NULL,' Tyler A','Johnson',NULL,NULL,NULL,NULL,NULL),(196,NULL,' Justin','Bosset',NULL,NULL,NULL,NULL,NULL),(197,NULL,' antonio J','matusich',NULL,NULL,NULL,NULL,NULL),(198,NULL,' Ethan','Starr',NULL,NULL,NULL,NULL,NULL),(199,NULL,' Jackson A','Krause',NULL,NULL,NULL,NULL,NULL),(200,NULL,' Jeremy M','Noel',NULL,NULL,NULL,NULL,NULL),(201,NULL,' Luke R','Sherrill',NULL,NULL,NULL,NULL,NULL),(202,NULL,' Joseph B','Burgess',NULL,NULL,NULL,NULL,NULL),(203,NULL,' Jayme','Owen',NULL,NULL,NULL,NULL,NULL),(204,NULL,' Kyle','Geffon',NULL,NULL,NULL,NULL,NULL),(205,NULL,' Jason','Dullaghan',NULL,NULL,NULL,NULL,NULL),(206,NULL,' Noah','Thurm',NULL,NULL,NULL,NULL,NULL),(207,NULL,' Duncan','Koblas',NULL,NULL,NULL,NULL,NULL),(208,NULL,' Teddy','Khuong',NULL,NULL,NULL,NULL,NULL),(209,NULL,' Christian','McDermott',NULL,NULL,NULL,NULL,NULL),(210,NULL,' Jake','Israni',NULL,NULL,NULL,NULL,NULL),(211,NULL,' Thomas','Ahrens',NULL,NULL,NULL,NULL,NULL),(212,NULL,' Josh A','Stukenborg',NULL,NULL,NULL,NULL,NULL),(213,NULL,' Ryan C','Lee',NULL,NULL,NULL,NULL,NULL),(214,NULL,' Varun','Sriram',NULL,NULL,NULL,NULL,NULL),(215,NULL,' Christopher M','Boennighausen',NULL,NULL,NULL,NULL,NULL),(216,NULL,' Danny','Olsen',NULL,NULL,NULL,NULL,NULL),(217,NULL,' Cole J','Baker',NULL,NULL,NULL,NULL,NULL),(218,NULL,' Trevor M','Goodwin',NULL,NULL,NULL,NULL,NULL),(219,NULL,' Andrew','Shieh',NULL,NULL,NULL,NULL,NULL),(220,NULL,' Connor J','Quinn',NULL,NULL,NULL,NULL,NULL),(221,NULL,' Nick','Cabot',NULL,NULL,NULL,NULL,NULL),(222,NULL,' Henry Y','Wang',NULL,NULL,NULL,NULL,NULL),(223,NULL,' Cameron','Jones',NULL,NULL,NULL,NULL,NULL),(224,NULL,' Jared M','Norris',NULL,NULL,NULL,NULL,NULL),(225,NULL,' Cooper','Fitz',NULL,NULL,NULL,NULL,NULL),(226,NULL,' Kian','Nikzad',NULL,NULL,NULL,NULL,NULL),(227,NULL,' Peter','Zdepski',NULL,NULL,NULL,NULL,NULL),(228,NULL,' Derrick','Turner',NULL,NULL,NULL,NULL,NULL),(229,NULL,' Connor J','Altinger',NULL,NULL,NULL,NULL,NULL),(230,NULL,' Mitchell','Kita',NULL,NULL,NULL,NULL,NULL),(231,NULL,' Nathan','Lue',NULL,NULL,NULL,NULL,NULL),(232,NULL,' William H','Lepesh',NULL,NULL,NULL,NULL,NULL),(233,NULL,' Brandt','Hedgpeth',NULL,NULL,NULL,NULL,NULL),(234,NULL,' Will','Smith',NULL,NULL,NULL,NULL,NULL),(235,NULL,' Kieran L','Dawson',NULL,NULL,NULL,NULL,NULL),(236,NULL,' Will P','Dominguez',NULL,NULL,NULL,NULL,NULL),(237,NULL,' Adam','Galles',NULL,NULL,NULL,NULL,NULL),(238,NULL,' Douglas','Dahm',NULL,NULL,NULL,NULL,NULL),(239,NULL,' James','Hoyt',NULL,NULL,NULL,NULL,NULL),(240,NULL,' Gregory','Galli',NULL,NULL,NULL,NULL,NULL),(241,NULL,' Ryan','Laurenzano',NULL,NULL,NULL,NULL,NULL),(242,NULL,' Darren','Liu',NULL,NULL,NULL,NULL,NULL),(243,NULL,' Nikhil S','Bapat',NULL,NULL,NULL,NULL,NULL),(244,NULL,' Nathan','Martinez',NULL,NULL,NULL,NULL,NULL),(245,NULL,' Jack','Hardy',NULL,NULL,NULL,NULL,NULL),(246,NULL,' Maximilian D','Nelson',NULL,NULL,NULL,NULL,NULL),(247,NULL,' Timothy M','McAfee',NULL,NULL,NULL,NULL,NULL),(248,NULL,' William','Kenyon',NULL,NULL,NULL,NULL,NULL),(249,NULL,' Ian','Byun',NULL,NULL,NULL,NULL,NULL),(250,NULL,' dougie a','powers',NULL,NULL,NULL,NULL,NULL),(251,NULL,' Christopher','Lewis',NULL,NULL,NULL,NULL,NULL),(252,NULL,' Henry','Lai',NULL,NULL,NULL,NULL,NULL),(253,NULL,' Jarrett','Conkin',NULL,NULL,NULL,NULL,NULL),(254,NULL,' Freddy','von Oepen',NULL,NULL,NULL,NULL,NULL),(255,NULL,' Brennan','Denzel',NULL,NULL,NULL,NULL,NULL),(256,NULL,' Conner','Demo',NULL,NULL,NULL,NULL,NULL),(257,NULL,' Sheldon','Wong',NULL,NULL,NULL,NULL,NULL),(258,NULL,' Iyer R','Adhvaith',NULL,NULL,NULL,NULL,NULL),(259,NULL,' Jason','Halden',NULL,NULL,NULL,NULL,NULL),(260,NULL,' Liam P','Magee',NULL,NULL,NULL,NULL,NULL),(261,NULL,' Nicholas','Kikuta',NULL,NULL,NULL,NULL,NULL),(262,NULL,' Devon','Sinha',NULL,NULL,NULL,NULL,NULL),(263,NULL,' Neal','Lund',NULL,NULL,NULL,NULL,NULL),(264,NULL,' JD','Coyne',NULL,NULL,NULL,NULL,NULL),(265,NULL,' Anthony E','Landphere',NULL,NULL,NULL,NULL,NULL),(266,NULL,' Nicholas','Wong',NULL,NULL,NULL,NULL,NULL),(267,NULL,' David','Shan',NULL,NULL,NULL,NULL,NULL),(268,NULL,' james R','clark',NULL,NULL,NULL,NULL,NULL),(269,NULL,' Max E','Edelson',NULL,NULL,NULL,NULL,NULL),(270,NULL,' Nathan H','Fairbanks',NULL,NULL,NULL,NULL,NULL),(271,NULL,' aran','cox',NULL,NULL,NULL,NULL,NULL),(272,NULL,' Shane','Mujica',NULL,NULL,NULL,NULL,NULL),(273,NULL,' Surya P','Vishnubhatt',NULL,NULL,NULL,NULL,NULL),(274,NULL,' Nicholas','Krystynak',NULL,NULL,NULL,NULL,NULL),(275,NULL,' Gavin','Stockton',NULL,NULL,NULL,NULL,NULL),(276,NULL,' Will V','Fimbres',NULL,NULL,NULL,NULL,NULL),(277,NULL,' Nicholas A','Mark',NULL,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `participants` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `phones`
+--
+
+DROP TABLE IF EXISTS `phones`;
+CREATE TABLE `phones` (
+  `id` int(11) NOT NULL auto_increment,
+  `phone_number` varchar(255) default NULL,
+  `phone_type` varchar(255) default NULL,
+  `preferred` tinyint(1) default '0',
+  `contact_id` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=256 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `phones`
+--
+
+LOCK TABLES `phones` WRITE;
+/*!40000 ALTER TABLE `phones` DISABLE KEYS */;
+INSERT INTO `phones` (`id`, `phone_number`, `phone_type`, `preferred`, `contact_id`) VALUES (1,NULL,NULL,0,2),(2,NULL,NULL,0,3),(3,NULL,NULL,0,4),(4,NULL,NULL,0,5),(5,NULL,NULL,0,6),(6,NULL,NULL,0,7),(7,NULL,NULL,0,8),(8,NULL,NULL,0,9),(9,NULL,NULL,0,10),(10,NULL,NULL,0,11),(11,NULL,NULL,0,12),(12,NULL,NULL,0,13),(13,NULL,NULL,0,14),(14,NULL,NULL,0,15),(15,NULL,NULL,0,16),(16,NULL,NULL,0,17),(17,NULL,NULL,0,18),(18,NULL,NULL,0,19),(19,NULL,NULL,0,20),(20,NULL,NULL,0,21),(21,NULL,NULL,0,22),(22,NULL,NULL,0,23),(23,NULL,NULL,0,24),(24,NULL,NULL,0,25),(25,NULL,NULL,0,26),(26,NULL,NULL,0,27),(27,NULL,NULL,0,28),(28,NULL,NULL,0,29),(29,NULL,NULL,0,30),(30,NULL,NULL,0,31),(31,NULL,NULL,0,32),(32,NULL,NULL,0,33),(33,NULL,NULL,0,34),(34,NULL,NULL,0,35),(35,NULL,NULL,0,36),(36,NULL,NULL,0,37),(37,NULL,NULL,0,38),(38,NULL,NULL,0,39),(39,NULL,NULL,0,40),(40,NULL,NULL,0,41),(41,NULL,NULL,0,42),(42,NULL,NULL,0,43),(43,NULL,NULL,0,44),(44,NULL,NULL,0,45),(45,NULL,NULL,0,46),(46,NULL,NULL,0,47),(47,NULL,NULL,0,48),(48,NULL,NULL,0,49),(49,NULL,NULL,0,50),(50,NULL,NULL,0,51),(51,NULL,NULL,0,52),(52,NULL,NULL,0,53),(53,NULL,NULL,0,54),(54,NULL,NULL,0,55),(55,NULL,NULL,0,56),(56,NULL,NULL,0,57),(57,NULL,NULL,0,58),(58,NULL,NULL,0,59),(59,NULL,NULL,0,60),(60,NULL,NULL,0,61),(61,NULL,NULL,0,62),(62,NULL,NULL,0,63),(63,NULL,NULL,0,64),(64,NULL,NULL,0,65),(65,NULL,NULL,0,66),(66,NULL,NULL,0,67),(67,NULL,NULL,0,68),(68,NULL,NULL,0,69),(69,NULL,NULL,0,70),(70,NULL,NULL,0,71),(71,NULL,NULL,0,72),(72,NULL,NULL,0,73),(73,NULL,NULL,0,74),(74,NULL,NULL,0,75),(75,NULL,NULL,0,76),(76,NULL,NULL,0,77),(77,NULL,NULL,0,78),(78,NULL,NULL,0,79),(79,NULL,NULL,0,80),(80,NULL,NULL,0,81),(81,NULL,NULL,0,82),(82,NULL,NULL,0,83),(83,NULL,NULL,0,84),(84,NULL,NULL,0,85),(85,NULL,NULL,0,86),(86,NULL,NULL,0,87),(87,NULL,NULL,0,88),(88,NULL,NULL,0,89),(89,NULL,NULL,0,90),(90,NULL,NULL,0,91),(91,NULL,NULL,0,92),(92,NULL,NULL,0,93),(93,NULL,NULL,0,94),(94,NULL,NULL,0,95),(95,NULL,NULL,0,96),(96,NULL,NULL,0,97),(97,NULL,NULL,0,98),(98,NULL,NULL,0,99),(99,NULL,NULL,0,100),(100,NULL,NULL,0,101),(101,NULL,NULL,0,102),(102,NULL,NULL,0,103),(103,NULL,NULL,0,104),(104,NULL,NULL,0,105),(105,NULL,NULL,0,106),(106,NULL,NULL,0,107),(107,NULL,NULL,0,108),(108,NULL,NULL,0,109),(109,NULL,NULL,0,110),(110,NULL,NULL,0,111),(111,NULL,NULL,0,112),(112,NULL,NULL,0,113),(113,NULL,NULL,0,114),(114,NULL,NULL,0,115),(115,NULL,NULL,0,116),(116,NULL,NULL,0,117),(117,NULL,NULL,0,118),(118,NULL,NULL,0,119),(119,NULL,NULL,0,120),(120,NULL,NULL,0,121),(121,NULL,NULL,0,122),(122,NULL,NULL,0,123),(123,NULL,NULL,0,124),(124,NULL,NULL,0,125),(125,NULL,NULL,0,126),(126,NULL,NULL,0,127),(127,NULL,NULL,0,128),(128,NULL,NULL,0,129),(129,NULL,NULL,0,130),(130,NULL,NULL,0,131),(131,NULL,NULL,0,132),(132,NULL,NULL,0,133),(133,NULL,NULL,0,134),(134,NULL,NULL,0,135),(135,NULL,NULL,0,136),(136,NULL,NULL,0,137),(137,NULL,NULL,0,138),(138,NULL,NULL,0,139),(139,NULL,NULL,0,140),(140,NULL,NULL,0,141),(141,NULL,NULL,0,142),(142,NULL,NULL,0,143),(143,NULL,NULL,0,144),(144,NULL,NULL,0,145),(145,NULL,NULL,0,146),(146,NULL,NULL,0,147),(147,NULL,NULL,0,148),(148,NULL,NULL,0,149),(149,NULL,NULL,0,150),(150,NULL,NULL,0,151),(151,NULL,NULL,0,152),(152,NULL,NULL,0,153),(153,NULL,NULL,0,154),(154,NULL,NULL,0,155),(155,NULL,NULL,0,156),(156,NULL,NULL,0,157),(157,NULL,NULL,0,158),(158,NULL,NULL,0,159),(159,NULL,NULL,0,160),(160,NULL,NULL,0,161),(161,NULL,NULL,0,162),(162,NULL,NULL,0,163),(163,NULL,NULL,0,164),(164,NULL,NULL,0,165),(165,NULL,NULL,0,166),(166,NULL,NULL,0,167),(167,NULL,NULL,0,168),(168,NULL,NULL,0,169),(169,NULL,NULL,0,170),(170,NULL,NULL,0,171),(171,NULL,NULL,0,172),(172,NULL,NULL,0,173),(173,NULL,NULL,0,174),(174,NULL,NULL,0,175),(175,NULL,NULL,0,176),(176,NULL,NULL,0,177),(177,NULL,NULL,0,178),(178,NULL,NULL,0,179),(179,NULL,NULL,0,180),(180,NULL,NULL,0,181),(181,NULL,NULL,0,182),(182,NULL,NULL,0,183),(183,NULL,NULL,0,184),(184,NULL,NULL,0,185),(185,NULL,NULL,0,186),(186,NULL,NULL,0,187),(187,NULL,NULL,0,188),(188,NULL,NULL,0,189),(189,NULL,NULL,0,190),(190,NULL,NULL,0,191),(191,NULL,NULL,0,192),(192,NULL,NULL,0,193),(193,NULL,NULL,0,194),(194,NULL,NULL,0,195),(195,NULL,NULL,0,196),(196,NULL,NULL,0,197),(197,NULL,NULL,0,198),(198,NULL,NULL,0,199),(199,NULL,NULL,0,200),(200,NULL,NULL,0,201),(201,NULL,NULL,0,202),(202,NULL,NULL,0,203),(203,NULL,NULL,0,204),(204,NULL,NULL,0,205),(205,NULL,NULL,0,206),(206,NULL,NULL,0,207),(207,NULL,NULL,0,208),(208,NULL,NULL,0,209),(209,NULL,NULL,0,210),(210,NULL,NULL,0,211),(211,NULL,NULL,0,212),(212,NULL,NULL,0,213),(213,NULL,NULL,0,214),(214,NULL,NULL,0,215),(215,NULL,NULL,0,216),(216,NULL,NULL,0,217),(217,NULL,NULL,0,218),(218,NULL,NULL,0,219),(219,NULL,NULL,0,220),(220,NULL,NULL,0,221),(221,NULL,NULL,0,222),(222,NULL,NULL,0,223),(223,NULL,NULL,0,224),(224,NULL,NULL,0,225),(225,NULL,NULL,0,226),(226,NULL,NULL,0,227),(227,NULL,NULL,0,228),(228,NULL,NULL,0,229),(229,NULL,NULL,0,230),(230,NULL,NULL,0,231),(231,NULL,NULL,0,232),(232,NULL,NULL,0,233),(233,NULL,NULL,0,234),(234,NULL,NULL,0,235),(235,NULL,NULL,0,236),(236,NULL,NULL,0,237),(237,NULL,NULL,0,238),(238,NULL,NULL,0,239),(239,NULL,NULL,0,240),(240,NULL,NULL,0,241),(241,NULL,NULL,0,242),(242,NULL,NULL,0,243),(243,NULL,NULL,0,244),(244,NULL,NULL,0,245),(245,NULL,NULL,0,246),(246,NULL,NULL,0,247),(247,NULL,NULL,0,248),(248,NULL,NULL,0,249),(249,NULL,NULL,0,250),(250,NULL,NULL,0,251),(251,NULL,NULL,0,252),(252,NULL,NULL,0,253),(253,NULL,NULL,0,254),(254,NULL,NULL,0,255),(255,NULL,NULL,0,256);
+/*!40000 ALTER TABLE `phones` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `photos`
+--
+
+DROP TABLE IF EXISTS `photos`;
+CREATE TABLE `photos` (
+  `id` int(11) NOT NULL auto_increment,
+  `user_id` int(11) default NULL,
+  `participant_id` int(11) default NULL,
+  `team_id` int(11) default NULL,
+  `source` varchar(255) default NULL,
+  `source_user_id` varchar(255) default NULL,
+  `source_album_id` varchar(255) default NULL,
+  `source_photo_id` varchar(255) default NULL,
+  `title` varchar(255) default NULL,
+  `description` varchar(1024) default NULL,
+  `thumbnail_url` varchar(512) default NULL,
+  `photo_url` varchar(512) default NULL,
+  `publish_date` datetime default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  `image_file_name` varchar(255) default NULL,
+  `image_content_tye` varchar(255) default NULL,
+  `image_file_size` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `photos`
+--
+
+LOCK TABLES `photos` WRITE;
+/*!40000 ALTER TABLE `photos` DISABLE KEYS */;
+/*!40000 ALTER TABLE `photos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `programs`
+--
+
+DROP TABLE IF EXISTS `programs`;
+CREATE TABLE `programs` (
+  `id` int(11) NOT NULL auto_increment,
+  `hub_id` int(11) NOT NULL,
+  `name` varchar(255) default NULL,
+  `description` text,
+  `status` varchar(255) default 'Active',
+  `created_on` datetime default NULL,
+  `created_by` varchar(255) default NULL,
+  `parent_id` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `programs`
+--
+
+LOCK TABLES `programs` WRITE;
+/*!40000 ALTER TABLE `programs` DISABLE KEYS */;
+INSERT INTO `programs` (`id`, `hub_id`, `name`, `description`, `status`, `created_on`, `created_by`, `parent_id`) VALUES (1,2,'Youth Basketball Ages 3-11','A great program for beginning and intermediate players. Varied basket height, ball size and game rules fit with each age group in promoting sportsmanship and teamwork. Pass, dribble and shoot your way into the YMCA\'s basketball league. The games are coached by parent volunteers and are refereed by YMCA staff. All games are played for one hour on Saturdays and game times are scheduled by the YMCA.','Active','2010-02-04 17:28:55',NULL,NULL),(2,4,'Regular Season Baseball','Recreational Development Baseball','Active','2010-02-04 00:00:00','Super Admin User',NULL);
+/*!40000 ALTER TABLE `programs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `registrations`
+--
+
+DROP TABLE IF EXISTS `registrations`;
+CREATE TABLE `registrations` (
+  `id` int(11) NOT NULL auto_increment,
+  `participant_id` int(11) default NULL,
+  `session_id` int(11) default NULL,
+  `division_id` int(11) default NULL,
+  `registered_date` datetime default NULL,
+  `registration_requests` text,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=278 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `registrations`
+--
+
+LOCK TABLES `registrations` WRITE;
+/*!40000 ALTER TABLE `registrations` DISABLE KEYS */;
+INSERT INTO `registrations` (`id`, `participant_id`, `session_id`, `division_id`, `registered_date`, `registration_requests`, `created_at`, `updated_at`) VALUES (1,1,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:28','2010-03-16 20:10:28'),(2,2,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:28','2010-03-16 20:10:28'),(3,3,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:28','2010-03-16 20:10:28'),(4,4,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:28','2010-03-16 20:10:28'),(5,5,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:28','2010-03-16 20:10:28'),(6,6,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(7,7,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(8,8,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(9,9,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(10,10,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(11,11,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(12,12,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(13,13,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(14,14,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(15,15,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(16,16,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(17,17,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(18,18,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(19,19,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(20,20,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(21,21,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(22,22,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(23,23,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(24,24,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(25,25,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(26,26,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(27,27,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(28,28,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(29,29,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(30,30,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(31,31,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(32,32,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(33,33,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(34,34,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(35,35,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(36,36,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(37,37,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(38,38,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(39,39,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(40,40,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(41,41,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(42,42,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(43,43,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:31','2010-03-16 20:10:31'),(44,44,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(45,45,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(46,46,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(47,47,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(48,48,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(49,49,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(50,50,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(51,51,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(52,52,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(53,53,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(54,54,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(55,55,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(56,56,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(57,57,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(58,58,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(59,59,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(60,60,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(61,61,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(62,62,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(63,63,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(64,64,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(65,65,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(66,66,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(67,67,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(68,68,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(69,69,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(70,70,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(71,71,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(72,72,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(73,73,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(74,74,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(75,75,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(76,76,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(77,77,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(78,78,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(79,79,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(80,80,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(81,81,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(82,82,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(83,83,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(84,84,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(85,85,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(86,86,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(87,87,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(88,88,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(89,89,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(90,90,2,5,'2010-03-16 00:00:00',NULL,'2010-03-16 20:10:32','2010-03-16 20:10:32'),(91,91,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(92,92,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(93,93,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(94,94,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(95,95,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(96,96,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(97,97,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(98,98,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(99,99,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(100,100,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(101,101,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(102,102,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(103,103,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(104,104,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(105,105,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(106,106,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(107,107,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(108,108,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(109,109,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(110,110,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(111,111,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(112,112,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(113,113,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(114,114,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(115,115,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(116,116,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(117,117,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(118,118,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(119,119,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:11','2010-03-16 22:04:11'),(120,120,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(121,121,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(122,122,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(123,123,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(124,124,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(125,125,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(126,126,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(127,127,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(128,128,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(129,129,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(130,130,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(131,131,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(132,132,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(133,133,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(134,134,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(135,135,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(136,136,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(137,137,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(138,138,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(139,139,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(140,140,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(141,141,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(142,142,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(143,143,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(144,144,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(145,145,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(146,146,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(147,147,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(148,148,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(149,149,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(150,150,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(151,151,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(152,152,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(153,153,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(154,154,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(155,155,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(156,156,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(157,157,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(158,158,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(159,159,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(160,160,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(161,161,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(162,162,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(163,163,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(164,164,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(165,165,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(166,166,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(167,167,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(168,168,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(169,169,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(170,170,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(171,171,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(172,172,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(173,173,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(174,174,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(175,175,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:12','2010-03-16 22:04:12'),(176,176,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:13','2010-03-16 22:04:13'),(177,177,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:13','2010-03-16 22:04:13'),(178,178,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:13','2010-03-16 22:04:13'),(179,179,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:13','2010-03-16 22:04:13'),(180,180,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:13','2010-03-16 22:04:13'),(181,181,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:13','2010-03-16 22:04:13'),(182,182,2,6,'2010-03-16 00:00:00',NULL,'2010-03-16 22:04:13','2010-03-16 22:04:13'),(183,183,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:32','2010-03-16 22:06:32'),(184,184,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:32','2010-03-16 22:06:32'),(185,185,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:32','2010-03-16 22:06:32'),(186,186,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:32','2010-03-16 22:06:32'),(187,187,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:32','2010-03-16 22:06:32'),(188,188,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:32','2010-03-16 22:06:32'),(189,189,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:32','2010-03-16 22:06:32'),(190,190,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:32','2010-03-16 22:06:32'),(191,191,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:32','2010-03-16 22:06:32'),(192,192,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:32','2010-03-16 22:06:32'),(193,193,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:32','2010-03-16 22:06:32'),(194,194,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:32','2010-03-16 22:06:32'),(195,195,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:32','2010-03-16 22:06:32'),(196,196,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:32','2010-03-16 22:06:32'),(197,197,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:32','2010-03-16 22:06:32'),(198,198,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:32','2010-03-16 22:06:32'),(199,199,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:32','2010-03-16 22:06:32'),(200,200,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(201,201,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(202,202,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(203,203,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(204,204,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(205,205,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(206,206,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(207,207,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(208,208,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(209,209,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(210,210,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(211,211,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(212,212,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(213,213,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(214,214,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(215,215,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(216,216,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(217,217,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(218,218,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(219,219,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(220,220,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(221,221,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(222,222,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(223,223,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(224,224,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(225,225,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(226,226,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(227,227,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(228,228,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(229,229,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(230,230,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(231,231,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(232,232,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(233,233,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(234,234,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(235,235,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(236,236,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(237,237,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(238,238,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(239,239,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(240,240,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(241,241,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(242,242,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(243,243,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:33','2010-03-16 22:06:33'),(244,244,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(245,245,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(246,246,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(247,247,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(248,248,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(249,249,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(250,250,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(251,251,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(252,252,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(253,253,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(254,254,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(255,255,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(256,256,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(257,257,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(258,258,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(259,259,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(260,260,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(261,261,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(262,262,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(263,263,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(264,264,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(265,265,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(266,266,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(267,267,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(268,268,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(269,269,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(270,270,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(271,271,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(272,272,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(273,273,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(274,274,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(275,275,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(276,276,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34'),(277,277,2,4,'2010-03-16 00:00:00',NULL,'2010-03-16 22:06:34','2010-03-16 22:06:34');
+/*!40000 ALTER TABLE `registrations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `schema_migrations`
+--
+
+DROP TABLE IF EXISTS `schema_migrations`;
+CREATE TABLE `schema_migrations` (
+  `version` varchar(255) NOT NULL,
+  UNIQUE KEY `unique_schema_migrations` (`version`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `schema_migrations`
+--
+
+LOCK TABLES `schema_migrations` WRITE;
+/*!40000 ALTER TABLE `schema_migrations` DISABLE KEYS */;
+INSERT INTO `schema_migrations` (`version`) VALUES ('20091015163919'),('20091015235647'),('20091016001323'),('20091016002704'),('20091016172004'),('20091027181218'),('20091027231242'),('20091029221435'),('20091102161303'),('20091102162535'),('20091102164558'),('20091102170658'),('20091102174003'),('20091102174205'),('20091102174756'),('20091102175614'),('20091104142506'),('20091106214102'),('20091110035347'),('20091110221436'),('20091111210613'),('20091111211508'),('20091201194645'),('20091208212002'),('20091214232629'),('20091215190902'),('20091215191628'),('20091217151555'),('20091220210900'),('20100104160000'),('20100111224735'),('20100112214056'),('20100113060130'),('20100113192626'),('20100113195127'),('20100113221500'),('20100114225258'),('20100114231312'),('20100114231657'),('20100119205143'),('20100122052046'),('20100131161929'),('20100201193830'),('20100201201307'),('20100202042759'),('20100202175313'),('20100204004922'),('20100204171007'),('20100213154329'),('20100213154703'),('20100213161338'),('20100213221636'),('20100302045722'),('20100315181514'),('20100316182037');
+/*!40000 ALTER TABLE `schema_migrations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sessions`
+--
+
+DROP TABLE IF EXISTS `sessions`;
+CREATE TABLE `sessions` (
+  `id` int(11) NOT NULL auto_increment,
+  `program_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` varchar(255) default NULL,
+  `start_date` datetime default NULL,
+  `end_date` datetime default NULL,
+  `status` varchar(255) default 'Active',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sessions`
+--
+
+LOCK TABLES `sessions` WRITE;
+/*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
+INSERT INTO `sessions` (`id`, `program_id`, `name`, `description`, `start_date`, `end_date`, `status`) VALUES (1,1,'Winter 2009-2010','','2010-01-16 00:00:00',NULL,'Active'),(2,2,'2010 Season',NULL,'2010-03-20 00:00:00','2010-08-31 07:00:00','Active');
+/*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sponsored_options`
+--
+
+DROP TABLE IF EXISTS `sponsored_options`;
+CREATE TABLE `sponsored_options` (
+  `id` int(11) NOT NULL auto_increment,
+  `sponsor_id` int(11) default NULL,
+  `sponsorship_option_id` int(11) default NULL,
+  `amount` int(11) default NULL,
+  `additional_info` text,
+  `status` varchar(255) default NULL,
+  `payment_reference` varchar(255) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sponsored_options`
+--
+
+LOCK TABLES `sponsored_options` WRITE;
+/*!40000 ALTER TABLE `sponsored_options` DISABLE KEYS */;
+INSERT INTO `sponsored_options` (`id`, `sponsor_id`, `sponsorship_option_id`, `amount`, `additional_info`, `status`, `payment_reference`) VALUES (1,1,467737552,800,'',NULL,NULL),(2,2,467737551,600,'Anand/Pinto-1',NULL,NULL),(3,4,467737549,300,'1:Anand Subramanyan/Shetland/',NULL,NULL),(4,5,467737550,400,'1:Anand Subramanyan/Pinto-2/','Approved','Auth:TESTMD/RefNum:0'),(5,6,467737549,300,'1:Anand Subramanyan/Pinto-2/','Approved','Auth:TESTMD/RefNum:0'),(6,7,866031385,25,'','Approved','Auth:87589P/RefNum:148942944'),(7,8,467737549,300,'1:Cameron Crose/Pinto-2/Team name is unknown at this time','Approved','Auth:017830/RefNum:149560884'),(8,9,467737549,300,'1:Colin Geffon/Pinto-1/Dan Kane is the coach.  I\'m not sure of the team number.',NULL,NULL),(9,10,467737549,300,'1:Colin Geffon- Team 7/Pinto-1/Dan Kane is the coach.  I\'m not sure of the team number.','Approved','Auth:021960/RefNum:149585974'),(10,11,467737549,300,'1:Jay Cohan/ Coach Yankees/Shetland/','Approved','Auth:517893/RefNum:149913514'),(11,12,467737549,300,'1:Keanu Garrett / White Sox/Shetland/','Approved','Auth:043486/RefNum:150130324'),(12,13,467737549,300,'1:Keaton Sullivan/Pinto-2/','Approved','Auth:200850/RefNum:150249156'),(13,14,467737549,300,'1:Jason Penilla/ Phillies/Pinto-2/','Approved','Auth:00135B/RefNum:150784281'),(14,15,467737549,300,'1:Lucas Persyn/Mets/Pinto-1/','Approved','Auth:04462C/RefNum:150960055'),(15,16,467737549,300,'1:Angels/Pinto-2/','Approved','Auth:002676/RefNum:151008603'),(16,17,467737549,300,'1:Mariners/Shetland/Intero\r\nReal Estate','Approved','Auth:002696/RefNum:151010664'),(17,18,467737549,300,'1:Francisco Lucca - Pirates/Pinto-1/PLease note that FINA is all capitals in company name.','Approved','Auth:032611/RefNum:151025828'),(18,19,467737549,300,'','Approved','Auth:123394/RefNum:151957821');
+/*!40000 ALTER TABLE `sponsored_options` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sponsors`
+--
+
+DROP TABLE IF EXISTS `sponsors`;
+CREATE TABLE `sponsors` (
+  `id` int(11) NOT NULL auto_increment,
+  `company_name` varchar(255) NOT NULL,
+  `company_website` varchar(255) default NULL,
+  `contact_name` varchar(255) default NULL,
+  `contact_email` varchar(255) default NULL,
+  `contact_phone` varchar(255) default NULL,
+  `street_address` varchar(255) default NULL,
+  `city` varchar(255) default NULL,
+  `state` varchar(8) default NULL,
+  `zip_code` varchar(12) default NULL,
+  `banner1_file_name` varchar(255) default NULL,
+  `banner1_content_type` varchar(255) default NULL,
+  `banner1_file_size` int(11) default NULL,
+  `banner1_updated_at` datetime default NULL,
+  `banner2_file_name` varchar(255) default NULL,
+  `banner2_content_type` varchar(255) default NULL,
+  `banner2_file_size` int(11) default NULL,
+  `banner2_updated_at` datetime default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  `hub_id` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sponsors`
+--
+
+LOCK TABLES `sponsors` WRITE;
+/*!40000 ALTER TABLE `sponsors` DISABLE KEYS */;
+INSERT INTO `sponsors` (`id`, `company_name`, `company_website`, `contact_name`, `contact_email`, `contact_phone`, `street_address`, `city`, `state`, `zip_code`, `banner1_file_name`, `banner1_content_type`, `banner1_file_size`, `banner1_updated_at`, `banner2_file_name`, `banner2_content_type`, `banner2_file_size`, `banner2_updated_at`, `created_at`, `updated_at`, `hub_id`) VALUES (1,'',NULL,'','','','','','CA','',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-04 17:42:28','2010-02-04 17:42:28',NULL),(2,'CoreDot',NULL,'Subbu B','bsubbu@sbcglobal.net','408-802-2720','1448 Marlbarough Court','Los Altos','CA','94024',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-04 18:04:33','2010-02-04 18:04:33',NULL),(3,'',NULL,'','','','','','CA','',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-04 19:42:11','2010-02-04 19:42:11',NULL),(4,'CoreContinuum',NULL,'Subbu Balakrishnan','','408-802-2720','1448 Marlbarough Court','Los Altos','CA','94024',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-11 13:23:58','2010-02-11 13:23:58',NULL),(5,'CoreContinuum',NULL,'Subbu Balakrishnan','bsubbu@sbcglobal.net','408-802-2720','1448 Marlbarough Court','Los Altos','CA','94024',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-13 16:26:33','2010-02-13 16:26:33',NULL),(6,'CoreContinuum',NULL,'Subbu Balakrishnan','bsubbu@sbcglobal.net','408-802-2720','1448 Marlbarough Court','Los Altos','CA','94024',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-13 16:53:29','2010-02-13 16:53:29',NULL),(7,'Subbu Balakrishnan',NULL,'Subbu Balakrishnan','bsubbu@sbcglobal.net','(408) 802-2720','1448 Marlbarough Court','Los Altos','CA','94024',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-18 22:59:09','2010-02-18 22:59:09',NULL),(8,'Farwest Plumbing Company',NULL,'John E. Crose, Jr.','john@farwestplumbing.com','650-333-7526','325 Chamisal Avenue','Los Altos','CA','94022',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-23 00:43:39','2010-02-23 00:43:39',NULL),(9,'Geffon & Isger',NULL,'Eric Geffon','egeffon@sjlawyer.net','408-838-6096','75 E. Santa Clara St. Ste. 295','San Jose','CA','95113',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-23 06:55:03','2010-02-23 06:55:03',NULL),(10,'Geffon & Isger',NULL,'Eric Geffon','egeffon@sjlawyer.net','408-838-6096','75 E. Santa Clara St. Ste. 295','San Jose','CA','95113',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-23 06:55:42','2010-02-23 06:55:42',NULL),(11,'Jefunira Camp',NULL,'Jeff Gamble','director@jefuniracamp.com','650 291 2888','221 Lassen Avenue','Mountain View','CA','94043',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-25 00:02:26','2010-02-25 00:02:26',NULL),(12,'Linda Garrett Swim School',NULL,'Linda Garrett','bookings@lgswim.com','650-961-1021','1200 Lubich Drive','Mountain View','CA','94040',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-26 04:30:24','2010-02-26 04:30:24',NULL),(13,'Turn2 Solutions',NULL,'Chris Sullivan','csullivan@turn2solutions.com','650-559-9600','PO Box 3605','Los Altos','CA','94024',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-26 17:33:28','2010-02-26 17:33:28',NULL),(14,'Al Penilla/ Martine, Penilla & Gencarella, LLP',NULL,'Anne Penilla','annepenilla@hotmail.com','6505649244','710 Lakeway Dr.','Sunnyvale','CA','94085',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-03-01 20:25:28','2010-03-01 20:25:28',NULL),(15,'Cassidy Turley BT Commercial',NULL,'Daniel Persyn','dpersyn@ctbt.com','650-320-0255','1950 University Circle','East Palo Alto','CA','94303',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-03-02 15:36:07','2010-03-02 15:36:07',NULL),(16,'I Love This Game!',NULL,'Carl S. Gutekunst','csg@alameth.org','650 961 5426','1988 Fallen Leaf Lane','Los Altos','CA','94024',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-03-02 18:47:12','2010-03-02 18:47:12',NULL),(17,'Intero Real Estate',NULL,'Dani Thompson','thethompsons99@yahoo.com','650.793.3327','11556 Hillpark Lane','Los Altos','CA','94024',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-03-02 18:56:38','2010-03-02 18:56:38',NULL),(18,'FINA Resources LLC',NULL,'Gaudi Lucca','gaudi@finaresources.com','415-860-2285','107 Hilary Avenue','Mountain View','CA','94040',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-03-02 19:49:48','2010-03-02 19:49:48',NULL),(19,'Charles Schwab & Co.',NULL,'Jason M. Babcock','jason.babcock@schwab.com','650-917-5664','301 S. San Antonio Rd.','Los Altos','CA','94022',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-03-08 16:20:51','2010-03-08 16:20:51',NULL);
+/*!40000 ALTER TABLE `sponsors` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sponsorship_options`
+--
+
+DROP TABLE IF EXISTS `sponsorship_options`;
+CREATE TABLE `sponsorship_options` (
+  `id` int(11) NOT NULL auto_increment,
+  `hub_id` int(11) default NULL,
+  `group` varchar(255) default NULL,
+  `name` varchar(255) default NULL,
+  `description` varchar(255) default NULL,
+  `graphic_file_name` varchar(255) default NULL,
+  `graphic_file_type` varchar(255) default NULL,
+  `graphic_file_size` int(11) default NULL,
+  `amount` varchar(255) default NULL,
+  `primary` tinyint(1) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=866031387 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sponsorship_options`
+--
+
+LOCK TABLES `sponsorship_options` WRITE;
+/*!40000 ALTER TABLE `sponsorship_options` DISABLE KEYS */;
+INSERT INTO `sponsorship_options` (`id`, `hub_id`, `group`, `name`, `description`, `graphic_file_name`, `graphic_file_type`, `graphic_file_size`, `amount`, `primary`) VALUES (467737549,4,'Category 5','Your Company Name','on back of team jersey (Shetland & Pinto divisions only)',NULL,NULL,NULL,'$300',1),(467737550,4,'Category 4','Business Card Size Black & White Ad','within Yearbook',NULL,NULL,NULL,'$400',1),(467737551,4,'Category 3','Half Page Four Color Ad','center of Yearbook',NULL,NULL,NULL,'$600',1),(467737552,4,'Category 2','Full Page Four Color Ad','center of Yearbook',NULL,NULL,NULL,'$800',1),(467737553,4,'Category 1','Full Page Four Color Ad','inside front, back or outside back cover',NULL,NULL,NULL,'$1000',1),(866031385,4,'Option 2','Corporate/Family Friend','of LA-MV PONY Baseball',NULL,NULL,NULL,'',0),(866031386,4,'Option 1','Full Page Insert Pull Out Ad','included in the Yearbook',NULL,NULL,NULL,'$900',0);
+/*!40000 ALTER TABLE `sponsorship_options` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sponsorships`
+--
+
+DROP TABLE IF EXISTS `sponsorships`;
+CREATE TABLE `sponsorships` (
+  `id` int(11) NOT NULL auto_increment,
+  `sponsorable_type` varchar(255) default NULL,
+  `sponsorable_id` int(11) default NULL,
+  `sponsor_id` int(11) default NULL,
+  `starts_at` date default NULL,
+  `ends_at` date default NULL,
+  `status` varchar(255) default NULL,
+  `notes` varchar(1024) default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sponsorships`
+--
+
+LOCK TABLES `sponsorships` WRITE;
+/*!40000 ALTER TABLE `sponsorships` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sponsorships` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `star_player_votes`
+--
+
+DROP TABLE IF EXISTS `star_player_votes`;
+CREATE TABLE `star_player_votes` (
+  `id` int(11) NOT NULL auto_increment,
+  `participant_id` int(11) NOT NULL,
+  `game_report_id` int(11) NOT NULL,
+  `vote_rank` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `star_player_votes`
+--
+
+LOCK TABLES `star_player_votes` WRITE;
+/*!40000 ALTER TABLE `star_player_votes` DISABLE KEYS */;
+INSERT INTO `star_player_votes` (`id`, `participant_id`, `game_report_id`, `vote_rank`) VALUES (4,11,6,1),(5,11,6,2),(6,13,6,3);
+/*!40000 ALTER TABLE `star_player_votes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `team_memberships`
+--
+
+DROP TABLE IF EXISTS `team_memberships`;
+CREATE TABLE `team_memberships` (
+  `id` int(11) NOT NULL auto_increment,
+  `participant_id` int(11) NOT NULL,
+  `team_id` int(11) NOT NULL,
+  `role` varchar(255) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `team_memberships`
+--
+
+LOCK TABLES `team_memberships` WRITE;
+/*!40000 ALTER TABLE `team_memberships` DISABLE KEYS */;
+INSERT INTO `team_memberships` (`id`, `participant_id`, `team_id`, `role`) VALUES (1,82,45,'Head Coach'),(2,29,45,'Assistant Coach'),(3,18,52,'Head Coach'),(4,22,51,'Head Coach'),(5,5,51,'Assistant Coach'),(6,7,49,'Head Coach'),(7,24,49,'Assistant Coach'),(8,63,47,'Head Coach'),(9,58,47,'Assistant Coach'),(10,59,46,'Head Coach'),(11,32,46,'Assistant Coach'),(12,10,52,NULL),(13,35,52,NULL),(14,41,52,NULL),(15,42,52,NULL),(16,62,52,NULL),(17,66,52,NULL),(18,68,52,NULL),(19,69,52,NULL),(20,80,52,NULL),(21,89,52,NULL),(22,3,50,NULL),(23,27,50,NULL),(24,31,50,NULL),(25,48,50,NULL),(26,53,50,NULL),(28,79,50,NULL),(29,83,50,NULL),(30,84,50,NULL),(31,86,50,NULL),(32,74,50,'Head Coach'),(33,87,48,'Head Coach'),(34,61,48,'Assistant Coach'),(35,9,48,NULL),(36,15,48,NULL),(37,16,48,NULL),(38,17,48,NULL),(39,23,48,NULL),(40,33,48,NULL),(41,34,48,NULL),(42,71,48,NULL),(43,75,48,NULL),(44,19,47,NULL),(45,25,47,NULL),(46,43,47,NULL),(47,46,47,NULL),(48,50,47,NULL),(49,54,47,NULL),(50,56,47,NULL),(51,77,47,NULL),(52,85,47,NULL),(53,1,46,NULL),(54,6,46,NULL),(55,45,46,NULL),(56,51,46,NULL),(57,52,46,NULL),(58,57,46,NULL),(59,70,46,NULL),(60,78,46,NULL),(61,2,51,NULL),(62,26,51,NULL),(63,36,51,NULL),(64,37,51,NULL),(65,44,51,NULL),(66,60,51,NULL),(67,64,51,NULL),(68,67,51,NULL),(69,73,51,NULL),(70,81,51,NULL),(71,8,49,NULL),(72,11,49,NULL),(73,12,49,NULL),(74,13,49,NULL),(75,20,49,NULL),(76,30,49,NULL),(77,39,49,NULL),(78,55,49,NULL),(79,76,49,NULL),(80,21,45,NULL),(81,28,45,NULL),(82,38,45,NULL),(83,40,45,NULL),(84,47,45,NULL),(85,49,45,NULL),(86,72,45,NULL),(87,90,45,NULL);
+/*!40000 ALTER TABLE `team_memberships` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `teams`
+--
+
+DROP TABLE IF EXISTS `teams`;
+CREATE TABLE `teams` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(255) default NULL,
+  `division_id` int(11) default NULL,
+  `session_id` int(11) default NULL,
+  `selected_name` varchar(255) default NULL,
+  `logo_file_name` varchar(255) default NULL,
+  `logo_content_tye` varchar(255) default NULL,
+  `logo_file_size` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `teams`
+--
+
+LOCK TABLES `teams` WRITE;
+/*!40000 ALTER TABLE `teams` DISABLE KEYS */;
+INSERT INTO `teams` (`id`, `name`, `division_id`, `session_id`, `selected_name`, `logo_file_name`, `logo_content_tye`, `logo_file_size`) VALUES (1,'S-1',1,2,NULL,NULL,NULL,NULL),(2,'S-2',1,2,NULL,NULL,NULL,NULL),(3,'S-3',1,2,NULL,NULL,NULL,NULL),(4,'S-4',1,2,NULL,NULL,NULL,NULL),(5,'S-5',1,2,NULL,NULL,NULL,NULL),(6,'S-6',1,2,NULL,NULL,NULL,NULL),(7,'S-7',1,2,NULL,NULL,NULL,NULL),(8,'S-8',1,2,NULL,NULL,NULL,NULL),(9,'S-9',1,2,NULL,NULL,NULL,NULL),(10,'S-10',1,2,NULL,NULL,NULL,NULL),(11,'S-11',1,2,NULL,NULL,NULL,NULL),(12,'S-12',1,2,NULL,NULL,NULL,NULL),(13,'P1-1',2,2,NULL,NULL,NULL,NULL),(14,'P1-2',2,2,NULL,NULL,NULL,NULL),(15,'P1-3',2,2,NULL,NULL,NULL,NULL),(16,'P1-4',2,2,NULL,NULL,NULL,NULL),(17,'P1-5',2,2,NULL,NULL,NULL,NULL),(18,'P1-6',2,2,NULL,NULL,NULL,NULL),(19,'P1-7',2,2,NULL,NULL,NULL,NULL),(20,'P1-8',2,2,NULL,NULL,NULL,NULL),(21,'P1-9',2,2,NULL,NULL,NULL,NULL),(22,'P1-10',2,2,NULL,NULL,NULL,NULL),(23,'P1-11',2,2,NULL,NULL,NULL,NULL),(24,'P1-12',2,2,NULL,NULL,NULL,NULL),(25,'P2-1',3,2,NULL,NULL,NULL,NULL),(26,'P2-2',3,2,NULL,NULL,NULL,NULL),(27,'P2-3',3,2,NULL,NULL,NULL,NULL),(28,'P2-4',3,2,NULL,NULL,NULL,NULL),(29,'P2-5',3,2,NULL,NULL,NULL,NULL),(30,'P2-6',3,2,NULL,NULL,NULL,NULL),(31,'P2-7',3,2,NULL,NULL,NULL,NULL),(32,'P2-8',3,2,NULL,NULL,NULL,NULL),(33,'P2-9',3,2,NULL,NULL,NULL,NULL),(34,'P2-10',3,2,NULL,NULL,NULL,NULL),(35,'P2-11',3,2,NULL,NULL,NULL,NULL),(36,'P2-12',3,2,NULL,NULL,NULL,NULL),(37,'M1-1',4,2,NULL,NULL,NULL,NULL),(38,'M1-2',4,2,NULL,NULL,NULL,NULL),(39,'M1-3',4,2,NULL,NULL,NULL,NULL),(40,'M1-4',4,2,NULL,NULL,NULL,NULL),(41,'M1-5',4,2,NULL,NULL,NULL,NULL),(42,'M1-6',4,2,NULL,NULL,NULL,NULL),(43,'M1-7',4,2,NULL,NULL,NULL,NULL),(44,'M1-8',4,2,NULL,NULL,NULL,NULL),(45,'M2-1',5,2,'Giants',NULL,NULL,NULL),(46,'M2-2',5,2,'Cubs',NULL,NULL,NULL),(47,'M2-3',5,2,'Nationals',NULL,NULL,NULL),(48,'M2-4',5,2,'Phillies','image.jpg',NULL,3659),(49,'M2-5',5,2,'A\'s',NULL,NULL,NULL),(50,'M2-6',5,2,'Red Sox',NULL,NULL,NULL),(51,'M2-7',5,2,'White Sox',NULL,NULL,NULL),(52,'M2-8',5,2,'Rangers',NULL,NULL,NULL),(53,'B-1',6,2,NULL,NULL,NULL,NULL),(54,'B-2',6,2,NULL,NULL,NULL,NULL),(55,'B-3',6,2,NULL,NULL,NULL,NULL),(56,'B-4',6,2,NULL,NULL,NULL,NULL),(57,'B-5',6,2,NULL,NULL,NULL,NULL),(58,'B-6',6,2,NULL,NULL,NULL,NULL),(59,'B-7',6,2,NULL,NULL,NULL,NULL),(60,'B-8',6,2,NULL,NULL,NULL,NULL),(61,'P-1',7,2,NULL,NULL,NULL,NULL),(62,'P-2',7,2,NULL,NULL,NULL,NULL),(63,'P-3',7,2,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `teams` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL auto_increment,
+  `login` varchar(40) default NULL,
+  `name` varchar(100) default '',
+  `email` varchar(100) default NULL,
+  `crypted_password` varchar(40) default NULL,
+  `salt` varchar(40) default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  `remember_token` varchar(40) default NULL,
+  `remember_token_expires_at` datetime default NULL,
+  `first_name` varchar(24) default NULL,
+  `last_name` varchar(24) default NULL,
+  `site_admin` tinyint(1) default '0',
+  `contact_id` int(11) default NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `index_users_on_login` (`login`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` (`id`, `login`, `name`, `email`, `crypted_password`, `salt`, `created_at`, `updated_at`, `remember_token`, `remember_token_expires_at`, `first_name`, `last_name`, `site_admin`, `contact_id`) VALUES (1,'admin','Super Admin User','subbu@coredotcontinuum.com','baf7c37506dd31a0437a9859267fad5390c4ff9e','17bacd9eeb91618752398a6e0555fd0a54493aee','2010-02-04 17:28:17','2010-02-04 17:28:17',NULL,NULL,'Super Admin','User',1,NULL),(2,'byroncyoung@sbcglobal.net','','byroncyoung@sbcglobal.net','0287bfd69c65c391daa537507b4e076f30fb86d0','93e64968a070b3f283d6cf26f5cafc1883ac6f92','2010-03-16 22:42:24','2010-03-16 23:41:49',NULL,NULL,NULL,NULL,0,88),(3,'kssmith@lamvpb.org','','kssmith@lamvpb.org','054616570a352113ea8534764f2516f50a301e7e','f54de05bb235343ddb0603e80d8c4dbdcf29aa5a','2010-03-16 23:36:52','2010-03-17 02:20:20',NULL,NULL,NULL,NULL,0,75);
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `volunteer_signups`
+--
+
+DROP TABLE IF EXISTS `volunteer_signups`;
+CREATE TABLE `volunteer_signups` (
+  `id` int(11) NOT NULL auto_increment,
+  `registration_id` int(11) default NULL,
+  `contact_id` int(11) default NULL,
+  `role` varchar(255) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `volunteer_signups`
+--
+
+LOCK TABLES `volunteer_signups` WRITE;
+/*!40000 ALTER TABLE `volunteer_signups` DISABLE KEYS */;
+/*!40000 ALTER TABLE `volunteer_signups` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2010-03-18 12:34:29

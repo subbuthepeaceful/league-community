@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/strongcirclescore/!svn/ver/551/branches/circlesbase/config
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/strongcirclescore/!svn/ver/551/branches/circlesbase/config/routes.rb
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/strongcirclescore/!svn/ver/528/branches/circlesbase/config/database.yml
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/strongcirclescore/!svn/ver/106/branches/circlesbase/config/boot.rb
+END
+environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/strongcirclescore/!svn/ver/565/branches/circlesbase/config/environment.rb
+END
+amazon_s3.yml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/strongcirclescore/!svn/ver/260/branches/circlesbase/config/amazon_s3.yml
+END
+flickr.yml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/strongcirclescore/!svn/ver/279/branches/circlesbase/config/flickr.yml
+END

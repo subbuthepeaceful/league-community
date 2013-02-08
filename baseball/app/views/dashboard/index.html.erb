@@ -1,0 +1,125 @@
+<script type="text/javascript">
+	$participantId = <%= @default_participant.id %>;
+</script>
+<div class="topmainbox">
+	<div class="profile">
+		<div class="image"></div>
+		<div class="text">
+
+			<ul class="info">
+				<li><h2><%= @participants.map {|p| p.name }%></h2></li>
+				<li>Contact Name(s): <%= current_user.contact.name %></li>
+				<li>Team: <a href="#"><%= @team.name%></a></li>
+			</ul><!-- /Info -->
+			<ul class="buttons">
+				<li><a class="signup" href="#">Snack Sign Up</a></li>
+				<li><a class="edit" href="#">Edit Profile</a></li>
+				<li><a class="upload" href="#">Upload Photos</a></li>
+				<li><a class="preferences" href="#">Set Availability</a></li>
+			</ul><!-- /Buttons -->
+		</div><!-- /Text -->
+	</div><!-- /Profile -->
+
+	<div class="sponsor">
+		<a href="#"><img src="/images/user/pic-banner1.png" alt="image" /></a>
+		<a class="allsponsors" href="#">All Sponsors</a>
+	</div><!-- /Sponsor -->
+</div><!-- /Top Mainbox -->
+<div class="topmainbox-bot"></div>
+
+<div id="columns">
+
+	<div class="leftcolumn">
+		<div class="myteam ltcolbox">
+			<div class="ltcolbox-top">
+				<div class="title">
+					<h2>My Team</h2>
+					<a class="openclose" href="#">Open/Close</a>
+				</div><!-- /Title -->
+			</div>
+			<div class="ltcolbox-bod">
+				<ul class="photos">
+					<li>
+						<div class="team"></div>
+						<p>Team</p>
+					</li>
+					<li>
+						<div class="coach"></div>
+						<p>Coach</p>
+					</li>
+				</ul><!-- /Photos -->
+				<div class="text">
+					<p><strong>Coach</strong></p>
+					<ul>
+						<li><a href="#"><strong><%= @team.head_coach.name%></strong></a></li>
+						<li>|</li>
+						<li><a class="sendmsg" href="#">Send Message</a></li>
+					</ul>
+					<p>Assistant Coaches<br />
+					<a href="#"><%= @team.assistant_coaches.collect { |ac| ac.name } %></a></p>
+				</div>
+			</div><!-- /My Team -->
+			<div class="ltcolbox-bot"></div><!-- /Bottom -->
+		</div><!-- /Body -->
+
+		<div class="mymessages ltcolbox">
+			<div class="ltcolbox-top">
+				<div class="title">
+					<h2>My Messages</h2>
+					<a href="#">(see all)</a>
+					<a class="openclose" href="#">Open/Close</a>
+				</div><!-- /Title -->
+			</div>
+			<div class="ltcolbox-bod">
+					<ul class="messages">
+						<% @messages.each_with_index do |message, i| -%>
+							<% if message.important -%>
+								<li class="highlight">
+							<% else -%>
+								<li>
+							<% end -%>
+									<span class="date"><%= message.sent.to_s(:message_sent) %></span>
+									<span class="sender"><%= message.contact.name %> : </span>
+									<% if message.important -%>
+										<img src="/images/user/ico-notice.png" alt="notice" /> <a href="#" class="msgsubject important"><%= message.subject %> &gt;</a>
+									<% else -%>
+										<a href="#" class="msgsubject"><%= message.subject %> &gt;</a>
+									<% end -%>
+									<div class="message-body">
+										<p><%= message.body %></p>
+										<br />
+										<a class="replymsg" href="#">Reply</a>
+									</div>
+							</li>
+						<% end -%>
+					</ul>
+				</div><!-- /My Messages -->
+			<div class="ltcolbox-bot"></div>
+		</div>
+		
+		<div class="mycalendar ltcolbox">
+			<div class="ltcolbox-top">
+				<div class="title">
+					<h2>My Week's Calendar</h2>
+					<a href="#">(full calendar)</a>
+					<a class="openclose" href="#">Open/Close</a>
+				</div><!-- /Title -->
+			</div>
+			<div class="ltcolbox-bod">
+				<div id="weekly_calendar">
+				</div>
+			</div>
+			<div class="ltcolbox-bot"></div>
+		</div><!-- /My Calendar -->
+		
+	</div><!-- Left Column -->
+	
+	
+	
+	<div class="rightcolumn">
+		<div class="sponsor"><img src="/images/user/pic-banner2.png" alt="image" /></div>
+	</div><!-- /Right Column -->
+</div><!-- /Columns -->
+
+<%= render :partial => "shared/new_message"%>
+	

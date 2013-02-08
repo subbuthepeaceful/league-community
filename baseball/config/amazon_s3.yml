@@ -1,0 +1,23 @@
+development:
+  bucket_name: circlesbase_development
+  access_key_id: '0YZVJDQE1C073Y13ZBG2'
+  secret_access_key: '0ywCafxM+e+4dHQ1VuZRjuyIeDtj83jQET3GyjXK'
+  port: 80
+
+test:
+  bucket_name: circlesbase_development
+  access_key_id: '0YZVJDQE1C073Y13ZBG2'
+  secret_access_key: '0ywCafxM+e+4dHQ1VuZRjuyIeDtj83jQET3GyjXK'
+  port: 80
+
+dailybuild:
+  bucket_name: circlesbase_dailybuild
+  access_key_id: '0YZVJDQE1C073Y13ZBG2'
+  secret_access_key: '0ywCafxM+e+4dHQ1VuZRjuyIeDtj83jQET3GyjXK'
+  port: 80
+
+production:
+  bucket_name: circlesbase_production
+  access_key_id: '0YZVJDQE1C073Y13ZBG2'
+  secret_access_key: '0ywCafxM+e+4dHQ1VuZRjuyIeDtj83jQET3GyjXK'
+  port: 80

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title><%= @hub.circle_name %> - <%= @hub.name %></title>
+	<meta name="description" content="StrongCircles" />
+	<meta name="keywords" content="StrongCircles" />
+	<link rel="shortcut icon" href="/images/stc-icon.jpg" />
+	<%#= stylesheet_link_tag "style-user" %>
+	<%= stylesheet_link_tag "circles" %>
+	
+	<% if @hub.full_circles_domain.nil? %>
+		<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=<%= GOOGLE_MAPS_API_KEY %>&sensor=true" 
+				type="text/javascript">
+		</script>
+	<% end -%>
+	<!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/ie.css" />
+	<![endif]-->
+	<!--[if IE 6]>
+	<script src="/javascripts/DD_belatedPNG_0.0.8a-min.js"></script>
+	<script>
+		DD_belatedPNG.fix('#logo');
+	</script>
+	<![endif]-->
+</head>
+<body style="background: none;">
+	<p>
+		<a class="skiplink" href="#container">Skip over navigation</a>
+	</p>
+		<div id="container">
+			<div id="container-bod">
+				<div id="content">
+					<%= yield %>
+				</div><!-- /Content -->
+			</div>
+			<div id="container-bot"></div>
+		</div><!-- /Container -->
+		<div style="clear-both">
+		</div>
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-12476912-1");
+	pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

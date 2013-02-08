@@ -1,0 +1,53 @@
+<%= javascript_include_tag "division" %>
+<div id="program_header" class="section-header">
+	<div class="section-header-title">
+		<h1><%= @session.name %></h1>
+		<span class="section-breadcrumb"><%= program_session_breadcrumb(@program, @session) %></span>
+	</div>
+	<div class="section-header-actions" id="program_header_actions">
+		<ul class="section-header-buttons">
+			<li>
+				<a id="add_division_link" href="#">+ Add Division</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="clear-both">
+</div>
+<div id="division_list" class="section-list">
+	<div class="section-list-options">
+		List
+		&nbsp;|&nbsp;
+		<%= link_to "Schedule", schedule_admin_program_session_path(@program, @session) %>
+	</div>
+	<div class="section-table">
+		<table id="divisions_table" class="tablesorter" width="100%">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Age Range</th>
+					<th># of Registrations</th>
+					<th># of Teams</th>
+					<th class="action-header">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @divisions.each_with_index do |division, i| -%>
+				<% if i % 2 == 0 -%>
+					<tr class="even">
+				<% else -%>
+					<tr class="odd">
+				<% end -%>
+						<td><%= link_to division.name, admin_program_session_division_teams_path(@program, @session, division) %></td>		
+						<td><%= division.age_range %></td>
+						<td><%= division.registrations_for_session(@session).size %></td>
+						<td><%= division.teams_for_session(@session).size %></td>
+						<td><a href="#">Edit</a></td>
+					</tr>
+				<% end -%>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<%= render :partial => "add_division" %>

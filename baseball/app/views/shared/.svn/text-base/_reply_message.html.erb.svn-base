@@ -1,0 +1,41 @@
+<div id="reply_message" class="circles-dialog">
+	<div class="form-box">
+		<div class="form-box-top">
+			<div class="title">
+				<h2>Reply to a Team Message</h2>
+			</div>
+		</div>
+		<div class="form-box-bod">
+			<% form_tag "/participants/#{@participant.id}/messages/", :id => "reply_message_form" do -%>
+				<div class="form-line">
+					<%= label_tag 'Original Message :' %>
+					<%= text_field_tag :message_subject, "", :size => 30, :disabled => true, :class => "txt disabled" %>
+				</div>
+				<div class="clear-both">
+				</div>
+				<div class="form-line">
+					<%= label_tag '' %>
+					<%= text_area_tag :message_body, "", :cols => "30", :rows => "5", :class => "txt-area disabled", :disabled => true %>
+				</div>
+				<div class="clear-both">
+				</div>
+				<div class="form-line">
+					<%= label_tag 'Reply to' %>
+					<input type="radio" name="sender" value="Whole Team" class="radio-button" checked />Whole Team
+					&nbsp;
+					<input type="radio" name="sender" value="Sender Only" class="radio-button" />Sender Only
+				</div>
+				<div class="clear-both">
+				</div>
+				<div class="form-line">
+					<%= label_tag '' %>
+					<%= text_area_tag :message_reply, "", :cols => "30", :rows => "5", :class => "txt-area"%>
+				</div>
+				<div class="clear-both">
+				</div>
+			<% end -%>
+		</div>
+		<div class="form-box-bot">
+		</div>
+	</div>
+</div>

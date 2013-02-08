@@ -1,0 +1,21 @@
+/* General IE fixes */
+#login_form #login_submit {
+	margin-left: 240px;
+}
+
+#program_header #program_header_actions {
+	width: 270px;
+}
+
+#add_program .txt {
+	margin-right: 50px;
+}
+
+#add_program .txt-area {
+	margin-right: 50px;
+}
+
+
+/* IE6 only fixes */
+#header li a,
+#header li a:visited{ _display:inline; }

@@ -1,0 +1,63 @@
+<script type="text/javascript">
+	var map = new GMap2(document.getElementById("map_div"));
+	<% if @eventType == "Game" %>
+		var address = "<%= @game.location.address %>";
+	<% else %>
+		var address = "<%= @event.location.address %>";
+	<% end -%>
+	//map.setCenter(new GLatLng(37.4419, -122.1419), 13);
+	var geocoder = new GClientGeocoder();
+
+	  geocoder.getLatLng(
+	    address,
+	    function(point) {
+	      if (!point) {
+	        alert(address + " not found");
+	      } else {
+	        map.setCenter(point, 13);
+	        var marker = new GMarker(point);
+	        map.addOverlay(marker);
+			addressDirectionsUrl = "http://maps.google.com/maps?daddr=" + address;
+			infoWindowHtml = address + "<br /><br />" + "Directions: " + "<a href=\"" + addressDirectionsUrl + "\" class=\"addr\" target=\"blank\">" + "To here" + "</a>";
+	        marker.openInfoWindowHtml(infoWindowHtml);
+	      }
+	    }
+	  );
+	map.checkResize();
+</script>
+<% if @eventType == "Game" -%>
+	<h3>Game <%= @game.id %></h3>
+	<table class="event_details_table">
+		<tr>
+			<td>Time:</td>
+			<td><%= @game.start.to_formatted_s(:circles_scheduled_event) %></td>
+		</tr>
+		<tr>
+			<td>Teams:</td>
+			<td><%= @game.away_team.display_name + "(Away) vs." + @game.home_team.display_name + "(Home)" %></td>
+		</tr>
+		<tr>
+			<td>Snack Duty:</td>
+			<td>
+				<% if @game.snack_volunteer(@participant.team) -%>
+					<%= @game.snack_volunteer(@participant.team).name %>&nbsp;(<%= @game.snack_volunteer(@participant.team).primary_contact.name %>)
+				<% else -%>
+					No one has signed up for Snacks yet!
+				<% end -%>
+			</td>
+		</tr>
+	</table>
+	<div id="map_div" style="width: 600px; height: 400px; margin-top: 20px; border: solid 1px #00A;">
+	</div>
+		
+<% elsif @eventType == "Event" -%>
+	<h3><%= @event.title %></h3>
+	<table class="event_details_table">
+		<tr>
+			<td>Time:</td>
+			<td><%= @event.start.to_formatted_s(:circles_scheduled_event) %></td>
+		</tr>
+	</table>
+	<div id="map_div" style="width: 600px; height: 400px; margin-top: 20px; border: solid 1px #00A;">
+	</div>
+<% end -%>

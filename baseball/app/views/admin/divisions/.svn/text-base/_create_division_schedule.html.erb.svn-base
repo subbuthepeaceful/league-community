@@ -1,0 +1,109 @@
+<div id="create_division_schedule" class="circles-dialog">
+	<div class="circles-form" id="create_division_schedule_form">
+		<h3>Define a weekly schedule for this division's games</h3>
+		<% form_tag update_schedule_admin_program_session_division_path(@program, @session, @division), :name => "create_division_schedule_form" do %>
+		<div class="form-line">
+			<%= label_tag 'Location' %>
+			<%= select_tag :location, options_from_collection_for_select(@locations, 'id', 'name') %>
+		</div>
+		<div class="clear-both">
+		</div>
+		<div id="game_schedule_table">
+			<table class="tablesorter division-schedule-table">
+				<thead>
+					<tr>
+						<th>Day of the week</th>
+						<th>Game Time Slots</th>
+					</tr>
+				</thead>
+				<tbody>			
+				<tr>
+					<td><%= check_box_tag :monday %>&nbsp;Monday</td>
+					<td>
+						<ul id="game_slots_monday">
+							<li id="monday_game_1" class="game-slot game-monday">
+								<%= label_tag 'time slot' %>
+								<input id="monday_slot_1", name="monday_slot_1", size="10", type="text", value="", class="game-time-slot-text" />
+								<%#= text_field_tag :monday_slot_1, '', :size => 10, :class => "game-time-slot-text" %>
+								<a href="#" id="add_time_slot_monday" class="add-time-slot">+ Add another</a>
+							</li>
+						</ul>
+					</td>				
+				</tr>
+				<tr>
+					<td><%= check_box_tag :tuesday %>&nbsp;Tuesday</td>
+					<td>
+						<ul id="game_slots_tuesday">
+							<li id="tuesday_game_1" class="game-slot game-tuesday">
+								<%= label_tag 'time slot' %>
+								<%= text_field_tag :tuesday_slot_1, '', :size => 10, :class => "game-time-slot-text" %>
+								<a href="#" id="add_time_slot_tuesday" class="add-time-slot">+ Add another</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td><%= check_box_tag :wednesday %>&nbsp;Wednesday</td>
+					<td>
+						<ul id="game_slots_wednesday">
+							<li id="wednesday_game_1" class="game-slot game-wednesday">
+								<%= label_tag 'time slot' %>
+								<%= text_field_tag :wednesday_slot_1, '', :size => 10, :class => "game-time-slot-text" %>
+								<a href="#" id="add_time_slot_wednesday" class="add-time-slot">+ Add another</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td><%= check_box_tag :thursday %>&nbsp;Thursday</td>
+					<td>
+						<ul id="game_slots_thursday">
+							<li id="thursday_game_1" class="game-slot game-thursday">
+								<%= label_tag 'time slot' %>
+								<%= text_field_tag :thursday_slot_1, '', :size => 10, :class => "game-time-slot-text" %>
+								<a href="#" id="add_time_slot_thursday" class="add-time-slot">+ Add another</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td><%= check_box_tag :friday %>&nbsp;Friday</td>
+					<td>
+						<ul id="game_slots_friday">
+							<li id="friday_game_1" class="game-slot game-friday">
+								<%= label_tag 'time slot' %>
+								<%= text_field_tag :friday_slot_1, '', :size => 10, :class => "game-time-slot-text" %>
+								<a href="#" id="add_time_slot_friday" class="add-time-slot">+ Add another</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td><%= check_box_tag :saturday %>&nbsp;Saturday</td>
+					<td>
+						<ul id="game_slots_saturday">
+							<li id="saturday_game_1" class="game-slot game-saturday">
+								<%= label_tag 'time slot' %>
+								<%= text_field_tag :saturday_slot_1, '', :size => 10, :class => "game-time-slot-text" %>
+								<a href="#" id="add_time_slot_saturday" class="add-time-slot">+ Add another</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>	
+					<td><%= check_box_tag :sunday %>&nbsp;Sunday</td>
+					<td>
+						<ul id="game_slots_sunday">
+							<li id="sunday_game_1" class="game-slot game-sunday">
+								<%= label_tag 'time slot' %>
+								<%= text_field_tag :sunday_slot_1, '', :size => 10, :class => "game-time-slot-text" %>
+								<a href="#" id="add_time_slot_sunday" class="add-time-slot">+ Add another</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<% end -%>
+	</div>
+</div>

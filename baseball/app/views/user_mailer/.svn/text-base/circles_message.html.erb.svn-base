@@ -1,0 +1,20 @@
+<p>Dear <%= @participant.primary_contact.name %></p>
+<br />
+<p>You have a new Team Notification from StrongCircles at the <%= @team.division.program.hub.name %></p>
+<br />
+<p><%= @message.contact.name %> says</p>
+<br />
+<p>
+	<%= simple_format(@message.body) %>
+</p>
+<br />
+<p>This message is delivered to your email as a convenience and is system-generated. Please don't reply to this, instead you can take action on this message 
+	at <%= @participant_dashboard_url %> and do more with your team online</p>
+	
+<br/>
+Thank you,
+The StrongCircles Team
+</p>
+<div class="circles-back">
+	<img src="http://<%= @domain %>/images/full-logo-strongcircles.jpg">
+</div>

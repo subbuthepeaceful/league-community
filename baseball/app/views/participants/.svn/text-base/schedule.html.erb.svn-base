@@ -1,0 +1,23 @@
+<script type="text/javascript">
+	var $participantId = <%= @participant.id %>;
+</script>
+
+<%= javascript_include_tag "user-schedule" %>
+
+<div class="topmainbox">
+	
+	<%= render :partial => "shared/team_header" %>
+	
+	<div id="columns">
+		<div class="center">
+			<div class="schedule_view">
+				<div id="participant_schedule">
+				</div>
+			</div>
+		</div>
+	</div>
+	<%= render :partial => "shared/event_detail" %>
+</div>
+<div class="topmainbox-bot"></div>	
+
+<%= render :partial => "shared/new_message"%>

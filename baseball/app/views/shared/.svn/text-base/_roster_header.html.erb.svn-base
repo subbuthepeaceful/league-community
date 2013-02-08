@@ -1,0 +1,22 @@
+<div class="profile teamhead">
+	<div class="text">
+		<ul class="info">
+			<li>Team: <span class="team-name">&nbsp;<%= @team.display_name%>&nbsp;</span></li>
+		</ul><!-- /Info -->
+		<ul class="buttons team-actions fright">
+			<li><a class="calendar" href="<%=schedule_participant_path(@participant)%>">Calendar</a></li>
+			<li><a class="signup" href="<%=gamelist_participant_path(@participant)%>">Games and Snacks</a></li>
+			<% if @messages_enabled -%>
+				<li><a class="sendmsg" href="#">Team Message</a></li>
+			<% end -%>
+			<li><a class="preferences" href="<%=availability_participant_path(@participant) %>">Set Availability</a></li>
+			<% if @is_head_coach || @is_assistant_coach -%>
+				<% if @team.is_external -%>
+					<li><a class="edit-roster" href="#">Edit Names / Jersey #s</a></li>
+				<% else -%>
+					<li><a class="jersey-number" href="#">Jersey Numbers</a></li>
+				<% end -%>
+			<% end -%>
+		</ul><!-- /Buttons -->
+	</div>
+</div>

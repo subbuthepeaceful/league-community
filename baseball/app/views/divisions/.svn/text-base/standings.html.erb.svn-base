@@ -1,0 +1,42 @@
+<div class="topmainbox">
+	
+	<div id="columns">
+		<div class="center">
+	
+			<table class="gamelist">
+				<tr class="head">
+					<td>Team</td>
+					<td>GP</td>
+					<td>W</td>
+					<td>L</td>
+					<td>T</td>
+					<td>Win %</td>
+					<td>RF</td>
+					<td>RA</td>
+				</tr>
+				<% @teams.each_index do |i| -%>
+					<% t = @teams[i] -%>
+					<% if i % 2 == 0 -%>
+						<tr class="even">
+					<% else -%>
+						<tr class="odd">
+					<% end -%>
+						<td><%= t.display_name -%></td>
+						<% if t.team_record -%>
+							<td><%= t.team_record.games_played %></td>
+							<td><%= t.team_record.wins %></td>
+							<td><%= t.team_record.losses %></td>
+							<td><%= t.team_record.ties %></td>
+							<td><%= t.team_record.win_pct %></td>
+							<td><%= t.team_record.runs_for %></td>
+							<td><%= t.team_record.runs_against %></td>
+						<% end -%>
+					</tr>	
+				<% end -%>
+			</table>
+		</div>
+	</div>
+</div>
+<hr />
+
+<%= render :partial => "scores"%>

@@ -1,0 +1,13 @@
+<div id="set_team_name" class="circles-dialog">
+	<div class="circles-form">
+		<% form_for :team, :url => update_teamname_participant_path(@default_participant), :html => { :name => "set_team_name_form"} do |f| %>
+			<div class="form-line">
+				<%= label_tag 'enter name' %>
+				<%= f.text_field :selected_name, :size => 24, :class => "txt" %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<input type="hidden" name="team[id]" value="<%= @team.id%>"/>
+		<% end -%>
+	</div>
+</div>

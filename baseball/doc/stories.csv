@@ -1,0 +1,116 @@
+100,"As a non-logged in member
+I want to be able to sign in
+So that I can access member only information"
+101,"As a logged-in member
+I want to view my profile page
+So that I can update my profile information"
+102,"As a logged-in member 
+I want to manage my notification preferences
+So that I can change where my emails get sent"
+103,"As a logged-in member
+I want to be able to send a private message to the coach
+So that I can communicate directly"
+104,"As a logged-in member
+I want to be receive notifications of upcoming practices and games
+So that I remember to go"
+105,"As a logged-in member
+I want to view a gallery of photos uploaded by the group
+So that I see photos of recent 'events'"
+106,"As a logged-in member
+I want to read messages sent to me internally on the site
+So that I see notifications and updates about hub classes"
+107,"As a logged-in member
+I want to receive an email when my group page is created
+So that I can easily access the page"
+108,"As a logged-in member
+I want to view a page with information about a location
+So that I can get driving directions to the location"
+109,"As a logged-in member
+I want to contact another participant
+So that I can connect with them about stuff"
+110,"As a logged-in member
+I have to see a targeted  ad
+So that I can see ads for this class or program"
+111,"As a logged-in member
+I have to see a sponsor
+So that I can who is sponsoring the team"
+112,"As a logged-in member
+I want to view and print a coupon
+So that I can get a discount on sporting goods or pizza"
+113,"As a logged-in member
+I want to see a roster of the people of the team
+So that I can see the list of people on the team"
+114,"As a logged-in member
+I want to see a practice schedule for the team
+So that I can attend practices at the correct time and location"
+115,"As a logged-in member
+I want to see a snack schedule for the team
+So that I known when it by child's turn to bring snacks"
+116,"As a logged-in member
+I want to be able see a poll for the team name
+So that I can vote for the team name"
+117,"As a logged-in member
+I want to be able upload a photo of my child
+So that I can personalize my profile"
+118,"As a logged-in member
+I want to be update my profile information
+So that my contact information is correct"
+119,"As a logged-in member
+I want to be able sign up for snacks 
+So that we have snacks for the kids after practice and games"
+120,"As a logged-in member
+I want to be able to view a calendar that reflects practice, game and snack schedule
+So that I have a global view of events"
+121,"As a logged-in member
+I want to be able to confirm my child's availability for the game
+So that the coach can finalize game plan"
+122,"As a logged-in member
+I can upload photos from practices and games
+So that I can share priceless memories with other participants"
+123,"As a logged-in member
+I can share photos and/or videos with family members
+So that I can share prices memories with familiy members"
+124,"As a logged-in member
+I receive weekly emails about the upcoming game, location, which family is on point for snack, and which jersey (black or white)"
+200,"As a volunteer coach
+I want to create a page for a class
+So that participants will be able to access it"
+201,"As a volunteer coach
+I want to set up a list of people signed up 
+So that all the participants get access to content and schedules."
+202,"As a volunteer coach
+I want to set up the schedule for practices and games
+So that participants can see when and where they should be."
+203,"As a volunteer coach
+I want to send a team email
+So that I can easily contact everyone "
+204,"As a volunteer coach
+I want to notify participants of a change (or cancelation) in schedule
+So that the participants get as much notice as possible"
+300,"As an admin
+I want to create teams based on the session/team enrollment
+So that the teams and group pages can be created/accessed"
+301,"As an admin
+I want to send group welcome email to the group paticipants
+So that they can be notified of the group page login information"
+302,"As an admin
+I want to import a spreadsheet of schedules
+So that I can use data I exported for another system"
+303,"As an admin
+I want to import a spreadsheet of participants
+So that I can use data I exported for another system"
+304,"As an admin
+I want to review and approve businesses wishing to advertise and sponsor the site
+So that I only include appropriate businesses"
+305,"As an admin
+I want to review and approve ads that have been created by business users
+So that I ensure that the content is appropriate for my site"
+306,"As an admin
+I want to be able to view advertise and sponsorship usage report "
+307,"As an admin
+I want to create/edit sponsorship inventory for business users
+So that they can browse the potential sponsorship opportunities"
+308,"As an admin
+I want to create a sponsor for a class "
+309,"As a administrator
+I want to able to create a sponsor for the team"

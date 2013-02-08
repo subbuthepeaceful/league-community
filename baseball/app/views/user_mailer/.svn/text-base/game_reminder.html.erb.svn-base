@@ -1,0 +1,26 @@
+<p>Dear <%= @participant.primary_contact.name %>,</p>
+<br/>
+<p><b>We apologize for a slight glitch where our first run of reminder emails sometimes mixed up snack duty assignments across teams. Of course, as we all know, as much fun as the games are, snacks are of great importance to the kids. We hope to have corrected this - once again, thank you for your participation, and our sincere apologies in this regard.</b></p>
+<p> This is a friendly reminder from the <%=@hub.name%> StrongCircles Admin of your upcoming <%=@program.name%> game this week. Please see details below.</p>
+<br/>
+<p>
+	Date:  <%= @game.scheduled_at.in_time_zone(@hub.time_zone).strftime("%m/%e/%y") %> <br/>
+	Time: <%= @game.scheduled_at.in_time_zone(@hub.time_zone).strftime("%l:%M%P") %> <br/>
+	Location: <%=@game.location.to_s %><br/>
+	Home Team:  <%=@game.home_team.name %><br/>
+	Away Team:  <%=@game.away_team.name %><br/>
+	Snack Duty:  <%=@game.snack_volunteer(@participant.team).primary_contact.name  if @game.snack_volunteer(@participant.team)%>
+<p />
+<br/>
+<p>This message is delivered to your email as a convenience and is system-generated. Please don't reply to this, instead you can take action on this message 
+	
+	at <%= @participant_dashboard_url %> and do more with your team online</p>
+	
+<p> 
+<br/>
+Thank you,
+Strong Circles Team
+</p>
+<div class="circles-back">
+	<img src="http://<%= @domain %>/images/full-logo-strongcircles.jpg">
+</div>

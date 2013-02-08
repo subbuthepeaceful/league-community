@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/strongcirclescore/!svn/ver/549/branches/circlesbase/app/views/game_reports
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/strongcirclescore/!svn/ver/528/branches/circlesbase/app/views/game_reports/edit.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/strongcirclescore/!svn/ver/528/branches/circlesbase/app/views/game_reports/new.html.erb
+END
+view.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/strongcirclescore/!svn/ver/528/branches/circlesbase/app/views/game_reports/view.html.erb
+END
+public.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/strongcirclescore/!svn/ver/549/branches/circlesbase/app/views/game_reports/public.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/strongcirclescore/!svn/ver/528/branches/circlesbase/app/views/game_reports/show.html.erb
+END
+plain.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/strongcirclescore/!svn/ver/528/branches/circlesbase/app/views/game_reports/plain.html.erb
+END

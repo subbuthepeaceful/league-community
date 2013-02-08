@@ -1,0 +1,27 @@
+<%= javascript_include_tag "sponsor" %>
+<div id="program_header" class="section-header">
+	<div class="section-header-title">
+		<h1>Sponsors</h1>
+	</div>
+	<div class="section-header-actions" id="sponsor_header_actions">
+		<ul class="section-header-buttons">
+			<li>
+				<a id="add_sponsor_link" href="#">+ Add Sponsor</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="clear-both">
+</div>
+<div id="sponsor_list" class="section-list">
+	<div class="section-list-options">
+		<% if @view == "list" -%>
+			List
+		<% else -%>
+			<a href="/admin/sponsors?view=list">List</a>
+		<% end -%>
+	</div>
+	<%= render :partial => @view %>
+</div>
+
+<%= render :partial => "add_sponsor" %>

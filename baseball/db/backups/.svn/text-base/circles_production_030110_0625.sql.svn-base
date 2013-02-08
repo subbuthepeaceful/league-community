@@ -1,0 +1,862 @@
+-- MySQL dump 10.11
+--
+-- Host: localhost    Database: circlesbase_production
+-- ------------------------------------------------------
+-- Server version	5.0.45
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `addresses`
+--
+
+DROP TABLE IF EXISTS `addresses`;
+CREATE TABLE `addresses` (
+  `id` int(11) NOT NULL auto_increment,
+  `street_address` varchar(255) default NULL,
+  `city` varchar(255) default NULL,
+  `state` varchar(8) default NULL,
+  `zip_code` varchar(12) default NULL,
+  `contact_id` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `addresses`
+--
+
+LOCK TABLES `addresses` WRITE;
+/*!40000 ALTER TABLE `addresses` DISABLE KEYS */;
+/*!40000 ALTER TABLE `addresses` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `availabilities`
+--
+
+DROP TABLE IF EXISTS `availabilities`;
+CREATE TABLE `availabilities` (
+  `id` int(11) NOT NULL auto_increment,
+  `game_id` int(11) NOT NULL,
+  `participant_id` int(11) NOT NULL,
+  `available` tinyint(1) default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `availabilities`
+--
+
+LOCK TABLES `availabilities` WRITE;
+/*!40000 ALTER TABLE `availabilities` DISABLE KEYS */;
+/*!40000 ALTER TABLE `availabilities` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `circle_options`
+--
+
+DROP TABLE IF EXISTS `circle_options`;
+CREATE TABLE `circle_options` (
+  `id` int(11) NOT NULL auto_increment,
+  `hub_id` int(11) NOT NULL,
+  `option_name` varchar(255) default NULL,
+  `option_value` varchar(255) default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `circle_options`
+--
+
+LOCK TABLES `circle_options` WRITE;
+/*!40000 ALTER TABLE `circle_options` DISABLE KEYS */;
+/*!40000 ALTER TABLE `circle_options` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `circles_messages`
+--
+
+DROP TABLE IF EXISTS `circles_messages`;
+CREATE TABLE `circles_messages` (
+  `id` int(11) NOT NULL auto_increment,
+  `contact_id` int(11) NOT NULL,
+  `subject` varchar(255) default NULL,
+  `body` text,
+  `sent` datetime default NULL,
+  `important` tinyint(1) default NULL,
+  `in_reply_to` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `circles_messages`
+--
+
+LOCK TABLES `circles_messages` WRITE;
+/*!40000 ALTER TABLE `circles_messages` DISABLE KEYS */;
+/*!40000 ALTER TABLE `circles_messages` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `contacts`
+--
+
+DROP TABLE IF EXISTS `contacts`;
+CREATE TABLE `contacts` (
+  `id` int(11) NOT NULL auto_increment,
+  `title` varchar(8) default NULL,
+  `first_name` varchar(24) default NULL,
+  `last_name` varchar(24) default NULL,
+  `email_address` varchar(64) default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  `profile_photo_file_name` varchar(255) default NULL,
+  `profile_photo_content_tye` varchar(255) default NULL,
+  `profile_photo_file_size` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `contacts`
+--
+
+LOCK TABLES `contacts` WRITE;
+/*!40000 ALTER TABLE `contacts` DISABLE KEYS */;
+INSERT INTO `contacts` (`id`, `title`, `first_name`, `last_name`, `email_address`, `created_at`, `updated_at`, `profile_photo_file_name`, `profile_photo_content_tye`, `profile_photo_file_size`) VALUES (1,NULL,'System','Administrator','admin@strongcircles.com','2010-02-04 17:28:17','2010-02-04 17:28:17',NULL,NULL,NULL);
+/*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `contacts_participants`
+--
+
+DROP TABLE IF EXISTS `contacts_participants`;
+CREATE TABLE `contacts_participants` (
+  `contact_id` int(11) default NULL,
+  `participant_id` int(11) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `contacts_participants`
+--
+
+LOCK TABLES `contacts_participants` WRITE;
+/*!40000 ALTER TABLE `contacts_participants` DISABLE KEYS */;
+/*!40000 ALTER TABLE `contacts_participants` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `delayed_jobs`
+--
+
+DROP TABLE IF EXISTS `delayed_jobs`;
+CREATE TABLE `delayed_jobs` (
+  `id` int(11) NOT NULL auto_increment,
+  `priority` int(11) default '0',
+  `attempts` int(11) default '0',
+  `handler` text,
+  `last_error` text,
+  `run_at` datetime default NULL,
+  `locked_at` datetime default NULL,
+  `failed_at` datetime default NULL,
+  `locked_by` varchar(255) default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  PRIMARY KEY  (`id`),
+  KEY `delayed_jobs_priority` (`priority`,`run_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `delayed_jobs`
+--
+
+LOCK TABLES `delayed_jobs` WRITE;
+/*!40000 ALTER TABLE `delayed_jobs` DISABLE KEYS */;
+/*!40000 ALTER TABLE `delayed_jobs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `divisions`
+--
+
+DROP TABLE IF EXISTS `divisions`;
+CREATE TABLE `divisions` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(255) default NULL,
+  `age_range` varchar(255) default NULL,
+  `program_id` int(11) NOT NULL,
+  `description` text,
+  `team_prefix` varchar(255) default NULL,
+  `has_schedule` tinyint(1) default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `divisions`
+--
+
+LOCK TABLES `divisions` WRITE;
+/*!40000 ALTER TABLE `divisions` DISABLE KEYS */;
+INSERT INTO `divisions` (`id`, `name`, `age_range`, `program_id`, `description`, `team_prefix`, `has_schedule`) VALUES (1,'Shetland','5-6',2,'Shetland Division','S',0),(2,'Pinto-1','7',2,'','P1',0),(3,'Pinto-2','8',2,'','P2',0),(4,'Mustang-1','9',2,'','M1',0),(5,'Mustang-2','10',2,'','M2',0),(6,'Bronco','11-12',2,'','B',0),(7,'Pony','14U',2,'','P',0),(8,'Colt','16U',2,'','C',0),(9,'Palomino','19U',2,'','PL',0);
+/*!40000 ALTER TABLE `divisions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `events`
+--
+
+DROP TABLE IF EXISTS `events`;
+CREATE TABLE `events` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL,
+  `description` text,
+  `starts` datetime default NULL,
+  `ends` datetime default NULL,
+  `location_id` int(11) default NULL,
+  `session_id` int(11) default NULL,
+  `division_id` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `events`
+--
+
+LOCK TABLES `events` WRITE;
+/*!40000 ALTER TABLE `events` DISABLE KEYS */;
+/*!40000 ALTER TABLE `events` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `games`
+--
+
+DROP TABLE IF EXISTS `games`;
+CREATE TABLE `games` (
+  `id` int(11) NOT NULL auto_increment,
+  `division_id` int(11) NOT NULL,
+  `scheduled_at` datetime default NULL,
+  `notes` text,
+  `snack_volunteer_id` int(11) default NULL,
+  `location_id` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `games`
+--
+
+LOCK TABLES `games` WRITE;
+/*!40000 ALTER TABLE `games` DISABLE KEYS */;
+/*!40000 ALTER TABLE `games` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `hub_assets`
+--
+
+DROP TABLE IF EXISTS `hub_assets`;
+CREATE TABLE `hub_assets` (
+  `id` int(11) NOT NULL auto_increment,
+  `hub_id` int(11) NOT NULL,
+  `name` varchar(255) default NULL,
+  `uri` varchar(255) default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=752915611 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `hub_assets`
+--
+
+LOCK TABLES `hub_assets` WRITE;
+/*!40000 ALTER TABLE `hub_assets` DISABLE KEYS */;
+INSERT INTO `hub_assets` (`id`, `hub_id`, `name`, `uri`, `created_at`, `updated_at`) VALUES (752915610,4,'Header Banner','/images/hubs/lamvpb-header.png','2010-02-04 17:28:55','2010-02-04 17:28:55');
+/*!40000 ALTER TABLE `hub_assets` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `hubs`
+--
+
+DROP TABLE IF EXISTS `hubs`;
+CREATE TABLE `hubs` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL,
+  `url_prefix` varchar(255) NOT NULL,
+  `description` text,
+  `parent_id` int(11) default NULL,
+  `time_zone` varchar(255) default 'UTC',
+  `active_since` datetime default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  `home_url` varchar(255) default NULL,
+  `sponsor_email` varchar(255) default NULL,
+  `circle_name` varchar(255) default NULL,
+  `program_variant` varchar(255) default NULL,
+  `full_circles_domain` varchar(255) default NULL,
+  `tax_id` varchar(255) default NULL,
+  `from_email` varchar(255) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `hubs`
+--
+
+LOCK TABLES `hubs` WRITE;
+/*!40000 ALTER TABLE `hubs` DISABLE KEYS */;
+INSERT INTO `hubs` (`id`, `name`, `url_prefix`, `description`, `parent_id`, `time_zone`, `active_since`, `created_at`, `updated_at`, `home_url`, `sponsor_email`, `circle_name`, `program_variant`, `full_circles_domain`, `tax_id`, `from_email`) VALUES (1,'Mt. Diablo Region YMCA','mdrymca','The Mt. Diablo Region YMCA with 4 locations in the East Bay - Northern California',0,'Pacific Time (US & Canada)',NULL,'2010-02-18 22:38:24','2010-02-18 22:38:24','http://www.mdrymca.org',NULL,'YMCA Circles','Multi-branch|Multi-program',NULL,NULL,NULL),(2,'San Ramon Valley YMCA','srvymca','Serving the communities of Alamo, Danville, San Ramon and Walnut Creek',1,'Pacific Time (US & Canada)',NULL,'2010-02-18 22:38:24','2010-02-18 22:38:24','http://www.mdrymca.org/branches/5-SRV',NULL,'YMCA Circles','Single-branch|Multi-program',NULL,NULL,NULL),(3,'MVLA Girls Softball','mvlags','The MVLA Girls Softball League',0,'Pacific Time (US & Canada)',NULL,'2010-02-18 22:38:24','2010-02-18 22:38:24','',NULL,'','',NULL,NULL,NULL),(4,'LAMV Pony Baseball','lamvpb','Serving Los Altos and Mountain View Youth since 1986 where Everyone Plays Real Baseball',0,'Pacific Time (US & Canada)',NULL,'2010-02-18 22:38:24','2010-02-18 22:38:24','http://www.lamvpb.org','sponsors@lamvpb.org','Strike Zone','Single-branch|Single-program|Multi-season','strikezone.lamvpb.org','77â€“0238764','webmaster@lamvpb.org'),(5,'Aro Rugby','aro-rugby','Building mind, spirit and body through the great sport of rugby, for boys and girls, ages 5 - 12',0,'Pacific Time (US & Canada)',NULL,'2010-02-18 22:38:24','2010-02-18 22:38:24','',NULL,'In Formation','Multi-branch|Single-program',NULL,NULL,NULL);
+/*!40000 ALTER TABLE `hubs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `hubs_participants`
+--
+
+DROP TABLE IF EXISTS `hubs_participants`;
+CREATE TABLE `hubs_participants` (
+  `hub_id` int(11) default NULL,
+  `participant_id` int(11) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `hubs_participants`
+--
+
+LOCK TABLES `hubs_participants` WRITE;
+/*!40000 ALTER TABLE `hubs_participants` DISABLE KEYS */;
+/*!40000 ALTER TABLE `hubs_participants` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `locations`
+--
+
+DROP TABLE IF EXISTS `locations`;
+CREATE TABLE `locations` (
+  `id` int(11) NOT NULL auto_increment,
+  `hub_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `street_address` varchar(255) default NULL,
+  `city` varchar(255) default NULL,
+  `state` varchar(8) default NULL,
+  `zip_code` varchar(12) default NULL,
+  `comments` text,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `locations`
+--
+
+LOCK TABLES `locations` WRITE;
+/*!40000 ALTER TABLE `locations` DISABLE KEYS */;
+/*!40000 ALTER TABLE `locations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mailbox_messages`
+--
+
+DROP TABLE IF EXISTS `mailbox_messages`;
+CREATE TABLE `mailbox_messages` (
+  `mailbox_id` int(11) NOT NULL,
+  `circles_message_id` int(11) NOT NULL,
+  `unread` tinyint(1) default '1'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mailbox_messages`
+--
+
+LOCK TABLES `mailbox_messages` WRITE;
+/*!40000 ALTER TABLE `mailbox_messages` DISABLE KEYS */;
+/*!40000 ALTER TABLE `mailbox_messages` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mailboxes`
+--
+
+DROP TABLE IF EXISTS `mailboxes`;
+CREATE TABLE `mailboxes` (
+  `id` int(11) NOT NULL auto_increment,
+  `contact_id` int(11) default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mailboxes`
+--
+
+LOCK TABLES `mailboxes` WRITE;
+/*!40000 ALTER TABLE `mailboxes` DISABLE KEYS */;
+INSERT INTO `mailboxes` (`id`, `contact_id`, `created_at`, `updated_at`) VALUES (1,1,'2010-02-04 17:28:17','2010-02-04 17:28:17');
+/*!40000 ALTER TABLE `mailboxes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `matchups`
+--
+
+DROP TABLE IF EXISTS `matchups`;
+CREATE TABLE `matchups` (
+  `id` int(11) NOT NULL auto_increment,
+  `game_id` int(11) NOT NULL,
+  `team_id` int(11) NOT NULL,
+  `home_or_away` varchar(255) default NULL,
+  `snack_volunteer_id` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `matchups`
+--
+
+LOCK TABLES `matchups` WRITE;
+/*!40000 ALTER TABLE `matchups` DISABLE KEYS */;
+/*!40000 ALTER TABLE `matchups` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `participants`
+--
+
+DROP TABLE IF EXISTS `participants`;
+CREATE TABLE `participants` (
+  `id` int(11) NOT NULL auto_increment,
+  `title` varchar(8) default NULL,
+  `first_name` varchar(24) default NULL,
+  `last_name` varchar(24) default NULL,
+  `date_of_birth` datetime default NULL,
+  `member_since` datetime default NULL,
+  `profile_photo_file_name` varchar(255) default NULL,
+  `profile_photo_content_tye` varchar(255) default NULL,
+  `profile_photo_file_size` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `participants`
+--
+
+LOCK TABLES `participants` WRITE;
+/*!40000 ALTER TABLE `participants` DISABLE KEYS */;
+/*!40000 ALTER TABLE `participants` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `phones`
+--
+
+DROP TABLE IF EXISTS `phones`;
+CREATE TABLE `phones` (
+  `id` int(11) NOT NULL auto_increment,
+  `phone_number` varchar(255) default NULL,
+  `phone_type` varchar(255) default NULL,
+  `preferred` tinyint(1) default '0',
+  `contact_id` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `phones`
+--
+
+LOCK TABLES `phones` WRITE;
+/*!40000 ALTER TABLE `phones` DISABLE KEYS */;
+/*!40000 ALTER TABLE `phones` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `photos`
+--
+
+DROP TABLE IF EXISTS `photos`;
+CREATE TABLE `photos` (
+  `id` int(11) NOT NULL auto_increment,
+  `user_id` int(11) default NULL,
+  `participant_id` int(11) default NULL,
+  `team_id` int(11) default NULL,
+  `source` varchar(255) default NULL,
+  `source_user_id` varchar(255) default NULL,
+  `source_album_id` varchar(255) default NULL,
+  `source_photo_id` varchar(255) default NULL,
+  `title` varchar(255) default NULL,
+  `description` varchar(1024) default NULL,
+  `thumbnail_url` varchar(512) default NULL,
+  `photo_url` varchar(512) default NULL,
+  `publish_date` datetime default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  `image_file_name` varchar(255) default NULL,
+  `image_content_tye` varchar(255) default NULL,
+  `image_file_size` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `photos`
+--
+
+LOCK TABLES `photos` WRITE;
+/*!40000 ALTER TABLE `photos` DISABLE KEYS */;
+/*!40000 ALTER TABLE `photos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `programs`
+--
+
+DROP TABLE IF EXISTS `programs`;
+CREATE TABLE `programs` (
+  `id` int(11) NOT NULL auto_increment,
+  `hub_id` int(11) NOT NULL,
+  `name` varchar(255) default NULL,
+  `description` text,
+  `status` varchar(255) default 'Active',
+  `created_on` datetime default NULL,
+  `created_by` varchar(255) default NULL,
+  `parent_id` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `programs`
+--
+
+LOCK TABLES `programs` WRITE;
+/*!40000 ALTER TABLE `programs` DISABLE KEYS */;
+INSERT INTO `programs` (`id`, `hub_id`, `name`, `description`, `status`, `created_on`, `created_by`, `parent_id`) VALUES (1,2,'Youth Basketball Ages 3-11','A great program for beginning and intermediate players. Varied basket height, ball size and game rules fit with each age group in promoting sportsmanship and teamwork. Pass, dribble and shoot your way into the YMCA\'s basketball league. The games are coached by parent volunteers and are refereed by YMCA staff. All games are played for one hour on Saturdays and game times are scheduled by the YMCA.','Active','2010-02-04 17:28:55',NULL,NULL),(2,4,'Regular Season Baseball','Recreational Development Baseball','Active','2010-02-04 00:00:00','Super Admin User',NULL);
+/*!40000 ALTER TABLE `programs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `registrations`
+--
+
+DROP TABLE IF EXISTS `registrations`;
+CREATE TABLE `registrations` (
+  `id` int(11) NOT NULL auto_increment,
+  `participant_id` int(11) default NULL,
+  `session_id` int(11) default NULL,
+  `division_id` int(11) default NULL,
+  `registered_date` datetime default NULL,
+  `registration_requests` text,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `registrations`
+--
+
+LOCK TABLES `registrations` WRITE;
+/*!40000 ALTER TABLE `registrations` DISABLE KEYS */;
+/*!40000 ALTER TABLE `registrations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `schema_migrations`
+--
+
+DROP TABLE IF EXISTS `schema_migrations`;
+CREATE TABLE `schema_migrations` (
+  `version` varchar(255) NOT NULL,
+  UNIQUE KEY `unique_schema_migrations` (`version`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `schema_migrations`
+--
+
+LOCK TABLES `schema_migrations` WRITE;
+/*!40000 ALTER TABLE `schema_migrations` DISABLE KEYS */;
+INSERT INTO `schema_migrations` (`version`) VALUES ('20091015163919'),('20091015235647'),('20091016001323'),('20091016002704'),('20091016172004'),('20091027181218'),('20091027231242'),('20091029221435'),('20091102161303'),('20091102162535'),('20091102164558'),('20091102170658'),('20091102174003'),('20091102174205'),('20091102174756'),('20091102175614'),('20091104142506'),('20091106214102'),('20091110035347'),('20091110221436'),('20091111210613'),('20091111211508'),('20091201194645'),('20091208212002'),('20091214232629'),('20091215190902'),('20091215191628'),('20091217151555'),('20091220210900'),('20100104160000'),('20100111224735'),('20100112214056'),('20100113060130'),('20100113192626'),('20100113195127'),('20100113221500'),('20100114225258'),('20100114231312'),('20100114231657'),('20100119205143'),('20100122052046'),('20100131161929'),('20100201193830'),('20100201201307'),('20100202042759'),('20100202175313'),('20100204004922'),('20100204171007'),('20100213154329'),('20100213154703'),('20100213161338'),('20100213221636');
+/*!40000 ALTER TABLE `schema_migrations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sessions`
+--
+
+DROP TABLE IF EXISTS `sessions`;
+CREATE TABLE `sessions` (
+  `id` int(11) NOT NULL auto_increment,
+  `program_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` varchar(255) default NULL,
+  `start_date` datetime default NULL,
+  `end_date` datetime default NULL,
+  `status` varchar(255) default 'Active',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sessions`
+--
+
+LOCK TABLES `sessions` WRITE;
+/*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
+INSERT INTO `sessions` (`id`, `program_id`, `name`, `description`, `start_date`, `end_date`, `status`) VALUES (1,1,'Winter 2009-2010','','2010-01-16 00:00:00',NULL,'Active'),(2,2,'2010 Season',NULL,'2010-02-01 08:00:00','2010-08-31 07:00:00','Active');
+/*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sponsored_options`
+--
+
+DROP TABLE IF EXISTS `sponsored_options`;
+CREATE TABLE `sponsored_options` (
+  `id` int(11) NOT NULL auto_increment,
+  `sponsor_id` int(11) default NULL,
+  `sponsorship_option_id` int(11) default NULL,
+  `amount` int(11) default NULL,
+  `additional_info` text,
+  `status` varchar(255) default NULL,
+  `payment_reference` varchar(255) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sponsored_options`
+--
+
+LOCK TABLES `sponsored_options` WRITE;
+/*!40000 ALTER TABLE `sponsored_options` DISABLE KEYS */;
+INSERT INTO `sponsored_options` (`id`, `sponsor_id`, `sponsorship_option_id`, `amount`, `additional_info`, `status`, `payment_reference`) VALUES (1,1,467737552,800,'',NULL,NULL),(2,2,467737551,600,'Anand/Pinto-1',NULL,NULL),(3,4,467737549,300,'1:Anand Subramanyan/Shetland/',NULL,NULL),(4,5,467737550,400,'1:Anand Subramanyan/Pinto-2/','Approved','Auth:TESTMD/RefNum:0'),(5,6,467737549,300,'1:Anand Subramanyan/Pinto-2/','Approved','Auth:TESTMD/RefNum:0'),(6,7,866031385,25,'','Approved','Auth:87589P/RefNum:148942944'),(7,8,467737549,300,'1:Cameron Crose/Pinto-2/Team name is unknown at this time','Approved','Auth:017830/RefNum:149560884'),(8,9,467737549,300,'1:Colin Geffon/Pinto-1/Dan Kane is the coach.  I\'m not sure of the team number.',NULL,NULL),(9,10,467737549,300,'1:Colin Geffon- Team 7/Pinto-1/Dan Kane is the coach.  I\'m not sure of the team number.','Approved','Auth:021960/RefNum:149585974'),(10,11,467737549,300,'1:Jay Cohan/ Coach Yankees/Shetland/','Approved','Auth:517893/RefNum:149913514'),(11,12,467737549,300,'1:Keanu Garrett / White Sox/Shetland/','Approved','Auth:043486/RefNum:150130324'),(12,13,467737549,300,'1:Keaton Sullivan/Pinto-2/','Approved','Auth:200850/RefNum:150249156');
+/*!40000 ALTER TABLE `sponsored_options` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sponsors`
+--
+
+DROP TABLE IF EXISTS `sponsors`;
+CREATE TABLE `sponsors` (
+  `id` int(11) NOT NULL auto_increment,
+  `company_name` varchar(255) NOT NULL,
+  `company_website` varchar(255) default NULL,
+  `contact_name` varchar(255) default NULL,
+  `contact_email` varchar(255) default NULL,
+  `contact_phone` varchar(255) default NULL,
+  `street_address` varchar(255) default NULL,
+  `city` varchar(255) default NULL,
+  `state` varchar(8) default NULL,
+  `zip_code` varchar(12) default NULL,
+  `banner1_file_name` varchar(255) default NULL,
+  `banner1_content_type` varchar(255) default NULL,
+  `banner1_file_size` int(11) default NULL,
+  `banner1_updated_at` datetime default NULL,
+  `banner2_file_name` varchar(255) default NULL,
+  `banner2_content_type` varchar(255) default NULL,
+  `banner2_file_size` int(11) default NULL,
+  `banner2_updated_at` datetime default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  `hub_id` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sponsors`
+--
+
+LOCK TABLES `sponsors` WRITE;
+/*!40000 ALTER TABLE `sponsors` DISABLE KEYS */;
+INSERT INTO `sponsors` (`id`, `company_name`, `company_website`, `contact_name`, `contact_email`, `contact_phone`, `street_address`, `city`, `state`, `zip_code`, `banner1_file_name`, `banner1_content_type`, `banner1_file_size`, `banner1_updated_at`, `banner2_file_name`, `banner2_content_type`, `banner2_file_size`, `banner2_updated_at`, `created_at`, `updated_at`, `hub_id`) VALUES (1,'',NULL,'','','','','','CA','',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-04 17:42:28','2010-02-04 17:42:28',NULL),(2,'CoreDot',NULL,'Subbu B','bsubbu@sbcglobal.net','408-802-2720','1448 Marlbarough Court','Los Altos','CA','94024',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-04 18:04:33','2010-02-04 18:04:33',NULL),(3,'',NULL,'','','','','','CA','',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-04 19:42:11','2010-02-04 19:42:11',NULL),(4,'CoreContinuum',NULL,'Subbu Balakrishnan','','408-802-2720','1448 Marlbarough Court','Los Altos','CA','94024',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-11 13:23:58','2010-02-11 13:23:58',NULL),(5,'CoreContinuum',NULL,'Subbu Balakrishnan','bsubbu@sbcglobal.net','408-802-2720','1448 Marlbarough Court','Los Altos','CA','94024',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-13 16:26:33','2010-02-13 16:26:33',NULL),(6,'CoreContinuum',NULL,'Subbu Balakrishnan','bsubbu@sbcglobal.net','408-802-2720','1448 Marlbarough Court','Los Altos','CA','94024',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-13 16:53:29','2010-02-13 16:53:29',NULL),(7,'Subbu Balakrishnan',NULL,'Subbu Balakrishnan','bsubbu@sbcglobal.net','(408) 802-2720','1448 Marlbarough Court','Los Altos','CA','94024',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-18 22:59:09','2010-02-18 22:59:09',NULL),(8,'Farwest Plumbing Company',NULL,'John E. Crose, Jr.','john@farwestplumbing.com','650-333-7526','325 Chamisal Avenue','Los Altos','CA','94022',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-23 00:43:39','2010-02-23 00:43:39',NULL),(9,'Geffon & Isger',NULL,'Eric Geffon','egeffon@sjlawyer.net','408-838-6096','75 E. Santa Clara St. Ste. 295','San Jose','CA','95113',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-23 06:55:03','2010-02-23 06:55:03',NULL),(10,'Geffon & Isger',NULL,'Eric Geffon','egeffon@sjlawyer.net','408-838-6096','75 E. Santa Clara St. Ste. 295','San Jose','CA','95113',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-23 06:55:42','2010-02-23 06:55:42',NULL),(11,'Jefunira Camp',NULL,'Jeff Gamble','director@jefuniracamp.com','650 291 2888','221 Lassen Avenue','Mountain View','CA','94043',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-25 00:02:26','2010-02-25 00:02:26',NULL),(12,'Linda Garrett Swim School',NULL,'Linda Garrett','bookings@lgswim.com','650-961-1021','1200 Lubich Drive','Mountain View','CA','94040',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-26 04:30:24','2010-02-26 04:30:24',NULL),(13,'Turn2 Solutions',NULL,'Chris Sullivan','csullivan@turn2solutions.com','650-559-9600','PO Box 3605','Los Altos','CA','94024',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2010-02-26 17:33:28','2010-02-26 17:33:28',NULL);
+/*!40000 ALTER TABLE `sponsors` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sponsorship_options`
+--
+
+DROP TABLE IF EXISTS `sponsorship_options`;
+CREATE TABLE `sponsorship_options` (
+  `id` int(11) NOT NULL auto_increment,
+  `hub_id` int(11) default NULL,
+  `group` varchar(255) default NULL,
+  `name` varchar(255) default NULL,
+  `description` varchar(255) default NULL,
+  `graphic_file_name` varchar(255) default NULL,
+  `graphic_file_type` varchar(255) default NULL,
+  `graphic_file_size` int(11) default NULL,
+  `amount` varchar(255) default NULL,
+  `primary` tinyint(1) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=866031387 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sponsorship_options`
+--
+
+LOCK TABLES `sponsorship_options` WRITE;
+/*!40000 ALTER TABLE `sponsorship_options` DISABLE KEYS */;
+INSERT INTO `sponsorship_options` (`id`, `hub_id`, `group`, `name`, `description`, `graphic_file_name`, `graphic_file_type`, `graphic_file_size`, `amount`, `primary`) VALUES (467737549,4,'Category 5','Your Company Name','on back of team jersey (Shetland & Pinto divisions only)',NULL,NULL,NULL,'$300',1),(467737550,4,'Category 4','Business Card Size Black & White Ad','within Yearbook',NULL,NULL,NULL,'$400',1),(467737551,4,'Category 3','Half Page Four Color Ad','center of Yearbook',NULL,NULL,NULL,'$600',1),(467737552,4,'Category 2','Full Page Four Color Ad','center of Yearbook',NULL,NULL,NULL,'$800',1),(467737553,4,'Category 1','Full Page Four Color Ad','inside front, back or outside back cover',NULL,NULL,NULL,'$1000',1),(866031385,4,'Option 2','Corporate/Family Friend','of LA-MV PONY Baseball',NULL,NULL,NULL,'',0),(866031386,4,'Option 1','Full Page Insert Pull Out Ad','included in the Yearbook',NULL,NULL,NULL,'$900',0);
+/*!40000 ALTER TABLE `sponsorship_options` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sponsorships`
+--
+
+DROP TABLE IF EXISTS `sponsorships`;
+CREATE TABLE `sponsorships` (
+  `id` int(11) NOT NULL auto_increment,
+  `sponsorable_type` varchar(255) default NULL,
+  `sponsorable_id` int(11) default NULL,
+  `sponsor_id` int(11) default NULL,
+  `starts_at` date default NULL,
+  `ends_at` date default NULL,
+  `status` varchar(255) default NULL,
+  `notes` varchar(1024) default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sponsorships`
+--
+
+LOCK TABLES `sponsorships` WRITE;
+/*!40000 ALTER TABLE `sponsorships` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sponsorships` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `team_memberships`
+--
+
+DROP TABLE IF EXISTS `team_memberships`;
+CREATE TABLE `team_memberships` (
+  `id` int(11) NOT NULL auto_increment,
+  `participant_id` int(11) NOT NULL,
+  `team_id` int(11) NOT NULL,
+  `role` varchar(255) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `team_memberships`
+--
+
+LOCK TABLES `team_memberships` WRITE;
+/*!40000 ALTER TABLE `team_memberships` DISABLE KEYS */;
+/*!40000 ALTER TABLE `team_memberships` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `teams`
+--
+
+DROP TABLE IF EXISTS `teams`;
+CREATE TABLE `teams` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(255) default NULL,
+  `division_id` int(11) default NULL,
+  `session_id` int(11) default NULL,
+  `selected_name` varchar(255) default NULL,
+  `logo_file_name` varchar(255) default NULL,
+  `logo_content_tye` varchar(255) default NULL,
+  `logo_file_size` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `teams`
+--
+
+LOCK TABLES `teams` WRITE;
+/*!40000 ALTER TABLE `teams` DISABLE KEYS */;
+INSERT INTO `teams` (`id`, `name`, `division_id`, `session_id`, `selected_name`, `logo_file_name`, `logo_content_tye`, `logo_file_size`) VALUES (1,'S-1',1,2,NULL,NULL,NULL,NULL),(2,'S-2',1,2,NULL,NULL,NULL,NULL),(3,'S-3',1,2,NULL,NULL,NULL,NULL),(4,'S-4',1,2,NULL,NULL,NULL,NULL),(5,'S-5',1,2,NULL,NULL,NULL,NULL),(6,'S-6',1,2,NULL,NULL,NULL,NULL),(7,'S-7',1,2,NULL,NULL,NULL,NULL),(8,'S-8',1,2,NULL,NULL,NULL,NULL),(9,'S-9',1,2,NULL,NULL,NULL,NULL),(10,'S-10',1,2,NULL,NULL,NULL,NULL),(11,'S-11',1,2,NULL,NULL,NULL,NULL),(12,'S-12',1,2,NULL,NULL,NULL,NULL),(13,'P1-1',2,2,NULL,NULL,NULL,NULL),(14,'P1-2',2,2,NULL,NULL,NULL,NULL),(15,'P1-3',2,2,NULL,NULL,NULL,NULL),(16,'P1-4',2,2,NULL,NULL,NULL,NULL),(17,'P1-5',2,2,NULL,NULL,NULL,NULL),(18,'P1-6',2,2,NULL,NULL,NULL,NULL),(19,'P1-7',2,2,NULL,NULL,NULL,NULL),(20,'P1-8',2,2,NULL,NULL,NULL,NULL),(21,'P1-9',2,2,NULL,NULL,NULL,NULL),(22,'P1-10',2,2,NULL,NULL,NULL,NULL),(23,'P1-11',2,2,NULL,NULL,NULL,NULL),(24,'P1-12',2,2,NULL,NULL,NULL,NULL),(25,'P2-1',3,2,NULL,NULL,NULL,NULL),(26,'P2-2',3,2,NULL,NULL,NULL,NULL),(27,'P2-3',3,2,NULL,NULL,NULL,NULL),(28,'P2-4',3,2,NULL,NULL,NULL,NULL),(29,'P2-5',3,2,NULL,NULL,NULL,NULL),(30,'P2-6',3,2,NULL,NULL,NULL,NULL),(31,'P2-7',3,2,NULL,NULL,NULL,NULL),(32,'P2-8',3,2,NULL,NULL,NULL,NULL),(33,'P2-9',3,2,NULL,NULL,NULL,NULL),(34,'P2-10',3,2,NULL,NULL,NULL,NULL),(35,'P2-11',3,2,NULL,NULL,NULL,NULL),(36,'P2-12',3,2,NULL,NULL,NULL,NULL),(37,'M1-1',4,2,NULL,NULL,NULL,NULL),(38,'M1-2',4,2,NULL,NULL,NULL,NULL),(39,'M1-3',4,2,NULL,NULL,NULL,NULL),(40,'M1-4',4,2,NULL,NULL,NULL,NULL),(41,'M1-5',4,2,NULL,NULL,NULL,NULL),(42,'M1-6',4,2,NULL,NULL,NULL,NULL),(43,'M1-7',4,2,NULL,NULL,NULL,NULL),(44,'M1-8',4,2,NULL,NULL,NULL,NULL),(45,'M2-1',5,2,NULL,NULL,NULL,NULL),(46,'M2-2',5,2,NULL,NULL,NULL,NULL),(47,'M2-3',5,2,NULL,NULL,NULL,NULL),(48,'M2-4',5,2,NULL,NULL,NULL,NULL),(49,'M2-5',5,2,NULL,NULL,NULL,NULL),(50,'M2-6',5,2,NULL,NULL,NULL,NULL),(51,'M2-7',5,2,NULL,NULL,NULL,NULL),(52,'M2-8',5,2,NULL,NULL,NULL,NULL),(53,'B-1',6,2,NULL,NULL,NULL,NULL),(54,'B-2',6,2,NULL,NULL,NULL,NULL),(55,'B-3',6,2,NULL,NULL,NULL,NULL),(56,'B-4',6,2,NULL,NULL,NULL,NULL),(57,'B-5',6,2,NULL,NULL,NULL,NULL),(58,'B-6',6,2,NULL,NULL,NULL,NULL),(59,'B-7',6,2,NULL,NULL,NULL,NULL),(60,'B-8',6,2,NULL,NULL,NULL,NULL),(61,'P-1',7,2,NULL,NULL,NULL,NULL),(62,'P-2',7,2,NULL,NULL,NULL,NULL),(63,'P-3',7,2,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `teams` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL auto_increment,
+  `login` varchar(40) default NULL,
+  `name` varchar(100) default '',
+  `email` varchar(100) default NULL,
+  `crypted_password` varchar(40) default NULL,
+  `salt` varchar(40) default NULL,
+  `created_at` datetime default NULL,
+  `updated_at` datetime default NULL,
+  `remember_token` varchar(40) default NULL,
+  `remember_token_expires_at` datetime default NULL,
+  `first_name` varchar(24) default NULL,
+  `last_name` varchar(24) default NULL,
+  `site_admin` tinyint(1) default '0',
+  `contact_id` int(11) default NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `index_users_on_login` (`login`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` (`id`, `login`, `name`, `email`, `crypted_password`, `salt`, `created_at`, `updated_at`, `remember_token`, `remember_token_expires_at`, `first_name`, `last_name`, `site_admin`, `contact_id`) VALUES (1,'admin','Super Admin User','subbu@coredotcontinuum.com','baf7c37506dd31a0437a9859267fad5390c4ff9e','17bacd9eeb91618752398a6e0555fd0a54493aee','2010-02-04 17:28:17','2010-02-04 17:28:17',NULL,NULL,'Super Admin','User',1,NULL);
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `volunteer_signups`
+--
+
+DROP TABLE IF EXISTS `volunteer_signups`;
+CREATE TABLE `volunteer_signups` (
+  `id` int(11) NOT NULL auto_increment,
+  `registration_id` int(11) default NULL,
+  `contact_id` int(11) default NULL,
+  `role` varchar(255) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `volunteer_signups`
+--
+
+LOCK TABLES `volunteer_signups` WRITE;
+/*!40000 ALTER TABLE `volunteer_signups` DISABLE KEYS */;
+/*!40000 ALTER TABLE `volunteer_signups` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2010-03-01 14:23:08

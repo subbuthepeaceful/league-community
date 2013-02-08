@@ -1,0 +1,141 @@
+<style type="text/css">
+#email_body {
+	width: 700px;
+	border: solid 2px #55A859;
+	font-family: "Arial", "Helvetica", serif;
+	font-size: 14px;
+	padding: 10px;
+}
+
+#email_body h1 {
+	font-size: 20px;
+}
+
+#email_body h2 {
+	font-size: 16px;
+}
+
+#email_body .tag-line {
+	font-style: italic;
+	margin-left: 200px;
+	color: #1771A6;
+}
+
+#email_body .header-logo {
+	margin-left: 250px;
+	margin-right: auto;
+}
+
+#email_body h3 {
+	font-style: italic;;
+}
+
+#email_body p.major {
+	color: #008F00;
+	font-size: 16px;
+}
+/* Baseball Game Report Table */
+.game-report-table { font-size: 14px;}
+.game-report-table input { font-size: 14px;}
+.game-report-table select { font-size: 18px;}
+.game-report-table tr.divider { border: solid 2px #272;}
+
+.game-report-table td { padding: 10px; border: solid 1px #DDD;}
+.game-report-table td.score { background-color: #4B4;}
+.game-report-table td.report-section { color: blue;}
+
+.game-report-roster-stats { font-size: 12px; margin-top: 10px;}
+.game-report-roster-stats td { padding: 5px;}
+span.score-num {
+	font-size: 24px;
+	color: #00E;
+}
+span.player-name {
+	font-size: 14px;
+	font-style: bold;
+}
+</style>
+<div id="email_body">
+	<h2>Game Report <span style="font-size: 0.75em;">(Filed by <%= @game_report.contact.name %> on <%= @game_report.updated_at.to_s(:message_sent)%>)<span></h2>
+	<table class="game-report-table">
+		<tr>
+			<td class="report-section">Game Details</td>
+			<td>Division : <b><%= @team.division %></b></td>
+			<td>Home Team : <b><%= @game.home_team.selected_name ? @game.home_team.selected_name : @game.home_team.name %></b></td>
+			<td>Visiting Team : <b><%= @game.away_team.name ? @game.away_team.selected_name : @game.away_team.name %></b></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Scheduled Date : <%= @game.scheduled_at.to_s(:circles_short_date) %></td>
+			<td>Scheduled Time : <%= @game.scheduled_at.to_s(:circles_time_only) %></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Actual Date : <%= @game_report.actual_start_date.to_s(:circles_short_date)  %></td>
+			<td>Actual Start  : <%= @game_report.actual_start_time.to_s(:circles_time_only) %>
+			<td>Actual End : <%= @game_report.actual_end_time.to_s(:circles_time_only) %></td>
+		</tr>
+		<tr>
+			<td colspan="2" class="score">Final Score: HOME <span class="score-num"><%= @game_report.home_team_score %></span>&nbsp;AWAY <span class="score-num"><%= @game_report.away_team_score %></span></td>
+			<td># of Innings Played : <%= @game_report.num_innings_played %></td>
+			<td>End Reason : <%= @game_report.end_reason %>
+			</td>
+		</tr>
+		<tr class="divider"></tr>
+		<tr>
+			<td class="report-section">All Star Vote</td>
+			<% @other_team = @game.other_team(@team) -%>
+			<td><span class="score-num"><%= @game_report.first_vote ? @game_report.first_vote.team_display(@other_team) : "None Selected" %></span></td>
+			<td><span class="score-num"><%= @game_report.second_vote ? @game_report.second_vote.team_display(@other_team) : "None Selected" %></span></td>
+			<td><span class="score-num"><%= @game_report.third_vote ? @game_report.third_vote.team_display(@other_team) : "None Selected" %></span></td>
+		</tr>
+		<tr class="divider"></tr>
+		<tr>
+			<td class="report-section">Umpires</td>
+			<td>Plate Ump: <%= @game_report.plate_umpire %></td>
+			<td>Field Ump: <%= @game_report.field_umpire %></td>
+			<td>Game played at : <%= @game.location %></td>
+		</tr>
+		<tr class="divider"></tr>
+		<tr>
+			<td colspan="4">
+				<table class="game-report-roster-stats">
+					<tr>
+						<th>Player</th>
+						<th colspan="3">Pitching</th>
+						<th></th>
+						<th>Catching</th>
+					</tr>
+					<% @game_statistics.each do |gs| -%>
+						<tr>
+							<td><span class="player-name"><%= gs[:player].team_display(@team) %></span></td>
+							<% if gs[:pitcher_number] -%>
+								<td>Pitcher # <span class="score-num"><%= gs[:pitcher_number] %></span></td>
+								<td>Innings Pitched <span class="score-num"><%= gs[:innings_pitched] %></span></td>
+								<td>Pitch Count <span class="score-num"><%= gs[:pitch_count] %></span></td>
+							<% else -%>
+								<td colspan="3"></td>
+							<% end -%>
+							<td>&nbsp; | &nbsp;</td>
+							<% if gs[:innings_caught]%>
+								<td>Innings Caught <span class="score-num"><%= gs[:innings_caught] %></span></td>
+							<% else -%>
+								<td></td>
+							<% end -%>
+						</tr>
+					<% end -%>
+				</table>
+			</td>
+		</tr>
+		<tr class="divider"></tr>
+		<tr>
+			<td class="report-section">Comments</td>
+			<td colspan="4"><%= @game_report.comments %></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</div>

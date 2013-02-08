@@ -1,0 +1,31 @@
+<div class="section-table">
+	<table id="sponsors_table" class="tablesorter" width="100%">
+		<thead>
+			<tr>
+				<th>Company Name</th>
+				<th>Contact Name</th>
+				<th>Banner (300x100)</th>
+        <th>Banner (250x250)</th>
+				<th>Created On</th>
+				<th class="action-header">Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @sponsors.each_with_index do |sponsor, i| -%>
+
+			<% if i % 2 == 0 -%>
+				<tr class="even">
+			<% else -%>
+				<tr class="odd">
+			<% end -%>
+					<td><%= link_to sponsor.company_name, sponsor.company_website, :target => '_blank' %></td>
+					<td><%= sponsor.contact_name %></td>
+					<td><%= image_tag sponsor.banner1.url(:thumb) %></td>
+          <td><%= image_tag sponsor.banner2.url(:thumb) %></td>
+					<td><%= sponsor.created_at.to_s(:circles_short_date) %></td>
+					<td><a href="#">Edit</a> | <%= link_to 'Delete', admin_sponsor_path(sponsor), :confirm => "Are you sure?", :method=>:delete %></td>
+				</tr>
+			<% end -%>
+		</tbody>
+	</table>
+</div>

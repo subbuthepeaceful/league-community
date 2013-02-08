@@ -1,0 +1,20 @@
+<script type="text/javascript">
+	var $hubId = <%= @hub.id %>;
+</script>
+<div class="profile teamhead">
+	<div class="text">
+		<ul class="info">
+			<% form_tag '#', :class => "division-select" do -%>
+				<%= label_tag 'Select Division:'%>
+				<%= select_tag "division_select", options_from_collection_for_select(@divisions, 'id', 'name') %>
+			<% end -%>
+		</ul><!-- /Info -->
+		<ul class="buttons team-actions fright">
+			<li><a class="signup" href="<%= view_hub_path(@hub)%>?division_id=<%=@selected_division.id%>">Game Reports</a></li>
+			<li><a class="star" href="<%= votes_hub_path(@hub)%>?division_id=<%=@selected_division.id%>">Player Votes</a></li>
+		</ul><!-- /Buttons -->
+	</div>
+</div>
+<script type="text/javascript">
+	document.getElementById('division_select').selectedIndex = <%= @selected_division_index %>;
+</script>

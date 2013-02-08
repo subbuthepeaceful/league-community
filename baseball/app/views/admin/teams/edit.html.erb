@@ -1,0 +1,76 @@
+<div id="program_header" class="section-header">
+	<div class="section-header-title">
+		<h1><%= @team.name %></h1>
+		<span class="section-breadcrumb"><%= team_breadcrumb(@program, @session, @division) %></span>
+	</div>
+</div>
+<div class="clear-both">
+</div>
+<div id="team_management_panel">
+	<div id="registrant_list" class="ui-corner-all">
+		<table id="registrants_table" class="tablesorter">
+			<thead>
+			<tr>
+				<th>Name</th>
+				<th>Primary Contact</th>
+				<th>Volunteer</th>
+				<th>Reg. Requests</th>
+				<th>Team</th>
+				<th>Actions</th>
+			</tr>
+			</thead>
+			<tbody>
+				<% @registrants.each_with_index do |registrant, i| -%>
+				<tr id="registrant_row_<%=registrant.participant.id%>">
+					<td class="registrant-name"><%= registrant.name %></td>
+					<td><%= registrant.primary_contact.name %></td>
+					<td><%= registrant.primary_contact.volunteer_role %></td>
+					<td><%= registrant.registration_requests %></td>
+					<td class="team-name">
+						<% if registrant.participant.team -%>
+							<% if registrant.participant.team == @team %>
+								<%= registrant.participant.team.name %>
+							<% else -%>
+								<%= link_to registrant.participant.team.name, edit_admin_team_path(registrant.participant.team) %>
+							<% end -%>
+						<% else -%>
+							Unassigned
+						<% end -%>
+					</td>
+					<td>
+						<% if registrant.participant.team -%>
+							<% if registrant.participant.team == @team -%>
+								<a href="#" class="team-roster-action-link">REMOVE</a>
+							<% else -%>
+								<a href="#" class="team-roster-action-link">ADD</a>
+							<% end -%>
+						<% else -%>
+							<a href="#" class="team-roster-action-link">ADD</a>
+						<% end -%>
+					</td>
+				</tr>
+				<% end -%>
+			</tbody>
+		</table>
+	</div>
+	<div id="team_roster" class="ui-corner-bottom">
+		<div class="ui-widget-header ui-corner-all">
+			<h3>Team Roster</h3>
+		</div>
+		<div class="clear-both">
+		</div>
+		<ul id="team_member_list">
+			<% @team.participants.each do |participant| %>
+				<li id="team_member_row_<%=participant.id%>"><%= participant.name %></li>
+			<% end -%>
+		</ul>
+		<% form_tag update_admin_team_path(@team), :id => "save_team_roster", :name => "save_team_roster_form" do %>
+			<%= submit_tag 'save' , :class => "ui-state-default ui-corner-all roster-save" %>
+			<%#= submit_tag 'clear', :class => "ui-state-default ui-corner-all"%>
+		<% end -%>
+		<div class="clear-both">
+		</div>
+	</div>
+</div>
+<div class="clear-both">
+</div>

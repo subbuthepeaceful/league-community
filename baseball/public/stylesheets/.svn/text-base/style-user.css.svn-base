@@ -1,0 +1,324 @@
+/* Css Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{ margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; }
+ol,ul{ list-style:none; }
+blockquote,q{ quotes:none; }
+blockquote:before,blockquote:after,q:before,q:after{ content:''; content:none; }
+:focus{ outline:0; }
+ins{ text-decoration:none; }
+del{ text-decoration:line-through; }
+table{ border-collapse:collapse; border-spacing:0; }
+
+/* General Styles */
+.skiplink{ display:none; }
+label{ cursor:pointer; }
+a,
+a:visited{ color:#3269aa; text-decoration:none; }
+a:focus,
+a:hover{ text-decoration:underline; }
+body{ background:#3269aa url(/images/user/bgr-body.png) repeat-x top; color:#333; font:62.5%/1 "Lucida Grande", Arial, Helvetica, sans-serif; }
+.wrapper{ width:998px; margin:0 auto; overflow:hidden; }
+
+/* Header */
+#header{ width:980px; color:#fff; padding:0 9px; height:108px; margin:0 auto; }
+	#header .top{ width:100%; overflow:hidden; }
+	#header #logo{ float:right; display:block; width:120px; height:35px; text-indent:-9999px; background:url(/images/user/logo.png) no-repeat right; }
+	#header h1{ float:left; font:normal 32px Georgia, "Times New Roman", Times, serif; margin:15px 15px 0 0; padding-top: 15px; padding-left: 20px;}
+	#header h2{ float:left; font:normal 32px Georgia, "Times New Roman", Times, serif; margin-top:15px; padding:0 0 5px 15px; border-left:1px solid #92aacd; }
+	#header-links{ float:right; font-size:11px; margin-top:10px; padding-bottom:1px; }
+	#header-links li{ float:left; margin-left:4px; }
+	#header-links li a,
+	#header-links li a:visited{ color:#fff; }
+
+#hub_title {
+	width: 500px;
+}
+
+#hub_title .hub-logo {
+	padding-top: 10px;
+	float: left;
+}
+
+/* Container */
+#container{ clear:both; margin-bottom:25px; }
+	.container-top{ width:100%; height:36px; background:url(/images/user/bgr-container-top.png) no-repeat; }
+	.container-bot{ width:100%; height:10px; background:url(/images/user/bgr-container-bot.png) no-repeat; }
+	.container-bod{ width:988px; padding:5px; background:url(/images/user/bgr-container-bod.png) repeat-y; }
+
+/* Nav */
+#nav{ clear:both; width:980px; margin:0 auto; }
+	#nav li{ display:inline; }
+	#nav a,
+	#nav a:visited{ float:left; margin:0; padding:0 4px; text-decoration:none; background:url(/images/user/bgr-tab-left.png) no-repeat left top; font-size:14px; font-weight:bold; }
+	#nav a span,
+	#nav a:visited span{ float:left; display:block; color:#000; padding:8px 16px 9px 13px; background:url(/images/user/bgr-tab-right.png) no-repeat right top; cursor:pointer; }
+	#nav .current a,
+	#nav a:hover{ background-position:left bottom; }
+	#nav .current a span,
+	#nav a:hover span{ background-position:right bottom; }
+	
+/* Content */
+#content{ clear:both; width:940px;  margin:0 auto; padding:10px 0; }
+
+/* Top Mainbox */
+.topmainbox{ width:900px; padding:20px 20px 15px; background:url(/images/user/bgr-topmainbox-top.png) no-repeat; overflow:hidden; }
+.topmainbox-bot{ clear:both; width:940px; height:5px; margin-bottom:20px; background:url(/images/user/bgr-topmainbox-bot.png) no-repeat; }
+	.topmainbox .profile{ float:left; width:565px; }
+	.topmainbox .profile h2{ font-size:30px; }
+	.topmainbox .profile .image{ float:left; width:109px; height:123px; margin-right:24px; padding:12px 0 0 12px; background:url(/images/user/bgr-profilepic.png) no-repeat; }
+	.topmainbox .profile .info{ font-size:14px; margin-bottom:20px; }
+	.topmainbox .profile .info li{ margin-bottom:8px; }
+	.topmainbox .profile .buttons{ font-size:12px; font-weight:bold; }
+	.topmainbox .profile .buttons li{ float:left; width:176px; height:17px; padding:5px; margin:0 10px 4px 0; background:url(/images/user/bgr-buttons.png) no-repeat; }
+	.topmainbox .profile .buttons li a{ display:block; padding:2px 0 2px 20px; }
+	.topmainbox .profile .buttons li a.signup{ background:url(/images/user/ico-signup.png) no-repeat left; }
+	.topmainbox .profile .buttons li a.edit{ background:url(/images/user/ico-editprofile.png) no-repeat left; }
+	.topmainbox .profile .buttons li a.upload{ background:url(/images/user/ico-uploadphotos.png) no-repeat left; }
+	.topmainbox .profile .buttons li a.preferences{ background:url(/images/user/ico-msgpref.png) no-repeat left; }
+	.topmainbox .sponsor{ float:right; width:299px; height:105px; padding:15px 17px; background:url(/images/user/bgr-sponsor.png) no-repeat; }
+	.topmainbox .sponsor a.allsponsors{ display:block; font-size:12px; text-align:right; margin:4px 0 0; }
+
+/* Columns */
+#columns{ clear:both; width:940px; overflow:hidden; }
+
+/* Footer */
+#footer{ background:url(/images/user/bgr-footer.png) repeat-x; width:100%; }
+#footer .wrapper{ padding:0 9px; width:980px; height:32px; }
+	#footer a,
+	#footer a:visited{ color:#fff; }
+	#footer p{ float:left; margin-top:10px; font-size:12px; color:#fff; }
+	#footer .logo{ float:right; display:block; width:120px; height:32px; text-indent:-9999px; background:url(/images/user/logo.png) no-repeat right; }
+
+
+/* Left Column */
+.leftcolumn{ float:left; width:670px; }
+.ltcolbox{ width:670px; margin-bottom:20px; }
+.ltcolbox-top{ width:670px; height:42px; background:url(/images/user/bgr-ltcolbox-top.png) no-repeat; overflow:hidden; }
+.ltcolbox-bot{ width:670px; height:6px; background:url(/images/user/bgr-ltcolbox-bot.png) no-repeat; }
+.ltcolbox-bod{ width:670px; padding-bottom:10px; background:url(/images/user/bgr-ltcolbox-bod.png) repeat-y; overflow:hidden; }
+.ltcolbox .title{ width:650px; height:32px; padding:10px 10px 0; overflow:hidden; }
+	.ltcolbox .title h2{ float:left; padding:2px 0 2px 50px; font-size:18px; }
+	.ltcolbox .title a.openclose{ float:right; display:block; width:21px; height:21px; text-indent:-5000px; background:url(/images/user/button-closebox.png) no-repeat; }
+
+.center{ float:left; width:900px; }	
+/* Right Column */
+.rightcolumn{ float:right; width:250px; }
+	.rightcolumn .sponsor{ margin-bottom:20px; }
+	.rightcolumn .rtcolbox-bod{ width:250px; background:url(/images/user/bgr-rtcolbox-bod.png) repeat-y; overflow:hidden; }
+	.rightcolumn .rtcolbox-bot{ clear:both; width:250px; height:6px; background:url(/images/user/bgr-rtcolbox-bot.png) no-repeat; }
+
+
+/* My Team */
+.myteam .title h2{ background:url(/images/user/ico-myteam.png) no-repeat left; }
+	.myteam .photos{ float:left; width:235px; padding:20px 0 0 20px; }
+	.myteam .photos li{ float:left; font-size:9px; margin-right:16px; text-transform:uppercase; }
+	.myteam .photos li .team{ width:98px; height:88px; padding:12px 0 0 12px; margin-bottom:2px; background:url(/images/user/bgr-teamlogo.png) no-repeat; }
+	.myteam .photos li .coach{ width:78px; height:88px; padding:12px 0 0 12px; margin-bottom:2px; background:url(/images/user/bgr-teamcoach.png) no-repeat; }
+	.myteam .text{ float:left; width:375px; font-size:12px; padding:35px 10px 0; }
+	.myteam .text ul{ width:375px; margin-bottom:15px; color:#c9c9b5; overflow:hidden; }
+	.myteam .text li{ float:left; margin-right:5px; padding-bottom:1px; }
+	.myteam .text li a.sendmsg{ display:block; padding-left:18px; background:url(/images/user/ico-send.png) no-repeat left; }
+	.myteam .text p{ margin-bottom:2px; }
+	.myteam .text br{ margin-bottom:2px; }
+
+/* My Messages */
+.mymessages .title h2{ margin-right:8px; background:url(/images/user/ico-mymsgs.png) no-repeat left; }
+	.mymessages .title a{ float:left; font-size:12px; font-weight:bold; vertical-align:middle; line-height:25px; }
+	.mymessages ul{ font-size:12px; padding:12px 10px; }
+	.mymessages li{ padding:6px; border-top:1px solid #dfdfcd; }
+	.mymessages li.first{ border-top:0; }
+	.mymessages li.highlight{ background:#f4ecd7; }
+	.mymessages li span.date{ padding-right:10px; }
+	.mymessages li span.notice{ font-weight:bold; font-style:italic; color:#900; }
+	.mymessages li a { color: #000;}
+	.mymessages li a.important { color:#900; }
+	.mymessages a.readmsg{ margin-left: 10px; padding-right:10px; background:url(/images/user/ico-dwnarrow.png) no-repeat right; color:#3269aa; }
+	.mymessages li a.replymsg{ padding-left:18px; background:url(/images/user/ico-send.png) no-repeat left; color:#3269aa;}
+	.mymessages .message-body { border: 1px solid #dfdfcd; margin: 5px; padding: 2px; background: #FFF; display: none;}
+	.mymessages .message-body p {padding: 5px;}
+	.mymessages li a.unread { font-weight: bold; text-decoration: underline;}
+
+/* My Calendar */
+.mycalendar .title h2{ margin-right:8px; background:url(/images/user/ico-mycalendar.png) no-repeat left; }
+	.mycalendar .title a{ float:left; font-size:12px; font-weight:bold; vertical-align:middle; line-height:25px; }
+	.mycalendar .monthday{ width:650px; font-size:14px; font-weight:bold; padding:0 15px; margin:5px 0; overflow:hidden; }
+	.mycalendar .monthday li{ float:left; line-height:20px; }
+	.mycalendar .monthday li.center{ width:605px; text-align:center; color:#333; }
+	.mycalendar .monthday li a{ font-size:30px; font-weight:normal; }
+	.mycalendar .days{ clear:both; color:#666; padding:0 5px; }
+	.mycalendar .days li{ float:left; width:90px; height:112px; margin-left:2px; padding-left:2px; border-left:1px solid #e8e9dc; }
+	.mycalendar .days li.first{ margin-left:0; padding-left:0; border-left:0; }
+	.mycalendar .days li .day{ padding:2px; margin-bottom:2px; text-align:center; text-transform:uppercase; background:#e8e9dc; }
+	.mycalendar .days li .event{ height:88px; padding:3px 5px; }
+	.mycalendar .days li .highlight{ background:#e0ebf0; }
+	.mycalendar .days li em{ font-weight:bold; color:#900; }
+	.mycalendar .days li p{ margin-bottom:10px; line-height:12px; color:#848484; }
+
+/* My Team */
+.mypictures .title h2{ margin-right:8px; background:url(/images/user/ico-uploadphotos.png) no-repeat left; }
+  .mypictures .title a{ float:left; font-size:12px; font-weight:bold; vertical-align:middle; line-height:25px; }
+ 	.mypictures .user-photos{ padding:20px 0 0 10px;}
+  .mypictures .user-photos .user-photo{ float:left; margin:12px 10px 10px 10px; font-size:9px; }
+	.mypictures .user-photos .user-photo .thumbnail{ width:100px; text-align:center; padding-left:4px; padding-right:4px;}
+  .mypictures .user-photos .user-photo .caption{text-align:center;  margin-top: 4px;}
+
+/* Generic Form Styles */
+/* Dialog Styles */
+.circles-dialog {
+	display: none;
+}
+
+.circles-dialog label {
+	font-size: 16px;
+}
+
+.circles-dialog .dialog-submit-buttons {
+	margin-top: 20px;
+}
+
+.circles-dialog .dialog-submit-buttons ul {
+	list-style: none;
+}
+
+.circles-dialog .dialog-submit-buttons li {
+	float: left;
+	margin-right: 20px;
+}
+
+.form-box {
+	width:670px; margin-bottom:20px;
+}
+
+.form-box-top {
+	width:670px; height:42px; background:url(/images/user/bgr-ltcolbox-top.png) no-repeat; overflow:hidden;
+}
+
+.form-box-bot {
+	width:670px; height:6px; background:url(/images/user/bgr-ltcolbox-bot.png) no-repeat;
+}
+
+.form-box-bod {
+	width:670px; padding-bottom:10px; background:url(/images/user/bgr-ltcolbox-bod.png) repeat-y; overflow:hidden;
+}
+
+.form-box .title {width:650px; height:32px; padding:10px 10px 0; overflow:hidden;}
+
+.form-box .title h2 {float:left; padding:2px 0 2px 50px; font-size:18px;}
+
+.form-box p { margin: 20px;}
+	
+.clear-both {
+	clear: both;
+}
+.form-line {
+	margin-top: 20px;
+	margin-bottom: 5px;
+	padding: 2px 2px 2px 2px;
+	display: block;
+}
+
+.form-line label {
+	float: left;
+	text-align: right;
+	padding-top: 5px;
+	font-size: 20px;
+	margin-right: 40px;
+	width: 150px;
+}
+
+.form-line .inline-label {
+	float: none;
+}
+
+.form-line .txt {
+	font-size: 20px;
+}
+
+.form-line .txt-area {
+	font-size: 20px;
+}
+
+.form-line select {
+	font-size: 20px;
+}
+
+.form-line .file-upload {
+	float: right;
+}
+
+.form-line .check-box {
+	margin-top: 5px;
+}
+
+.form-line .radio-button {
+	margin-top: 5px;
+}
+
+.form-line .disabled {
+	background: none;
+	border: 0.5px dotted #000;
+}
+
+.form-submit {
+	padding-bottom: 5px;
+	float: left;
+	margin-top: 5px;
+	margin-left: 190px;
+}
+
+#change_password_form label {
+	width: 200px;
+}
+
+#change_password_form .form-submit {
+	margin-left: 240px;
+}
+
+#weekly_calendar {
+	padding-top: 2px;
+}
+
+#reply_message_form label {
+	width: 250px;
+}
+
+/* extending #content styles - added by Vidhya */
+
+ #content .title{ font-size:23px; margin: 3px 3px 10px 3px;}
+ #content .subtitle{ font-weight: bold;font-size:14px;  margin: 3px 3px 6px 3px}
+ #content .nav{ width:640px;float:left; margin: 3px;margin-bottom: 17px;}
+ #content .nav .item {float:left;font-size:12px; font-weight:bold;}
+ #content .nav .item a{background:none;font-size:12px;}
+
+ #content  table {font-size:12px;margin:10px 0 15px 15px;text-align:left;width:100%;}	
+ #content table tr{height:23px; }
+ #content table tr.head{font-weight:bold; height:34px; }
+ #content table tr td{padding:3px 7px 3px 7px;}
+ #content table tr.head td{padding-top: 7px; }
+ #content table tr.last td{padding-bottom: 15px; }
+ #content .icon{height:16px;}
+
+/* extending #content styles - added by Vidhya */
+
+ .update_availability_btn{ color:#3269aa;font-size:12px; font-weight:bold; float:left; width:156px; height:26px; padding:0px; margin: 4px ; background:url(/images/user/bgr-buttons.png) no-repeat;  }
+ .availability_table .name{width:30%;}
+ .gamelist-table {border-style:solid;border-width:1px; border-color:gray;}
+
+/* roster page styles end */
+
+#picture-provider-form{margin: 20px 0 20px 30px; font-size:12px; }
+#album-select-form{margin: 20px 0 20px 30px; font-size:12px; }
+  #album-select-form .all-albums{margin-top:20px; }
+  #album-select-form .albums{}
+  #album-select-form .albums .album{float:left; margin:20px 20px 4px 0; vertical-align:middle;}
+  #album-select-form .albums .album .caption{text-align:center;}
+  #album-select-form #album-submit{margin: 20px 0 20px 50px}
+
+.preview-photos{ padding:10px 0 0 10px; width: 670px}
+.preview-photos .select_all{font-size:12px;  margin-left:10px }
+.preview-photos .preview-photo{ float:left; margin:12px 10px 10px 10px; font-size:9px; }
+.preview-photos .preview-photo .thumbnail{ width:100px; text-align:center; padding-left:4px; padding-right:4px;}
+.preview-photos .preview-photo .preview-check{text-align:center;  margin-top: 4px;}
+.preview-photos .preview-photos-submit{ margin:10px 50px 10px 20px; text-align:center;}
+
+#photo_dialog #photo_dialog_photo{ text-align:center;}
+#photo_dialog #photo_dialog_caption{ text-align:center; margin-top: 5px} 

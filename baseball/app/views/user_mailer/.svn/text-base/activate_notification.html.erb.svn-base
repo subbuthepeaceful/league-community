@@ -1,0 +1,69 @@
+<style type="text/css">
+#email_body {
+	width: 700px;
+	border: solid 2px #55A859;
+	font-family: "Arial", "Helvetica", serif;
+	font-size: 14px;
+	padding: 10px;
+}
+
+#email_body h1 {
+	font-size: 20px;
+}
+
+#email_body h2 {
+	font-size: 16px;
+}
+
+#email_body .tag-line {
+	font-style: italic;
+	margin-left: 200px;
+	color: #1771A6;
+}
+
+#email_body .header-logo {
+	margin-left: 250px;
+	margin-right: auto;
+}
+
+#email_body h3 {
+	font-style: italic;;
+}
+
+#email_body p.major {
+	color: #008F00;
+	font-size: 16px;
+}
+</style>
+<div id="email_body">
+	<h1>Welcome to <%= @hub.circle_name %></h1>
+	<h3>Welcome to the <%= @session.name %> at <%= @hub.name %></h3>
+	<br />
+	<p>Dear (Coach) <%= @user.contact.name %>,</p>
+	<br />
+	<div>
+	<%#= @message %>
+	<p>This is the third edition of a continuing program to provide interesting and useful tools to the volunteer community at <%= @hub.name %>. Inside you will find the beginnings of an interactive roster, schedules and post-game reports. Please direct all feedback to <%= auto_link(@hub.from_email) %>. 
+	</p>
+	<br />
+	<p>Thank you for your participation and we look forward to improving your experience with <%= @hub.name %>
+	</p>
+	<br />
+	</div>
+	<div>
+		<p>Your online account has been activated.</p>
+		<br />
+		<p>
+		Username : <%= @user.email %>
+		</p>
+		<p>
+		Password : <%= @password %>
+		</p>
+		<br />
+		<p>
+		Get Started at <%= auto_link(@activation_url) %>
+		</p>
+	</div>
+	<br />
+	Thank you<br />
+</div>

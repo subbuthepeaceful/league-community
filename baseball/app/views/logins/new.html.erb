@@ -1,0 +1,46 @@
+<div class="form-box">
+	<div class="form-box-top">
+		<div class="title">
+			<h2>Log In</h2>
+		</div>
+	</div>
+	<% if flash[:error] %>
+		<div class="error-message">
+			<%= flash[:error] %>
+			<% flash[:error] = nil %>
+		</div>
+	<% end -%>
+	<div class="form-box-bod">
+		<div id="login_form" class="circles-form">
+
+			<% form_tag '/logins/create' do -%>
+			<div class="form-line">
+				<%= label_tag 'login' %>
+				<%= text_field_tag 'login', @login, :class => "txt", :size => 30 %>
+			</div>
+			<div class="clear-both">
+			</div>
+
+			<div class="form-line">
+				<%= label_tag 'password' %>
+				<%= password_field_tag 'password', nil, :class => "txt", :size => 30 %>
+			</div>
+			<div class="clear-both">
+			</div>
+			<div class="form-line">
+				<%= label_tag ''%>
+				<a href="/forgot_password">Forgot password? Click here to reset</a>
+			</div>
+			<div class="clear-both">
+			</div>
+	
+			<%= submit_tag 'Login', :class => "ui-state-default ui-corner-all form-submit user-form-submit", :id => "login_submit" %>
+			<div class="clear-both">
+			</div>
+			<% end -%>
+		</div>
+	</div>
+	<div class="form-box-bot">
+	</div>
+</div>
+

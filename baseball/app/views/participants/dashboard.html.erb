@@ -1,0 +1,302 @@
+<script type="text/javascript">
+	$participantId = <%= @default_participant.id %>;
+</script>
+<div class="topmainbox">
+	<div class="profile">
+		<div class="image">
+			<% if @default_participant.profile_photo_file_name -%>
+				<%= image_tag @default_participant.profile_photo.url(:thumb)%>
+			<% else -%>
+				<%= image_tag "/images/hubs/programs/#{@default_participant.team.division.program.id}/user-default-photo-thumb.jpg"%>
+			<% end -%>
+			<a class="set-profile-photo">Upload Photo ></a>
+		</div>
+		<div class="text">
+
+			<ul class="info">
+				<li><h2><% if @default_participant.first_name != "N/A" -%>
+							<%= @default_participant.name %>
+						<% else -%>
+							Volunteer Coach
+						<% end -%>
+					</h2>
+				</li>
+				<li>Contact Name(s): <%= @default_participant.primary_contact.name %></li>
+				<li><b><%= @default_participant.team.division.program.name %></b>&nbsp;/ Team: <span class="team-name">&nbsp;<%= @team.name%>&nbsp;</span>
+					<% if @team.selected_name %>
+						&nbsp;<span class="team-name"><b>(<%= @team.selected_name %>)</b></span> 
+							<% if @is_head_coach || @is_assistant_coach %>
+								<a href="#" class="teamname">Change ></a>
+							<% end %>
+					<% else -%>
+						&nbsp; 
+							<% if @is_head_coach || @is_assistant_coach %>
+								<a href="#" class="teamname">Set Team Name ></a>
+							<% end -%>	
+					<% end -%>
+				</li>
+			</ul><!-- /Info -->
+			<ul class="buttons">
+				<% if @is_head_coach || @is_assistant_coach %>
+					<li><a class="signup" href="<%=gamelist_team_path(@team)%>"><b>Game Reports</b></a></li>
+				<% else -%>
+					<li><a class="signup" href="<%=gamelist_participant_path(@default_participant)%>">Games and Snacks</a></li>
+				<% end -%>
+				<% if @messages_enabled -%>
+					<li><a class="sendmsg" href="#">Send Team Message</a></li>
+				<% end -%>
+				<% if @pictures_enabled -%>
+					<li><a class="upload" href="<%=participant_pictures_path(@default_participant)%>">Share Photos</a></li>
+				<% end -%>
+				<li><a class="preferences" href="<%=availability_participant_path(@default_participant) %>">Set Availability</a></li>
+			</ul><!-- /Buttons -->
+		</div><!-- /Text -->
+	</div><!-- /Profile -->
+
+	<div class="sponsor">
+		<!--<a href="#"><img src="/images/user/pic-banner1.png" alt="image" /></a> -->
+		
+    	<%= random_sponsor_banner1('user/pic-banner1.png') %>
+		
+    <a class="allsponsors" href="mailto:<%= @hub.sponsor_email %>">Interested in becoming a Sponsor?</a>
+	</div><!-- /Sponsor -->
+</div><!-- /Top Mainbox -->
+<div class="topmainbox-bot"></div>
+
+<div id="columns">
+
+	<div class="leftcolumn">
+		<div class="myteam ltcolbox">
+			<div class="ltcolbox-top">
+				<div class="title">
+					<h2>My Team</h2>
+					<a class="openclose" href="#">Open/Close</a>
+				</div><!-- /Title -->
+			</div>
+			<div class="ltcolbox-bod">
+				<ul class="photos">
+					<li>
+						<div class="team">
+							<% if @team.logo_file_name %>
+								<%= image_tag @team.logo.url(:thumb) %>
+							<% else -%>
+								<%= image_tag "hubs/#{@hub.url_prefix}-tall.png"%>
+							<% end -%>
+						</div>
+						<p>Team</p>
+						<%if @is_head_coach || @is_assistant_coach %>
+							<a class="set-team-logo">Upload Logo ></a>
+						<% end -%>
+					</li>
+					<li>
+						<div class="coach">
+							<% if @head_coach && @head_coach.profile_photo_file_name %>
+								<%= image_tag @head_coach.profile_photo.url(:thumb) %>
+							<% end -%>
+						</div>
+						<p>Coach</p>
+						<%if @is_head_coach %>
+							<a class="set-contact-photo">Upload Photo ></a>
+						<% end -%>
+					</li>
+				</ul><!-- /Photos -->
+				<div class="text">
+					<p><strong>Coach</strong></p>
+					<ul>
+						<li><%= @team.head_coach.name if @team.head_coach %></li>
+						<% if @messages_enabled -%>
+							<li>|</li>
+							<li><a class="sendmsg" href="#">Send Message</a></li>
+						<% end -%>
+					</ul>
+					<p><strong>Assistant Coaches</strong><br />
+					<%= @team.assistant_coaches.collect { |ac| ac.name } %></p>
+				</div>
+			</div><!-- /My Team -->
+			<div class="ltcolbox-bot"></div><!-- /Bottom -->
+		</div><!-- /Body -->
+
+		<% if @messages_enabled -%>
+			<div class="mymessages ltcolbox">
+				<div class="ltcolbox-top">
+					<div class="title">
+						<h2>My Messages</h2>
+						<a href="<%= participant_messages_path(@default_participant) %>">(see all)</a>
+						<a class="openclose" href="#">Open/Close</a>
+					</div><!-- /Title -->
+				</div>
+				<div class="ltcolbox-bod">
+						<ul class="messages">
+							<% @messages.each_with_index do |message, i| -%>
+								<% if message.important -%>
+									<li class="highlight">
+								<% else -%>
+									<li>
+								<% end -%>
+										<span class="date"><%= message.sent.to_s(:message_sent) %></span>
+										<span class="sender"><%= message.contact.name %> : </span>
+										<% if message.important -%>
+											<img src="/images/user/ico-notice.png" alt="notice" /> <a href="#" class="msgsubject important" id="subject_<%=message.id%>"><%= message.subject %></a>
+										<% else -%>
+											<a href="#" class="msgsubject" id="subject_<%=message.id%>"><%= message.subject %></a>
+										<% end -%>
+										<% if message.unread(@default_participant.primary_contact) -%>
+											<script type="text/javascript">
+												var $msgId = <%= message.id %>;
+												var $msgItem = "#subject_" + $msgId;
+												$($msgItem).addClass("unread");
+											</script>
+										<% end -%>
+										<a class="readmsg" href="#">read</a>
+										<div class="message-body" id="body_<%=message.id%>">
+											<p><%= message.body %></p>
+											<br />
+											<a class="replymsg" href="#" id="reply_<%= message.id%>">Reply</a>
+										</div>
+								</li>
+							<% end -%>
+						</ul>
+					</div><!-- /My Messages -->
+				<div class="ltcolbox-bot"></div>
+			</div>
+		<% end -%>
+		
+		<div class="mycalendar ltcolbox">
+			<div class="ltcolbox-top">
+				<div class="title">
+					<h2>My Week's Calendar</h2>
+					<a href="<%=schedule_participant_path(@default_participant)%>">(full calendar)</a>
+					<a class="openclose" href="#">Open/Close</a>
+				</div><!-- /Title -->
+			</div>
+			<div class="ltcolbox-bod">
+				<div id="weekly_calendar">
+				</div>
+			</div>
+			<div class="ltcolbox-bot"></div>
+		</div><!-- /My Calendar -->
+	
+	<% if @pictures_enabled -%>	
+	    <div class="mypictures ltcolbox">
+	      <div class="ltcolbox-top">
+	        <div class="title">
+	          <h2>Team Pictures </h2>
+	          <% if @team_photos.size<5 %>
+	            <%= link_to '(share)', new_participant_picture_path(@default_participant)%>
+	          <% else -%>
+	            <%= link_to '(view all)', participant_pictures_path(@default_participant)%>
+	          <% end -%>
+	          <a class="openclose" href="#">Open/Close</a>
+	        </div><!-- /Title -->
+	      </div>
+	      <div class="ltcolbox-bod">
+	        <div class="user-photos">
+	          <% @team_photos.each do |photo| -%>
+	          <div class="user-photo">
+	            <div class="thumbnail"><%= picture_tag(photo) %></div>
+	            <div class="caption"><%= photo.title %></div>
+	          </div>
+	          <% end -%>
+	        </div><!-- /Photos -->
+	      </div><!-- /Team Pictures -->
+	      <div class="ltcolbox-bot"></div><!-- /Bottom -->
+	    </div><!-- /Body -->
+	<% end -%>
+	</div><!-- Left Column -->
+	
+	<% if @promo_enabled %>
+		<div class="rightcolumn">
+			<%= render :partial => "shared/circles_promo"%>
+		</div><!-- /Right Column -->
+	<% end -%>
+	
+	<div class="rightcolumn">
+		<%= render :partial => "shared/announcements"%>
+	</div>
+</div><!-- /Columns -->
+
+<%= render :partial => "shared/new_message"%>
+
+<%= render :partial => "shared/reply_message"%>
+
+<%= render :partial => "shared/event_detail" %>
+
+<%=  render :partial => 'shared/picture_popup' %>
+
+<%= render :partial => "set_team_name" %>
+
+<div id="set_participant_photo" class="circles-dialog">
+	<div class="form-box">
+		<div class="form-box-top">
+			<div class="title">
+				<h2>Upload a Profile Photo</h2>
+			</div>
+		</div>
+		<div class="form-box-bod">
+			<% form_for :participant, :url => update_profile_photo_participant_path(@default_participant), :html => { :name => "profile_photo_form", :multipart => true } do |f| %>
+				<div class="form-line">
+					<%= label_tag "select photo"%>
+					<%= f.file_field :profile_photo %>
+				</div>
+				<div class="clearboth">
+				</div>
+			<% end -%>
+		</div>
+		<div class="form-box-bot">
+		</div>
+	</div>
+</div>
+
+<div id="set_contact_photo" class="circles-dialog">
+	<div class="form-box">
+		<div class="form-box-top">
+			<div class="title">
+				<h2>Upload a Profile Photo</h2>
+			</div>
+		</div>
+		<div class="form-box-bod">
+			<% form_for :contact, :url => update_contact_profile_photo_participant_path(@default_participant), :html => { :name => "contact_profile_photo_form", :multipart => true } do |f| %>
+				<div class="form-line">
+					<%= label_tag "select photo"%>
+					<%= f.file_field :profile_photo %>
+				</div>
+				<div class="clearboth">
+				</div>
+			<% end -%>
+		</div>
+		<div class="form-box-bot">
+		</div>
+	</div>
+</div>
+
+<div id="set_team_logo" class="circles-dialog">
+	<div class="form-box">
+		<div class="form-box-top">
+			<div class="title">
+				<h2>Upload a Team Logo</h2>
+			</div>
+		</div>
+		<div class="form-box-bod">
+			<% form_for :team, :url => update_team_logo_participant_path(@default_participant), :html => { :name => "team_logo_form", :multipart => true } do |f| %>
+				<div class="form-line">
+					<%= label_tag "select logo"%>
+					<%= f.file_field :logo %>
+				</div>
+				<div class="clearboth">
+				</div>
+			<% end -%>
+		</div>
+		<div class="form-box-bot">
+		</div>
+	</div>
+</div>
+
+<div id="processing_window">
+	<div class="processing-status">
+		<%= image_tag "/images/ajax-loader.gif" %>
+	</div>
+</div>
+
+
+			
+	

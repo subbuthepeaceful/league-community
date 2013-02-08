@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/strongcirclescore/!svn/ver/464/branches/circlesbase/app/helpers
+END
+users_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/app/helpers/users_helper.rb
+END
+application_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/strongcirclescore/!svn/ver/464/branches/circlesbase/app/helpers/application_helper.rb
+END
+logins_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/strongcirclescore/!svn/ver/121/branches/circlesbase/app/helpers/logins_helper.rb
+END

@@ -1,0 +1,34 @@
+<div id="columns">
+
+	<div class="leftcolumn">
+		<div class="localsponsors ltcolbox">
+			<div class="ltcolbox-top">
+				<div class="title">
+					<h2>Local Sponsors </h2>
+          <a class="openclose" href="#">Open/Close</a>
+				</div><!-- /Title -->
+			</div>
+			<div class="ltcolbox-bod">
+        <% if @sponsors.empty? -%>
+          <p>Coming soon ... </p>
+        <% else -%>
+          <% @sponsors.each do |sponsor| -%>
+                <div class="sponsor">
+                    <div class="sponsor-logo"><%= sponsor_banner1(sponsor,'user/pic-banner1.png',200) %></div>
+                    <div class="sponsor-title"><%=  link_to(sponsor.company_name,sponsor.company_website, :target=>'blank') %></div>
+                </div>
+                <div class="clear-both"></div>
+          <% end -%>
+          <br/>
+        <% end -%>
+      </div><!-- /Sponsors-->
+			<div class="ltcolbox-bot"></div><!-- /Bottom -->
+		</div><!-- /Body -->
+
+  </div>
+  <div class="rightcolumn">
+  		<%= render :partial => "shared/circles_promo"%>
+  </div><!-- /Right Column -->
+</div><!-- /Columns -->
+
+<%=  render :partial => 'shared/picture_popup' %>

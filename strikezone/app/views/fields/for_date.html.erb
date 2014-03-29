@@ -1,0 +1,38 @@
+<table class="styled">
+  <thead>
+    <td>Game Slot</td>
+    <td>Team</td>
+    <td>Status/Action</td>
+  </thead>
+  <tbody>
+    <% @game_slots.each_with_index do |slot, j| -%>
+    <tr>
+      <td><%= slot.game_date_time_time_display %></td>
+      <td><%= slot.available? ? '' : slot.game.team.name %></td>
+      <% if slot.available? -%>
+        <td><a class="button flat game_slot" href="javascript:void(0);" id="<%=slot.id%>" >Claim ></a></td>
+      <% else -%>
+        <td>N/A</td>
+      <% end -%>
+    </tr>
+    <% end -%>
+  </tbody>
+</table>
+
+<script type="text/javascript">
+  $("a.game_slot").unbind("click");
+  $("a.game_slot").click(function() {
+    if ($(this).text() == "Claim >") {
+      $(this).parent().prev().text(currentTeam);
+      $(this).text("Undo >");
+
+      $(this).addClass("slot_chosen");
+    }
+    else if ($(this).text() == "Undo >") {
+      $(this).parent().prev().text('');
+      $(this).text("Claim >");
+
+      $(this).removeClass("slot_chosen");
+    }
+  });
+</script>

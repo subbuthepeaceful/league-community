@@ -1,0 +1,12 @@
+APPLICATION README:
+
+This application is designed to provide a simple management capability for a (Competitive) Soccer Team or Club.
+
+Acknowledgements:
+1. How to integrate Active Admin with Devise into a single User Model
+REFERENCE : http://dan.doezema.com/2012/02/how-to-implement-a-single-user-model-with-rails-activeadmin-and-devise/
+
+Issues:
+1. Differences between local environment and Production on Time zones - creates complications when creating Game Slots
+across PDT and PST boundaries. The code in 'lib/tasks/setup_club.rake' should be refactored to handle this environment
+difference

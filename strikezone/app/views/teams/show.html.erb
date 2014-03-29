@@ -1,0 +1,229 @@
+<div class="grid_12">
+  <div class="box">
+    <div class="header">
+      <h2><%= @team.name %> &mdash; Coach : <%= @team.coach %></h2>
+      <div class="add_game">
+        <% if @team.administerable?(current_user) -%>
+          <a class="button flat red add_game_btn">Add New Game</a>
+        <% end -%>
+      </div>
+    </div>
+    <div class="content">
+      <table class="styled">
+        <thead>
+            <td style="display:none;">Game #</td>
+            <td>Date</td>
+            <td>Time</td>
+            <td>Opponent</td>
+            <td>Home/Away</td>
+            <td>Location</td>
+            <td>Status</td>
+            <td>Comments</td>
+            <td>Actions</td>
+        </thead>
+        <tbody>
+          <% @team.games.each do |game| -%>
+            <tr>
+              <td class="game_id" style="display:none;"><%= game.id %></td>
+              <td class="game_date"><%= game.game_date.strftime('%m/%d/%Y (%a)') %></td>
+              <td><%= game.game_time ? game.game_time.strftime('%I:%M %p') : '' %></td>
+              <td class="game_opponent"><%= game.opponent %></td>
+              <td class="game_h_or_a"><%= game.home_or_away %><a class="button grey flat small toggle_home_away">Switch</a></td>
+              <td><%= game.field %></td>
+              <% if game.scheduled? -%>
+                <td><span class="badge green">OK</span></td>
+              <% else -%>
+                <td><span class="badge red">TBD</span></td>
+              <% end -%>
+              <td><%= game.comments %></td>
+              <% if @team.administerable?(current_user) -%>
+                <% if game.is_home_game -%>
+                  <td><a class="schedule_home_dialog_btn button blue flat">Schedule></a></td>
+                <% else -%>
+                  <td><a class="schedule_away_dialog_btn button blue flat">Schedule></a></td>
+                <% end -%>
+              <% else -%>
+                <td></td>
+              <% end -%>
+            </tr>  
+          <% end -%>  
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div style="display: none;" id="schedule_game_dialog" title="Schedule Game Dialog">   
+  <div class="content">
+    <span id="game_title">Game : </span>
+    <br />
+    <span id="game_date"></span>&nbsp;<a href="#" class="button change_date">Change Date ></a>
+    <hr />
+  </div>
+  <table width="100%">
+    <tr>
+      <td>
+        <div id="fields_for_age_group">
+            <div class="box tabbedBox">
+              <div class="header">
+              <h2>Home Fields</h2>
+                <ul>
+                  <% @fields.each_with_index do |field, i| -%>
+                    <li><a href="#field_<%=i%>"><%= field.name %></a></li>
+                    <span class="field_game_day_uri" style="display:none;"><%= "/fields/#{field.id}/for_date" %></span>
+                  <% end -%>
+                </ul>
+              </div>
+              <div class="content tabbed">
+                <% @fields.each_with_index do |field, i| -%>
+                  <div id="field_<%=i%>">
+                    <table class="styled">
+                      <thead>
+                        <td>Game Slot</td>
+                        <td>Team</td>
+                        <td>Status/Action</td>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                    </table>
+                  </div>
+                <% end -%>
+              </div>
+            </div>
+        </div>
+      </td>
+      <td>
+        <div class="coach_schedule">
+          <div class="box">
+            <div class="header">
+              <h2>Coach <%= @team.coach %>'s Schedule</h2>
+              <span class="coach_game_day_uri" style="display:none;"><%= "/members/#{@team.coach_as_member.id}/schedule_for_date" %></span>
+            </div>
+            <div class="content coach_schedule_table" id="coach_schedule_table_home">
+              <table class="styled">
+                <thead>
+                  <td>Game Time</td>
+                  <td>Team</td>
+                  <td>Location</td>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div style="display: none;" id="game_date_dialog" title="New Game Date">
+  <div class="content">
+    <form>
+      <label>New Game Date</label>
+      <input type="date" id="game_date_field"/>
+    </form>
+  </div>
+</div>
+
+<div style="display: none;" id="away_game_schedule_dialog" title="Away Game Details">
+  <div>
+    <span id="away_game_title">Game : </span>
+    <br />
+    <span id="away_game_date"></span>&nbsp;<a href="#" class="button change_date">Change Date ></a>
+    <hr />
+    <table width="100%">
+      <tr>
+        <td>
+        <form class="full">
+            <div class="row">
+              <label>Game Time</label>
+              <div>
+                <!--<input type="datetime" id="away_game_date_time_field" value=""/>-->
+                <div data-type="time" data-id="away_game_date_time_field"></div>
+              </div>
+            </div>
+            <div class="row">
+              <label>Game Location</label>
+              <div>
+                <input type="text" id="away_game_location_field" value=""/>
+              </div>
+            </div>
+            <div class="row">
+              <label>Location Address</label>
+              <div>
+                <input type="text" id="away_game_location_address_field" value=""/>
+              </div>
+            </div>
+        </form>
+        </td>
+        <td>
+          <div class="coach_schedule">
+            <div class="box">
+              <div class="header">
+                <h2>Coach <%= @team.coach %>'s Schedule</h2>
+                <span class="coach_game_day_uri" style="display:none;"><%= "/members/#{@team.coach_as_member.id}/schedule_for_date" %></span>
+              </div>
+              <div class="content coach_schedule_table" id="coach_schedule_table_away">
+                <table class="styled">
+                  <thead>
+                    <td>Game Time</td>
+                    <td>Team</td>
+                    <td>Location</td>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div style="display: none;" id="add_game_dialog" title="Add a New Game for <%= @team.name %>">
+  <div class="content">
+    <form class="full">
+      <div class="row">
+        <label>Game Opponent</label>
+        <div>
+          <input type="text" id="new_game_opponent" name="new_game_opponent" value="" />
+        </div>
+      </div>
+      <div class="row">
+        <label>Game Date</label>
+        <div>
+          <input type="date" id="new_game_date" name="new_game_date" length="10" value="" />
+        </div>
+      </div>
+      <div class="row">
+        <label>Home / Away</label>
+        <div style="padding-top: 25px;">
+          <input type="checkbox" id="new_game_home" name="new_game_home" value="home" checked="1"/>&nbsp;Home Game 
+        </div>
+      </div>
+      <div class="row">
+        <label>Comments</label>
+        <div>
+          <input type="text" id="new_game_comments" name="new_game_comments" />
+        </div>
+      </div> 
+    </form>
+  </div>
+</div>
+
+<div style="display:none;" id="toggle_home_away_dialog" title="Switch Home/Away">
+  <div class="content">
+    <h2>Are you sure you would like to change this game?</h2>
+    <br />
+    <p>Any scheduled field slots for a home game and coach's time slot will be released. You can then reschedule the game by clicking its Schedule button.</p>
+  </div>
+</div>
+
+
+<script>
+  var currentTeam = "<%= @team.name %>";
+  var currentTeamId = "<%= @team.id %>";
+</script>

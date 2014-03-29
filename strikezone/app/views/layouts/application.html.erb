@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//themes.googleusercontent.com" />
+  
+  <link rel="dns-prefetch" href="//ajax.googleapis.com" />
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="//agorbatchev.typepad.com" />
+  
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+     More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>Red Star Soccer - Team Manager Portal</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- iPhone: Don't render numbers as call links -->
+  <meta name="format-detection" content="telephone=no">
+  
+  <link rel="shortcut icon" href="favicon.ico" />
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <!-- This approach is needed because asset precompilation is needed for active admin but compressed css is not working in IE -->
+  <!--[if IE]>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/fonts/font-awesome.css">
+    <link rel="stylesheet" href="css/external/jquery-ui-1.8.21.custom.css">
+    <link rel="stylesheet" href="css/external/jquery.chosen.css">
+    <link rel="stylesheet" href="css/external/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/elements.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/typographics.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/ie-fixes.css">
+  <![endif]-->
+  <!--[if IE 8]><link rel="stylesheet" href="css/fonts/font-awesome-ie7.css"><![endif]-->
+
+  <%#= stylesheet_link_tag "clubsoccer", :media => "all" %>
+
+  <!-- The Scripts -->
+    
+  <!-- Load Webfont loader -->
+  <!-- <script type="text/javascript">
+    window.WebFontConfig = {
+      google: { families: [ 'PT Sans:400,700' ] },
+      active: function(){ $(window).trigger('fontsloaded') }
+    };
+  </script>
+  <script defer async src="https://ajax.googleapis.com/ajax/libs/webfont/1.0.28/webfont.js"></script>-->
+  <!--[if lt IE 9]><script src="js/mylibs/polyfills/selectivizr-min.js"></script><![endif]-->
+  <!--[if lt IE 10]><script src="js/mylibs/polyfills/excanvas.js"></script><![endif]-->
+  <!--[if lt IE 10]><script src="js/mylibs/polyfills/classlist.js"></script><![endif]-->
+  <!-- Grab frameworks from CDNs -->
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.4.2/lodash.min.js"></script>
+
+  <%= javascript_include_tag "application" %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <!-- Some dialogs etc. -->
+
+  <!-- The loading box -->
+  <div id="loading-overlay"></div>
+  <div id="loading">
+    <span>Loading...</span>
+  </div>
+  <!-- End of loading box -->
+  
+  <!--------------------------------->
+  <!-- Now, the page itself begins -->
+  <!--------------------------------->
+  
+  <!-- The toolbar at the top -->
+  <section id="toolbar">
+    <div class="container_12">
+          
+      <% if current_user %>
+        <div class="right">
+          <ul>
+            <% if current_user.superadmin? -%>
+              <li><a href="/admin">Club Administration</a></li>
+            <% end -%>
+            <li><a href="/users/sign_out">Logout</a></li>
+          </ul>
+        </div>
+      <% end -%>  
+      <div class="phone">
+        
+        <!-- User Link -->
+        <li><a href="#"><span class="icon icon-user"></span></a></li>
+        <!-- Navigation -->
+        <li><a class="navigation" href="#"><span class="icon icon-list"></span></a></li>
+      
+      </div>
+      
+    </div>
+  </section><!-- End of #toolbar -->
+  
+  <!-- The header containing the logo -->
+  <header class="container_12">
+    <a href="#"><%= image_tag "redstar-logo.png", :width => "100", :height => "100" %>
+      <div class="club-title">
+        <span class="club-name"><%= @club.name.upcase %></span>
+        <br />
+        <span class="club-tagline"><%= @club.tagline %></span>
+      </div>
+      <!-- <a href="#"><img src="img/logo.png" alt="Mango" width="191" height="60"></a>-->
+    <a class="phone-title" href="#"><%= image_tag "redstar-logo.png", :height => "22", :width => "70" %></a>
+    
+    <div class="buttons">
+      <a href="http://www.arbitersports.com" target="_blank">
+        <span class="icon"></span>
+        Arbiter
+      </a>
+      <% if current_user && @team -%>
+        <a href="<%= @team.external_url %>" target="_blank">
+                <span class="icon"></span>
+                NorCal
+        </a> 
+      <% else -%>
+        <a href="http://www.norcalpremier.com/teams/club/19529375.html" target="_blank">
+            <span class="icon"></span>
+            NorCal
+        </a> 
+      <% end -%>
+      <a href="http://go.teamsnap.com" target="_blank">
+        <span class="icon"></span>
+        TeamSnap
+      </a>
+      <a href="http://www.redstarsoccer.com" target="_blank">
+        <span class="icon"></span>
+        Red Star
+      </a>
+    </div>
+  </header><!-- End of header -->
+  
+  <!-- The container of the sidebar and content box -->
+  <div role="main" id="main" class="container_12 clearfix">
+  
+    <!-- The blue toolbar stripe -->
+    <section class="toolbar">
+      <% if current_user %>
+        <div class="user">
+          <span><%= current_user.name %></span>
+          <ul>
+            <li class="line"></li>
+            <li><a href="/users/sign_out">Logout</a></li>
+          </ul>
+        </div>
+      <% end -%>
+    </section><!-- End of .toolbar-->
+    
+    <!-- The sidebar -->
+    <% if current_user %>
+      <aside>
+        <div class="top">
+
+          <!-- Navigation -->
+          <nav><ul class="collapsible">
+          
+            <!-- <li class="current"><a href="#"><img src="img/icons/packs/fugue/16x16/dashboard.png" alt="" height=16 width=16>Dashboard (Coming) </a></li> -->
+            
+            <li>
+              <a class="open" href="javascript:void(0);"><img src="/img/icons/packs/fugue/16x16/ui-layered-pane.png" alt="" height=16 width=16>My Teams<span class="badge"><%= @user.teams.size %></span></a>
+              <ul>
+                <% @user.sorted_teams.each do |t| -%>
+                  <% if t == @team %>
+                    <li class="current">
+                  <% else -%>
+                    <li>
+                  <% end -%>      
+                  <a href="<%= member_team_path(@user, t) %>"><span class="icon icon-list"></span><%= t.name %></a></li>
+                <% end -%>
+              </ul>
+            </li>
+             <li>
+              <a class="open" href="javascript:void(0);"><img src="/img/icons/packs/fugue/16x16/ui-layered-pane.png" alt="" height=16 width=16>My Coaches<span class="badge"><%= @user.calendars.size %></span></a>
+              <ul>
+                <% @user.calendars.each do |c| -%>
+                  <% if c == @calendar -%>
+                    <li class="current">
+                  <% else -%>
+                    <li>
+                  <% end -%>
+                  <a href="<%= member_calendar_path(@user, c)%>"><span class="icon icon-calendar"></span><%= "#{c.name}" %></a></li> 
+                <% end -%>
+              </ul>
+            </li>
+             <li>
+              <a class="open" href="javascript:void(0);"><img src="/img/icons/packs/fugue/16x16/ui-layered-pane.png" alt="" height=16 width=16>My Fields<span class="badge"><%= @user.fields.size %></span></a>
+              <ul>
+                <% @user.fields.each do |f| -%>
+                  <% if f == @field -%>
+                    <li class="current">
+                  <% else -%>
+                    <li>
+                  <% end -%>
+                  <a href="<%= field_path(f)%>"><span class="icon icon-calendar"></span><%= "#{f.name}" %></a></li> 
+                <% end -%>
+              </ul>
+            </li>
+             <li>
+              <a class="open" href="javascript:void(0);"><img src="/img/icons/packs/fugue/16x16/ui-layered-pane.png" alt="" height=16 width=16>Other Fields<span class="badge"><%= @user.other_fields.size %></span></a>
+              <ul>
+                <% @user.other_fields.each do |f| -%>
+                  <% if f == @field -%>
+                    <li class="current">
+                  <% else -%>
+                    <li>
+                  <% end -%>
+                  <a href="<%= field_path(f)%>"><span class="icon icon-calendar"></span><%= "#{f.name}" %></a></li> 
+                <% end -%>
+              </ul>
+            </li>
+             <li>
+              <a class="open" href="javascript:void(0);"><img src="/img/icons/packs/fugue/16x16/ui-layered-pane.png" alt="" height=16 width=16>Related Teams<span class="badge"><%= @user.other_teams.size %></span></a>
+              <ul>
+                <% @user.other_teams.each do |t| -%>
+                  <% if t == @team -%>
+                    <li class="current">
+                  <% else -%>
+                    <li>
+                  <% end -%>
+                  <a href="<%= member_team_path(@user, t)%>"><span class="icon icon-calendar"></span><%= "#{t.name}" %></a></li> 
+                <% end -%>
+              </ul>
+            </li>
+            
+          </ul></nav><!-- End of nav -->
+          
+        </div><!-- End of .top -->
+      </aside><!-- End of sidebar -->
+    <% end -%>
+    
+    <!-- Here goes the content. -->
+    <section id="content" class="container_12 clearfix" data-sort=true>
+    
+      <%= yield %>
+    
+    </section><!-- End of #content -->
+    
+  </div><!-- End of #main -->
+  
+  <!-- The footer -->
+  <footer class="container_12">
+    <ul class="grid_6">
+      <li><a href="#"><%= @club.name %></a></li>
+      <li><a href="#">__</a></li>
+    </ul>
+    
+    <span class="grid_6">
+      This is designed to be an open-source project to help youth sports
+    </span>
+  </footer><!-- End of footer -->
+
+  <!-- Spawn $$.loaded -->
+  <script>
+    $$.loaded();
+  </script>
+  
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+  <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+  <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+</body>
+</html>

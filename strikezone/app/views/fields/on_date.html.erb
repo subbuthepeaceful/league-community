@@ -1,0 +1,25 @@
+  <div class="box tabbedBox">
+    <div class="header">
+    <h2>Fields</h2>
+      <ul>
+        <% @fields.each_with_index do |field, i| -%>
+          <li><a href="#field_<%=i%>"><%= field.name %></a></li>
+        <% end -%>
+      </ul>
+    </div>
+    <div class="content tabbed">
+      <% @fields.each_with_index do |field, i| -%>
+        <div id="field_<%=i%>">
+          <table class="styled">
+            <thead>
+              <td>Game Slot</td>
+              <td>Team</td>
+              <td>Status/Action</td>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      <% end -%>
+    </div>
+  </div>

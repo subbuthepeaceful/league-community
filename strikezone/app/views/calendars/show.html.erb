@@ -1,0 +1,40 @@
+<div class="grid_12">
+  <div class="box">
+    <div class="header">
+      <h2><%= @desired_calendar_user.name + "'s Calendar" %>
+    </div>
+    <% @calendar.each do |game_date, games_on_date| -%>
+      <div class="box">
+        <div class="header">
+          <h2><%= game_date %>
+        </div>
+        <div class="content">
+          <table class="styled">
+            <thead>
+              <td>Game Time</td>
+              <td>Team</td>
+              <td>Opponent</td>
+              <td>Location</td>
+              <td>Contact</td>
+            </thead>
+            <tbody>
+              <% games_on_date.each do |game| -%>
+                <tr>
+                  <td><%= game.game_time ? game.game_time.strftime('%I:%M %p') : '' %></td>
+                  <td><%= game.team.name %></td>
+                  <td><%= game.opponent %></td>
+                  <td><%= game.field %></td>
+                  <td class="underline-link">
+                    <% if game.team.manager -%>
+                      <a href="mailto:<%= game.team.manager.email %>"><%= game.team.manager.email %></a>
+                    <% end -%>
+                  </td>
+                </tr>
+              <% end -%>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    <% end -%>
+  </div>
+</div>

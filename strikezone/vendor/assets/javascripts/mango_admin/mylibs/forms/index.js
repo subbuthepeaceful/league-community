@@ -1,0 +1,15 @@
+//= require mylibs/forms/jquery.autosize
+//= require mylibs/forms/jquery.checkbox
+//= require mylibs/forms/jquery.chosen
+//= require mylibs/forms/jquery.cleditor
+//= require mylibs/forms/jquery.colorpicker
+//= require mylibs/forms/jquery.ellipsis
+//= require mylibs/forms/jquery.fileinput
+//= require mylibs/forms/jquery.fullcalendar
+//= require mylibs/forms/jquery.maskedinput
+//= require mylibs/forms/jquery.mousewheel
+//= require mylibs/forms/jquery.placeholder
+//= require mylibs/forms/jquery.pwdmeter
+//= require mylibs/forms/jquery.ui.datetimepicker
+//= require mylibs/forms/jquery.ui.spinner
+//= require mylibs/forms/jquery.validate

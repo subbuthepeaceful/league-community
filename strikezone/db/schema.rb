@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120816052226) do
+ActiveRecord::Schema.define(:version => 20140330192128) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -42,6 +42,10 @@ ActiveRecord::Schema.define(:version => 20120816052226) do
   create_table "clubs", :force => true do |t|
     t.string "name"
     t.string "tagline"
+  end
+
+  create_table "divisions", :force => true do |t|
+    t.string "name"
   end
 
   create_table "fields", :force => true do |t|
@@ -79,6 +83,11 @@ ActiveRecord::Schema.define(:version => 20120816052226) do
     t.text     "comments"
   end
 
+  create_table "leagues", :force => true do |t|
+    t.string "name"
+    t.string "url"
+  end
+
   create_table "roles", :force => true do |t|
     t.integer "user_id",                        :null => false
     t.integer "team_id",                        :null => false
@@ -94,8 +103,8 @@ ActiveRecord::Schema.define(:version => 20120816052226) do
   create_table "teams", :force => true do |t|
     t.string  "name",         :null => false
     t.string  "gender"
-    t.integer "age_group_id", :null => false
     t.string  "external_url"
+    t.integer "division_id",  :null => false
   end
 
   create_table "users", :force => true do |t|

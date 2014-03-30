@@ -1,7 +1,8 @@
 class Team < ActiveRecord::Base
   attr_accessible :name, :gender, :age_group_id, :external_url
 
-  belongs_to :age_group
+  # belongs_to :age_group
+  belongs_to :division
   has_many :roles
   has_many :users, :through => :roles
 

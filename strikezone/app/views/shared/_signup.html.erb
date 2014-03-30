@@ -1,8 +1,5 @@
-<h1>Welcome to StrikeZone - A Work in Progress towards v2</h1>
-
-
 <div class="grid_16">
-  <%= form_for @user, :as => :user, :url => user_session_path, :html => { :class => "box"} do |f| -%>
+  <%= form_for @user, :as => :user, :url => user_registration_path, :html => { :class => "box"} do |f| -%>
   <% if flash[:alert] -%>
     <div class="alert error">
       <span class="icon"></span>
@@ -10,7 +7,7 @@
     </div>
   <% end -%>
     <div class="header">
-      <h2>Sign In</h2>
+      <h2>Sign Up</h2>
     </div>
     <div class="content">
       <div class="row">
@@ -25,12 +22,18 @@
           <%= f.password_field :password %>
         </div>
       </div>
+      <div class="row">
+        <%= f.label :password_confirmation %>
+        <div>
+          <%= f.password_field :password_confirmation %>
+        </div>
+      </div>
     </div>
     <div class="actions">
       <div class="left">
       </div>
       <div class="right">
-        <%= f.submit "Sign In" %>
+        <%= f.submit "Sign Up" %>
       </div>
     <div>
   <% end -%>

@@ -1,8 +1,9 @@
 class Team < ActiveRecord::Base
-  attr_accessible :name, :gender, :age_group_id, :external_url
+  attr_accessible :name, :gender, :age_group_id, :external_url, :division_id, :authorized_user_ids
 
-  # belongs_to :age_group
   belongs_to :division
+  has_and_belongs_to_many :authorized_users
+
   has_many :roles
   has_many :users, :through => :roles
 
@@ -37,5 +38,9 @@ class Team < ActiveRecord::Base
 
   def administerable?(user)
     users.include?(user)
+  end
+
+  def authorized_user_list
+    authorized_users.collect { |a| a.name }.join(",")
   end
 end

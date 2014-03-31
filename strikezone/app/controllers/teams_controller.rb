@@ -7,6 +7,5 @@ class TeamsController < ApplicationController
     @user = User.find(params[:member_id])
     @team = Team.find(params[:id])
 
-    @fields = @team.age_group.fields
   end
 end

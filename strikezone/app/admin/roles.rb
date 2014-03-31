@@ -9,7 +9,7 @@ ActiveAdmin.register Role do
     f.inputs "Details" do 
       f.input :user
       f.input :team
-      f.input :name, :as => :select, :collection => ["Coaching Staff"]
+      f.input :name, :as => :select, :collection => ["Coach"]
     end
     f.buttons
   end

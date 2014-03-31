@@ -4,9 +4,9 @@ class MembersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    # if @user.teams
-    #   redirect_to member_team_path(@user, @user.teams[0])
-    # end
+    if @user.teams
+       redirect_to member_team_path(@user, @user.teams[0])
+    end
   end
 
   def schedule_for_date

@@ -21,9 +21,6 @@ end
 
 gem 'jquery-rails', '2.3.0'
 
-group :development do
-	gem 'capistrano'
-end
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.5'
@@ -53,7 +50,7 @@ gem 'devise', "~> 2.0.0"
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano', '2.12.0'
 
 # To use debugger
 gem 'debugger'

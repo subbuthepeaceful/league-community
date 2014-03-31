@@ -10,6 +10,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
         password: params[:user][:password],
         password_confirmation: params[:user][:password_confirmation]
         )
+      authorized_user.teams.each do |team|
+        Role.create(user: user, team: team, name: "Coach")
+      end
       sign_in user
       flash[:notice] = "Welcome to Strikezone"
       redirect_to member_path(user)

@@ -43,4 +43,7 @@ class Team < ActiveRecord::Base
   def authorized_user_list
     authorized_users.collect { |a| a.name }.join(",")
   end
+
+  def add_as_coach(user)
+  end
 end

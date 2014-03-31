@@ -3,6 +3,10 @@
 
 <div class="grid_16">
   <%= form_for @user, :as => :user, :url => user_session_path, :html => { :class => "box"} do |f| -%>
+<div class="alert note">
+    <span class="icon"></span>
+    <strong>If you have not signed up yet, please <a href="/users/sign_up" class="button flat">Sign Up</a> first</strong>
+</div>
   <% if flash[:alert] -%>
     <div class="alert error">
       <span class="icon"></span>

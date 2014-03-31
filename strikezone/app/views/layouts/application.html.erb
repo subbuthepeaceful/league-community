@@ -162,58 +162,6 @@
                 <% end -%>
               </ul>
             </li>
-             <li>
-              <a class="open" href="javascript:void(0);"><img src="/img/icons/packs/fugue/16x16/ui-layered-pane.png" alt="" height=16 width=16>My Coaches<span class="badge"><%= @user.calendars.size %></span></a>
-              <ul>
-                <% @user.calendars.each do |c| -%>
-                  <% if c == @calendar -%>
-                    <li class="current">
-                  <% else -%>
-                    <li>
-                  <% end -%>
-                  <a href="<%= member_calendar_path(@user, c)%>"><span class="icon icon-calendar"></span><%= "#{c.name}" %></a></li> 
-                <% end -%>
-              </ul>
-            </li>
-             <li>
-              <a class="open" href="javascript:void(0);"><img src="/img/icons/packs/fugue/16x16/ui-layered-pane.png" alt="" height=16 width=16>My Fields<span class="badge"><%= @user.fields.size %></span></a>
-              <ul>
-                <% @user.fields.each do |f| -%>
-                  <% if f == @field -%>
-                    <li class="current">
-                  <% else -%>
-                    <li>
-                  <% end -%>
-                  <a href="<%= field_path(f)%>"><span class="icon icon-calendar"></span><%= "#{f.name}" %></a></li> 
-                <% end -%>
-              </ul>
-            </li>
-             <li>
-              <a class="open" href="javascript:void(0);"><img src="/img/icons/packs/fugue/16x16/ui-layered-pane.png" alt="" height=16 width=16>Other Fields<span class="badge"><%= @user.other_fields.size %></span></a>
-              <ul>
-                <% @user.other_fields.each do |f| -%>
-                  <% if f == @field -%>
-                    <li class="current">
-                  <% else -%>
-                    <li>
-                  <% end -%>
-                  <a href="<%= field_path(f)%>"><span class="icon icon-calendar"></span><%= "#{f.name}" %></a></li> 
-                <% end -%>
-              </ul>
-            </li>
-             <li>
-              <a class="open" href="javascript:void(0);"><img src="/img/icons/packs/fugue/16x16/ui-layered-pane.png" alt="" height=16 width=16>Related Teams<span class="badge"><%= @user.other_teams.size %></span></a>
-              <ul>
-                <% @user.other_teams.each do |t| -%>
-                  <% if t == @team -%>
-                    <li class="current">
-                  <% else -%>
-                    <li>
-                  <% end -%>
-                  <a href="<%= member_team_path(@user, t)%>"><span class="icon icon-calendar"></span><%= "#{t.name}" %></a></li> 
-                <% end -%>
-              </ul>
-            </li>
             
           </ul></nav><!-- End of nav -->
           

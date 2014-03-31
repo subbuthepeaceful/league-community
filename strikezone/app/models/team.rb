@@ -7,7 +7,10 @@ class Team < ActiveRecord::Base
   has_many :roles
   has_many :users, :through => :roles
 
-  has_many :games, :order => "game_date"
+  has_many :home_games, :foreign_key => :home_team_id
+  has_many :away_games, :foreign_key => :away_team_id
+
+  has_many :players
 
   def coach
     r = roles.find_by_name("Coach")

@@ -1,23 +1,11 @@
 class Game < ActiveRecord::Base
-  attr_accessible :team_id, :external_id, :game_date, :game_time, :opponent, :is_home_game, :location, :status, :field_duties, :game_slot_id, :comments, :division, :league
+  attr_accessible :home_team_id, :away_team_id, :game_date, :game_time, :location, :status, :field_duties, :comments, :division, :league
 
-  belongs_to :team
-  belongs_to :game_slot
-
-  def field
-    if game_slot
-      game_slot.field.name
-    else
-      location
-    end
-  end
+  belongs_to :home_team, :class_name => "Team"
+  belongs_to :away_team, :class_name => "Team"
 
   def scheduled?
     game_time? ? true : false
-  end
-
-  def home_or_away
-    is_home_game ? "Home" : "Away"
   end
 
 end

@@ -20,7 +20,7 @@ production:
   database: strikezone_production
   host: localhost
   username: strikezone
-  password: 
+  password: ev1Plays
 
 cucumber:
   <<: *test

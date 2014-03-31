@@ -1,9 +1,9 @@
-set :application, "clubsoccer"
-set :repository,  "git@github.com:subbuthepeaceful/clubsoccer.git"
+set :application, "strikezone"
+set :repository,  "git@github.com:subbuthepeaceful/league-community.git"
 
 set :scm, :git
-set :user, "clubsoccer"
-set :deploy_to, "/home/clubsoccer/applications/#{application}"
+set :user, "strikezone"
+set :deploy_to, "/home/strikezone/applications/#{application}"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
 role :web, "75.98.32.39"                          # Your HTTP server, Apache/etc

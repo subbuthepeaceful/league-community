@@ -12,6 +12,10 @@ class Team < ActiveRecord::Base
 
   has_many :players
 
+  def to_s
+    name
+  end
+
   def coach
     r = roles.find_by_name("Coach")
     r ? r.user.name : "TBD" 
@@ -57,4 +61,5 @@ class Team < ActiveRecord::Base
     @games.flatten!.sort! { |a,b| a.game_time <=> b.game_time }
     @games
   end
+
 end

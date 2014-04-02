@@ -5,6 +5,7 @@ ActiveAdmin.register Team do
     column :division
     column :name
     column :authorized_user_list
+    default_actions
   end
 
   form do |f|

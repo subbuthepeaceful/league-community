@@ -8,4 +8,8 @@ class Game < ActiveRecord::Base
     game_time? ? true : false
   end
 
+  def opponent(team)
+    team == home_team ? "vs. #{away_team}" : " at #{home_team}"
+  end
+
 end

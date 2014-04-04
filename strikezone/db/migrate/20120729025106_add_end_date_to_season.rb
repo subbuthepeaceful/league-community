@@ -4,6 +4,6 @@ class AddEndDateToSeason < ActiveRecord::Migration
   end
 
   def down
-    remove_column :season, :end_date
+    remove_column :seasons, :end_date
   end
 end

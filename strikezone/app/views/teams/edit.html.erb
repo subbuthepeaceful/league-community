@@ -1,0 +1,39 @@
+<div class="grid_16">
+    <%= form_for @team, :url => member_team_path(current_user, @team), :method => :put, :html => { :class => "box"} do |f| -%>
+      <div class="header">
+        <h2>Manage Team Roster</h2>
+      </div>
+      <div class="content">
+        <table class="styled">
+          <thead>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Jersey #</td>
+          </thead>
+          <tbody>
+          <% @team.players.each_with_index do |p, i| -%>
+            <tr>
+              <td><%= text_field_tag "player_fname_#{i}", p.first_name %></td>
+              <td><%= text_field_tag "player_lname_#{i}", p.last_name %></td>
+              <td><%= text_field_tag "player_jersey_num_#{i}", p.jersey_number, size: 3 %></td>
+            </tr>
+          <% end -%>
+          <% for i in @team.players.size..15 -%>
+              <tr>
+                <td><%= text_field_tag "player_fname_#{i}" %></td>
+                <td><%= text_field_tag "player_lname_#{i}" %></td>
+                <td><%= text_field_tag "player_jersey_num_#{i}", '', size: 3 %></td>
+              </tr>
+            <% end -%>
+          </tbody>
+        </table>
+      </div>
+      <div class="actions">
+        <div class="left">
+        </div>
+        <div class="right">
+          <%= submit_tag "Update Roster" %>
+        </div>
+      </div>
+    <% end -%>
+</div>

@@ -30,6 +30,7 @@ Strikezone::Application.routes.draw do
 
   resources :teams do
     resources :games
+    resources :players
   end
 
   resources :age_groups do

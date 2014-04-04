@@ -11,4 +11,3 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require mango_admin
-//= require clubsoccer

@@ -4,7 +4,11 @@
       <h2><%= @team.name %> &mdash; Coach : <%= @team.coach %></h2>
       <div class="add_game">
         <% if @team.administerable?(current_user) -%>
-          <a class="button flat red add_game_btn">Manage Roster</a>
+          <% unless @team.players && @team.players.size > 1 %>
+            <a class="button flat red" href="<%= edit_member_team_path(current_user, @team) %>">Manage Roster</a>
+          <% else -%>
+            <a class="button flat grey" href="<%= edit_member_team_path(current_user, @team) %>">Manage Roster (<%= @team.players.size %>)</a>
+          <% end -%>
         <% end -%>
       </div>
     </div>

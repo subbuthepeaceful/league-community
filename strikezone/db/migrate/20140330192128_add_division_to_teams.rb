@@ -6,7 +6,7 @@ class AddDivisionToTeams < ActiveRecord::Migration
   end
 
   def down
-    add_column :teams, :age_group_id, :null => false
+    add_column :teams, :age_group_id, :integer, :null => false
 
     remove_column :teams, :division_id
   end

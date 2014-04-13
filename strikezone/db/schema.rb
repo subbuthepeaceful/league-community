@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140331132451) do
+ActiveRecord::Schema.define(:version => 20140413002901) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -66,6 +66,15 @@ ActiveRecord::Schema.define(:version => 20140331132451) do
     t.text   "instructions"
   end
 
+  create_table "game_reports", :force => true do |t|
+    t.integer "game_id",         :null => false
+    t.integer "user_id",         :null => false
+    t.string  "home_or_away"
+    t.integer "home_team_score"
+    t.integer "away_team_score"
+    t.text    "comments"
+  end
+
   create_table "game_slot_patterns", :force => true do |t|
     t.string  "day_of_the_week",                                    :null => false
     t.time    "first_game_time", :default => '2000-01-01 16:00:00'
@@ -94,6 +103,15 @@ ActiveRecord::Schema.define(:version => 20140331132451) do
   create_table "leagues", :force => true do |t|
     t.string "name"
     t.string "url"
+  end
+
+  create_table "player_statistics", :force => true do |t|
+    t.integer "game_report_id",  :null => false
+    t.integer "player_id",       :null => false
+    t.float   "innings_pitched"
+    t.integer "pitch_count"
+    t.float   "innings_caught"
+    t.boolean "all_star_vote"
   end
 
   create_table "players", :force => true do |t|

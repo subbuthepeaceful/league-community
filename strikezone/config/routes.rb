@@ -29,7 +29,9 @@ Strikezone::Application.routes.draw do
   end
 
   resources :teams do
-    resources :games
+    resources :games do
+      resources :game_reports
+    end
     resources :players
   end
 
@@ -55,6 +57,7 @@ Strikezone::Application.routes.draw do
   end
 
   resources :games do
+
     member do
       post 'update_away_details'
       post 'switch_home_away'

@@ -1,0 +1,92 @@
+<div class="grid_16">
+  <%= form_for @game_report, :url => team_game_game_reports_path(@team, @game), :html => { :class => "box"} do |f| -%>
+    <div class="header game-report-header">
+      <h2>Game Report : <%= @game.away_team %>(Away) at <%= @game.home_team %>(Home) | <%= @game.game_time.strftime('%m/%d/%Y (%a) %I:%M %p') %></h2>
+    </div>
+    <div class="content">
+      <div class="grid_2">
+        <h2>Score</h2>
+        <div class="row">
+          <label>Away</label>
+            <div>
+              <%= text_field_tag "away_team_score", '', size: 3 %>
+            </div>
+        </div>
+        <div class="row">
+          <label>Home</label>
+          <div>
+            <%= text_field_tag "home_team_score", '', size: 3 %>
+          </div>
+        </div>
+      </div>
+      <div class="grid_8 right">
+        <h2>Comments</h2>
+        <%= text_area_tag "comments", '', rows: 8, cols: 100 %>
+      </div>
+    </div>
+    <hr />
+    <hr />
+    <div class="content">
+      <div class="grid_4">
+        <h2>Star Player</h2>
+        <div class="row">
+          <label>Player</label>
+          <div>
+            <%= select_tag("all_star_vote_1", options_from_collection_for_select(@game.opponent(@team).players, :id, :full), prompt: "Select a Player") %>
+           </div>
+        </div>
+      </div>
+      <div class="grid_4">
+        <h2>Star Player</h2>
+        <div class="row">
+          <label>Player</label>
+          <div>
+            <%= select_tag("all_star_vote_2", options_from_collection_for_select(@game.opponent(@team).players, :id, :full), prompt: "Select a Player") %>
+          </div>
+        </div>
+      </div>
+      <div class="grid_4">
+        <h2>Star Player</h2>
+        <div class="row">
+          <label>Player</label>
+          <div>
+            <%= select_tag("all_star_vote_3", options_from_collection_for_select(@game.opponent(@team).players, :id, :full), prompt: "Select a Player") %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <hr />
+    <div class="content">
+      <div class="grid_12">
+        <h2>Player Statistics</h2>
+        <table class="styled">
+          <thead>
+            <td>Player</td>
+            <td>Innings Pitched</td>
+            <td>Pitch Count</td>
+            <td>Innings Caught</td>
+          </thead>
+          <tbody>
+            <% @team.players.each_with_index do |p, i| -%>
+              <tr>
+                <td><%= p.full %></td>
+                <td><%= text_field_tag "inn_p_player_#{i}", '', size: 3 %></td>
+                <td><%= text_field_tag "pitch_ct_player_#{i}", '', size: 3 %></td>
+                <td><%= text_field_tag "inn_c_player_#{i}", '', size: 3 %></td>
+              </tr>
+            <% end -%>
+          </tbody>    
+        </table>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="left">
+      </div>
+      <div class="right">
+        <%= submit_tag "Submit Report" %>
+      </div>
+    </div>
+  <% end -%>
+
+</div>

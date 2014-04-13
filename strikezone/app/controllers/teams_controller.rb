@@ -16,7 +16,9 @@ class TeamsController < ApplicationController
     @user = User.find(params[:member_id])
     @team = Team.find(params[:id])
 
-    @team.players.delete_all
+    @team.players.each do |p|
+      p.delete
+    end
     for i in 0..15
       unless params["player_fname_#{i}"].blank?
         player = Player.create(first_name: params["player_fname_#{i}"], 

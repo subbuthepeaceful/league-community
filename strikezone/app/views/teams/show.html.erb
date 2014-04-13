@@ -31,8 +31,28 @@
               <td><%= game.game_time ? game.game_time.strftime('%I:%M %p') : '' %></td>
               <td class="game_opponent"><%= game.opponent(@team) %></td>
               <td><%= game.location %></td>
-              <td class="game_score"></td>
-              <td></td>
+              <td class="game_score"><%= game.final_score %></td>
+              <td>
+                <% if game.home_team_report -%>
+                  <span class="badge green">Home</span>
+                <% else -%>
+                  <% if game.home_team === @team -%>
+                    <a class="button flat" href="<%= new_team_game_game_report_path(@team, game) %>">Enter</a>
+                  <% else -%>
+                    <span class="badge red">Home</span>
+                  <% end -%>
+                <% end -%>
+                &nbsp; | &nbsp;
+                <% if game.away_team_report -%>
+                  <span class="badge green">Away</span>
+                <% else -%>
+                  <% if game.away_team === @team -%>
+                    <a class="button flat" href="<%= new_team_game_game_report_path(@team, game) %>">Enter</a>
+                  <% else -%>
+                    <span class="badge red">Away</span>
+                  <% end -%>
+                <% end -%>
+              </td>
             </tr>  
           <% end -%>  
         </tbody>

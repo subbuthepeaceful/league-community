@@ -13,6 +13,7 @@
  */
 
 span.league-name { font-size : 24px; }
+span.score { font-size: 24px;}
 
 form#new_user { width: 500px;}
 
@@ -31,3 +32,4 @@ a.toggle_home_away { float: right;}
 div.game-report-header h2 {
   font-weight: bold; font-size: 16px;
 }
+

@@ -30,7 +30,11 @@ Strikezone::Application.routes.draw do
 
   resources :teams do
     resources :games do
-      resources :game_reports
+      resources :game_reports do
+        member do
+          get 'redo'
+        end
+      end
     end
     resources :players
   end

@@ -1,0 +1,53 @@
+<div class="grid_16">
+  <div class="box">
+    <div class="header game-report-header">
+      <h2>Game Report : <%= @game.away_team %>(Away) at <%= @game.home_team %>(Home) | <%= @game.game_time.strftime('%m/%d/%Y (%a) %I:%M %p') %></h2>
+    </div>
+    <div class="content">
+      <div class="grid_2">
+        <h2>Score</h2>
+            <span class="score"><%= @game_report.away_team_score %></span>
+            &nbsp;&dash;&nbsp;
+            <span class="score"><%= @game_report.home_team_score %></span>
+      </div>
+      <div class="grid_4">
+        <h2>Comments</h2>
+          <span class="comments"><%= @game_report.comments %></span>
+      </div>
+      <div class="grid_4 right">
+        <h2>Star Players</h2>
+        <span class="star-players"><%= @game_report.star_players %></span>
+      </div>
+    </div>
+    <div class="grid_12">
+      <div class="content">
+        <h2>Player Statistics</h2>
+        <table class="styled">
+          <thead>
+            <td>Player</td>
+            <td>Innings Pitched</td>
+            <td>Pitch Count</td>
+            <td>Innings Caught</td>
+          </thead>
+          <tbody>
+            <% @game_report.team_player_statistics(@team).each do |ps| -%>
+              <tr>
+                <td><%= ps.player.full %></td>
+                <td><%= ps.innings_pitched %></td>
+                <td><%= ps.pitch_count %></td>
+                <td><%= ps.innings_caught %></td>
+              </tr>
+            <% end -%>
+          </tbody>    
+        </table>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="left">
+      </div>
+      <div class="right">
+        <a href="<%= redo_team_game_game_report_path(@team, @game, @game_report) %>" class="button red">Re-enter Report</a>
+      </div>
+    </div>
+  </div>
+</div> 

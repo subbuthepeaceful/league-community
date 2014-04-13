@@ -74,6 +74,7 @@
                 <td><%= text_field_tag "inn_p_player_#{i}", '', size: 3 %></td>
                 <td><%= text_field_tag "pitch_ct_player_#{i}", '', size: 3 %></td>
                 <td><%= text_field_tag "inn_c_player_#{i}", '', size: 3 %></td>
+                <%= hidden_field_tag "id_player_#{i}", p.id %>
               </tr>
             <% end -%>
           </tbody>    

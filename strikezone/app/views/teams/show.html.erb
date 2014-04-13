@@ -34,7 +34,7 @@
               <td class="game_score"><%= game.final_score %></td>
               <td>
                 <% if game.home_team_report -%>
-                  <span class="badge green">Home</span>
+                  <a href="<%= team_game_game_report_path(@team, game, game.home_team_report) %>"><span class="badge green">Home</span></a>
                 <% else -%>
                   <% if game.home_team === @team -%>
                     <a class="button flat" href="<%= new_team_game_game_report_path(@team, game) %>">Enter</a>
@@ -44,7 +44,7 @@
                 <% end -%>
                 &nbsp; | &nbsp;
                 <% if game.away_team_report -%>
-                  <span class="badge green">Away</span>
+                  <a href="<%= team_game_game_report_path(@team, game, game.away_team_report) %>"><span class="badge green">Away</span></a>
                 <% else -%>
                   <% if game.away_team === @team -%>
                     <a class="button flat" href="<%= new_team_game_game_report_path(@team, game) %>">Enter</a>
